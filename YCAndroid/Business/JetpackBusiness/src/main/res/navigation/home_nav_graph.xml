@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+    <!--app:startDestination 默认的起始位置-->
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.yc.jetpack.ui.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+    </fragment>
+    <action
+        android:id="@+id/actionHomeFragment"
+        app:destination="@id/homeFragment" />
+
+
+
+    <fragment
+        android:id="@+id/navigationFragment"
+        android:name="com.yc.jetpack.ui.fragment.NavigationFragment"
+        android:label="NavigationFragment"
+        tools:layout="@layout/fragment_navigation">
+    </fragment>
+    <action
+        android:id="@+id/actionNavigationFragment"
+        app:destination="@id/navigationFragment" />
+
+
+    <activity
+        android:id="@+id/navigationActivity"
+        android:name="com.yc.jetpack.study.navigation.NavigationActivity"
+        android:label="NavigationActivity"
+        tools:layout="@layout/activity_navigation_home">
+
+    </activity>
+
+
+    <activity
+        android:id="@+id/liveDataActivity"
+        android:name="com.yc.jetpack.study.livedata.LiveDataActivity"
+        android:label="LiveDataActivity"
+        tools:layout="@layout/activity_live_data">
+    </activity>
+    <action
+        android:id="@+id/actionLiveDataActivity"
+        app:destination="@id/liveDataActivity" />
+
+
+    <activity
+        android:id="@+id/viewModelActivity"
+        android:name="com.yc.jetpack.study.model.ViewModelActivity"
+        android:label="ViewModelActivity"
+        tools:layout="@layout/activity_saved_state">
+    </activity>
+    <action
+        android:id="@+id/actionViewModelActivity"
+        app:destination="@id/viewModelActivity" />
+
+    <!--在nav中嵌套分支nav，避免nav文件过大-->
+    <include app:graph = "@navigation/sample_nav_graph"/>
+
+</navigation>

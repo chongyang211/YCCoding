@@ -1,0 +1,115 @@
+plugins {
+    id 'com.android.application'
+}
+apply from: rootProject.projectDir.absolutePath + "/yc.gradle"
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    defaultConfig {
+        applicationId "com.yc.widgetbusiness"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        // dex突破65535的限制
+        multiDexEnabled true
+        //开启Render脚本支持minSdkVersion < 19或使用renderscript支持模式时
+        renderscriptTargetApi 19
+        //同时支持AndroidX和Android Support Library
+        renderscriptSupportModeEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation(rootProject.ext.dependencies["appcompat"])
+    implementation(rootProject.ext.dependencies["annotation"])
+    implementation(rootProject.ext.dependencies["constraintlayout"])
+    implementation(rootProject.ext.dependencies["material"])
+    implementation(rootProject.ext.dependencies["percentlayout"])
+
+    //通用日志输出库
+    implementation 'com.github.yangchong211.YCCommonLib:AppLogLib:1.4.9'
+    implementation 'com.github.yangchong211.YCDialog:ToastUtils:3.6.9'
+    implementation 'com.github.yangchong211.YCCommonLib:BaseClassLib:1.4.9'
+    //implementation 'com.github.yangchong211.YCCommonLib:ToolUtilsLib:1.4.9'
+    implementation 'com.github.yangchong211.YCStatusBar:StatusBarLib:1.4.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:RoundCorners:1.0.6'
+
+    //SnapHelper相关封装，https://github.com/yangchong211/YCBannerView
+    //轮播图，https://github.com/yangchong211/YCBannerView
+    implementation 'com.github.yangchong211.YCBannerView:YCBannerLib:2.3.6'
+    //SnapHelper相关封装，https://github.com/yangchong211/YCBannerView
+    implementation 'com.github.yangchong211.YCBannerView:SnapBannerLib:2.3.6'
+    //轮播图，使用recyclerView实现，https://github.com/yangchong211/YCBannerView
+    implementation 'com.github.yangchong211.YCBannerView:GalleryBannerLib:2.3.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:ShadowConfig:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:RedDotView:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:ExpandPager:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:ExpandLib:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:CardViewLib:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:RoundCorners:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:AppShadowLib:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:AppSwitchView:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:AppTextView:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:BaseProgress:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:CircleProgress:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:CustomWidget:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:EastAdapterLib:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:ExpandLib:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:FloatWindow:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:PhotoCoverLib:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:PhotoWidget:1.0.6'
+    implementation 'com.github.yangchong211.YCWidgetLib:ZoomImageLib:1.0.6'
+
+//    implementation 'com.github.yangchong211.YCDialog:DialogLib:3.6.8'
+//    implementation 'com.github.yangchong211.YCDialog:PopupWindow:3.6.8'
+//    implementation 'com.github.yangchong211.YCDialog:ToastUtils:3.6.9'
+//    implementation 'com.github.yangchong211.YCDialog:SnackBar:3.6.8'
+//    implementation 'com.github.yangchong211.YCDialog:DialogFragment:3.6.8'
+//    implementation 'com.github.yangchong211.YCDialog:BaseDialog:3.6.8'
+
+    implementation project(path: ':PopupWindow')
+    implementation project(path: ':ToastUtils')
+    implementation project(path: ':SnackBar')
+    implementation project(path: ':DialogFragment')
+    implementation project(path: ':BaseDialog')
+    implementation project(':StatusBarLib')
+
+    implementation project(path: ':NotifyBusiness')
+    implementation project(path: ':StatusBarLib')
+    implementation project(path: ':AppLogClient')
+    implementation project(path: ':AppLogService')
+    implementation project(path: ':PercentLayout')
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation project(path: ':ToolUtilsLib')
+    implementation project(path: ':AppTextView')
+    implementation project(path: ':AppChartView')
+//    implementation project(path: ':RoundCorners')
+    implementation project(path: ':AppImageView')
+    implementation project(path: ':AppScrollView')
+    implementation project(path: ':CustomWidget')
+    implementation project(path: ':AppShadowLib')
+    implementation project(path: ':ZoomImageLib')
+    implementation project(path: ':RedDotView')
+    implementation project(path: ':ExpandLib')
+    implementation project(path: ':FloatWindow')
+    implementation project(path: ':BlurViewLib')
+    implementation project(path: ':LibraryLayer')
+    implementation project(path: ':GlideServer')
+    implementation project(path: ':BannerViewLib')
+    implementation project(path: ':SecondaryScreen')
+}
+

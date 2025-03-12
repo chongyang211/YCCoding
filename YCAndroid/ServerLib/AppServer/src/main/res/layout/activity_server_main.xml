@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <com.yc.roundcorner.view.RoundTextView
+            android:id="@+id/tv_log_server"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dp20"
+            android:text="1.log日志调试案例"
+            android:textSize="@dimen/textSize18"
+            android:background="@color/priority_green"
+            android:layout_marginTop="@dimen/dp20"
+            app:rRadius="@dimen/dp20"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+        <com.yc.roundcorner.view.RoundTextView
+            android:id="@+id/tv_vibrator_test"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dp20"
+            android:text="3.手机震动的设置"
+            android:textSize="@dimen/textSize18"
+            android:background="@color/priority_green"
+            android:layout_marginTop="@dimen/dp20"
+            app:rRadius="@dimen/dp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_log_server"/>
+
+
+        <com.yc.roundcorner.view.RoundTextView
+            android:id="@+id/tv_private_test"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dp20"
+            android:text="4.隐私合规获取敏感信息"
+            android:textSize="@dimen/textSize18"
+            android:background="@color/priority_green"
+            android:layout_marginTop="@dimen/dp20"
+            app:rRadius="@dimen/dp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vibrator_test"/>
+
+        <com.yc.roundcorner.view.RoundTextView
+            android:id="@+id/tv_net_test"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dp20"
+            android:text="5.网络请求案例大合集"
+            android:textSize="@dimen/textSize18"
+            android:background="@color/priority_green"
+            android:layout_marginTop="@dimen/dp20"
+            app:rRadius="@dimen/dp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_private_test"/>
+
+        <com.yc.roundcorner.view.RoundTextView
+            android:id="@+id/tv_thread_test"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dp20"
+            android:text="6.线程相关的案例"
+            android:textSize="@dimen/textSize18"
+            android:background="@color/priority_green"
+            android:layout_marginTop="@dimen/dp20"
+            app:rRadius="@dimen/dp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_net_test"/>
+
+        <com.yc.roundcorner.view.RoundTextView
+            android:id="@+id/tv_file_test"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dp20"
+            android:text="7.磁盘缓存文件查看"
+            android:textSize="@dimen/textSize18"
+            android:background="@color/priority_green"
+            android:layout_marginTop="@dimen/dp20"
+            app:rRadius="@dimen/dp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_net_test"/>
+
+        <com.yc.roundcorner.view.RoundTextView
+            android:id="@+id/tv_ble_1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dp20"
+            android:text="8.1 最简单版本蓝牙案例"
+            android:textSize="@dimen/textSize18"
+            android:background="@color/priority_green"
+            android:layout_marginTop="@dimen/dp20"
+            app:rRadius="@dimen/dp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_file_test"/>
+
+        <com.yc.roundcorner.view.RoundTextView
+            android:id="@+id/tv_ble_2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dp20"
+            android:text="8.2 蓝牙实现聊天的功能"
+            android:textSize="@dimen/textSize18"
+            android:background="@color/priority_green"
+            android:layout_marginTop="@dimen/dp20"
+            app:rRadius="@dimen/dp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ble_1"/>
+
+        <com.yc.roundcorner.view.RoundTextView
+            android:id="@+id/tv_ble_3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dp20"
+            android:text="8.3 蓝牙综合功能案例库"
+            android:textSize="@dimen/textSize18"
+            android:background="@color/priority_green"
+            android:layout_marginTop="@dimen/dp20"
+            app:rRadius="@dimen/dp20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ble_2"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

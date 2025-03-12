@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <integer-array name="splash_image">
+        <item name="first">@drawable/bg_autumn_tree_min</item>
+        <item name="second">@drawable/bg_small_tree_min</item>
+        <item name="third">@drawable/bg_small_solda_min</item>
+        <item name="four">@drawable/bg_small_kites_min</item>
+    </integer-array>
+
+    <!--///////////////////////////////////////首页/////////////////////////////////////-->
+
+
+    <!--首页底部导航栏的标题，未选中时-->
+    <integer-array name="main_tab_un_select">
+        <item name="tab_home">@drawable/tab_home_unselect</item>
+        <item name="tab_find">@drawable/tab_speech_unselect</item>
+        <item name="tab_data">@drawable/tab_contact_unselect</item>
+        <item name="tab_me">@drawable/tab_more_unselect</item>
+    </integer-array>
+
+    <!--首页底部导航栏的标题，选中时-->
+    <integer-array name="main_tab_select">
+        <item name="tab_home">@drawable/tab_home_select</item>
+        <item name="tab_find">@drawable/tab_speech_select</item>
+        <item name="tab_data">@drawable/tab_contact_select</item>
+        <item name="tab_me">@drawable/tab_more_select</item>
+    </integer-array>
+
+    <!--首页底部导航栏文字-->
+    <string-array name="main_title">
+        <item>首页</item>
+        <item>数据</item>
+        <item>工具</item>
+        <item>更多</item>
+    </string-array>
+
+
+    <!--首页精选跑马灯文字-->
+    <string-array name="main_marquee_title">
+        <item>1.坚持读书，写作，源于内心的动力</item>
+        <item>2.展翅翱翔，青春我们一路前行</item>
+        <item>3.欢迎订阅喜马拉雅听书</item>
+    </string-array>
+
+    <!--轮播图图片-->
+    <integer-array name="banner_image">
+        <item>@drawable/bg_small_autumn_tree_min</item>
+        <item>@drawable/bg_small_kites_min</item>
+        <item>@drawable/bg_small_lake_min</item>
+        <item>@drawable/bg_small_magnolia_trees_min</item>
+        <item>@drawable/bg_small_leaves_min</item>
+    </integer-array>
+
+    <!--///////////////////////////////////////发现/////////////////////////////////////-->
+
+
+
+
+    <string-array name="find_list1_title">
+        <item>视频</item>
+        <item>妹子</item>
+        <item>视频</item>
+        <item>画板</item>
+        <item>拼图</item>
+        <item>游戏</item>
+        <item>抽奖</item>
+        <item>倒计时</item>
+    </string-array>
+    <integer-array name="find_list1_image">
+        <item>@drawable/ic_data_picture</item>
+        <item>@drawable/ic_data_music</item>
+        <item>@drawable/ic_data_video</item>
+        <item>@drawable/ic_data_picture</item>
+        <item>@drawable/ic_data_video</item>
+        <item>@drawable/ic_data_music</item>
+        <item>@drawable/ic_data_picture</item>
+        <item>@drawable/ic_data_video</item>
+    </integer-array>
+
+
+
+    <string-array name="find_list3_title">
+        <item>豆瓣电影</item>
+        <item>豆瓣音乐</item>
+        <item>豆瓣读书</item>
+    </string-array>
+    <integer-array name="find_list3_image">
+        <item>@drawable/bg_small_autumn_tree_min</item>
+        <item>@drawable/bg_small_leaves_min</item>
+        <item>@drawable/bg_small_magnolia_trees_min</item>
+    </integer-array>
+
+
+
+    <string-array name="find_list4_title">
+        <item>妹子美图</item>
+        <item>稀土掘金</item>
+        <item>快读头条</item>
+    </string-array>
+    <integer-array name="find_list4_image">
+        <item>@drawable/bg_small_autumn_tree_min</item>
+        <item>@drawable/bg_small_leaves_min</item>
+        <item>@drawable/bg_small_magnolia_trees_min</item>
+    </integer-array>
+
+
+    <!--发现页图片-->
+    <integer-array name="find_pro_pic">
+        <item>@drawable/ic_investment</item>
+        <item>@drawable/ic_project</item>
+        <item>@drawable/ic_financing</item>
+        <item>@drawable/ic_show</item>
+        <item>@drawable/ic_investment</item>
+        <item>@drawable/ic_project</item>
+        <item>@drawable/ic_financing</item>
+        <item>@drawable/ic_show</item>
+        <item>@drawable/ic_investment</item>
+        <item>@drawable/ic_project</item>
+        <item>@drawable/ic_financing</item>
+        <item>@drawable/ic_show</item>
+    </integer-array>
+
+    <!--发现页图片对应的位子-->
+    <string-array name="find_pro_title">
+        <item>干货集中营</item>
+        <item>播放器</item>
+        <item>超文本</item>
+        <item>时光笔记</item>
+        <item>7日天气</item>
+        <item>绘画板</item>
+        <item>快读</item>
+        <item>时光聆听</item>
+        <item>急转弯</item>
+        <item>猜谜语</item>
+        <item>翻译</item>
+        <item>缴费</item>
+    </string-array>
+
+
+    <!--///////////////////////////////////////数据/////////////////////////////////////-->
+
+
+    <!--数据页图片-->
+    <integer-array name="data_pro_pic">
+        <item>@drawable/ic_investment</item>
+        <item>@drawable/ic_project</item>
+        <item>@drawable/ic_financing</item>
+        <item>@drawable/ic_show</item>
+        <item>@drawable/ic_investment</item>
+        <item>@drawable/ic_project</item>
+        <item>@drawable/ic_financing</item>
+        <item>@drawable/ic_show</item>
+        <item>@drawable/ic_investment</item>
+        <item>@drawable/ic_project</item>
+        <item>@drawable/ic_financing</item>
+        <item>@drawable/ic_show</item>
+    </integer-array>
+
+    <!--数据页图片对应的位子-->
+    <string-array name="data_pro_title">
+        <item>有趣视频</item>
+        <item>爬妹子图</item>
+        <item>MarkDown</item>
+        <item>开启权限</item>
+        <item>天行八卦</item>
+        <item>妹子美图</item>
+        <item>flutter</item>
+        <item>状态切换</item>
+        <item>圆环进度</item>
+        <item>妹子拼图</item>
+        <item>翻译</item>
+        <item>缴费</item>
+    </string-array>
+
+
+    <!--数据页小工具图片-->
+    <integer-array name="data_tool_pro_pic">
+        <item>@drawable/ic_investment</item>
+        <item>@drawable/ic_project</item>
+        <item>@drawable/ic_financing</item>
+        <item>@drawable/ic_show</item>
+        <item>@drawable/ic_investment</item>
+        <item>@drawable/ic_project</item>
+        <item>@drawable/ic_financing</item>
+        <item>@drawable/ic_show</item>
+        <item>@drawable/ic_investment</item>
+        <item>@drawable/ic_project</item>
+        <item>@drawable/ic_financing</item>
+        <item>@drawable/ic_show</item>
+        <item>@drawable/ic_investment</item>
+        <item>@drawable/ic_project</item>
+        <item>@drawable/ic_financing</item>
+        <item>@drawable/ic_show</item>
+        <item>@drawable/ic_investment</item>
+        <item>@drawable/ic_project</item>
+        <item>@drawable/ic_financing</item>
+        <item>@drawable/ic_show</item>
+    </integer-array>
+
+    <!--数据页小工具图片对应的位子-->
+    <string-array name="data_tool_pro_title">
+        <item>加载大图</item>
+        <item>轮播图</item>
+        <item>爱心表达</item>
+        <item>杀毒进度</item>
+        <item>NFC</item>
+        <item>飞机大战</item>
+        <item>老虎机</item>
+        <item>电影评分</item>
+        <item>线程池</item>
+        <item>逗比视频</item>
+        <item>百分比条</item>
+        <item>绘画板</item>
+        <item>去评分</item>
+        <item>日历事件</item>
+        <item>测崩溃</item>
+        <item>崩溃列表</item>
+        <item>条形码</item>
+        <item>二维码</item>
+        <item>dai</item>
+        <item>dai</item>
+    </string-array>
+
+    <!--数据页横向滑动图片-->
+    <integer-array name="data_narrow_Image">
+        <item>@drawable/bg_small_autumn_tree_min</item>
+        <item>@drawable/bg_small_kites_min</item>
+        <item>@drawable/bg_small_lake_min</item>
+        <item>@drawable/bg_small_leaves_min</item>
+        <item>@drawable/bg_small_magnolia_trees_min</item>
+        <item>@drawable/bg_small_solda_min</item>
+        <item>@drawable/bg_small_tree_min</item>
+        <item>@drawable/bg_small_tulip_min</item>
+    </integer-array>
+
+</resources>

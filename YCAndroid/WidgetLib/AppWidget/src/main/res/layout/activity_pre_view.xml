@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chart.PreActivity">
+
+    <com.yc.appchartview.PieFlagView
+        android:id="@+id/pie_chart_now"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#DFDEDE"
+        android:padding="18dp"
+        app:blockAgeMarginLeft="10dp"
+        app:border_length="15dp"
+        app:centerHint="坐姿侧弯"
+        app:centerTitle="70%"
+        app:intervalWidth="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:radius="60dp"
+        app:textSize="13sp" />
+
+    <com.yc.appchartview.PieEasyLayout
+        android:id="@+id/pie_chart_layout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pie_chart_now">
+
+
+
+    </com.yc.appchartview.PieEasyLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#01000000">
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_top"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/lib_update_app_top_bg"/>
+
+        <com.yc.roundcorner.viewgroup.RoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            app:rBottomLeftRadius="6dp"
+            app:rBottomRightRadius="6dp">
+
+
+            <!--这个地方需要设置可以滚动-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:scrollbars="vertical">
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:lineSpacingExtra="5dp"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/update_content_info"/>
+            </ScrollView>
+
+
+            <ProgressBar
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/progress"
+                android:visibility="invisible"
+                android:layout_marginTop="15dp"
+                android:progressDrawable="@drawable/progress_bar_color"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+                <com.yc.roundcorner.view.RoundTextView
+                    android:id="@+id/tv_cancel"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/update_next"
+                    app:rRadius="20dp"
+                    app:rStrokeWidth="1px"
+                    app:rStrokeColor="@color/color_ff666666"/>
+
+                <com.yc.roundcorner.view.RoundTextView
+                    android:id="@+id/tv_ok"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/update_info"
+                    android:background="@color/color_ffe935"
+                    app:rRadius="20dp"/>
+            </LinearLayout>
+
+        </com.yc.roundcorner.viewgroup.RoundLinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

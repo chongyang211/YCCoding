@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PieChartView">
+        <attr name="pieRadius" format="dimension"/>
+        <attr name="borderLength" format="dimension"/>
+        <attr name="pieIntervalWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="PieFlagView">
+        <attr name="radius" format="dimension"/>
+        <attr name="border_length" format="dimension"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+        <attr name="centerTitle" format="string"/>
+        <attr name="centerHint" format="string"/>
+        <attr name="intervalWidth" format="dimension"/>
+        <attr name="blockAgeMarginLeft" format="dimension"/>
+    </declare-styleable>
+
+</resources>

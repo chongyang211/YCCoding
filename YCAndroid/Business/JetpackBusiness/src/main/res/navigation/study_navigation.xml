@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/home_dest">
+    <!--app:startDestination	默认的起始位置-->
+
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="com.yc.jetpack.study.navigation.NavigationFragment"
+        android:label="NavigationFragment首页"
+        tools:layout="@layout/fragment_navigation_home">
+        <action
+            android:id="@+id/home_dest_one"
+            app:destination="@id/flow_step_one_dest"/>
+
+        <action android:id="@+id/action_to_argsSampleFragment"
+            app:destination="@id/args_sample_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/flow_step_one_dest"
+        android:name="com.yc.jetpack.study.navigation.FlowStepFragment"
+        android:label="FlowStepFragment1"
+        tools:layout="@layout/fragment_navigation_step_one">
+        <action
+            android:id="@+id/next_one_action"
+            app:destination="@id/flow_step_two_dest"/>
+        <argument
+            android:name="flowStepNumber"
+            app:argType="integer"
+            android:defaultValue="1"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/flow_step_two_dest"
+        android:name="com.yc.jetpack.study.navigation.FlowStepFragment"
+        android:label="FlowStepFragment2"
+        tools:layout="@layout/fragment_navigation_step_two">
+        <argument
+            android:name="flowStepNumber"
+            app:argType="integer"
+            android:defaultValue="2"/>
+        <action
+            android:id="@+id/next_two_action"
+            app:popUpTo="@id/home_dest">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/dash_board"
+        android:name="com.yc.jetpack.study.navigation.DashBoardFragment"
+        android:label="DashBoardFragment"
+        tools:layout="@layout/fragment_navigation_deeplink">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/deeplink_dest"
+        android:name="com.yc.jetpack.study.navigation.DeepLinkFragment"
+        android:label="DeepLinkFragment"
+        tools:layout="@layout/fragment_navigation_deeplink">
+        <argument
+            android:name="myarg"
+            android:defaultValue="Android!"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/args_sample_fragment"
+        android:name="com.yc.jetpack.study.navigation.SampleArgsFragment"
+        android:label="SampleArgsFragment"
+        tools:layout="@layout/fragment_sample_args">
+        <argument
+            android:name="argument_flag"
+            app:argType="integer"/>
+        <argument
+            android:name="argument_normal"
+            app:argType="string"/>
+        <argument
+            android:name="argument_bean"
+            app:argType="com.yc.jetpack.study.navigation.ArgumentBean"/>
+
+        <action
+            android:id="@+id/action_to_home_dest"
+            app:popUpTo="@id/home_dest"/>
+    </fragment>
+
+
+</navigation>

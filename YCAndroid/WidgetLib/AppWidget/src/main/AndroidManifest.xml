@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yc.widgetbusiness">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        tools:replace="android:label,android:authorities"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity android:name=".WidgetActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".round.RoundCornersActivity"/>
+        <activity android:name=".image.ImageViewActivity"/>
+        <activity android:name=".textview.MixtureTextViewActivity"/>
+        <activity android:name=".chart.PreActivity"/>
+        <activity android:name=".shadow.ShadowActivity"/>
+        <activity android:name=".shadow.ShadowDrawableActivity"/>
+        <activity android:name=".zoom.ZoomMainActivity"/>
+        <activity android:name=".zoom.ViewPagerActivity"/>
+        <activity android:name=".zoom.PhotoBrowseActivity"/>
+        <activity android:name=".zoom.ImgClickActivity"/>
+        <activity android:name=".zoom.ImgActivity"/>
+        <activity android:name=".zoom.ImageViewActivity"/>
+        <activity android:name=".red.RedViewActivity"/>
+        <activity android:name=".floatpage.FloatActivity"/>
+        <activity android:name=".blur.BlurActivity"/>
+        <activity android:name=".banner.MeBannerActivity"/>
+        <activity android:name=".banner.BannerActivity"/>
+        <activity android:name=".event.EventActivity"/>
+        <activity android:name=".dialog.DialogActivity"/>
+        <activity android:name=".percent.PercentActivity"/>
+        <activity android:name=".screen.PresentationActivity"/>
+
+
+        <activity android:name="com.yc.widgetbusiness.status.BarActivity"/>
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarColorActivity" />
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarColorToolBarActivity" />
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarTranslucent"/>
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarColorCoordinatorActivity" />
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarTranslucentCoordinatorActivity"/>
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarWhiteActivity"/>
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarWhiteToolBarActivity"/>
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarWhiteCoordinatorActivity"/>
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarWhiteCoordinatorActivity2"/>
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarWhiteCoordinatorActivity3"/>
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarFragmentActivity"/>
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarFragment2Activity"/>
+        <activity android:name="com.yc.widgetbusiness.status.StatusBarFragment3Activity"/>
+    </application>
+
+
+</manifest>

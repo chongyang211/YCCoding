@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yc.jetpack">
+
+    <application>
+        <activity android:name="com.yc.jetpack.ui.activity.JetpackActivity"/>
+        <activity android:name="com.yc.jetpack.study.navigation.NavigationActivity"/>
+        <activity android:name="com.yc.jetpack.study.livedata.LiveDataActivity"/>
+        <activity android:name="com.yc.jetpack.study.model.ViewModelActivity"/>
+        <activity android:name="com.yc.jetpack.study.lifecycle.LifecycleActivity"/>
+    </application>
+
+</manifest>

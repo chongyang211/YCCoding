@@ -1,0 +1,62 @@
+plugins {
+    id 'com.android.application'
+}
+apply plugin: 'kotlin-android'
+apply from: rootProject.projectDir.absolutePath + "/yc.gradle"
+
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        applicationId "com.yc.appserver"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        // dex突破65535的限制
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(rootProject.ext.dependencies["appcompat"])
+    implementation(rootProject.ext.dependencies["annotation"])
+    implementation(rootProject.ext.dependencies["constraintlayout"])
+    implementation(rootProject.ext.dependencies["gson"])
+    implementation(rootProject.ext.dependencies["okhttp"])
+    implementation(rootProject.ext.dependencies["lifecycleRuntime"])
+    implementation 'com.github.yangchong211.YCDialog:ToastUtils:3.6.9'
+    implementation project(path: ':BleBusiness')
+    implementation project(path: ':LibraryLayer')
+    implementation project(path: ':ToolUtilsLib')
+    implementation project(path: ':RoundCorners')
+    implementation project(path: ':MonitorPhone')
+    implementation project(path: ':MonitorPingLib')
+    implementation project(path: ':AppLogClient')
+    implementation project(path: ':AppLogService')
+    implementation project(path: ':MonitorFileLib')
+    implementation project(path: ':PrivateServer')
+    implementation project(path: ':OkHttpServer')
+    implementation project(path: ':GsonServer')
+    implementation project(path: ':ToolUtilsLib')
+    implementation project(path: ':MonitorInterceptor')
+    implementation project(path: ':AppTaskLib')
+    implementation project(path: ':NotCaptureLib')
+    implementation project(path: ':AudioHelper')
+    implementation project(path: ':TcpManager')
+}
+

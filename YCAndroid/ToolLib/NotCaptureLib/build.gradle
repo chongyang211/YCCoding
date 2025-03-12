@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply from: rootProject.projectDir.absolutePath + "/yc.gradle"
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    //buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+    }
+
+    buildTypes {
+        debug {
+            manifestPlaceholders = [
+                    NETWORK_SECURITY_CONFIG: "@xml/network_security_config_debug"
+            ]
+        }
+        release {
+            manifestPlaceholders = [
+                    NETWORK_SECURITY_CONFIG: "@xml/network_security_config_release"
+            ]
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["annotation"]
+    implementation(rootProject.ext.dependencies["okhttp"])
+    implementation(rootProject.ext.dependencies["gson"])
+    //同上上报库
+    implementation 'com.github.yangchong211.YCCommonLib:EventUploadLib:1.4.9'
+    //加解密库
+    implementation project(path: ':AppEncryptLib')
+    //implementation 'com.github.yangchong211.YCCommonLib:AppEncryptLib:1.4.4'
+    //通用组件接口库
+    implementation 'com.github.yangchong211.YCCommonLib:AppCommonInter:1.4.9'
+    implementation project(path: ':NetWorkLib')
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yc.blesample">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application>
+        <activity android:name="com.yc.blesample.ble.BleMainActivity"/>
+        <activity android:name="com.yc.blesample.ble.operation.OperationActivity" />
+        <activity android:name="com.yc.blesample.demo.BleEasyActivity"/>
+        <activity android:name="com.yc.blesample.chat.base.ChatMainActivity"/>
+        <activity android:name="com.yc.blesample.chat.client.DeviceActivity"/>
+        <activity android:name="com.yc.blesample.chat.chat.ChatActivity"/>
+        <activity android:name="com.yc.blesample.ble.BleDetailActivity"/>
+        <service android:name="com.yc.blesample.chat.server.AcceptService"/>
+    </application>
+
+</manifest>

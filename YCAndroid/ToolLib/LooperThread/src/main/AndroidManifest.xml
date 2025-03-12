@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yc.looperthread">
+
+    <application>
+        <service android:name="com.yc.looperthread.heart.HeartService"/>
+        <receiver
+            android:name="com.yc.looperthread.heart.HeartReceiver"
+            android:exported="false" />
+        <activity android:name="com.yc.looperthread.test.HeartActivity"/>
+    </application>
+
+
+</manifest>
