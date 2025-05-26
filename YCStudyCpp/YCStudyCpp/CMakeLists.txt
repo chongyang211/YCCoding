@@ -106,4 +106,27 @@ add_executable(YCStudyCC
         chapter3/day_3_1_1.cpp
         chapter3/day_3_1_2.cpp
         chapter3/day_3_4.cpp
-        chapter3/day_3_5.cpp)
+        chapter3/day_3_5.cpp
+        chapter3/day_3_7.cpp
+        chapter3/day_3_6.cpp
+        chapter3/day_3_8.cpp
+        chapter3/da.cpp
+        chapter4/day_4_2.cpp
+        chapter4/da.cpp
+        chapter4/da.cpp
+        chapter4/day_4_3.cpp
+        chapter4/day_4_4.cpp
+        chapter4/day_4_4.cpp
+        chapter4/day_4_5.cpp
+        chapter4/day_4_6.cpp
+        chapter6/day_6_1.cpp
+        chapter6/day_6_2.cpp
+        chapter6/day_6_3.cpp
+        chapter6/day_6_4.cpp
+        chapter6/day_6_5.cpp
+        chapter6/day_6_6.cpp
+        chapter6/day_6_6.h
+        chapter6/day_6_7.cpp
+        chapter7/day_7_1.cpp
+        chapter7/day_7_3.cpp
+        chapter7/day_7_4.cpp)
