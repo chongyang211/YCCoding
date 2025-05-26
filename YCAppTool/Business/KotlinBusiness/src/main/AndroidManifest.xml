@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yc.kotlinbusiness">
+
+    <application>
+        <activity android:name="com.yc.kotlinbusiness.KotlinHomeActivity"/>
+        <activity android:name="com.yc.kotlinbusiness.scope.KotlinScopeActivity"/>
+        <activity android:name="com.yc.kotlinbusiness.scope.LifecycleScopeActivity"/>
+        <activity android:name="com.yc.kotlinbusiness.scope.LiveDataScopeActivity"/>
+        <activity android:name="com.yc.kotlinbusiness.scope.ViewModelScopeActivity"/>
+    </application>
+
+</manifest>

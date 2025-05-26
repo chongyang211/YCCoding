@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yc.ycnotification">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!--USE_FULL_SCREEN_INTENT权限，这是一个普通权限。比如微信来语音或者视频通话时，弹出的接听页面就是使用这一功能。-->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+
+    <application>
+        <activity android:name="com.yc.ycnotification.NotifyHomeActivity"/>
+        <activity android:name="com.yc.ycnotification.NotificationActivity"/>
+        <activity android:name="com.yc.ycnotification.NotifyIntentActivity"/>
+        <activity android:name="com.yc.ycnotification.NotifyActivity"/>
+        <activity android:name="com.yc.ycnotification.service.ServiceActivity"/>
+        <receiver android:name="com.yc.ycnotification.ReminderReceiver"/>
+        <service android:name="com.yc.ycnotification.service.MyService"
+            android:foregroundServiceType="location"
+            tools:ignore="Instantiatable" />
+        <service android:name="com.yc.ycnotification.service.MyForegroundService"
+            android:foregroundServiceType="location" />
+
+        <service android:name="com.yc.ycnotification.service.MyService2"
+            android:foregroundServiceType="location"
+            tools:ignore="Instantiatable" />
+        <service android:name="com.yc.ycnotification.service.MyForegroundService2"
+            android:foregroundServiceType="location" />
+    </application>
+
+</manifest>

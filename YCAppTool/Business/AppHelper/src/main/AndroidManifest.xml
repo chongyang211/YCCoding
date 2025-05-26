@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yc.lifehelper">
+
+
+    <application
+        android:name="com.yc.lifehelper.app.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_yc_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config_debug"
+        tools:replace="android:theme,android:label,android:allowBackup,android:name"
+        tools:ignore="GoogleAppIndexingWarning">
+        <!--android:exported = true-->
+        <!--在Activity中该属性用来标示：当前Activity是否可以被另一个Application的组件启动：true允许被启动；false不允许被启动。-->
+        <!--android:exported 是Android中的四大组件 Activity，Service，Provider，Receiver 四大组件中都会有的一个属性。-->
+        <!--总体来说它的主要作用是：是否支持其它应用调用当前组件。-->
+        <activity android:name="com.yc.lifehelper.SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yc.lifehelper.SchemeActivity"
+            android:screenOrientation="portrait">
+            <!--Android 接收外部跳转过滤器-->
+            <!--要想在别的App上能成功调起App，必须添加intent过滤器-->
+            <intent-filter>
+                <!-- 协议部分配置 ,注意需要跟web配置相同-->
+                <!--协议部分，随便设置 yc://ycbjie.cn:8888/from?type=yangchong  -->
+                <data android:scheme="yc"
+                    android:host="ycbjie.cn"
+                    android:path="/from"
+                    android:port="8888"/>
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.yc.lifehelper.MainActivity"/>
+        <service android:name="com.yc.library.base.app.InitializeService"/>
+        <activity android:name="com.yc.lifehelper.LocaleActivity"/>
+    </application>
+
+</manifest>
