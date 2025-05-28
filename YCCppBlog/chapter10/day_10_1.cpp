@@ -4,18 +4,23 @@
 #include "iostream"
 using namespace std;
 
-int main() {
-    int a = 10; //定义整型变量a
-    //1、指针的定义
-    //指针定义语法： 数据类型 * 变量名 ;
-    int * p;
-    //指针变量赋值
-    p = &a; //指针指向变量a的地址
-    cout << &a << endl; //打印数据a的地址
-    cout << p << endl;  //打印指针变量p
+class C1 {
+    int a;  //默认是私有权限
+};
 
-    //2、指针的使用
-    //通过*操作指针变量指向的内存
-    cout << "*p = " << *p << endl;
+struct C2 {
+    int a;  //默认是公共权限
+};
+
+//struct和class区别
+void test1() {
+    C1 c1;
+    // c1.a = 10; //错误，访问权限是私有
+    C2 c2;
+    c2.a = 10; //正确，访问权限是公共
+}
+
+int main() {
+    test1();
     return 0;
 }
