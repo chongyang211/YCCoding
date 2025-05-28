@@ -155,8 +155,9 @@ project(':AppTool').projectDir = new File('ToolLib/AppTool')
 //库
 include ':ZxingServerLib', ':SocketHelper', ':In18HelperLib', ':CountTimerLib',
         ':AnimatorToolLib', ':ThreadPoolLib', ':AutoCloserLib', ':AppProcessLib',':LooperThread',
-         ':AppUpdateLib', ':AnimBaseHelper', ':NotCaptureLib', ':CameraHelper'
+         ':AppUpdateLib', ':AnimBaseHelper', ':NotCaptureLib', ':CameraHelper', ':ZxingTool'
 project(':ZxingServerLib').projectDir = new File('ToolLib/ZxingServerLib')
+project(':ZxingTool').projectDir = new File('ToolLib/ZxingTool')
 project(':SocketHelper').projectDir = new File('ToolLib/SocketHelper')
 project(':In18HelperLib').projectDir = new File('ToolLib/In18HelperLib')
 project(':CountTimerLib').projectDir = new File('ToolLib/CountTimerLib')

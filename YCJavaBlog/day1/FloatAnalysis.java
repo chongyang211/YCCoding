@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
  **/
 public class FloatAnalysis{
 
+
+
     public static void main(String[] args) throws Exception {
         // 需要计算真实存储值的浮点数
         float floatValue1 = 16.35f;

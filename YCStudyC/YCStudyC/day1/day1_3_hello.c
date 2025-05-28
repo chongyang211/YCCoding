@@ -14,6 +14,7 @@ int main(){
     printf("%5d\n", 123);
     // 输出 "  123.450000"
     printf("%12f\n", 123.45);
+
     return 0;
 }
 
