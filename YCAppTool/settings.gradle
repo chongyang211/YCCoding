@@ -13,21 +13,6 @@ project(':MvvmDatabinding').projectDir = new File('Business/MvvmDatabinding')
 project(':MvvmTodoLive').projectDir = new File('Business/MvvmTodoLive')
 
 
-/* +++++++++ 框架业务服务层 +++++++++ */
-//demo
-include ':AppServer'
-project(':AppServer').projectDir = new File('ServerLib/AppServer')
-include ':GlideServer', ':GsonServer', ':EasyBleServer', ':OkHttpServer', ':PrivateServer',
-         ':SignalHooker', ':CompressServer', ':GrpcServer'
-project(':GlideServer').projectDir = new File('ServerLib/GlideServer')
-project(':GsonServer').projectDir = new File('ServerLib/GsonServer')
-project(':EasyBleServer').projectDir = new File('ServerLib/EasyBleServer')
-project(':OkHttpServer').projectDir = new File('ServerLib/OkHttpServer')
-project(':PrivateServer').projectDir = new File('ServerLib/PrivateServer')
-project(':SignalHooker').projectDir = new File('ServerLib/SignalHooker')
-project(':CompressServer').projectDir = new File('ServerLib/CompressServer')
-project(':GrpcServer').projectDir = new File('ServerLib/GrpcServer')
-
 
 /* +++++++++ 框架公共组件层 +++++++++ */
 //案例
@@ -38,7 +23,7 @@ include ':AppReceiver', ':ToolUtilsLib', ':AppBaseStore',
         ':BaseClassLib', ':AppLogLib', ':AppRestartLib',
         ':ArchitectureLib', ':ComponentManager',
         ':AppCommonInter', ':AppEncryptLib',
-         ':NetWorkLib', ':AppTaskLib'
+        ':NetWorkLib', ':AppTaskLib'
 project(':AppReceiver').projectDir = new File('CommonLib/AppReceiver')
 //综合工具库：
 //字节转化，点击，克隆clone，上下文，文件，intent，内存，权限，反射，屏幕，分享，时间校验，store，io流工具，uri工具，zip压缩工具
@@ -60,11 +45,27 @@ project(':ComponentManager').projectDir = new File('CommonLib/ComponentManager')
 project(':AppCommonInter').projectDir = new File('CommonLib/AppCommonInter')
 //加解密：des，aes，rc4，rsa
 project(':AppEncryptLib').projectDir = new File('CommonLib/AppEncryptLib')
-//
+//网络工具库
 project(':NetWorkLib').projectDir = new File('CommonLib/NetWorkLib')
-//Task任务：
+//Task任务分发库，串行工具库
 project(':AppTaskLib').projectDir = new File('CommonLib/AppTaskLib')
 
+
+
+/* +++++++++ 框架业务服务层 +++++++++ */
+//demo
+include ':AppServer'
+project(':AppServer').projectDir = new File('ServerLib/AppServer')
+include ':GlideServer', ':GsonServer', ':EasyBleServer', ':OkHttpServer', ':PrivateServer',
+         ':SignalHooker', ':CompressServer', ':GrpcServer'
+project(':GlideServer').projectDir = new File('ServerLib/GlideServer')
+project(':GsonServer').projectDir = new File('ServerLib/GsonServer')
+project(':EasyBleServer').projectDir = new File('ServerLib/EasyBleServer')
+project(':OkHttpServer').projectDir = new File('ServerLib/OkHttpServer')
+project(':PrivateServer').projectDir = new File('ServerLib/PrivateServer')
+project(':SignalHooker').projectDir = new File('ServerLib/SignalHooker')
+project(':CompressServer').projectDir = new File('ServerLib/CompressServer')
+project(':GrpcServer').projectDir = new File('ServerLib/GrpcServer')
 
 /* +++++++++ 框架view基础组件层 +++++++++ */
 //demo
