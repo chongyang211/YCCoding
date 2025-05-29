@@ -2,4 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yc.animhelper">
 
+   <application>
+       <activity android:name="com.yc.animhelper.ui.AnimationActiviy"/>
+       <activity android:name="com.yc.animhelper.ui.ValueAnimatorAct"/>
+       <activity android:name="com.yc.animhelper.ui.FrameAnimation"/>
+       <activity android:name="com.yc.animhelper.ui.ActivityAnimation"/>
+       <activity android:name="com.yc.animhelper.ui.TweenAnimation"/>
+       <activity android:name="com.yc.animhelper.ui.AnimMainActivity"/>
+       <activity android:name="com.yc.animhelper.ui.PropertyAnimatorAct"/>
+
+       <activity android:name="com.yc.animhelper.ui.reveal.RevealEffectActivity"/>
+       <activity android:name="com.yc.animhelper.ui.reveal.RevealAnimationActivity"/>
+
+       <activity android:name="com.yc.animhelper.ui.transition.TransitionActivity"/>
+       <activity android:name="com.yc.animhelper.ui.transition.ObjectAnimatorActivity"/>
+       <activity android:name="com.yc.animhelper.ui.transition.SampleTranslateActivity"/>
+       <activity android:name="com.yc.animhelper.ui.transition.SceneActivity"/>
+       <activity android:name="com.yc.animhelper.ui.transition.ShareElementActivity1"/>
+       <activity android:name="com.yc.animhelper.ui.transition.ShareElementActivity2"/>
+   </application>
+
 </manifest>

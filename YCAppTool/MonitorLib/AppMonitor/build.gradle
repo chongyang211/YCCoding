@@ -36,17 +36,14 @@ dependencies {
     implementation(rootProject.ext.dependencies["annotation"])
     implementation(rootProject.ext.dependencies["constraintlayout"])
     implementation 'com.github.yangchong211.YCDialog:ToastUtils:3.6.9'
-    implementation project(path: ':LibraryLayer')
     implementation project(path: ':ToolUtilsLib')
     implementation project(path: ':RoundCorners')
-    implementation project(path: ':MonitorPhone')
     implementation project(path: ':MonitorPingLib')
     implementation project(path: ':MonitorFileLib')
     implementation project(path: ':MonitorCrashLib')
     implementation project(path: ':MonitorSpeed')
     implementation project(path: ':MonitorTimeLib')
     implementation project(path: ':MonitorNetLib')
-    implementation project(path: ':MonitorApmLib')
     implementation project(path: ':MonitorFpsLib')
 
 //    implementation project(path: ':LeakCanarySdk')

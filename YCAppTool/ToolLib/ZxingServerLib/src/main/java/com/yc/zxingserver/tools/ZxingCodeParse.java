@@ -1,6 +1,7 @@
 package com.yc.zxingserver.tools;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 import androidx.annotation.NonNull;
 
@@ -13,22 +14,16 @@ import com.google.zxing.Result;
 import com.google.zxing.common.GlobalHistogramBinarizer;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeReader;
-import com.yc.toolutils.system.AppLogUtils;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
 
 /**
- * <pre>
- *     @author yangchong
- *     email  : yangchong211@163.com
- *     time  : 2020/6/6
- *     desc  : 解析二维码工具类
- *     revise: 参考：https://blog.csdn.net/mountain_hua/article/details/80646089
- * </pre>
+ * 解析二维码工具类
  */
 public final class ZxingCodeParse {
+
 
     public static final int DEFAULT_REQ_WIDTH = 450;
     public static final int DEFAULT_REQ_HEIGHT = 800;
@@ -99,7 +94,7 @@ public final class ZxingCodeParse {
             MultiFormatReader reader = new MultiFormatReader();
             reader.setHints(hints);
             RGBLuminanceSource source = getRGBLuminanceSource(
-                    ZxingImageUtils.compressBitmap(bitmapPath, reqWidth, reqHeight));
+                    compressBitmap(bitmapPath, reqWidth, reqHeight));
             if (source != null) {
 
                 boolean isReDecode;
@@ -144,9 +139,7 @@ public final class ZxingCodeParse {
                 reader.reset();
             }
         } catch (Exception e) {
-            AppLogUtils.w(e.getMessage());
         }
-
         return result;
     }
 
@@ -199,11 +192,13 @@ public final class ZxingCodeParse {
      * @param hints      配置参数
      * @return 码内容
      */
-    public static Result parseQRCodeResult(String bitmapPath, int reqWidth, int reqHeight, Map<DecodeHintType, ?> hints) {
+    public static Result parseQRCodeResult(String bitmapPath, int reqWidth,
+                                           int reqHeight, Map<DecodeHintType, ?> hints) {
         Result result = null;
         try {
             QRCodeReader reader = new QRCodeReader();
-            RGBLuminanceSource source = getRGBLuminanceSource(ZxingImageUtils.compressBitmap(bitmapPath, reqWidth, reqHeight));
+            Bitmap compressBitmap = compressBitmap(bitmapPath, reqWidth, reqHeight);
+            RGBLuminanceSource source = getRGBLuminanceSource(compressBitmap);
             if (source != null) {
                 boolean isReDecode;
                 try {
@@ -233,7 +228,8 @@ public final class ZxingCodeParse {
                 }
                 if (isReDecode && source.isRotateSupported()) {
                     try {
-                        BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source.rotateCounterClockwise()));
+                        BinaryBitmap bitmap = new BinaryBitmap(
+                                new HybridBinarizer(source.rotateCounterClockwise()));
                         result = reader.decode(bitmap, hints);
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -242,7 +238,6 @@ public final class ZxingCodeParse {
                 reader.reset();
             }
         } catch (Exception e) {
-            AppLogUtils.w(e.getMessage());
         }
         return result;
     }
@@ -261,6 +256,43 @@ public final class ZxingCodeParse {
         bitmap.getPixels(pixels, 0, bitmap.getWidth(), 0, 0,
                 bitmap.getWidth(), bitmap.getHeight());
         return new RGBLuminanceSource(width, height, pixels);
+    }
+
+    /**
+     * 压缩图片
+     */
+    public static Bitmap compressBitmap(String path, int reqWidth, int reqHeight) {
+        BitmapFactory.Options newOpts = new BitmapFactory.Options();
+        // 开始读入图片，此时把options.inJustDecodeBounds 设回true了
+        //获取原始图片大小
+        newOpts.inJustDecodeBounds = true;
+        // 此时返回bm为空
+        BitmapFactory.decodeFile(path, newOpts);
+        float width = newOpts.outWidth;
+        float height = newOpts.outHeight;
+        // 缩放比，由于是固定比例缩放，只用高或者宽其中一个数据进行计算即可
+        // wSize=1表示不缩放
+        int wSize = 1;
+        if (width > reqWidth) {
+            // 如果宽度大的话根据宽度固定大小缩放
+            wSize = (int) (width / reqWidth);
+        }
+        // wSize=1表示不缩放
+        int hSize = 1;
+        // 如果高度高的话根据宽度固定大小缩放
+        if (height > reqHeight) {
+            hSize = (int) (height / reqHeight);
+        }
+        int size = Math.max(wSize, hSize);
+        if (size <= 0) {
+            size = 1;
+        }
+        // 设置缩放比例
+        newOpts.inSampleSize = size;
+        // 重新读入图片，注意此时已经把options.inJustDecodeBounds 设回false了
+        newOpts.inJustDecodeBounds = false;
+        Bitmap bitmap = BitmapFactory.decodeFile(path, newOpts);
+        return bitmap;
     }
 
 

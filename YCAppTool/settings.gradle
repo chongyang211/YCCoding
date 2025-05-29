@@ -2,55 +2,30 @@
 
 
 /* +++++++++ 业务组件层 +++++++++ */
-include ':AppGrpc'
-project(':AppGrpc').projectDir = new File('Business/AppGrpc')
-include ':AppHelper'
-project(':AppHelper').projectDir = new File('Business/AppHelper')
-include ':AppLeet'
-project(':AppLeet').projectDir = new File('Business/AppLeet')
-include ':AppDesign'
-project(':AppDesign').projectDir = new File('Business/AppDesign')
-include ':AppWebView'
-project(':AppWebView').projectDir = new File('Business/AppWebView')
-include ':AnimBusiness', ':MvvmDatabinding', ':DemoBusiness', ':MvpTodoBusiness',
-        ':MvvmTodoLive', ':JetpackBusiness',
-        ':BleBusiness', ':NotifyBusiness', ':KotlinBusiness',
-        ':SocketBusiness', ':LibraryLayer'
+include ':MvvmDatabinding',':MvpTodoBusiness', ':MvvmTodoLive', ':JetpackBusiness'
+//Jetpack
 project(':JetpackBusiness').projectDir = new File('Business/JetpackBusiness')
-project(':DemoBusiness').projectDir = new File('Business/DemoBusiness')
-project(':AnimBusiness').projectDir = new File('Business/AnimBusiness')
+//mvp
 project(':MvpTodoBusiness').projectDir = new File('Business/MvpTodoBusiness')
+//mvvm
 project(':MvvmDatabinding').projectDir = new File('Business/MvvmDatabinding')
+//mvvm
 project(':MvvmTodoLive').projectDir = new File('Business/MvvmTodoLive')
-project(':BleBusiness').projectDir = new File('Business/BleBusiness')
-project(':NotifyBusiness').projectDir = new File('Business/NotifyBusiness')
-project(':KotlinBusiness').projectDir = new File('Business/KotlinBusiness')
-project(':SocketBusiness').projectDir = new File('Business/SocketBusiness')
-project(':LibraryLayer').projectDir = new File('Business/LibraryLayer')
 
 
 /* +++++++++ 框架业务服务层 +++++++++ */
 //demo
 include ':AppServer'
 project(':AppServer').projectDir = new File('ServerLib/AppServer')
-//库
-include ':GlideServer',
-        ':GsonServer', ':IpcServer', ':TcpServerLib', ':TcpManager',
-        ':EasyBleServer', ':OkHttpServer', ':PrivateServer',
-        ':AppLogClient', ':AppLogService', ':SignalHooker',
-        ':CompressServer', ':GrpcServer'
+include ':GlideServer', ':GsonServer', ':EasyBleServer', ':OkHttpServer', ':PrivateServer',
+         ':SignalHooker', ':CompressServer', ':GrpcServer'
 project(':GlideServer').projectDir = new File('ServerLib/GlideServer')
 project(':GsonServer').projectDir = new File('ServerLib/GsonServer')
-project(':AppLogClient').projectDir = new File('ServerLib/AppLogClient')
-project(':AppLogService').projectDir = new File('ServerLib/AppLogService')
-project(':IpcServer').projectDir = new File('ServerLib/IpcServer')
 project(':EasyBleServer').projectDir = new File('ServerLib/EasyBleServer')
 project(':OkHttpServer').projectDir = new File('ServerLib/OkHttpServer')
 project(':PrivateServer').projectDir = new File('ServerLib/PrivateServer')
 project(':SignalHooker').projectDir = new File('ServerLib/SignalHooker')
 project(':CompressServer').projectDir = new File('ServerLib/CompressServer')
-project(':TcpServerLib').projectDir = new File('ServerLib/TcpServerLib')
-project(':TcpManager').projectDir = new File('ServerLib/TcpManager')
 project(':GrpcServer').projectDir = new File('ServerLib/GrpcServer')
 
 
@@ -154,39 +129,18 @@ include ':AppTool'
 project(':AppTool').projectDir = new File('ToolLib/AppTool')
 //库
 include ':ZxingServerLib', ':SocketHelper', ':In18HelperLib', ':CountTimerLib',
-        ':AnimatorToolLib', ':ThreadPoolLib', ':AutoCloserLib', ':AppProcessLib',':LooperThread',
-         ':AppUpdateLib', ':AnimBaseHelper', ':NotCaptureLib', ':CameraHelper', ':ZxingTool'
+        ':ThreadPoolLib', ':AutoCloserLib', ':LooperThread',
+         ':AppUpdateLib', ':AnimBaseHelper', ':NotCaptureLib', ':CameraHelper'
 project(':ZxingServerLib').projectDir = new File('ToolLib/ZxingServerLib')
-project(':ZxingTool').projectDir = new File('ToolLib/ZxingTool')
 project(':SocketHelper').projectDir = new File('ToolLib/SocketHelper')
 project(':In18HelperLib').projectDir = new File('ToolLib/In18HelperLib')
 project(':CountTimerLib').projectDir = new File('ToolLib/CountTimerLib')
-project(':AnimatorToolLib').projectDir = new File('ToolLib/AnimatorToolLib')
 project(':ThreadPoolLib').projectDir = new File('ToolLib/ThreadPoolLib')
-project(':AppProcessLib').projectDir = new File('ToolLib/AppProcessLib')
 project(':AppUpdateLib').projectDir = new File('ToolLib/AppUpdateLib')
 project(':AnimBaseHelper').projectDir = new File('ToolLib/AnimBaseHelper')
 project(':NotCaptureLib').projectDir = new File('ToolLib/NotCaptureLib')
 project(':LooperThread').projectDir = new File('ToolLib/LooperThread')
 project(':CameraHelper').projectDir = new File('ToolLib/CameraHelper')
-//project(':MmapLog').projectDir = new File('ToolLib/MmapLog')
-
-
-/* +++++++++ Apt框架基础工具库 +++++++++ */
-//include ':RouteCompiler', ':RouteManager', ':RouteAnnotations', ':BuildTimeCostPlugin',':MethodTimePlugin'
-//        ':ServiceLoaderApi', ':ServiceLoaderAnnotations', ':ServiceLoaderRegistry',
-//        ':ServiceLoaderPlugin', ':ServiceLoaderProcessor'
-//project(':RouteCompiler').projectDir = new File('AptHelper/RouteCompiler')
-//project(':RouteManager').projectDir = new File('AptHelper/RouteManager')
-//project(':RouteAnnotations').projectDir = new File('AptHelper/RouteAnnotations')
-//project(':BuildTimeCostPlugin').projectDir = new File('AptHelper/BuildTimeCostPlugin')
-//project(':ServiceLoaderApi').projectDir = new File('AptHelper/ServiceLoaderApi')
-//project(':ServiceLoaderAnnotations').projectDir = new File('AptHelper/ServiceLoaderAnnotations')
-//project(':ServiceLoaderRegistry').projectDir = new File('AptHelper/ServiceLoaderRegistry')
-//project(':ServiceLoaderPlugin').projectDir = new File('AptHelper/ServiceLoaderPlugin')
-//project(':ServiceLoaderProcessor').projectDir = new File('AptHelper/ServiceLoaderProcessor')
-//project(':MethodTimePlugin').projectDir = new File('AptHelper/MethodTimePlugin')
-
 
 
 /* +++++++++ App监控库 +++++++++ */
@@ -195,20 +149,18 @@ include ':AppMonitor'
 project(':AppMonitor').projectDir = new File('MonitorLib/AppMonitor')
 //库
 include ':MonitorCpuLib', ':MonitorCatonLib', ':MonitorAnrLib', ':MonitorCrashLib',
-        ':MonitorNetLib', ':MonitorFileLib', ':MonitorOomLib',
-        ':MonitorXposed', ':MonitorMemory',':MonitorLeakLib',
-        ':MonitorApmLib', ':MonitorPingLib', ':MonitorFpsLib',':MonitorThread',
+        ':MonitorNetLib', ':MonitorFileLib',
+        ':MonitorXposed', ':MonitorMemory',
+        ':MonitorPingLib', ':MonitorFpsLib',
         ':MonitorPrivacy', ':MonitorTimeLib', ':MonitorSpeed', ':MonitorInterceptor',
-        ':MonitorPhone', ':MonitorPicture', ':MonitorMethod', ':MonitorFlow'
+        ':MonitorFlow'
 project(':MonitorCpuLib').projectDir = new File('MonitorLib/MonitorCpuLib')
 project(':MonitorCatonLib').projectDir = new File('MonitorLib/MonitorCatonLib')
 project(':MonitorAnrLib').projectDir = new File('MonitorLib/MonitorAnrLib')
 project(':MonitorCrashLib').projectDir = new File('MonitorLib/MonitorCrashLib')
 project(':MonitorNetLib').projectDir = new File('MonitorLib/MonitorNetLib')
 project(':MonitorFileLib').projectDir = new File('MonitorLib/MonitorFileLib')
-project(':MonitorOomLib').projectDir = new File('MonitorLib/MonitorOomLib')
 project(':MonitorXposed').projectDir = new File('MonitorLib/MonitorXposed')
-project(':MonitorApmLib').projectDir = new File('MonitorLib/MonitorApmLib')
 project(':MonitorPingLib').projectDir = new File('MonitorLib/MonitorPingLib')
 project(':MonitorFpsLib').projectDir = new File('MonitorLib/MonitorFpsLib')
 project(':MonitorPrivacy').projectDir = new File('MonitorLib/MonitorPrivacy')
@@ -216,11 +168,6 @@ project(':MonitorTimeLib').projectDir = new File('MonitorLib/MonitorTimeLib')
 project(':MonitorSpeed').projectDir = new File('MonitorLib/MonitorSpeed')
 project(':MonitorInterceptor').projectDir = new File('MonitorLib/MonitorInterceptor')
 project(':MonitorMemory').projectDir = new File('MonitorLib/MonitorMemory')
-project(':MonitorPhone').projectDir = new File('MonitorLib/MonitorPhone')
-project(':MonitorPicture').projectDir = new File('MonitorLib/MonitorPicture')
-project(':MonitorLeakLib').projectDir = new File('MonitorLib/MonitorLeakLib')
-project(':MonitorThread').projectDir = new File('MonitorLib/MonitorThread')
-project(':MonitorMethod').projectDir = new File('MonitorLib/MonitorMethod')
 project(':MonitorFlow').projectDir = new File('MonitorLib/MonitorFlow')
 
 
@@ -230,12 +177,10 @@ include ':AppPlayer'
 project(':AppPlayer').projectDir = new File('PlayerLib/AppPlayer')
 //库
 include ':VideoCache', ':EasyTtsPlayer', ':VideoSurface', ':EasyMediaPlayer',
-        ':MusicPlayer', ':VideoKernel', ':VideoPlayer', ':VideoView',
-        ':AudioHelper', ':MediaScanner'
+        ':VideoKernel', ':VideoPlayer', ':VideoView', ':AudioHelper', ':MediaScanner'
 project(':VideoCache').projectDir = new File('PlayerLib/VideoCache')
 //简单型tts播放器，简单tts和综合性tts
 project(':EasyTtsPlayer').projectDir = new File('PlayerLib/EasyTtsPlayer')
-project(':MusicPlayer').projectDir = new File('PlayerLib/MusicPlayer')
 //视频播放器内核，ijk，exo，media
 project(':VideoKernel').projectDir = new File('PlayerLib/VideoKernel')
 //视频播放器surface
@@ -290,27 +235,24 @@ project(':GsonLib').projectDir = new File('ThirdLib/GsonLib')
 include ':AppHardware'
 project(':AppHardware').projectDir = new File('Hardware/AppHardware')
 //库
-include 'SecondaryScreen',':UsbManager',':SerialPort', ':CardManager', ':NfcHelper',
+include 'SecondaryScreen',':UsbManager',':SerialPortSdk', ':CardManager',
         ':KeyEventLib'
 project(':SecondaryScreen').projectDir = new File('Hardware/SecondaryScreen')
 project(':CardManager').projectDir = new File('Hardware/CardManager')
 project(':UsbManager').projectDir = new File('Hardware/UsbManager')
-project(':SerialPort').projectDir = new File('Hardware/SerialPort')
+project(':SerialPortSdk').projectDir = new File('Hardware/SerialPortSdk')
 project(':KeyEventLib').projectDir = new File('Hardware/KeyEventLib')
-project(':NfcHelper').projectDir = new File('Hardware/NfcHelper')
-
 
 
 /* +++++++++ JNI开发demo +++++++++ */
 include ':AppJni'
-include ':CallJniLib', ':TestJniLib',':SafetyJniLib',':ReLinker', ':SerialPortSdk',
+include ':CallJniLib', ':TestJniLib',':SafetyJniLib',':ReLinker',
         ':UVCCameraLib', ':UsbCameraLib', ':usbCameraTest1',':usbCameraTest0',':usbCameraTest2',':usbCameraTest3',
         ':usbCameraTest4',':usbCameraTest5',':usbCameraTest6',':usbCameraTest7',':usbCameraTest8'
 project(':CallJniLib').projectDir = new File('JniNdkLib/CallJniLib')
 project(':TestJniLib').projectDir = new File('JniNdkLib/TestJniLib')
 project(':SafetyJniLib').projectDir = new File('JniNdkLib/SafetyJniLib')
 project(':ReLinker').projectDir = new File('JniNdkLib/ReLinker')
-project(':SerialPortSdk').projectDir = new File('JniNdkLib/SerialPortSdk')
 project(':UVCCameraLib').projectDir = new File('JniNdkLib/UVCCameraLib')
 project(':UsbCameraLib').projectDir = new File('JniNdkLib/UsbCameraLib')
 project(':usbCameraTest1').projectDir = new File('JniNdkLib/usbCameraTest1')
@@ -322,7 +264,3 @@ project(':usbCameraTest5').projectDir = new File('JniNdkLib/usbCameraTest5')
 project(':usbCameraTest6').projectDir = new File('JniNdkLib/usbCameraTest6')
 project(':usbCameraTest7').projectDir = new File('JniNdkLib/usbCameraTest7')
 project(':usbCameraTest8').projectDir = new File('JniNdkLib/usbCameraTest8')
-
-include ':AppTest'
-include ':MmapLog'
-include ':serialport'

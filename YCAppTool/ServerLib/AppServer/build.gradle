@@ -40,14 +40,9 @@ dependencies {
     implementation(rootProject.ext.dependencies["okhttp"])
     implementation(rootProject.ext.dependencies["lifecycleRuntime"])
     implementation 'com.github.yangchong211.YCDialog:ToastUtils:3.6.9'
-    implementation project(path: ':BleBusiness')
-    implementation project(path: ':LibraryLayer')
     implementation project(path: ':ToolUtilsLib')
     implementation project(path: ':RoundCorners')
-    implementation project(path: ':MonitorPhone')
     implementation project(path: ':MonitorPingLib')
-    implementation project(path: ':AppLogClient')
-    implementation project(path: ':AppLogService')
     implementation project(path: ':MonitorFileLib')
     implementation project(path: ':PrivateServer')
     implementation project(path: ':OkHttpServer')
@@ -57,6 +52,5 @@ dependencies {
     implementation project(path: ':AppTaskLib')
     implementation project(path: ':NotCaptureLib')
     implementation project(path: ':AudioHelper')
-    implementation project(path: ':TcpManager')
 }
 

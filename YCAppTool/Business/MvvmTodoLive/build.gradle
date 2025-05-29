@@ -60,7 +60,6 @@ dependencies {
     annotationProcessor(rootProject.ext.dependencies["roomCompiler"])
     implementation(rootProject.ext.dependencies["lifecycle"])
     annotationProcessor(rootProject.ext.dependencies["lifecycleCompiler"])
-    implementation project(path: ':LibraryLayer')
     implementation "androidx.legacy:legacy-support-v4:1.0.0"
     implementation "com.google.guava:guava:27.0.1-android"
 }

@@ -7,5 +7,9 @@
             android:name="com.yc.activitymanager.activity.ManagerProvider"
             android:authorities="${applicationId}.baseProvider"
             android:exported="false" />
+        <provider
+            android:name="com.yc.activitymanager.process.ProcessInitializer"
+            android:authorities="${applicationId}.ProcessInitializer"
+            android:exported="false" />
     </application>
 </manifest>

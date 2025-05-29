@@ -86,7 +86,6 @@ dependencies {
     implementation project(path: ':VideoPlayer')
     implementation project(path: ':VideoKernel')
     implementation project(path: ':VideoView')
-    implementation project(path: ':MusicPlayer')
     implementation project(path: ':EasyTtsPlayer')
     implementation project(path: ':VideoSurface')
 

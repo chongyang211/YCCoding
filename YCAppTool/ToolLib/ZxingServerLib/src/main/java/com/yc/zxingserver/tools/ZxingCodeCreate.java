@@ -12,21 +12,12 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-import com.yc.toolutils.system.AppLogUtils;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <pre>
- *     @author yangchong
- *     email  : yangchong211@163.com
- *     time  : 2020/6/6
- *     desc  : 生成二维码工具类
- *     revise: 参考博客
- *                  https://www.cnblogs.com/tfxz/p/12621626.html
- *                  https://www.jianshu.com/p/e5a45f9fbce3
- * </pre>
+ * 生成二维码工具类
  */
 public final class ZxingCodeCreate {
 
@@ -42,7 +33,7 @@ public final class ZxingCodeCreate {
      *
      * @param content   二维码的内容
      * @param heightPix 二维码的高
-     * @return
+     * @return 二维码图片
      */
     public static Bitmap createQRCode(String content, int heightPix) {
         return createQRCode(content, heightPix, null);
@@ -54,7 +45,7 @@ public final class ZxingCodeCreate {
      * @param content   二维码的内容
      * @param heightPix 二维码的高
      * @param logo      logo大小默认占二维码的20%
-     * @return
+     * @return 二维码图片
      */
     public static Bitmap createQRCode(String content, int heightPix, Bitmap logo) {
         return createQRCode(content, heightPix, logo, Color.BLACK);
@@ -67,7 +58,7 @@ public final class ZxingCodeCreate {
      * @param heightPix 二维码的高
      * @param logo      logo大小默认占二维码的20%
      * @param codeColor 二维码的颜色
-     * @return
+     * @return 二维码图片
      */
     public static Bitmap createQRCode(String content, int heightPix, Bitmap logo, int codeColor) {
         return createQRCode(content, heightPix, logo, 0.2f, codeColor);
@@ -81,10 +72,11 @@ public final class ZxingCodeCreate {
      * @param logo      二维码中间的logo
      * @param ratio     logo所占比例 因为二维码的最大容错率为30%，所以建议ratio的范围小于0.3
      * @param codeColor 二维码的颜色
-     * @return
+     * @return 二维码图片
      */
-    public static Bitmap createQRCode(String content, int heightPix, Bitmap logo,
-                                      @FloatRange(from = 0.0f, to = 1.0f) float ratio, int codeColor) {
+    public static Bitmap createQRCode(String content, int heightPix,
+                                      Bitmap logo, @FloatRange(from = 0.0f, to = 1.0f) float ratio,
+                                      int codeColor) {
         //配置参数
         Map<EncodeHintType, Object> hints = new HashMap<>();
         // 设置编码方式
@@ -105,7 +97,7 @@ public final class ZxingCodeCreate {
      * @param ratio     logo所占比例 因为二维码的最大容错率为30%，所以建议ratio的范围小于0.3
      * @param hints     配置参数
      * @param codeColor 二维码的颜色
-     * @return
+     * @return 二维码图片
      */
     public static Bitmap createQRCode(String content, int heightPix, Bitmap logo,
                                       @FloatRange(from = 0.0f, to = 1.0f) float ratio,
@@ -136,7 +128,6 @@ public final class ZxingCodeCreate {
             }
             return bitmap;
         } catch (WriterException e) {
-            AppLogUtils.w(e.getMessage());
         }
         return null;
     }
@@ -148,9 +139,10 @@ public final class ZxingCodeCreate {
      * @param src   二维码
      * @param logo  logo
      * @param ratio logo所占比例 因为二维码的最大容错率为30%，所以建议ratio的范围小于0.3
-     * @return
+     * @return 二维码图片
      */
-    private static Bitmap addLogo(Bitmap src, Bitmap logo, @FloatRange(from = 0.0f, to = 1.0f) float ratio) {
+    private static Bitmap addLogo(Bitmap src, Bitmap logo,
+                                  @FloatRange(from = 0.0f, to = 1.0f) float ratio) {
         if (src == null) {
             return null;
         }
@@ -175,12 +167,12 @@ public final class ZxingCodeCreate {
             Canvas canvas = new Canvas(bitmap);
             canvas.drawBitmap(src, 0, 0, null);
             canvas.scale(scaleFactor, scaleFactor, srcWidth / 2.0f, srcHeight / 2.0f);
-            canvas.drawBitmap(logo, (srcWidth - logoWidth) / 2.0f, (srcHeight - logoHeight) / 2.0f, null);
+            canvas.drawBitmap(logo, (srcWidth - logoWidth) / 2.0f,
+                    (srcHeight - logoHeight) / 2.0f, null);
             canvas.save();
             canvas.restore();
         } catch (Exception e) {
             bitmap = null;
-            AppLogUtils.w(e.getMessage());
         }
         return bitmap;
     }

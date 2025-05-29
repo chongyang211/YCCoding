@@ -123,8 +123,6 @@ dependencies {
     implementation project(path: ':NetWorkLib')
     //其他
     implementation project(path: ':RoundCorners')
-    implementation project(path: ':LibraryLayer')
-    implementation project(path: ':AppProcessLib')
     implementation project(path: ':MonitorFileLib')
     implementation project(path: ':CompressServer')
     implementation project(path: ':AppRestartLib')
