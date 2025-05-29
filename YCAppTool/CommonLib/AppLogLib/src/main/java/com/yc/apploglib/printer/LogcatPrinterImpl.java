@@ -1,7 +1,5 @@
 package com.yc.apploglib.printer;
 
-import com.yc.apploglib.printer.AbsPrinter;
-
 /**
  * <pre>
  *     @author yangchong
@@ -27,5 +25,10 @@ public class LogcatPrinterImpl extends AbsPrinter {
             message += " Desc: " + android.util.Log.getStackTraceString(tr);
         }
         android.util.Log.println(level, tag, message);
+    }
+
+    @Override
+    public void clearOldFile() {
+        super.clearOldFile();
     }
 }

@@ -1,12 +1,14 @@
 package com.yc.apploglib.config;
 
 
+import android.content.Context;
+
 /**
  * @author yangchong
  * @GitHub : <a href="https://github.com/yangchong211/YCCommonLib">...</a>
  * @email : yangchong211@163.com
- * @time  : 2018/11/9
- * @desc  : log日志配置类
+ * @time : 2018/11/9
+ * @desc : log日志配置类
  * @revise:
  */
 public final class AppLogConfig {
@@ -22,7 +24,7 @@ public final class AppLogConfig {
     /**
      * 是否写入文件
      */
-    private final boolean isWriteFile;
+    private boolean isWriteFile;
     /**
      * 文件路径
      */
@@ -31,6 +33,14 @@ public final class AppLogConfig {
      * 日志标签tag
      */
     private final String tag;
+    /**
+     * 上下文
+     */
+    private final Context context;
+    /**
+     * 过期清理日志的时间（天数）
+     */
+    private final int clearLogFileTime = 7;
 
     private AppLogConfig(Builder builder) {
         this.enableDbgLog = builder.enableDbgLog;
@@ -38,6 +48,7 @@ public final class AppLogConfig {
         this.filePath = builder.filePath;
         this.isWriteFile = builder.isWriteFile;
         this.tag = builder.tag;
+        this.context = builder.context;
     }
 
 
@@ -64,12 +75,22 @@ public final class AppLogConfig {
         return tag;
     }
 
+    public Context getContext() {
+        return context;
+    }
+
+    public int getClearLogFileTime() {
+        return clearLogFileTime;
+    }
+
     public static class Builder {
         private boolean enableDbgLog;
         private int minLogLevel = LogDispatcher.OFF;
         private String filePath;
-        private boolean isWriteFile;
+        private boolean isWriteFile = true;
         private String tag;
+        private Context context;
+        private int clearLogFileTime = 7;
 
         public Builder enableDbgLog(boolean debugLog) {
             this.enableDbgLog = debugLog;
@@ -93,6 +114,16 @@ public final class AppLogConfig {
 
         public Builder minLogLevel(int minLogLevel) {
             this.minLogLevel = minLogLevel;
+            return this;
+        }
+
+        public Builder setContext(Context context) {
+            this.context = context;
+            return this;
+        }
+
+        public Builder setClearLogFileTime(int clearLogFileTime) {
+            this.clearLogFileTime = clearLogFileTime;
             return this;
         }
 

@@ -1,12 +1,5 @@
 package com.yc.apploglib.config;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.VisibleForTesting;
-
-import com.yc.apploglib.printer.AbsPrinter;
-
-import java.util.concurrent.CopyOnWriteArrayList;
-
 import static android.util.Log.ASSERT;
 import static android.util.Log.DEBUG;
 import static android.util.Log.ERROR;
@@ -14,10 +7,18 @@ import static android.util.Log.INFO;
 import static android.util.Log.VERBOSE;
 import static android.util.Log.WARN;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.VisibleForTesting;
+
+
+import com.yc.apploglib.printer.AbsPrinter;
+
+import java.util.concurrent.CopyOnWriteArrayList;
+
 /**
  * <pre>
  *     @author yangchong
- *     GitHub : https://github.com/yangchong211/YCCommonLib
+ *     GitHub : <a href="https://github.com/yangchong211/YCCommonLib">...</a>
  *     email : yangchong211@163.com
  *     time  : 2018/11/9
  *     desc  : log日志分发
@@ -70,6 +71,14 @@ public final class LogDispatcher {
             }
         }
         return false;
+    }
+
+    public void clearOldFile() {
+        for (AbsPrinter printer : sPrinters) {
+            if (printer != null) {
+                printer.clearOldFile();
+            }
+        }
     }
 
     /**

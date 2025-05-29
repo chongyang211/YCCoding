@@ -1,8 +1,8 @@
 package com.yc.apploglib.printer;
 
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 
 /**
  * <pre>
@@ -33,6 +33,13 @@ public abstract class AbsPrinter {
      * @param tr      异常
      */
     public abstract void println(int level, String tag, String message, Throwable tr);
+
+    /**
+     * 清理过期文件，默认是7天
+     */
+    public void clearOldFile() {
+        //子类可以自由实现
+    }
 
     @Override
     public final boolean equals(@Nullable Object obj) {

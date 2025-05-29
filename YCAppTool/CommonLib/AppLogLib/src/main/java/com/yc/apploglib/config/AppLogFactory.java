@@ -1,12 +1,12 @@
 package com.yc.apploglib.config;
 
+import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.yc.toolutils.context.AppToolUtils;
-import com.yc.toolutils.file.AppFileUtils;
+import com.yc.apploglib.AppLogHelper;
 import com.yc.apploglib.log.DefaultLoggerImpl;
 import com.yc.apploglib.log.InterLogger;
 import com.yc.apploglib.printer.AbsPrinter;
@@ -38,12 +38,13 @@ public final class AppLogFactory {
         if (config.isWriteFile()){
             File file;
             if (TextUtils.isEmpty(config.getFilePath())){
-                String log = AppFileUtils.getExternalFilePath(AppToolUtils.getApp(), "ycLog");
+                Context context = config.getContext();
+                String log = getExternalFilePath(context, "logger");
                 file = new File(log);
             } else {
                 file = new File(config.getFilePath());
             }
-            Log.d("AppLog" , "file path" + file.getPath());
+            Log.d(AppLogHelper.TAG , "file path" + file.getPath());
             S_LOG_DISPATCHER.addPrinter(new FilePrinterImpl(file));
         }
         S_LOG_DISPATCHER.setMinLogLevel(config.getMinLogLevel());
@@ -71,7 +72,7 @@ public final class AppLogFactory {
 
     public static AppLogConfig getAppLogConfig(){
         if (appLogConfig == null){
-            throw new NullPointerException("please init log at first");
+            throw new NullPointerException("AppLogFactory please init log at first");
         }
         return appLogConfig;
     }
@@ -81,5 +82,35 @@ public final class AppLogFactory {
             S_LOG_DISPATCHER.addPrinter(new LogcatPrinterImpl());
             S_LOG_DISPATCHER.setMinLogLevel(logLevel);
         }
+    }
+
+
+    /**
+     * 外部存储根目录，举个例子
+     * files:/storage/emulated/0/Android/data/包名/files
+     */
+    public static String getExternalFilePath(Context context , String name) {
+        String path = getExternalFilePath(context) + File.separator + name;
+        File file = new File(path);
+        if (!file.exists()) {
+            //创建一个File对象所对应的目录，成功返回true，否则false。且File对象必须为路径而不是文件。
+            //创建多级目录，创建路径中所有不存在的目录
+            file.mkdirs();
+        }
+        return path;
+    }
+
+    /**
+     * 获取外部存储根目录的files文件路径
+     * files:/storage/emulated/0/Android/data/包名/files
+     * @param context   上下文
+     * @return          路径
+     */
+    public static String getExternalFilePath(Context context){
+        File filesDir = context.getExternalFilesDir(null);
+        if (filesDir!=null && filesDir.exists()){
+            return filesDir.getAbsolutePath();
+        }
+        return null;
     }
 }

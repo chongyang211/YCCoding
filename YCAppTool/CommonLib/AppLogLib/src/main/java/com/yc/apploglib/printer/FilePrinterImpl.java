@@ -1,16 +1,24 @@
 package com.yc.apploglib.printer;
 
+import static com.yc.apploglib.AppLogHelper.TAG;
+
+import android.content.Context;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Process;
 import android.util.Log;
 
+import com.yc.apploglib.config.AppLogFactory;
+
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -33,7 +41,7 @@ public class FilePrinterImpl extends AbsPrinter {
      */
     private static final String PRINTER_NAME = "FilePrinter";
     /**
-     * file文件
+     * file文件，父目录
      */
     private final File mLogDir;
     /**
@@ -43,7 +51,16 @@ public class FilePrinterImpl extends AbsPrinter {
     /**
      * file文件格式
      */
-    private SimpleDateFormat mFileNameFormat = null;
+    private SimpleDateFormat simpleDateFormat = null;
+    /**
+     * 时间
+     */
+    private long tomorrow;
+    /**
+     * 工作日志
+     */
+    private File workLogFile;
+    private static final long DAY = 24 * 3600 * 1000;
 
     /**
      * File Thread handler.
@@ -58,6 +75,16 @@ public class FilePrinterImpl extends AbsPrinter {
 
     public FilePrinterImpl(File logDir) {
         mLogDir = logDir;
+        //初始化文件
+        tomorrow = System.currentTimeMillis() / DAY + 1;
+        //初始化文件夹
+        SimpleDateFormat simpleDateFormat = getSimpleDateFormat();
+        workLogFile = new File(mLogDir, simpleDateFormat.format(System.currentTimeMillis()) + ".log");
+        try {
+            workLogFile.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private SimpleDateFormat getInfoHeaderFormat() {
@@ -67,11 +94,11 @@ public class FilePrinterImpl extends AbsPrinter {
         return sInfoHeaderFormat;
     }
 
-    private SimpleDateFormat getFileNameFormat() {
-        if (mFileNameFormat == null) {
-            mFileNameFormat = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
+    private SimpleDateFormat getSimpleDateFormat() {
+        if (simpleDateFormat == null) {
+            simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         }
-        return mFileNameFormat;
+        return simpleDateFormat;
     }
 
     private PrintWriter getWriter() {
@@ -81,7 +108,7 @@ public class FilePrinterImpl extends AbsPrinter {
                 if (logFile == null) {
                     break;
                 }
-                Log.d("AppLog" , "logFile path" + logFile.getPath());
+                Log.d("AppLog", "logFile path" + logFile.getPath());
                 if (logFile.length() > MAX_LOG_FILE) {
                     if (!logFile.delete()) {
                         break;
@@ -123,10 +150,15 @@ public class FilePrinterImpl extends AbsPrinter {
             if (writer == null) {
                 return;
             }
+            StringBuilder sb = new StringBuilder();
+            sb.append("时间：").append(getInfoHeaderFormat().format(new Date())).append("-");
+            sb.append("线程id：").append(threadId).append("-");
+            sb.append("Level：").append(levelToStr(level)).append("-");
+            sb.append("tag：").append(tag).append("-");
+            sb.append("打印消息：").append(msg).append("；");
 
-            String log = String.format("%s %s-%s %s/%s %s/%s %s",
-                    getInfoHeaderFormat().format(new Date()), Process.myPid(), threadId,
-                    Process.myUid(), getProcessName(), levelToStr(level), tag, msg);
+            String log = sb.toString();
+            //Log.d("logWrite: ", log);
             writer.println(log);
             if (tr != null) {
                 tr.printStackTrace(writer);
@@ -141,17 +173,17 @@ public class FilePrinterImpl extends AbsPrinter {
 
     private static String levelToStr(int level) {
         switch (level) {
-            case android.util.Log.VERBOSE:
+            case Log.VERBOSE:
                 return "V";
-            case android.util.Log.DEBUG:
+            case Log.DEBUG:
                 return "D";
-            case android.util.Log.INFO:
+            case Log.INFO:
                 return "I";
-            case android.util.Log.WARN:
+            case Log.WARN:
                 return "W";
-            case android.util.Log.ERROR:
+            case Log.ERROR:
                 return "E";
-            case android.util.Log.ASSERT:
+            case Log.ASSERT:
                 return "A";
             default:
                 return "UNKNOWN";
@@ -173,21 +205,115 @@ public class FilePrinterImpl extends AbsPrinter {
     }
 
     File getLogFile() {
-        File file = new File(mLogDir, String.format("Log_%s_%s.log",
-                getFileNameFormat().format(new Date()), Process.myPid()));
-        File dir = file.getParentFile();
-        if (!dir.exists()) {
-            if (!dir.mkdirs()) {
-                if (!dir.exists()) {
-                    return null;
-                }
+        long today = System.currentTimeMillis() / DAY;
+        if (today >= tomorrow || mLogDir == null) {
+            tomorrow = today + 1;
+            SimpleDateFormat simpleDateFormat = getSimpleDateFormat();
+            workLogFile = new File(mLogDir, simpleDateFormat.format(System.currentTimeMillis()) + ".log");
+            try {
+                workLogFile.createNewFile();
+                Log.d("LogFile", "workLogFile " + workLogFile.getPath());
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
+        Log.d(TAG, "workLogFile " + workLogFile.getPath());
+        return workLogFile;
+    }
+
+    @Override
+    public void clearOldFile() {
+        File logPalmFile = getAppLogger();
+        if (logPalmFile == null) {
+            return;
+        }
+        long clearLogFileTime = AppLogFactory.getAppLogConfig().getClearLogFileTime();
+        if (clearLogFileTime > 7) {
+            //如果过期清理日志的时间（天数）大于7，则使用默认天数7，一周的日志
+            clearLogFileTime = 7;
+        }
+        List<File> fileList = getFileList(logPalmFile);
+        for (int i = 0; i < fileList.size(); i++) {
+            File file = fileList.get(i);
+            long fileTime = getFileTime(file);
+            long time = System.currentTimeMillis() - fileTime;
+            if (time > clearLogFileTime * 24 * 60 * 1000) {
+                //删除超过一周以前的数据
+                boolean deleteFile = deleteFile(file);
+                Log.d(TAG, "删除log文件状态：" + file.getName() + " , 状态" + deleteFile);
+            }
+
+            if (file.getName().endsWith("zip")) {
+                boolean deleteFile = deleteFile(file);
+                Log.d(TAG, "删除log日志zip文件" + file.getName() + " , 状态：" + deleteFile);
+            }
+        }
+    }
+
+    public File getAppLogger() {
+        Context context = AppLogFactory.getAppLogConfig().getContext();
+        //File filesDir = context.getFilesDir();
+        File filesDir = context.getExternalFilesDir(null);
+        if (filesDir == null) {
+            return null;
+        }
+        String path = filesDir.getAbsolutePath() + File.separator + "logger";
+        File file = new File(path);
+        if (!file.exists()) {
+            Log.d(TAG, "init palmLog create");
+            //创建一个File对象所对应的目录，成功返回true，否则false。且File对象必须为路径而不是文件。
+            //创建多级目录，创建路径中所有不存在的目录
+            file.mkdirs();
+        }
+        Log.d(TAG, "init palmLog path : " + file.getPath());
         return file;
     }
 
-    private static String getProcessName() {
-        return "?";
+
+    /**
+     * 获取某个file对应的子file列表
+     *
+     * @param dir file文件
+     * @return
+     */
+    private List<File> getFileList(File dir) {
+        List<File> fileList = new ArrayList<>();
+        if (dir.listFiles() != null) {
+            File[] files = dir.listFiles();
+            if (files == null || files.length <= 0) {
+                return fileList;
+            }
+            int length = files.length;
+            for (int i = 0; i < length; ++i) {
+                File file = files[i];
+                fileList.add(file);
+            }
+        }
+        return fileList;
+    }
+
+
+    /**
+     * 文件创建时间，方便测试查看缓存文件的最后修改时间
+     *
+     * @param file 文件
+     */
+    private long getFileTime(File file) {
+        if (file != null && file.exists()) {
+            return file.lastModified();
+        }
+        return 0L;
+    }
+
+
+    /**
+     * 删除文件
+     *
+     * @param file file文件
+     * @return true表示删除成功
+     */
+    private boolean deleteFile(final File file) {
+        return file != null && (!file.exists() || file.isFile() && file.delete());
     }
 
 }

@@ -1,5 +1,6 @@
 package com.yc.apploglib;
 
+
 import com.yc.apploglib.config.AppLogFactory;
 
 /**
@@ -13,6 +14,8 @@ import com.yc.apploglib.config.AppLogFactory;
  * </pre>
  */
 public final class AppLogHelper {
+
+    public static final String TAG = "logger";
 
     /**
      * Verbose
@@ -134,6 +137,10 @@ public final class AppLogHelper {
 
     public static void wtf(String tag, Throwable tr) {
         AppLogFactory.S_LOG_DISPATCHER.wtf(tag, tr);
+    }
+
+    public static void clearOldFile() {
+        AppLogFactory.S_LOG_DISPATCHER.clearOldFile();
     }
 }
 

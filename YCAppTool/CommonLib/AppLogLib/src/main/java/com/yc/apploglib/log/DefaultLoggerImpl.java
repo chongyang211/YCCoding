@@ -1,5 +1,6 @@
 package com.yc.apploglib.log;
 
+
 import com.yc.apploglib.config.LogDispatcher;
 
 /**
