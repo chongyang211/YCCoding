@@ -1,0 +1,43 @@
+[
+{
+  "directory": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/.cxx/cmake/debug/x86",
+  "command": "/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android17 --gcc-toolchain=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dlog_manager_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -lz -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/log_manager.dir/log_manager.cpp.o -c /Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/log_manager.cpp",
+  "file": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/log_manager.cpp"
+},
+
+{
+  "directory": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/.cxx/cmake/debug/x86",
+  "command": "/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android17 --gcc-toolchain=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dlog_manager_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -lz -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/log_manager.dir/log_buffer.cpp.o -c /Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/log_buffer.cpp",
+  "file": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/log_buffer.cpp"
+},
+
+{
+  "directory": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/.cxx/cmake/debug/x86",
+  "command": "/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android17 --gcc-toolchain=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dlog_manager_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -lz -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/log_manager.dir/log_buffer_header.cpp.o -c /Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/log_buffer_header.cpp",
+  "file": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/log_buffer_header.cpp"
+},
+
+{
+  "directory": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/.cxx/cmake/debug/x86",
+  "command": "/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android17 --gcc-toolchain=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dlog_manager_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -lz -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/log_manager.dir/flush_buffer.cpp.o -c /Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/flush_buffer.cpp",
+  "file": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/flush_buffer.cpp"
+},
+
+{
+  "directory": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/.cxx/cmake/debug/x86",
+  "command": "/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android17 --gcc-toolchain=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dlog_manager_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -lz -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/log_manager.dir/async_file.cpp.o -c /Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/async_file.cpp",
+  "file": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/async_file.cpp"
+},
+
+{
+  "directory": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/.cxx/cmake/debug/x86",
+  "command": "/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android17 --gcc-toolchain=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dlog_manager_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -lz -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/log_manager.dir/log_utils.cpp.o -c /Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/log_utils.cpp",
+  "file": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/log_utils.cpp"
+},
+
+{
+  "directory": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/.cxx/cmake/debug/x86",
+  "command": "/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android17 --gcc-toolchain=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/yangchong/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dlog_manager_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -frtti -fexceptions -lz -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/log_manager.dir/mmap_helper.cpp.o -c /Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/mmap_helper.cpp",
+  "file": "/Users/yc/newgit/YCCoding/YCAppTool/CommonLib/AppLogLib/src/main/cpp/mmap_helper.cpp"
+}
+]
