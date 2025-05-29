@@ -2,6 +2,7 @@
 #### 目录介绍
 - 01.基础概念介绍
 - 02.Api调用说明
+- 03.如何写日志数据
 
 
 
@@ -66,6 +67,30 @@ AppLogFactory.addPrinter(new AbsPrinter() {
     }
 });
 ```
+
+## 03.如何写日志数据
+
+如何写数据的设计：创建Writer对象，调用writer.write(string)进行写入数据。
+
+``` java
+try {
+    PrintWriter writer = getWriter();
+    writer.println(log);
+    if (tr != null) {
+        tr.printStackTrace(writer);
+        writer.println();
+    }
+    writer.flush();
+} catch (Throwable ignored) {
+}
+```
+
+flush写数据时机，粗略分为四种情况：
+
+1. 缓存池满
+2. 应用从前台进入后台
+3. 应用从后台恢复至前台
+4. 手动代码调用。手动代码调用一般发生在进入超高频触发区之前，或者是跨功能模块时，以及用户交互需求日志上传时。
 
 
 
