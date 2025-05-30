@@ -11,15 +11,18 @@
     <!-- 获取网络状态改变的权限 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-
     <application
         android:label="@string/app_name">
         <activity
-            android:name="com.yc.netlib.ui.NetRequestActivity"
+            android:name="com.yc.netlib.curl.ui.NetRequestActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"/>
         <activity
-            android:name="com.yc.netlib.ui.NetworkDetailActivity"
+            android:name="com.yc.netlib.curl.ui.NetworkDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.yc.netlib.speed.ConnectionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.yc.netlib.ping.MonitorPingActivity"
             android:screenOrientation="portrait"/>
     </application>
 </manifest>

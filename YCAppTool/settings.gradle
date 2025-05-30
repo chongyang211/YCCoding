@@ -129,18 +129,14 @@ project(':AppMonitor').projectDir = new File('MonitorLib/AppMonitor')
 include ':MonitorApmSdk', ':MonitorCrashLib',
         ':MonitorNetLib', ':MonitorFileLib',
         ':MonitorXposed',
-        ':MonitorPingLib',
-        ':MonitorPrivacy', ':MonitorTimeLib', ':MonitorSpeed', ':MonitorInterceptor'
+        ':MonitorPrivacy', ':MonitorTimeLib'
 project(':MonitorApmSdk').projectDir = new File('MonitorLib/MonitorApmSdk')
 project(':MonitorCrashLib').projectDir = new File('MonitorLib/MonitorCrashLib')
 project(':MonitorNetLib').projectDir = new File('MonitorLib/MonitorNetLib')
 project(':MonitorFileLib').projectDir = new File('MonitorLib/MonitorFileLib')
 project(':MonitorXposed').projectDir = new File('MonitorLib/MonitorXposed')
-project(':MonitorPingLib').projectDir = new File('MonitorLib/MonitorPingLib')
 project(':MonitorPrivacy').projectDir = new File('MonitorLib/MonitorPrivacy')
 project(':MonitorTimeLib').projectDir = new File('MonitorLib/MonitorTimeLib')
-project(':MonitorSpeed').projectDir = new File('MonitorLib/MonitorSpeed')
-project(':MonitorInterceptor').projectDir = new File('MonitorLib/MonitorInterceptor')
 
 
 /* +++++++++ 音视频 +++++++++ */

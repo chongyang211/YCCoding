@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.yc.looperthread.R;
 import com.yc.ycthreadpoollib.looper.IDoAction;
 import com.yc.ycthreadpoollib.heart.HeartManager;
 import com.yc.ycthreadpoollib.looper.HandlerLoopThread;
@@ -24,6 +23,8 @@ import java.util.ArrayList;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+
+import cn.ycbjie.ycthreadpoollib.R;
 
 public class HeartActivity extends AppCompatActivity {
 

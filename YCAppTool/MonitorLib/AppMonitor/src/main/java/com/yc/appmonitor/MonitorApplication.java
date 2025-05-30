@@ -5,7 +5,7 @@ import android.app.Application;
 
 import com.yc.monitortimelib.monitor.MonitorListener;
 import com.yc.monitortimelib.monitor.MonitorTimeHelper;
-import com.yc.netlib.utils.NetworkTool;
+import com.yc.netlib.curl.utils.NetworkTool;
 import com.yc.crash.lib.CrashHandler;
 import com.yc.crash.lib.CrashListener;
 import com.yc.toolutils.system.AppLogUtils;

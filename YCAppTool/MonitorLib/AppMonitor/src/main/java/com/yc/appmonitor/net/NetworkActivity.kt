@@ -8,11 +8,9 @@ import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.yc.appmonitor.MonitorApplication
 import com.yc.appmonitor.R
-import com.yc.appmonitor.net.NetworkActivity
 import com.yc.appmonitor.net.NetworkModel.DataListener
-import com.yc.netlib.ui.NetRequestActivity
+import com.yc.netlib.curl.ui.NetRequestActivity
 import com.yc.toastutils.ToastUtils
 import okhttp3.Call
 import okhttp3.Callback

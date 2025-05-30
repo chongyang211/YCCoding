@@ -42,13 +42,11 @@ dependencies {
     implementation 'com.github.yangchong211.YCDialog:ToastUtils:3.6.9'
     implementation project(path: ':ToolUtilsLib')
     implementation project(path: ':RoundCorners')
-    implementation project(path: ':MonitorPingLib')
     implementation project(path: ':MonitorFileLib')
     implementation project(path: ':PrivateServer')
     implementation project(path: ':OkHttpServer')
     implementation project(path: ':GsonServer')
     implementation project(path: ':ToolUtilsLib')
-    implementation project(path: ':MonitorInterceptor')
     implementation project(path: ':AppTaskLib')
     implementation project(path: ':NotCaptureLib')
     implementation project(path: ':AudioHelper')

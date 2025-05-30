@@ -3,8 +3,8 @@ package com.yc.appmonitor.net;
 
 
 
-import com.yc.netlib.stetho.NetworkInterceptor;
-import com.yc.netlib.stetho.NetworkListener;
+import com.yc.netlib.curl.stetho.NetworkInterceptor;
+import com.yc.netlib.curl.stetho.NetworkListener;
 
 import java.util.Map;
 

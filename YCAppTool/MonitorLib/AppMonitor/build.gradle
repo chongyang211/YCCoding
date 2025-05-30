@@ -38,10 +38,8 @@ dependencies {
     implementation 'com.github.yangchong211.YCDialog:ToastUtils:3.6.9'
     implementation project(path: ':ToolUtilsLib')
     implementation project(path: ':RoundCorners')
-    implementation project(path: ':MonitorPingLib')
     implementation project(path: ':MonitorFileLib')
     implementation project(path: ':MonitorCrashLib')
-    implementation project(path: ':MonitorSpeed')
     implementation project(path: ':MonitorTimeLib')
     implementation project(path: ':MonitorNetLib')
 
