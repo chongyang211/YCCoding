@@ -17,7 +17,7 @@
             android:background="@drawable/bg_kites_min"/>
     </RelativeLayout>
 
-    <com.yc.blurview.view.RealTimeBlurView
+    <com.yc.widget.blur.view.RealTimeBlurView
         android:id="@+id/blur_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

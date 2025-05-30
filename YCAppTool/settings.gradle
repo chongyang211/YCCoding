@@ -72,56 +72,33 @@ project(':GrpcServer').projectDir = new File('ServerLib/GrpcServer')
 include ':AppWidget'
 project(':AppWidget').projectDir = new File('WidgetLib/AppWidget')
 //库
-include ':BannerViewLib', ':PhotoWidget', ':CustomWidget', ':BlurViewLib',
-        ':ZoomImageLib', ':LargeImageLib',
-        ':SwipeBackLib', ':StatusBarLib', ':AppStateLib', ':WebViewLib',
-        ':ToastUtils', ':FloatPageLib', ':NotifyMessage', ':NotificationLib',
-        ':DialogFragment', ':SnackBar', ':PopupWindow', ':BaseDialog', ':RoundCorners',
+include ':BannerViewLib', ':PhotoWidget', ':CustomWidget',
+        ':LargeImageLib', ':SwipeBackLib', ':StatusBarLib', ':WebViewLib',
+        ':FloatPageLib', ':NotifyMessage', ':NotificationLib',
+        ':BaseDialog', ':RoundCorners',
         ':EastAdapterLib', ':PhotoCoverLib', ':RefreshViewLib', ':SelectViewLib',
-        ':GroupAdapterLib', ':BaseProgress', ':CircleProgress', ':SlideViewLib',
-        ':FloatWindow', ':AppTextView', ':AppImageView', ':PercentLayout', ':AppScrollView',
-        ':AppSwitchView', ':AppEditText',':AppGrayLib',
-        ':RedDotView', ':ExpandLib', ':AppChartView', ':AppShadowLib', ':AppCoordinatorLayout'
+        ':GroupAdapterLib', ':SlideViewLib', ':FloatWindow', ':PercentLayout', ':AppWidgetSdk'
 project(':BannerViewLib').projectDir = new File('WidgetLib/BannerViewLib')
 project(':PhotoWidget').projectDir = new File('WidgetLib/PhotoWidget')
 project(':CustomWidget').projectDir = new File('WidgetLib/CustomWidget')
-project(':BlurViewLib').projectDir = new File('WidgetLib/BlurViewLib')
-project(':ZoomImageLib').projectDir = new File('WidgetLib/ZoomImageLib')
 project(':LargeImageLib').projectDir = new File('WidgetLib/LargeImageLib')
 project(':SwipeBackLib').projectDir = new File('WidgetLib/SwipeBackLib')
 project(':StatusBarLib').projectDir = new File('WidgetLib/StatusBarLib')
-project(':AppStateLib').projectDir = new File('WidgetLib/AppStateLib')
 project(':WebViewLib').projectDir = new File('WidgetLib/WebViewLib')
 project(':FloatPageLib').projectDir = new File('WidgetLib/FloatPageLib')
 project(':NotifyMessage').projectDir = new File('WidgetLib/NotifyMessage')
 project(':NotificationLib').projectDir = new File('WidgetLib/NotificationLib')
-project(':DialogFragment').projectDir = new File('WidgetLib/DialogFragment')
-project(':SnackBar').projectDir = new File('WidgetLib/SnackBar')
-project(':PopupWindow').projectDir = new File('WidgetLib/PopupWindow')
 project(':BaseDialog').projectDir = new File('WidgetLib/BaseDialog')
-project(':ToastUtils').projectDir = new File('WidgetLib/ToastUtils')
 project(':RoundCorners').projectDir = new File('WidgetLib/RoundCorners')
 project(':EastAdapterLib').projectDir = new File('WidgetLib/EastAdapterLib')
 project(':PhotoCoverLib').projectDir = new File('WidgetLib/PhotoCoverLib')
 project(':RefreshViewLib').projectDir = new File('WidgetLib/RefreshViewLib')
 project(':SelectViewLib').projectDir = new File('WidgetLib/SelectViewLib')
 project(':GroupAdapterLib').projectDir = new File('WidgetLib/GroupAdapterLib')
-project(':BaseProgress').projectDir = new File('WidgetLib/BaseProgress')
-project(':CircleProgress').projectDir = new File('WidgetLib/CircleProgress')
 project(':SlideViewLib').projectDir = new File('WidgetLib/SlideViewLib')
 project(':FloatWindow').projectDir = new File('WidgetLib/FloatWindow')
-project(':AppTextView').projectDir = new File('WidgetLib/AppTextView')
-project(':AppImageView').projectDir = new File('WidgetLib/AppImageView')
 project(':PercentLayout').projectDir = new File('WidgetLib/PercentLayout')
-project(':AppScrollView').projectDir = new File('WidgetLib/AppScrollView')
-project(':AppSwitchView').projectDir = new File('WidgetLib/AppSwitchView')
-project(':AppEditText').projectDir = new File('WidgetLib/AppEditText')
-project(':RedDotView').projectDir = new File('WidgetLib/RedDotView')
-project(':ExpandLib').projectDir = new File('WidgetLib/ExpandLib')
-project(':AppChartView').projectDir = new File('WidgetLib/AppChartView')
-project(':AppShadowLib').projectDir = new File('WidgetLib/AppShadowLib')
-project(':AppCoordinatorLayout').projectDir = new File('WidgetLib/AppCoordinatorLayout')
-project(':AppGrayLib').projectDir = new File('WidgetLib/AppGrayLib')
+project(':AppWidgetSdk').projectDir = new File('WidgetLib/AppWidgetSdk')
 
 
 /* +++++++++ 框架基础工具库 +++++++++ */
@@ -130,17 +107,17 @@ include ':AppTool'
 project(':AppTool').projectDir = new File('ToolLib/AppTool')
 //库
 include ':ZxingServerLib', ':SocketHelper', ':In18HelperLib', ':CountTimerLib',
-        ':ThreadPoolLib', ':AutoCloserLib', ':LooperThread',
+        ':ThreadPoolLib', ':AutoCloserLib',
          ':AppUpdateLib', ':AnimBaseHelper', ':NotCaptureLib', ':CameraHelper'
 project(':ZxingServerLib').projectDir = new File('ToolLib/ZxingServerLib')
 project(':SocketHelper').projectDir = new File('ToolLib/SocketHelper')
 project(':In18HelperLib').projectDir = new File('ToolLib/In18HelperLib')
 project(':CountTimerLib').projectDir = new File('ToolLib/CountTimerLib')
+//线程池，线程监控，线程debug，心跳，轮训等工具库
 project(':ThreadPoolLib').projectDir = new File('ToolLib/ThreadPoolLib')
 project(':AppUpdateLib').projectDir = new File('ToolLib/AppUpdateLib')
 project(':AnimBaseHelper').projectDir = new File('ToolLib/AnimBaseHelper')
 project(':NotCaptureLib').projectDir = new File('ToolLib/NotCaptureLib')
-project(':LooperThread').projectDir = new File('ToolLib/LooperThread')
 project(':CameraHelper').projectDir = new File('ToolLib/CameraHelper')
 
 
@@ -149,27 +126,21 @@ project(':CameraHelper').projectDir = new File('ToolLib/CameraHelper')
 include ':AppMonitor'
 project(':AppMonitor').projectDir = new File('MonitorLib/AppMonitor')
 //库
-include ':MonitorCpuLib', ':MonitorCatonLib', ':MonitorAnrLib', ':MonitorCrashLib',
+include ':MonitorApmSdk', ':MonitorCrashLib',
         ':MonitorNetLib', ':MonitorFileLib',
-        ':MonitorXposed', ':MonitorMemory',
-        ':MonitorPingLib', ':MonitorFpsLib',
-        ':MonitorPrivacy', ':MonitorTimeLib', ':MonitorSpeed', ':MonitorInterceptor',
-        ':MonitorFlow'
-project(':MonitorCpuLib').projectDir = new File('MonitorLib/MonitorCpuLib')
-project(':MonitorCatonLib').projectDir = new File('MonitorLib/MonitorCatonLib')
-project(':MonitorAnrLib').projectDir = new File('MonitorLib/MonitorAnrLib')
+        ':MonitorXposed',
+        ':MonitorPingLib',
+        ':MonitorPrivacy', ':MonitorTimeLib', ':MonitorSpeed', ':MonitorInterceptor'
+project(':MonitorApmSdk').projectDir = new File('MonitorLib/MonitorApmSdk')
 project(':MonitorCrashLib').projectDir = new File('MonitorLib/MonitorCrashLib')
 project(':MonitorNetLib').projectDir = new File('MonitorLib/MonitorNetLib')
 project(':MonitorFileLib').projectDir = new File('MonitorLib/MonitorFileLib')
 project(':MonitorXposed').projectDir = new File('MonitorLib/MonitorXposed')
 project(':MonitorPingLib').projectDir = new File('MonitorLib/MonitorPingLib')
-project(':MonitorFpsLib').projectDir = new File('MonitorLib/MonitorFpsLib')
 project(':MonitorPrivacy').projectDir = new File('MonitorLib/MonitorPrivacy')
 project(':MonitorTimeLib').projectDir = new File('MonitorLib/MonitorTimeLib')
 project(':MonitorSpeed').projectDir = new File('MonitorLib/MonitorSpeed')
 project(':MonitorInterceptor').projectDir = new File('MonitorLib/MonitorInterceptor')
-project(':MonitorMemory').projectDir = new File('MonitorLib/MonitorMemory')
-project(':MonitorFlow').projectDir = new File('MonitorLib/MonitorFlow')
 
 
 /* +++++++++ 音视频 +++++++++ */

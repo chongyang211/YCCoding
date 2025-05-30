@@ -4,8 +4,8 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
-import com.yc.popup.BasePopDialog;
-import com.yc.toastutils.ToastUtils;
+import com.yc.basedialog.popup.BasePopDialog;
+import com.yc.basedialog.toast.ToastUtils;
 import com.yc.widgetbusiness.R;
 
 public class CustomPop extends BasePopDialog {

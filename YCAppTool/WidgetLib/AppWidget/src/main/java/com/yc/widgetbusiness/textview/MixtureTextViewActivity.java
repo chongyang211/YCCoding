@@ -33,7 +33,7 @@ import com.yc.customwidget.RoundedBackgroundSpan;
 import com.yc.customwidget.SpannableUtils;
 import com.yc.customwidget.VerticalImageSpan;
 import com.yc.statusbar.bar.StateAppBar;
-import com.yc.toastutils.ToastUtils;
+import com.yc.basedialog.toast.ToastUtils;
 import com.yc.widgetbusiness.R;
 
 /**

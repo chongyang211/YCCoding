@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PieChartView">
+        <attr name="pieRadius" format="dimension"/>
+        <attr name="borderLength" format="dimension"/>
+        <attr name="pieIntervalWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="PieFlagView">
+        <attr name="radius" format="dimension"/>
+        <attr name="border_length" format="dimension"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+        <attr name="centerTitle" format="string"/>
+        <attr name="centerHint" format="string"/>
+        <attr name="intervalWidth" format="dimension"/>
+        <attr name="blockAgeMarginLeft" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="PasswordEditText">
+        <attr format="integer" name="pet_iconShow"/>
+        <attr format="integer" name="pet_iconHide"/>
+    </declare-styleable>
+
+    <declare-styleable name="MultiEditInputView">
+        <attr format="integer" name="maxCount"/>
+        <attr format="boolean" name="IgnoreCnOrEn"/>
+        <attr format="string" name="hintText"/>
+        <attr format="string" name="contentText"/>
+        <attr format="dimension" name="contentHeight"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundCornerImageView">
+        <attr name="radius" format="dimension" />
+        <attr name="left_top_radius" format="dimension" />
+        <attr name="right_top_radius" format="dimension" />
+        <attr name="right_bottom_radius" format="dimension" />
+        <attr name="left_bottom_radius" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundImageView">
+        <attr name="is_circle" format="boolean" />
+        <attr name="is_cover_src" format="boolean" />
+        <attr name="corner_radius" format="dimension" />
+        <attr name="corner_top_left_radius" format="dimension" />
+        <attr name="corner_top_right_radius" format="dimension" />
+        <attr name="corner_bottom_left_radius" format="dimension" />
+        <attr name="corner_bottom_right_radius" format="dimension" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="inner_border_width" format="dimension" />
+        <attr name="inner_border_color" format="color" />
+        <attr name="mask_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowLayout">
+        <!--阴影的圆角大小-->
+        <attr name="shadow_cornerRadius" format="dimension" />
+        <!--阴影的扩散范围(也可以理解为扩散程度)-->
+        <attr name="shadow_shadowLimit" format="dimension" />
+        <!--阴影颜色-->
+        <attr name="shadow_shadowColor" format="color" />
+        <!--x轴的偏移量-->
+        <attr name="shadow_dx" format="dimension" />
+        <!--y轴的偏移量-->
+        <attr name="shadow_dy" format="dimension" />
+        <!--左边是否显示阴影-->
+        <attr name="shadow_leftShow" format="boolean" />
+        <!--右边是否显示阴影-->
+        <attr name="shadow_rightShow" format="boolean" />
+        <!--上边是否显示阴影-->
+        <attr name="shadow_topShow" format="boolean" />
+        <!--下面是否显示阴影-->
+        <attr name="shadow_bottomShow" format="boolean" />
+    </declare-styleable>
+
+
+    <!--选择开关自定义控件-->
+    <declare-styleable name="Switch">
+        <!--阴影半径-->
+        <attr name="sb_shadow_radius" format="reference|dimension"/>
+        <!--阴影偏移-->
+        <attr name="sb_shadow_offset" format="reference|dimension"/>
+        <!--阴影颜色-->
+        <attr name="sb_shadow_color" format="reference|color"/>
+        <!--阴影颜色-->
+        <attr name="sb_uncheck_color" format="reference|color"/>
+        <!--开启颜色-->
+        <attr name="sb_checked_color" format="reference|color"/>
+        <!--边框宽度-->
+        <attr name="sb_border_width" format="reference|dimension"/>
+        <!--开启指示器颜色-->
+        <attr name="sb_checkline_color" format="reference|color"/>
+        <!--开启指示器线宽-->
+        <attr name="sb_checkline_width" format="reference|dimension"/>
+        <!--关闭指示器颜色-->
+        <attr name="sb_uncheckcircle_color" format="reference|color"/>
+        <!--关闭指示器线宽-->
+        <attr name="sb_uncheckcircle_width" format="reference|dimension"/>
+        <!--关闭指示器半径-->
+        <attr name="sb_uncheckcircle_radius" format="reference|dimension"/>
+        <!--是否选中-->
+        <attr name="sb_checked" format="reference|boolean"/>
+        <!--是否启用阴影-->
+        <attr name="sb_shadow_effect" format="reference|boolean"/>
+        <!--动画时间，默认300ms-->
+        <attr name="sb_effect_duration" format="reference|integer"/>
+        <!--按钮颜色-->
+        <attr name="sb_button_color" format="reference|color"/>
+        <!--是否显示指示器，默认true：显示-->
+        <attr name="sb_show_indicator" format="reference|boolean"/>
+        <!--背景色，默认白色-->
+        <attr name="sb_background" format="reference|color"/>
+        <!--是否启用特效，默认true-->
+        <attr name="sb_enable_effect" format="reference|boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="hasShadow" format="boolean"/>
+        <attr name="primaryColor" format="color"/>
+        <attr name="primaryColorDark" format="color"/>
+        <attr name="offColor" format="color"/>
+        <attr name="offColorDark" format="color"/>
+        <attr name="barColor" format="color"/>
+        <attr name="bgColor" format="color"/>
+        <attr name="shadowColor" format="color"/>
+        <attr name="ratioAspect" format="float"/>
+        <attr name="isOpened" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="leftDrawable" format="reference|color"/>
+        <attr name="rightDrawable" format="reference|color"/>
+        <attr name="topDrawable" format="reference|color"/>
+        <attr name="bottomDrawable" format="reference|color"/>
+
+        <attr name="leftDrawableWidth" format="reference|dimension"/>
+        <attr name="rightDrawableWidth" format="reference|dimension"/>
+        <attr name="topDrawableWidth" format="reference|dimension"/>
+        <attr name="bottomDrawableWidth" format="reference|dimension"/>
+
+        <attr name="leftDrawableHeight" format="reference|dimension"/>
+        <attr name="rightDrawableHeight" format="reference|dimension"/>
+        <attr name="topDrawableHeight" format="reference|dimension"/>
+        <attr name="bottomDrawableHeight" format="reference|dimension"/>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="AlignTextView">
+        <attr name="alignOnlyOneLine" format="boolean"/>
+    </declare-styleable>
+
+    <!-- 末行对齐方式 -->
+    <declare-styleable name="AligningTextView">
+        <attr name="align" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="RingProgressBar">
+        <attr name="progressMax" format="integer" />
+        <!--完成进度点的颜色-->
+        <attr name="dotColor" format="color" />
+        <!--未完成进度点的颜色-->
+        <attr name="dotBgColor" format="color" />
+
+        <!--显示模式-->
+        <attr name="showMode" >
+            <!--空-->
+            <enum name="NULL" value="0" />
+            <!--只有百分比和单位-->
+            <enum name="PERCENT" value="1" />
+            <!--全显，包括百分比和单位、按钮-->
+            <enum name="ALL" value="2" />
+        </attr>
+
+        <!--显示的百分比-->
+        <attr name="percentTextSize" format="dimension" />
+        <attr name="percentTextColor" format="color" />
+        <!--百分比瘦身大小-->
+        <attr name="percentThinPadding" format="integer" />
+
+        <!--百分比单位-->
+        <attr name="unitText" format="string" />
+        <attr name="unitTextSize" format="dimension" />
+        <attr name="unitTextColor" format="color" />
+        <!--单位与百分比的底部对齐方式-->
+        <attr name="unitTextAlignMode">
+            <!--默认对齐-->
+            <enum name="DEFAULT" value="0" />
+            <!--中文对齐-->
+            <enum name="CN" value="1" />
+            <!--英文对齐：主要针对底部长的字母或字符，如：g、j、p、q、y、$、@等，其他几乎字母或字符都可以使用默认对齐-->
+            <enum name="EN" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="NumberProgressbar">
+        <attr name="progress_current" format="integer"/>
+        <attr name="progress_max" format="integer"/>
+
+        <attr name="progress_unreached_color" format="color"/>
+        <attr name="progress_reached_color" format="color"/>
+        <attr name="progress_reached_bar_height" format="dimension"/>
+        <attr name="progress_unreached_bar_height" format="dimension"/>
+
+        <attr name="progress_text_size" format="dimension"/>
+        <attr name="progress_text_color" format="color"/>
+        <attr name="progress_text_offset" format="dimension"/>
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="CarlProgressbar">
+        <!-- 进度条当前进度 -->
+        <attr name="carl_progress_current" format="integer"/>
+        <!-- 进度条最大进度，默认100，需要开发者自己设置 -->
+        <attr name="carl_progress_max" format="integer"/>
+        <!-- 未到达进度条颜色 -->
+        <attr name="carl_progress_unreached_color" format="color"/>
+        <!-- 到达进度条颜色 -->
+        <attr name="carl_progress_reached_color" format="color"/>
+        <!-- 到达进度条高度 -->
+        <attr name="carl_progress_reached_bar_height" format="dimension"/>
+        <!-- 未到达进度条高度 -->
+        <attr name="carl_progress_unreached_bar_height" format="dimension"/>
+    </declare-styleable>
+
+    <!--模糊视图控件-->
+    <declare-styleable name="RealTimeBlurView">
+        <attr name="realtimeBlurRadius" format="dimension"/>
+        <attr name="realtimeDownsampleFactor" format="float"/>
+        <attr name="realtimeOverlayColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ShapeBlurView">
+        <attr name="blur_radius" format="dimension" />
+        <attr name="blur_down_sample" format="float" />
+        <attr name="blur_overlay_color" format="color" />
+        <attr name="blur_corner_radius" format="dimension" />
+        <attr name="blur_corner_radius_top_left" format="dimension" />
+        <attr name="blur_corner_radius_top_right" format="dimension" />
+        <attr name="blur_corner_radius_bottom_left" format="dimension" />
+        <attr name="blur_corner_radius_bottom_right" format="dimension" />
+        <attr name="blur_border_width" format="dimension" />
+        <attr name="blur_border_color" format="color" />
+        <attr name="blur_mode">
+            <enum name="rectangle" value="0" />
+            <enum name="circle" value="1" />
+            <enum name="oval" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleProgressbar">
+        <!--颜色-->
+        <attr name="circle_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="FolderTextView">
+        <attr name="foldline" format="integer" />
+    </declare-styleable>
+
+</resources>

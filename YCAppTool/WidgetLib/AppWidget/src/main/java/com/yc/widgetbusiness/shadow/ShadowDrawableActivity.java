@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import com.yc.shadow.drawable.ShadowTool;
+import com.yc.widget.shadow.drawable.ShadowTool;
 import com.yc.statusbar.bar.StateAppBar;
 import com.yc.toolutils.size.AppSizeUtils;
 import com.yc.widgetbusiness.R;

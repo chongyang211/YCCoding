@@ -18,7 +18,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-import com.yc.reddot.YCRedDotView;
+import com.yc.widget.dot.YCRedDotView;
 import com.yc.widgetbusiness.R;
 
 import java.util.ArrayList;

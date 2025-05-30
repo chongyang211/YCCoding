@@ -17,9 +17,9 @@ import androidx.appcompat.app.AlertDialog;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 import com.yc.library.base.mvp.BaseActivity;
-import com.yc.popup.CustomPopupWindow;
+import com.yc.basedialog.popup.CustomPopupWindow;
 import com.yc.statusbar.bar.StateAppBar;
-import com.yc.toastutils.ToastUtils;
+import com.yc.basedialog.toast.ToastUtils;
 import com.yc.toolutils.appinfo.AppWindowUtils;
 import com.yc.widgetbusiness.R;
 

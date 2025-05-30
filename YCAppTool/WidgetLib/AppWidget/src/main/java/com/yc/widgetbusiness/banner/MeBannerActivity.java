@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 
-import com.yc.blurview.blur.CustomBlur;
+import com.yc.widget.blur.blur.CustomBlur;
 import com.yc.gallerybannerlib.GalleryRecyclerView;
 import com.yc.library.base.mvp.BaseActivity;
 import com.yc.statusbar.bar.StateAppBar;

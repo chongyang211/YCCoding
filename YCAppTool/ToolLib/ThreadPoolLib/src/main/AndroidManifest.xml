@@ -1,2 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.ycbjie.ycthreadpoollib" />
+    package="cn.ycbjie.ycthreadpoollib" >
+    <application>
+        <service android:name="com.yc.ycthreadpoollib.heart.HeartService"/>
+        <receiver
+            android:name="com.yc.ycthreadpoollib.heart.HeartReceiver"
+            android:exported="false" />
+        <activity android:name="com.yc.ycthreadpoollib.test.HeartActivity"/>
+    </application>
+</manifest>

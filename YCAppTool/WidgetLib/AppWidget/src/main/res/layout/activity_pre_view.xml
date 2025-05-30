@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".chart.PreActivity">
 
-    <com.yc.appchartview.PieFlagView
+    <com.yc.widget.chart.PieFlagView
         android:id="@+id/pie_chart_now"
         android:layout_width="match_parent"
         android:layout_height="180dp"
@@ -23,7 +23,7 @@
         app:radius="60dp"
         app:textSize="13sp" />
 
-    <com.yc.appchartview.PieEasyLayout
+    <com.yc.widget.chart.PieEasyLayout
         android:id="@+id/pie_chart_layout"
         android:layout_width="match_parent"
         android:layout_height="180dp"
@@ -34,7 +34,7 @@
 
 
 
-    </com.yc.appchartview.PieEasyLayout>
+    </com.yc.widget.chart.PieEasyLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

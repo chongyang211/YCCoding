@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp">
 
-        <com.yc.apptextview.DrawableTextView
+        <com.yc.widget.text.DrawableTextView
             android:id="@+id/tv_drawable_1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -26,7 +26,7 @@
             app:leftDrawableHeight="20dp"
             app:leftDrawableWidth="20dp"/>
 
-        <com.yc.apptextview.DrawableTextView
+        <com.yc.widget.text.DrawableTextView
             android:id="@+id/tv_drawable_2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -39,7 +39,7 @@
             app:rightDrawableHeight="20dp"
             app:rightDrawableWidth="20dp"/>
 
-        <com.yc.apptextview.DrawableTextView
+        <com.yc.widget.text.DrawableTextView
             android:id="@+id/tv_drawable_3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -57,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp">
 
-        <com.yc.apptextview.DrawableTextView
+        <com.yc.widget.text.DrawableTextView
             android:id="@+id/tv_drawable_4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -70,7 +70,7 @@
             app:bottomDrawableHeight="20dp"
             app:bottomDrawableWidth="20dp"/>
 
-        <com.yc.apptextview.DrawableTextView
+        <com.yc.widget.text.DrawableTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -85,7 +85,7 @@
             app:topDrawableHeight="20dp"
             app:topDrawableWidth="20dp"/>
 
-        <com.yc.apptextview.DrawableTextView
+        <com.yc.widget.text.DrawableTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -107,7 +107,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp">
 
-        <com.yc.apptextview.DrawableTextView
+        <com.yc.widget.text.DrawableTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -122,7 +122,7 @@
             app:topDrawableHeight="20dp"
             app:topDrawableWidth="20dp"/>
 
-        <com.yc.apptextview.DrawableTextView
+        <com.yc.widget.text.DrawableTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -140,7 +140,7 @@
             app:topDrawableHeight="20dp"
             app:topDrawableWidth="20dp"/>
 
-        <com.yc.apptextview.DrawableTextView
+        <com.yc.widget.text.DrawableTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -162,7 +162,7 @@
             app:topDrawableWidth="20dp"/>
     </LinearLayout>
 
-    <com.yc.apptextview.DrawableTextView
+    <com.yc.widget.text.DrawableTextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:drawablePadding="5dp"
@@ -173,7 +173,7 @@
         app:leftDrawableHeight="20dp"
         app:leftDrawableWidth="20dp"/>
 
-    <com.yc.apptextview.DrawableTextView
+    <com.yc.widget.text.DrawableTextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:drawablePadding="5dp"

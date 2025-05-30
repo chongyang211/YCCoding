@@ -2,7 +2,6 @@ package com.yc.widgetbusiness.blur;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
@@ -10,7 +9,7 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.yc.blurview.view.RealTimeBlurView;
+import com.yc.widget.blur.view.RealTimeBlurView;
 import com.yc.roundcorner.view.RoundTextView;
 import com.yc.widgetbusiness.R;
 import com.yc.widgetbusiness.banner.MeBannerActivity;

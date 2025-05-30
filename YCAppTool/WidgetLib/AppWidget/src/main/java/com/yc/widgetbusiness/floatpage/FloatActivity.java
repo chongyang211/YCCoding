@@ -19,7 +19,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.yc.roundcorner.view.RoundTextView;
 import com.yc.statusbar.bar.StateAppBar;
-import com.yc.toastutils.ToastUtils;
+import com.yc.basedialog.toast.ToastUtils;
 import com.yc.toolutils.appinfo.AppWindowUtils;
 import com.yc.window.FloatWindow;
 import com.yc.window.draggable.MovingTouchListener;

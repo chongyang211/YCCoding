@@ -13,9 +13,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.yc.expandlib.ExpandLayout;
-import com.yc.expandlib.ExpandLogUtils;
-import com.yc.expandlib.FolderTextView;
+import com.yc.widget.expand.ExpandLayout;
+import com.yc.widget.expand.ExpandLogUtils;
+import com.yc.widget.expand.FolderTextView;
 import com.yc.widgetbusiness.R;
 
 /**

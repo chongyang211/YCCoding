@@ -11,9 +11,9 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.yc.apptextview.DrawableTextView;
+import com.yc.widget.text.DrawableTextView;
 import com.yc.statusbar.bar.StateAppBar;
-import com.yc.toastutils.ToastUtils;
+import com.yc.basedialog.toast.ToastUtils;
 import com.yc.widgetbusiness.R;
 
 public class DrawableTextActivity extends AppCompatActivity {

@@ -4,10 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.yc.appchartview.PieChartView
-import com.yc.appchartview.PieEasyLayout
-import com.yc.appchartview.PieFlagData
-import com.yc.appchartview.PieFlagView
+import com.yc.widget.chart.PieEasyLayout
+import com.yc.widget.chart.PieFlagData
+import com.yc.widget.chart.PieFlagView
 import com.yc.widgetbusiness.R
 
 

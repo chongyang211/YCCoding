@@ -8,7 +8,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.yc.toastutils.ToastUtils;
+import com.yc.basedialog.toast.ToastUtils;
 import com.yc.widgetbusiness.R;
 
 public class EventActivity extends AppCompatActivity {
