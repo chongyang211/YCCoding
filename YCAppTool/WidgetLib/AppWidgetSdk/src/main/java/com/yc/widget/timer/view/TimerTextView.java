@@ -1,4 +1,4 @@
-package com.yc.timerlib.view;
+package com.yc.widget.timer.view;
 
 
 import android.content.Context;
@@ -7,9 +7,9 @@ import android.util.AttributeSet;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 
-import com.yc.timerlib.timer.CountDownTimer;
-import com.yc.timerlib.timer.CountTimeTools;
-import com.yc.timerlib.timer.TimerListener;
+import com.yc.widget.timer.timer.CountDownTimer;
+import com.yc.widget.timer.timer.CountTimeTools;
+import com.yc.widget.timer.timer.TimerListener;
 
 /**
  * <pre>

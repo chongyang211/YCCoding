@@ -106,13 +106,11 @@ project(':AppWidgetSdk').projectDir = new File('WidgetLib/AppWidgetSdk')
 include ':AppTool'
 project(':AppTool').projectDir = new File('ToolLib/AppTool')
 //库
-include ':ZxingServerLib', ':SocketHelper', ':In18HelperLib', ':CountTimerLib',
-        ':ThreadPoolLib', ':AutoCloserLib',
+include ':ZxingServerLib', ':SocketHelper', ':In18HelperLib', ':ThreadPoolLib', ':AutoCloserLib',
          ':AppUpdateLib', ':AnimBaseHelper', ':NotCaptureLib', ':CameraHelper'
 project(':ZxingServerLib').projectDir = new File('ToolLib/ZxingServerLib')
 project(':SocketHelper').projectDir = new File('ToolLib/SocketHelper')
 project(':In18HelperLib').projectDir = new File('ToolLib/In18HelperLib')
-project(':CountTimerLib').projectDir = new File('ToolLib/CountTimerLib')
 //线程池，线程监控，线程debug，心跳，轮训等工具库
 project(':ThreadPoolLib').projectDir = new File('ToolLib/ThreadPoolLib')
 project(':AppUpdateLib').projectDir = new File('ToolLib/AppUpdateLib')
