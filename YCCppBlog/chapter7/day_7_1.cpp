@@ -4,6 +4,7 @@
 #include "iostream"
 using namespace std;
 
+
 int main() {
     int a = 10; //定义整型变量a
     //1、指针的定义
