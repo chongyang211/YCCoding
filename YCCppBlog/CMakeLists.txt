@@ -28,4 +28,7 @@ add_executable(YCCppBlog main.cpp
         chapter10/day_10_4_4.cpp
         chapter10/day_10_4_3.cpp
         chapter10/day_10_4_2.cpp
-        chapter10/day_10_4_8.cpp)
+        chapter10/day_10_4_8.cpp
+        chapter14/day_14_1.cpp
+        chapter16/day_16_1.cpp
+        chapter16/day_16_1_3.cpp)
