@@ -35,6 +35,8 @@ public:
     void save();
     //标志文件是否为空
     bool fileIsEmpty;
+    //统计人数
+    int getEmpNum();
     //显示职工
     void showEmp();
 };

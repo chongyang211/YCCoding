@@ -29,6 +29,9 @@ WorkerManager::WorkerManager() {
         ifs.close();
         return;
     }
+    int num =  this->getEmpNum();
+    cout << "职工个数为：" << num << endl;  //测试代码
+    this->empNum = num;  //更新成员属性
 }
 
 WorkerManager::~WorkerManager() {
@@ -190,6 +193,23 @@ void WorkerManager::save() {
     }
     ofs.close();
 }
+
+int WorkerManager::getEmpNum() {
+    ifstream ifs;
+    ifs.open(FILENAME , ios::in);
+    int id;
+    string name;
+    int dId;
+    int num = 0;
+    //下面这个写法是什么意思
+    while (ifs>>id && ifs>>name && ifs>>dId) {
+        //记录人数
+        num++;
+    }
+    ifs.close();
+    return num;
+}
+
 
 
 void WorkerManager::showEmp() {
