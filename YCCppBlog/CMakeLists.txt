@@ -3,6 +3,15 @@ project(YCCppBlog)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# ld: symbol(s) not found for architecture arm64
+# 设置目标架构为 arm64（适用于 Apple Silicon）
+#set(CMAKE_OSX_ARCHITECTURES "arm64" CACHE STRING "Target architectures")
+# 适用于多架构（如同时支持 x86_64 和 arm64）
+#set(CMAKE_OSX_ARCHITECTURES "x86_64;arm64" CACHE STRING "Target architectures")
+if (APPLE)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -arch arm64")
+endif()
+
 add_executable(YCCppBlog main.cpp
         chapter10/day_10_1.cpp
         chapter10/day_10_1.cpp

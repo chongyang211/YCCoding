@@ -7,12 +7,13 @@
 #include "Boss.h"
 #include "Manager.h"
 #include "Employee.h"
+#include <fstream>
 using namespace std;
 
 #ifndef WORKERMANAGER_H
 #define WORKERMANAGER_H
 
-
+#define  FILENAME "empFile.txt"
 
 class WorkerManager {
 public:
@@ -30,6 +31,10 @@ public:
     Worker ** empArray;
     //增加职工
     void addEmp();
+    //保存文件
+    void save();
+    //标志文件是否为空
+    bool fileIsEmpty;
     //显示职工
     void showEmp();
 };

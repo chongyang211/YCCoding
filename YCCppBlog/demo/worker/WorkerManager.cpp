@@ -6,10 +6,29 @@
 
 WorkerManager::WorkerManager() {
     //构造函数实现
-    //初始化人数
-    this->empNum = 0;
-    //初始化数组指针
-    this->empArray = NULL;
+    ifstream ifs;
+    ifs.open(FILENAME, ios::in);
+    //文件不存在情况
+    if (!ifs.is_open()){
+        cout << "文件不存在" << endl; //测试输出
+        this->empNum = 0;  //初始化人数
+        this->fileIsEmpty = true; //初始化文件为空标志
+        this->empArray = NULL; //初始化数组
+        ifs.close(); //关闭文件
+        return;
+    }
+    //文件存在，并且没有记录
+    char ch;
+    ifs >> ch;
+    if (ifs.eof())
+    {
+        cout << "文件为空!" << endl;
+        this->empNum = 0;
+        this->fileIsEmpty = true;
+        this->empArray = NULL;
+        ifs.close();
+        return;
+    }
 }
 
 WorkerManager::~WorkerManager() {
@@ -153,11 +172,25 @@ void WorkerManager::addEmp() {
     this->empArray = newSpace;
     //更新新的个数
     this->empNum = newSize;
+    //更新职工不为空标志
+    this->fileIsEmpty = false;
     //提示信息
     cout << "成功添加" << addNum << "名新职工！" << endl;
     //输入新数据
     clearScreen();
 }
+
+void WorkerManager::save() {
+    ofstream ofs;
+    ofs.open(FILENAME,ios::out);
+    for (int i = 0; i < this->empNum; i++){
+        ofs << this->empArray[i]->id << " "
+            << this->empArray[i]->name << " "
+            << this->empArray[i]->deptId << endl;
+    }
+    ofs.close();
+}
+
 
 void WorkerManager::showEmp() {
     clearScreen();
