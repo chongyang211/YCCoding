@@ -14,6 +14,9 @@ WorkerManager::WorkerManager() {
 
 WorkerManager::~WorkerManager() {
     //析构函数实现
+    if (this->empArray != NULL) {
+        delete[] this->empArray;
+    }
 }
 
 void clearScreen() {
@@ -46,7 +49,7 @@ void showMainSelect() {
     int choice = 0;
     while (true) {
         //展示菜单
-        wm.Show_Menu();
+        wm.showMenu();
         cout << "请输入您的选择:" << endl;
         cin >> choice;
         switch (choice) {
@@ -54,7 +57,7 @@ void showMainSelect() {
                 wm.exitSystem();
                 break;
             case 1: //添加职工
-                testWorker();
+                wm.addEmp();
                 break;
             case 2: //显示职工
                 break;
@@ -75,7 +78,7 @@ void showMainSelect() {
     }
 }
 
-void WorkerManager::Show_Menu() {
+void WorkerManager::showMenu() {
     cout << "********************************************" << endl;
     cout << "*********  欢迎使用职工管理系统！ **********" << endl;
     cout << "*************  0.退出管理程序  *************" << endl;
@@ -95,6 +98,73 @@ void WorkerManager::exitSystem() {
     pause();
     exit(0);
 }
+
+void WorkerManager::addEmp() {
+    cout << "请输入增加职工数量： " << endl;
+    int addNum = 0;
+    cin >> addNum;
+    if (addNum == 0) {
+        cout << "输入有误，请重新输入大于0的数值" << endl;
+        return;
+    }
+    //计算新空间大小
+    int newSize = this->empNum + addNum;
+    //开辟新空间
+    Worker ** newSpace = new Worker*[newSize];
+    //将原空间下内容存放到新空间下
+    if (this->empArray != NULL){
+        for (int i = 0; i < this->empNum; i++){
+            newSpace[i] = this->empArray[i];
+        }
+    }
+    //输入新数据
+    for (int i = 0; i < addNum; i++) {
+        int id;
+        string name;
+        int dSelect;
+        cout << "请输入第 " << i + 1 << " 个新职工编号：" << endl;
+        cin >> id;
+        cout << "请输入第 " << i + 1 << " 个新职工姓名：" << endl;
+        cin >> name;
+        cout << "请选择该职工的岗位：" << endl;
+        cout << "1、普通职工" << endl;
+        cout << "2、经理" << endl;
+        cout << "3、老板" << endl;
+        cin >> dSelect;
+        Worker * worker = NULL;
+        switch (dSelect) {
+            case 1: //普通员工
+                worker = new Employee(id, name, 1);
+            break;
+            case 2: //经理
+                worker = new Manager(id, name, 2);
+            break;
+            case 3:  //老板
+                worker = new Boss(id, name, 3);
+            break;
+            default:
+                break;
+        }
+        newSpace[this->empNum + i] = worker;
+    }
+    //释放原有空间
+    delete[] this->empArray;
+    //更改新空间的指向
+    this->empArray = newSpace;
+    //更新新的个数
+    this->empNum = newSize;
+    //提示信息
+    cout << "成功添加" << addNum << "名新职工！" << endl;
+    //输入新数据
+    clearScreen();
+}
+
+void WorkerManager::showEmp() {
+    clearScreen();
+}
+
+
+
 
 
 

@@ -21,13 +21,17 @@ public:
     //析构函数
     ~WorkerManager();
     //展示菜单
-    void Show_Menu();
+    void showMenu();
     //推出系统
     void exitSystem();
     //记录文件中的人数个数
     int empNum;
     //员工数组的指针。思考，什么是数组指针？？？
     Worker ** empArray;
+    //增加职工
+    void addEmp();
+    //显示职工
+    void showEmp();
 };
 
 //声明，菜单输入选项
