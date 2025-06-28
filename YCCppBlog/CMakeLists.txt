@@ -42,4 +42,6 @@ add_executable(YCCppBlog main.cpp
         demo/worker/Employee.h
         demo/worker/Manager.cpp
         demo/worker/Manager.h
+        demo/worker/Boss.cpp
+        demo/worker/Boss.h
 )
