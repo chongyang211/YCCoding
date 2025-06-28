@@ -33,5 +33,11 @@ add_executable(YCCppBlog main.cpp
         chapter16/day_16_1.cpp
         chapter16/day_16_1_3.cpp
         chapter16/day_16_1_4.cpp
-        demo/StudentManager.cpp
-        demo/StudentManager.h)
+        demo/student/StudentManager.cpp
+        demo/student/StudentManager.h
+        demo/worker/WorkerManager.cpp
+        demo/worker/WorkerManager.h
+        demo/worker/Worker.h
+        demo/worker/Employee.cpp
+        demo/worker/Employee.h
+)

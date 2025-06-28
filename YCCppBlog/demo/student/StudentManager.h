@@ -41,4 +41,19 @@ void addPerson(AddressBooks *abs);
 //显示联系人
 void showPerson(AddressBooks * abs);
 
+//检查联系人是否存在
+int isExist(AddressBooks * abs, string name);
+
+//删除指定联系人信息
+void deletePerson(AddressBooks * abs);
+
+//查找指定联系人信息
+void findPerson(AddressBooks * abs);
+
+//修改指定联系人信息
+void modifyPerson(AddressBooks * abs);
+
+//清空所有联系人
+void cleanPerson(AddressBooks * abs);
+
 #endif //STUDENTMANAGER_H
