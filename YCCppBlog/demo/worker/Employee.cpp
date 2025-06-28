@@ -17,7 +17,6 @@ void Employee::showInfo() {
             << " \t岗位职责：完成经理交给的任务" << endl;
 }
 
-
 string Employee::getDeptName() {
     return string("员工");
 }
