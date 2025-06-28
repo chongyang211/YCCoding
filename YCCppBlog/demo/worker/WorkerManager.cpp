@@ -6,6 +6,10 @@
 
 WorkerManager::WorkerManager() {
     //构造函数实现
+    //初始化人数
+    this->empNum = 0;
+    //初始化数组指针
+    this->empArray = NULL;
 }
 
 WorkerManager::~WorkerManager() {

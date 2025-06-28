@@ -24,6 +24,10 @@ public:
     void Show_Menu();
     //推出系统
     void exitSystem();
+    //记录文件中的人数个数
+    int empNum;
+    //员工数组的指针。思考，什么是数组指针？？？
+    Worker ** empArray;
 };
 
 //声明，菜单输入选项
