@@ -45,6 +45,7 @@ int main() {
             case 3:  //清空记录
                 break;
             case 0:  //退出系统
+                sm.exitSystem();
                 break;
             default:
                 system("cls"); //清屏
@@ -64,6 +65,12 @@ void SpeechManager::showMenu() {
     cout << "*************  0.退出比赛程序  *************" << endl;
     cout << "********************************************" << endl;
     cout << endl;
+}
+
+void SpeechManager::exitSystem() {
+    cout << "欢迎下次使用" << endl;
+    pause();
+    exit(0);
 }
 
 

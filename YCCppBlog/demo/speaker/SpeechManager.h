@@ -18,6 +18,8 @@ public:
     ~SpeechManager();
     //展示菜单
     void showMenu();
+    //推出
+    void exitSystem();
 };
 
 
