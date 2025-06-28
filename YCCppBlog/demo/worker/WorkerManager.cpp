@@ -3,8 +3,6 @@
 //
 
 #include "WorkerManager.h"
-#include<iostream>
-using namespace std;
 
 WorkerManager::WorkerManager() {
     //构造函数实现
@@ -52,6 +50,7 @@ void showMainSelect() {
                 wm.exitSystem();
                 break;
             case 1: //添加职工
+                testWorker();
                 break;
             case 2: //显示职工
                 break;

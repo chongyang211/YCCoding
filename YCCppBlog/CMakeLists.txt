@@ -44,4 +44,5 @@ add_executable(YCCppBlog main.cpp
         demo/worker/Manager.h
         demo/worker/Boss.cpp
         demo/worker/Boss.h
+        demo/worker/WorkerTest.cpp
 )

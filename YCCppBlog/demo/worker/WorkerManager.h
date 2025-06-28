@@ -1,7 +1,12 @@
 //
 // Created by 杨充 on 2025/6/28.
 //
+
 #include <iostream>
+#include "Worker.h"
+#include "Boss.h"
+#include "Manager.h"
+#include "Employee.h"
 using namespace std;
 
 #ifndef WORKERMANAGER_H
