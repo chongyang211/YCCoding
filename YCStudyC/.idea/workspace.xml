@@ -20,157 +20,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="376bfc71-45fe-4649-91c7-3b19c99dfad9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/chapter1/day_1_3_1.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/YCMeiZiTu.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/YCStudyC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/YCStudyC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="376bfc71-45fe-4649-91c7-3b19c99dfad9" name="Changes" comment="完善代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/day1/day1_1_c.c" beforeDir="false" afterPath="$PROJECT_DIR$/day1/day1_1_c.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/day1/day1_3_hello.c" beforeDir="false" afterPath="$PROJECT_DIR$/day1/day1_3_hello.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/day1/day1_4_basic.c" beforeDir="false" afterPath="$PROJECT_DIR$/day1/day1_4_basic.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/day2/day2_2_const.c" beforeDir="false" afterPath="$PROJECT_DIR$/day2/day2_2_const.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/day2/day2_3_enum.c" beforeDir="false" afterPath="$PROJECT_DIR$/day2/day2_3_enum.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/day2/day2_4_string.c" beforeDir="false" afterPath="$PROJECT_DIR$/day2/day2_4_string.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/day8/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/day8/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/day8/day8_1_pointer.c" beforeDir="false" afterPath="$PROJECT_DIR$/day8/day8_1_pointer.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/calendar/01.编制万年历系统.md" beforeDir="false" afterPath="$PROJECT_DIR$/demo/calendar/01.编制万年历系统.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/calendar/Calendar.c" beforeDir="false" afterPath="$PROJECT_DIR$/demo/calendar/Calendar.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/calendar/Calendar.h" beforeDir="false" afterPath="$PROJECT_DIR$/demo/calendar/Calendar.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/calendar/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/demo/calendar/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/clearance/01.模拟扫雷小游戏.md" beforeDir="false" afterPath="$PROJECT_DIR$/demo/clearance/01.模拟扫雷小游戏.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/clearance/MineClearance.c" beforeDir="false" afterPath="$PROJECT_DIR$/demo/clearance/MineClearance.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/clearance/MineClearance.h" beforeDir="false" afterPath="$PROJECT_DIR$/demo/clearance/MineClearance.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/clearance/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/demo/clearance/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/game/01.俄罗斯方块游戏.md" beforeDir="false" afterPath="$PROJECT_DIR$/demo/game/01.俄罗斯方块游戏.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/game/GameMain.c" beforeDir="false" afterPath="$PROJECT_DIR$/demo/game/GameMain.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/gobang/01.五子棋小游戏.md" beforeDir="false" afterPath="$PROJECT_DIR$/demo/gobang/01.五子棋小游戏.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/gobang/GoBangGame.c" beforeDir="false" afterPath="$PROJECT_DIR$/demo/gobang/GoBangGame.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/gobang/GoBangGame.h" beforeDir="false" afterPath="$PROJECT_DIR$/demo/gobang/GoBangGame.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/gobang/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/demo/gobang/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/guess/01.猜数字小游戏.md" beforeDir="false" afterPath="$PROJECT_DIR$/demo/guess/01.猜数字小游戏.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/guess/GuessNumber.c" beforeDir="false" afterPath="$PROJECT_DIR$/demo/guess/GuessNumber.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/guess/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/demo/guess/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/manager/Stu.c" beforeDir="false" afterPath="$PROJECT_DIR$/demo/manager/Stu.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/manager/Stu.h" beforeDir="false" afterPath="$PROJECT_DIR$/demo/manager/Stu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/manager/StuManager.c" beforeDir="false" afterPath="$PROJECT_DIR$/demo/manager/StuManager.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/manager/StuManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/demo/manager/StuManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/manager/StudentManager.c" beforeDir="false" afterPath="$PROJECT_DIR$/demo/manager/StudentManager.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/manager/StudentManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/demo/manager/StudentManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/manager/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/demo/manager/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/manager/stu.info" beforeDir="false" afterPath="$PROJECT_DIR$/demo/manager/stu.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/maze/01.迷宫探险游戏.md" beforeDir="false" afterPath="$PROJECT_DIR$/demo/maze/01.迷宫探险游戏.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/maze/MazeGame.c" beforeDir="false" afterPath="$PROJECT_DIR$/demo/maze/MazeGame.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/maze/MazeGame.h" beforeDir="false" afterPath="$PROJECT_DIR$/demo/maze/MazeGame.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/maze/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/demo/maze/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/snake/01.贪吃蛇游戏.md" beforeDir="false" afterPath="$PROJECT_DIR$/demo/snake/01.贪吃蛇游戏.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/snake/SnakeMain.c" beforeDir="false" afterPath="$PROJECT_DIR$/demo/snake/SnakeMain.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/snake/SnakeMain.h" beforeDir="false" afterPath="$PROJECT_DIR$/demo/snake/SnakeMain.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/sokoban/01.推箱子小游戏.md" beforeDir="false" afterPath="$PROJECT_DIR$/demo/sokoban/01.推箱子小游戏.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/sokoban/Sokoban.c" beforeDir="false" afterPath="$PROJECT_DIR$/demo/sokoban/Sokoban.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/sokoban/Sokoban.h" beforeDir="false" afterPath="$PROJECT_DIR$/demo/sokoban/Sokoban.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/demo/sokoban/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/demo/sokoban/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/02.C语言基础语法.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/02.C语言基础语法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/03.cli命令行环境.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/03.cli命令行环境.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/04.types数据类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/04.types数据类型.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/05.variable变量.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/05.variable变量.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/06.specifier存储类.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/06.specifier存储类.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/07.operator运算符.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/07.operator运算符.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/08.flow-control流程控制.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/08.flow-control流程控制.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/09.array数组.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/09.array数组.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/09.function函数.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/09.function函数.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/1.1 C语言介绍.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/1.1 C语言介绍.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/1.2 C语言环境设置.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/1.2 C语言环境设置.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/1.3 第一个程序.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/1.3 第一个程序.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/1.4 基本语法介绍.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/1.4 基本语法介绍.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/12.string字符串.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/12.string字符串.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/13.struct结构体.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/13.struct结构体.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/14.union共同体.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/14.union共同体.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/15.typedef类型别名.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/15.typedef类型别名.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/16.io输入和输出.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/16.io输入和输出.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/17.file文件操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/17.file文件操作.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/18.preprocessor预处理器.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/18.preprocessor预处理器.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/19.memory内存管理.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/19.memory内存管理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/2.1 数据类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/2.1 数据类型.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/2.2 变量和常量.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/2.2 变量和常量.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/2.3 枚举和派生类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/2.3 枚举和派生类型.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/2.4 字符串类型.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/2.4 字符串类型.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/20.enum枚举.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/20.enum枚举.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/21.Unicode多字节字符.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/21.Unicode多字节字符.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/22.multifile多文件项目.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/22.multifile多文件项目.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/23.error异常处理.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/23.error异常处理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/8.1 pointer指针.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/8.1 pointer指针.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/file/test1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file/test1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/01.stdio.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/01.stdio.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/02.stdlib.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/02.stdlib.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/03.stdint.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/03.stdint.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/04.signal.h信号处理.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/04.signal.h信号处理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/05.assert.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/05.assert.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/06.ctype.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/06.ctype.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/07.errno.h错误处理.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/07.errno.h错误处理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/08.float.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/08.float.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/09.inttypes.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/09.inttypes.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/10.iso646.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/10.iso646.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/11.limits.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/11.limits.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/12.locale.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/12.locale.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/13.math.h函数库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/13.math.h函数库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/14.stdarg.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/14.stdarg.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/15.stdbool.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/15.stdbool.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/16.stddef.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/16.stddef.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/17.string.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/17.string.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/18.time.h时间库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/18.time.h时间库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/19.wchar.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/19.wchar.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/libwiki/20.wctype.h标准库.md" beforeDir="false" afterPath="$PROJECT_DIR$/libwiki/20.wctype.h标准库.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/study1/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day10_zyy.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day10_zyy.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day11_array.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day11_array.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day12_enum.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day12_enum.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day13_runoob.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day13_runoob.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day14_callback.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day14_callback.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day15_string.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day15_string.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day16_struct.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day16_struct.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day17_union.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day17_union.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day18_weiyu.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day18_weiyu.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day19_typedef.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day19_typedef.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day20_print_scanf.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day20_print_scanf.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day21_file.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day21_file.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day22_yclq.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day22_yclq.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day23_header.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day23_header.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day23_header.h" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day23_header.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day24_zh.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day24_zh.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day25_error.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day25_error.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day26_params.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day26_params.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day27_memory.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day27_memory.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day28_cmd.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day28_cmd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day2_data.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day2_data.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day3_var.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day3_var.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day4_val.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day4_val.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day5_ccl.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day5_ccl.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day6_ysf.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day6_ysf.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day7_yuju.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day7_yuju.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day8_while.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day8_while.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day9_fun.c" beforeDir="false" afterPath="$PROJECT_DIR$/study1/day9_fun.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study2/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/study2/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study2/day10_file_char.c" beforeDir="false" afterPath="$PROJECT_DIR$/study2/day10_file_char.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study2/day11_date.c" beforeDir="false" afterPath="$PROJECT_DIR$/study2/day11_date.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study2/day1_print_num.c" beforeDir="false" afterPath="$PROJECT_DIR$/study2/day1_print_num.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study2/day2_print_float.c" beforeDir="false" afterPath="$PROJECT_DIR$/study2/day2_print_float.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study2/day3_number_add.c" beforeDir="false" afterPath="$PROJECT_DIR$/study2/day3_number_add.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study2/day4_char_ascii.c" beforeDir="false" afterPath="$PROJECT_DIR$/study2/day4_char_ascii.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study2/day5_byte.c" beforeDir="false" afterPath="$PROJECT_DIR$/study2/day5_byte.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study2/day6_if_else.c" beforeDir="false" afterPath="$PROJECT_DIR$/study2/day6_if_else.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study2/day7_print_99.c" beforeDir="false" afterPath="$PROJECT_DIR$/study2/day7_print_99.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study2/day8_a_z.c" beforeDir="false" afterPath="$PROJECT_DIR$/study2/day8_a_z.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study2/day9_file.c" beforeDir="false" afterPath="$PROJECT_DIR$/study2/day9_file.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/wiki/01.C语言学习推荐.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/01.C语言学习推荐.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter1/day_1_3_1.c" beforeDir="false" afterPath="$PROJECT_DIR$/chapter1/day_1_3_1.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,11 +99,26 @@
       <workItem from="1749863819113" duration="6000" />
       <workItem from="1749865190636" duration="18000" />
       <workItem from="1750150555641" duration="9586000" />
-      <workItem from="1750208729504" duration="1000" />
+      <workItem from="1750208729504" duration="7090000" />
+      <workItem from="1750640759012" duration="3118000" />
+      <workItem from="1750814136925" duration="8000" />
     </task>
+    <task id="LOCAL-00001" summary="完善代码">
+      <option name="closed" value="true" />
+      <created>1750208764686</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750208764686</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完善代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善代码" />
   </component>
 </project>
