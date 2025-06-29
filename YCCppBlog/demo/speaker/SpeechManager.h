@@ -52,6 +52,13 @@ public:
     void showScore();
     //保存记录
     void saveRecord();
+
+    //读取记录
+    void loadRecord();
+    //文件为空的标志
+    bool fileIsEmpty;
+    //往届记录
+    map<int, vector<string>> record;
 };
 
 

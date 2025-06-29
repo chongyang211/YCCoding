@@ -9,6 +9,8 @@ SpeechManager::SpeechManager(){
     this->initSpeech();
     //创建选手
     this->createSpeaker();
+    //获取往届记录
+    this->loadRecord();
 }
 
 SpeechManager::~SpeechManager(){
@@ -252,6 +254,49 @@ void SpeechManager::saveRecord() {
     //关闭文件
     ofs.close();
     cout << "记录已经保存" << endl;
+}
+
+
+void SpeechManager::loadRecord() {
+    //输入流对象 读取文件
+    ifstream ifs("speech.csv", ios::in);
+    if (!ifs.is_open()) {
+        this->fileIsEmpty = true;
+        cout << "文件不存在！" << endl;
+        ifs.close();
+        return;
+    }
+    char ch;
+    ifs >> ch;
+    if (ifs.eof()) {
+        cout << "文件为空!" << endl;
+        this->fileIsEmpty = true;
+        ifs.close();
+        return;
+    }
+    //文件不为空
+    this->fileIsEmpty = false;
+    ifs.putback(ch); //读取的单个字符放回去
+    string data;
+    int index = 0;
+    while (ifs >> data) {
+        //cout << data << endl;
+        vector<string> v;
+        int pos = -1;
+        int start = 0;
+        while (true) {
+            pos = data.find(",", start); //从0开始查找 ','
+            if (pos == -1) {
+                break; //找不到break返回
+            }
+            string tmp = data.substr(start, pos - start); //找到了,进行分割 参数1 起始位置，参数2 截取长度
+            v.push_back(tmp);
+            start = pos + 1;
+        }
+        this->record.insert(make_pair(index, v));
+        index++;
+    }
+    ifs.close();
 }
 
 
