@@ -22,6 +22,8 @@ public:
     vector<int> victory;
     //存放编号 以及对应的 具体选手 容器
     map<int, Speaker> speaker;
+    //比赛轮次
+    int index;
     //构造函数
     SpeechManager();
     //析构函数
@@ -30,6 +32,8 @@ public:
     void showMenu();
     //推出
     void exitSystem();
+    //初始化属性
+    void initSpeech();
 };
 
 

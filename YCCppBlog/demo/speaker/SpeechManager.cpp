@@ -5,7 +5,8 @@
 #include "SpeechManager.h"
 
 SpeechManager::SpeechManager(){
-
+    //初始化属性
+    this->initSpeech();
 }
 
 SpeechManager::~SpeechManager(){
@@ -72,6 +73,17 @@ void SpeechManager::exitSystem() {
     pause();
     exit(0);
 }
+
+void SpeechManager::initSpeech() {
+    //容器保证为空
+    this->v1.clear();
+    this->v2.clear();
+    this->victory.clear();
+    this->speaker.clear();
+    //初始化比赛轮次
+    this->index = 1;
+}
+
 
 
 
