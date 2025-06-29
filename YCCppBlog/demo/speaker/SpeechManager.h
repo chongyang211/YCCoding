@@ -44,6 +44,8 @@ public:
     void startSpeech();
     //抽签
     void speechDraw();
+    //比赛
+    void speechContest();
 };
 
 
