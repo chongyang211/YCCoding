@@ -109,6 +109,18 @@ void SpeechManager::createSpeaker() {
     }
 }
 
+void SpeechManager::startSpeech() {
+    //第一轮比赛
+    //1、抽签
+    //2、比赛
+    //3、显示晋级结果
+    //第二轮比赛
+    //1、抽签
+    //2、比赛
+    //3、显示最终结果
+    //4、保存分数
+}
+
 
 
 

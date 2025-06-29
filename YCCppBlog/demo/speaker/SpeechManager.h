@@ -36,6 +36,8 @@ public:
     void initSpeech();
     //初始化创建12名选手
     void createSpeaker();
+    //开始比赛-比赛流程控制
+    void startSpeech();
 };
 
 
