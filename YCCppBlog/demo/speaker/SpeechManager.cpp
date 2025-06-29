@@ -52,8 +52,10 @@ int main() {
                 sm.startSpeech();
                 break;
             case 2:  //查看记录
+                sm.showRecord();
                 break;
             case 3:  //清空记录
+                sm.clearRecord();
                 break;
             case 0:  //退出系统
                 sm.exitSystem();
@@ -305,6 +307,27 @@ void SpeechManager::showRecord() {
                 "冠军编号：" << this->record[i][0] << " 得分：" << this->record[i][1] << " "
                 "亚军编号：" << this->record[i][2] << " 得分：" << this->record[i][3] << " "
                 "季军编号：" << this->record[i][4] << " 得分：" << this->record[i][5] << endl;
+    }
+    pauseAndCls();
+}
+
+void SpeechManager::clearRecord() {
+    cout << "确认清空？" << endl;
+    cout << "1、确认" << endl;
+    cout << "2、返回" << endl;
+    int select = 0;
+    cin >> select;
+    if (select == 1) {
+        //打开模式 ios::trunc 如果存在删除文件并重新创建
+        ofstream ofs("speech.txt", ios::trunc);
+        ofs.close();
+        //初始化属性
+        this->initSpeech();
+        //创建选手
+        this->createSpeaker();
+        //获取往届记录
+        this->loadRecord();
+        cout << "清空成功！" << endl;
     }
     pauseAndCls();
 }

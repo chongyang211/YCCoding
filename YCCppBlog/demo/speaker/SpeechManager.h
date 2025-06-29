@@ -61,6 +61,8 @@ public:
     map<int, vector<string> > record;
     //显示往届得分
     void showRecord();
+    //清空记录
+    void clearRecord();
 };
 
 
