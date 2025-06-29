@@ -4,7 +4,11 @@
 #pragma once
 #include<iostream>
 #include <map>
+#include <algorithm>
+#include <random>
+#include <vector>
 #include "Speaker.h"
+
 using namespace std;
 
 #ifndef SPEECHMANAGER_H
@@ -38,6 +42,8 @@ public:
     void createSpeaker();
     //开始比赛-比赛流程控制
     void startSpeech();
+    //抽签
+    void speechDraw();
 };
 
 

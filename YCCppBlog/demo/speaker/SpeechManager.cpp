@@ -47,6 +47,7 @@ int main() {
         cin >> choice; // 接受用户的选项
         switch (choice){
             case 1:  //开始比赛
+                sm.startSpeech();
                 break;
             case 2:  //查看记录
                 break;
@@ -112,6 +113,7 @@ void SpeechManager::createSpeaker() {
 void SpeechManager::startSpeech() {
     //第一轮比赛
     //1、抽签
+    this->speechDraw();
     //2、比赛
     //3、显示晋级结果
     //第二轮比赛
@@ -119,6 +121,32 @@ void SpeechManager::startSpeech() {
     //2、比赛
     //3、显示最终结果
     //4、保存分数
+}
+
+void SpeechManager::speechDraw() {
+    cout << "第 << " << this->index << " >> 轮比赛选手正在抽签，打乱用户顺序"<<endl;
+    cout << "---------------------" << endl;
+    cout << "抽签后演讲顺序如下：" << endl;
+    //random_shuffle这个已经不用了
+    // 创建随机数引擎
+    random_device rd;
+    mt19937 g(rd());
+    if (this->index == 1) {
+        shuffle(v1.begin(), v1.end(),g);
+        for (vector<int>::iterator it = v1.begin(); it != v1.end(); it++){
+            cout << *it << " ";
+        }
+        cout << endl;
+    } else {
+        shuffle(v2.begin(), v2.end(),g);
+        for (vector<int>::iterator it = v2.begin(); it != v2.end(); it++){
+            cout << *it << " ";
+        }
+        cout << endl;
+    }
+    cout << "---------------------" << endl;
+    pause();
+    cout << endl;
 }
 
 
