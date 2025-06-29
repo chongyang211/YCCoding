@@ -59,6 +59,8 @@ public:
     bool fileIsEmpty;
     //往届记录
     map<int, vector<string> > record;
+    //显示往届得分
+    void showRecord();
 };
 
 

@@ -299,6 +299,17 @@ void SpeechManager::loadRecord() {
     ifs.close();
 }
 
+void SpeechManager::showRecord() {
+    for (int i = 0; i < this->record.size(); i++) {
+        cout << "第" << i + 1 << "届 " <<
+                "冠军编号：" << this->record[i][0] << " 得分：" << this->record[i][1] << " "
+                "亚军编号：" << this->record[i][2] << " 得分：" << this->record[i][3] << " "
+                "季军编号：" << this->record[i][4] << " 得分：" << this->record[i][5] << endl;
+    }
+    pauseAndCls();
+}
+
+
 
 
 
