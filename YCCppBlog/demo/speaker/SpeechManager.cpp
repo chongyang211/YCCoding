@@ -7,6 +7,8 @@
 SpeechManager::SpeechManager(){
     //初始化属性
     this->initSpeech();
+    //创建选手
+    this->createSpeaker();
 }
 
 SpeechManager::~SpeechManager(){
@@ -83,6 +85,25 @@ void SpeechManager::initSpeech() {
     //初始化比赛轮次
     this->index = 1;
 }
+
+void SpeechManager::createSpeaker() {
+    //创建选手后，将选手编号，并且放到容器中
+    string nameSeed = "ABCDEFGHIJKL";
+    for (int i=0 ; i<nameSeed.size() ; i++) {
+        string name = "选手";
+        name += nameSeed[i];
+        Speaker sp;
+        sp.name = name;
+        for (int i=0 ; i<2 ; i++) {
+            sp.score[i] = 0;
+        }
+        //12名选手编号
+        this->v1.push_back(i+10001);
+        //选手编号 以及对应的选手 存放到map容器中
+        this->speaker.insert(make_pair(i+10001,sp));
+    }
+}
+
 
 
 
