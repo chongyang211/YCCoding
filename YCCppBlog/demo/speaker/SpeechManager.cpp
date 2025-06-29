@@ -259,7 +259,7 @@ void SpeechManager::saveRecord() {
 
 void SpeechManager::loadRecord() {
     //输入流对象 读取文件
-    ifstream ifs("speech.csv", ios::in);
+    ifstream ifs("speech.txt", ios::in);
     if (!ifs.is_open()) {
         this->fileIsEmpty = true;
         cout << "文件不存在！" << endl;

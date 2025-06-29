@@ -58,7 +58,7 @@ public:
     //文件为空的标志
     bool fileIsEmpty;
     //往届记录
-    map<int, vector<string>> record;
+    map<int, vector<string> > record;
 };
 
 
