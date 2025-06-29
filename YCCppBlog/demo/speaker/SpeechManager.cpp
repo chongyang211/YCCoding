@@ -35,6 +35,11 @@ void pauseAndCls() {
 
 int main() {
     SpeechManager sm;
+    for (map<int, Speaker>::iterator it = sm.speaker.begin(); it != sm.speaker.end(); it++) {
+        cout << "选手编号：" << it->first
+                << " 姓名： " << it->second.name
+                << " 成绩： " << it->second.score[0] << endl;
+    }
     int choice = 0; //用来存储用户的选项
     while (true){
         sm.showMenu();
