@@ -7,6 +7,8 @@
 #include <algorithm>
 #include <random>
 #include <vector>
+#include <ostream>
+#include <fstream>
 #include "Speaker.h"
 
 using namespace std;
@@ -48,6 +50,8 @@ public:
     void speechContest();
     //显示比赛结果
     void showScore();
+    //保存记录
+    void saveRecord();
 };
 
 
