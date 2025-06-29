@@ -117,6 +117,7 @@ void SpeechManager::startSpeech() {
     //2、比赛
     this->speechContest();
     //3、显示晋级结果
+    this->showScore();
     //第二轮比赛
     //1、抽签
     //2、比赛
@@ -212,6 +213,25 @@ void SpeechManager::speechContest() {
     }
     cout << "------------- 第" << this->index << "轮比赛完毕  ------------- " << endl;
     pause();
+}
+
+void SpeechManager::showScore() {
+    cout << "---------第" << this->index << "轮晋级选手信息如下：-----------" << endl;
+    vector<int> v;
+    if (this->index == 1) {
+        //如果是第一轮，晋级6人
+        v = v2;
+    } else {
+        //如果是第二轮，晋级3人
+        v = victory;
+    }
+    for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
+        cout << "选手编号：" << *it <<
+            " 姓名： " << speaker[*it].name <<
+                " 得分： " << speaker[*it].score[this->index - 1] << endl;
+    }
+    clearScreen();
+    this->showMenu();
 }
 
 
