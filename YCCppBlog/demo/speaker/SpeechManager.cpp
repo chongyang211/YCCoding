@@ -119,9 +119,13 @@ void SpeechManager::startSpeech() {
     //3、显示晋级结果
     this->showScore();
     //第二轮比赛
+    this->index++;
     //1、抽签
+    this->speechDraw();
     //2、比赛
+    this->speechContest();
     //3、显示最终结果
+    this->showScore();
     //4、保存分数
 }
 
