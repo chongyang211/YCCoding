@@ -59,4 +59,5 @@ add_executable(YCCppBlog main.cpp
         demo/speaker/Speaker.h
         demo/school/ComputerManager.cpp
         demo/school/ComputerManager.h
+        demo/school/Identity.h
 )
