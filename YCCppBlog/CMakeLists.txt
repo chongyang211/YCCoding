@@ -62,4 +62,6 @@ add_executable(YCCppBlog main.cpp
         demo/school/Identity.h
         demo/school/Student.cpp
         demo/school/Student.h
+        demo/school/Teacher.cpp
+        demo/school/Teacher.h
 )
