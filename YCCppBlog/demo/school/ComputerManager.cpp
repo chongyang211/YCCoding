@@ -25,6 +25,7 @@ void pauseAndCls() {
 
 int main() {
     int select = 0;
+    ComputerManager *cm;
     while (true) {
         cout << "======================  欢迎来到传智播客机房预约系统  =====================" << endl;
         cout << endl << "请输入您的身份" << endl;
@@ -43,10 +44,13 @@ int main() {
         cin >> select; //接受用户选择
         switch (select) {
             case 1: //学生身份
+                cm->loginIn(STUDENT_FILE,1);
                 break;
             case 2: //老师身份
+                cm->loginIn(STUDENT_FILE,2);
                 break;
             case 3: //管理员身份
+                cm->loginIn(STUDENT_FILE,3);
                 break;
             case 0: //退出系统
                 cout << "欢迎下一次使用" << endl;
@@ -61,3 +65,42 @@ int main() {
     pause();
     return 0;
 }
+
+void ComputerManager::loginIn(string fileName, int type) {
+    //创建成员对象
+    Identity *person = NULL;
+    //打开文本文件
+    ifstream ifs;
+    ifs.open(fileName,ios::in);
+    //文件不存在
+    if (!ifs.is_open()) {
+        cout << "文件不存在" <<endl;
+        ifs.close();
+        return;
+    }
+    int id = 0;
+    string name;
+    string pwd;
+    if (type == 1) {    //学生登陆
+        cout << "请输入你的学号" << endl;
+        cin >> id;
+    } else if (type ==2) {  //教师登录
+        cout << "请输入你的职工号" << endl;
+        cin >> id;
+    }
+    cout << "请输入用户名：" << endl;
+    cin >> name;
+    cout << "请输入密码： " << endl;
+    cin >> pwd;
+    if (type == 1) {
+        //学生登录验证
+    } else if (type == 2) {
+        //教师登录验证
+    } else if (type == 3) {
+        //管理员登录验证
+    }
+    cout << "验证登录失败!" << endl;
+    pauseAndCls();
+    return;
+ }
+
