@@ -13,13 +13,8 @@
 using namespace std;
 
 
-
-class ComputerManager {
-public:
-    //fileName  --- 操作的文件名
-    //type      ---  登录的身份  （1代表学生、2代表老师、3代表管理员）
-    void loginIn(string fileName, int type);
-    //管理员菜单
-    void managerMenu(Identity * &manager);
-};
-
+//fileName  --- 操作的文件名
+//type      ---  登录的身份  （1代表学生、2代表老师、3代表管理员）
+void loginIn(string fileName, int type);
+//管理员菜单
+void managerMenu(Identity * &manager);
