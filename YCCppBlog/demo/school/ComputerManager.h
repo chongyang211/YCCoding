@@ -9,7 +9,7 @@
 #include "Identity.h"
 #include "Student.h"
 #include "Teacher.h"
-#include "Manager.h"
+#include "AdminManager.h"
 using namespace std;
 
 

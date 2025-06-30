@@ -7,12 +7,12 @@ using namespace std;
 #include "Identity.h"
 
 
-class Manager : Identity {
+class AdminManager : Identity {
 public:
     //默认构造
-    Manager();
+    AdminManager();
     //有参构造  管理员姓名，密码
-    Manager(string name, string pwd);
+    AdminManager(string name, string pwd);
     //选择菜单
     virtual void openMenu();
     //添加账号
