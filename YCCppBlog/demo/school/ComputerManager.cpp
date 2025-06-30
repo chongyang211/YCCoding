@@ -138,5 +138,34 @@ void ComputerManager::loginIn(string fileName, int type) {
     cout << "验证登录失败!" << endl;
     pauseAndCls();
     return;
- }
+}
+
+void ComputerManager::managerMenu(Identity *&manager) {
+    while (true) {
+        //管理员菜单
+        manager->openMenu();
+        Manager *man = (Manager *) manager;
+        int select = 0;
+        cin >> select;
+        if (select == 1) {
+            cout << "添加账号" << endl;
+            man->addPerson();
+        } else if (select == 2) {
+            cout << "查看账号" << endl;
+            man->showPerson();
+        } else if (select == 3) {
+            cout << "查看机房" << endl;
+            man->showComputer();
+        } else if (select == 4) {
+            cout << "清空预约" << endl;
+            man->cleanFile();
+        } else {
+            delete manager;
+            cout << "注销成功" << endl;
+            pauseAndCls();
+            return;
+        }
+    }
+}
+
 
