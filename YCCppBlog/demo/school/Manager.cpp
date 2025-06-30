@@ -13,7 +13,7 @@ Manager::Manager(string name, string pwd) {
 }
 
 //选择菜单
-void Manager::operMenu() {
+void Manager::openMenu() {
 }
 
 //添加账号

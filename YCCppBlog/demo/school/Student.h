@@ -16,7 +16,7 @@ public:
     //有参构造(学号、姓名、密码)
     Student(int id, string name , string pwd);
     //菜单界面
-    virtual void operMenu();
+    virtual void openMenu();
     //申请预约
     void applyOrder();
     //查看我的预约

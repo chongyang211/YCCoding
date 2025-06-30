@@ -17,7 +17,7 @@ public:
     Teacher(int empId, string name, string pwd);
 
     //菜单界面
-    virtual void operMenu();
+    virtual void openMenu();
 
     //查看所有预约
     void showAllOrder();

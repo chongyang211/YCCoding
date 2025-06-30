@@ -14,7 +14,7 @@ Student::Student(int id, string name, string pwd) {
 }
 
 //菜单界面
-void Student::operMenu() {
+void Student::openMenu() {
 }
 
 //申请预约

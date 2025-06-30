@@ -6,18 +6,15 @@
 using namespace std;
 #include "Identity.h"
 
-#ifndef MANAGER_H
-#define MANAGER_H
 
-
-
-class Manager : Identity{
+class Manager : Identity {
+public:
     //默认构造
     Manager();
     //有参构造  管理员姓名，密码
     Manager(string name, string pwd);
     //选择菜单
-    virtual void operMenu();
+    virtual void openMenu();
     //添加账号
     void addPerson();
     //查看账号
@@ -27,7 +24,3 @@ class Manager : Identity{
     //清空预约记录
     void cleanFile();
 };
-
-
-
-#endif //MANAGER_H

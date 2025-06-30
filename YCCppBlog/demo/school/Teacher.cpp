@@ -13,7 +13,7 @@ Teacher::Teacher(int empId, string name, string pwd) {
 }
 
 //菜单界面
-void Teacher::operMenu() {
+void Teacher::openMenu() {
 }
 
 //查看所有预约
