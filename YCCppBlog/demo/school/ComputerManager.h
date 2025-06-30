@@ -5,8 +5,8 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include "globalFile.h"
-#include "identity.h"
+#include "GlobalFile.h"
+#include "Identity.h"
 using namespace std;
 #ifndef COMPUTERMANAGER_H
 #define COMPUTERMANAGER_H
