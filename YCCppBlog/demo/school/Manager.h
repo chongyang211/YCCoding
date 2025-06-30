@@ -4,7 +4,7 @@
 #pragma once
 #include<iostream>
 using namespace std;
-#include "identity.h"
+#include "Identity.h"
 
 #ifndef MANAGER_H
 #define MANAGER_H

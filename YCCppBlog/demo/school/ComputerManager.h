@@ -8,6 +8,7 @@
 #include "GlobalFile.h"
 #include "Identity.h"
 #include "Student.h"
+#include "Teacher.h"
 using namespace std;
 
 

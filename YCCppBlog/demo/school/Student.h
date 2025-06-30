@@ -7,8 +7,6 @@
 using namespace std;
 #include "Identity.h"
 
-#ifndef STUDENT_H
-#define STUDENT_H
 
 //学生类
 class Student : public Identity{
@@ -32,4 +30,4 @@ public:
 };
 
 
-#endif //STUDENT_H
+

@@ -96,19 +96,30 @@ void ComputerManager::loginIn(string fileName, int type) {
     if (type == 1) {
         //学生登录验证
         //学生登录验证
-        // int fId;
-        // string fName;
-        // string fPwd;
-        // while (ifs>>fId && ifs>>fName && ifs>>fPwd) {
-        //     //用户输入的id，姓名和密钥，跟文件做对比
-        //     if (id == fId && name == fName && pwd == fPwd) {
-        //         cout << "学生验证登录成功!" << endl;
-        //         pauseAndCls();
-        //         person = new Student(id, name, pwd);
-        //     }
-        // }
+        int fId;
+        string fName;
+        string fPwd;
+        while (ifs>>fId && ifs>>fName && ifs>>fPwd) {
+            //用户输入的id，姓名和密钥，跟文件做对比
+            if (id == fId && name == fName && pwd == fPwd) {
+                cout << "学生验证登录成功!" << endl;
+                pauseAndCls();
+                person = new Student(id, name, pwd);
+            }
+        }
     } else if (type == 2) {
         //教师登录验证
+        int fId;
+        string fName;
+        string fPwd;
+        while (ifs >> fId && ifs >> fName && ifs >> fPwd) {
+            if (id == fId && name == fName && pwd == fPwd) {
+                cout << "教师验证登录成功!" << endl;
+                pauseAndCls();
+                person = new Teacher(id, name, pwd);
+                return;
+            }
+        }
     } else if (type == 3) {
         //管理员登录验证
     }
