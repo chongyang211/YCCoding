@@ -7,9 +7,8 @@
 #include <fstream>
 #include "GlobalFile.h"
 #include "Identity.h"
+#include "Student.h"
 using namespace std;
-#ifndef COMPUTERMANAGER_H
-#define COMPUTERMANAGER_H
 
 
 
@@ -20,6 +19,3 @@ public:
     void loginIn(string fileName, int type);
 };
 
-
-
-#endif //COMPUTERMANAGER_H
