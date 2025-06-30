@@ -3,6 +3,7 @@
 //
 
 #include "ComputerManager.h"
+#include "Student.h"
 
 
 void clearScreen() {

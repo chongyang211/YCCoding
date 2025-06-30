@@ -9,8 +9,10 @@ using namespace std;
 
 
 //学生类
-class Student : public Identity{
+class Student : public Identity {
 public:
+    //学生学号
+    int id;
     //默认构造
     Student();
     //有参构造(学号、姓名、密码)
@@ -25,8 +27,6 @@ public:
     void showAllOrder();
     //取消预约
     void cancelOrder();
-    //学生学号
-    int id;
 };
 
 
