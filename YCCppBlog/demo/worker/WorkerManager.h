@@ -34,6 +34,8 @@ public:
     void addEmp();
     //保存文件
     void save();
+    //读取文件
+    void read();
     //标志文件是否为空
     bool fileIsEmpty;
     //统计人数

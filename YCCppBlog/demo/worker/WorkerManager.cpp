@@ -6,32 +6,7 @@
 
 WorkerManager::WorkerManager() {
     //构造函数实现
-    ifstream ifs;
-    ifs.open(FILENAME, ios::in);
-    //文件不存在情况
-    if (!ifs.is_open()){
-        cout << "文件不存在" << endl; //测试输出
-        this->empNum = 0;  //初始化人数
-        this->fileIsEmpty = true; //初始化文件为空标志
-        this->empArray = NULL; //初始化数组
-        ifs.close(); //关闭文件
-        return;
-    }
-    //文件存在，并且没有记录
-    char ch;
-    ifs >> ch;
-    if (ifs.eof())
-    {
-        cout << "文件为空!" << endl;
-        this->empNum = 0;
-        this->fileIsEmpty = true;
-        this->empArray = NULL;
-        ifs.close();
-        return;
-    }
-    int num =  this->getEmpNum();
-    cout << "职工个数为：" << num << endl;  //测试代码
-    this->empNum = num;  //更新成员属性
+    read();
 }
 
 WorkerManager::~WorkerManager() {
@@ -200,6 +175,36 @@ void WorkerManager::save() {
     ofs.close();
 }
 
+
+void WorkerManager::read() {
+    ifstream ifs;
+    ifs.open(FILENAME,ios::in);
+    //文件不存在情况
+    if (!ifs.is_open()){
+        cout << "文件不存在" << endl; //测试输出
+        this->empNum = 0;  //初始化人数
+        this->fileIsEmpty = true; //初始化文件为空标志
+        this->empArray = NULL; //初始化数组
+        ifs.close(); //关闭文件
+        return;
+    }
+    //文件存在，并且没有记录
+    char ch;
+    ifs >> ch;
+    if (ifs.eof()) {
+        cout << "文件为空!" << endl;
+        this->empNum = 0;
+        this->fileIsEmpty = true;
+        this->empArray = NULL;
+        ifs.close();
+        return;
+    }
+    int num =  this->getEmpNum();
+    cout << "职工个数为：" << num << endl;  //测试代码
+    this->empNum = num;  //更新成员属性
+}
+
+
 int WorkerManager::getEmpNum() {
     ifstream ifs;
     ifs.open(FILENAME , ios::in);
@@ -208,6 +213,8 @@ int WorkerManager::getEmpNum() {
     int dId;
     int num = 0;
     //下面这个写法是什么意思
+    //这段代码的作用是从文件流 ifs 中依次读取 id、name 和 dId 三个数据
+    //ifs >> id，从文件流 ifs 中读取一个值，并将其存储到变量 id 中。如果读取成功，表达式返回 true；否则返回 false。
     while (ifs>>id && ifs>>name && ifs>>dId) {
         //记录人数
         num++;
