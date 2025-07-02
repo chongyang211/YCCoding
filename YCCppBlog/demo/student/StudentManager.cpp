@@ -94,10 +94,10 @@ void addPerson(AddressBooks *abs) {
         cout << "通讯录已经满了，无法添加" << endl;
         return;
     }
+    cout << "当前用户列表size是：" << abs->size << endl;
     string name;
     cout << "请输入姓名：" << endl;
     cin >> name;
-    //直接赋值
     abs->personArray[abs->size].name = name;
 
     cout << "请输入性别：" << endl;
@@ -128,7 +128,7 @@ void addPerson(AddressBooks *abs) {
     cin >> address;
     abs->personArray[abs->size].address = address;
 
-    //更新通讯录
+    //插入联系人后，数量要+1
     abs->size ++;
     cout << "添加用户：" << name << "成功。用户列表size是：" << abs->size << endl;
     pauseAndCls();
@@ -155,6 +155,7 @@ int isExist(AddressBooks * abs, string name) {
     for (int i=0 ; i<abs->size ; i++) {
         //判断是否存在查询的人员，存在返回在数组中索引位置，不存在返回-1
         if (abs->personArray[i].name == name) {
+            //对比用户名
             return i;
         }
     }
