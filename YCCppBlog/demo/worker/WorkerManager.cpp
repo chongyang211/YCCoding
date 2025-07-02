@@ -157,15 +157,15 @@ void WorkerManager::addEmp() {
         switch (dSelect) {
             case 1: //普通员工
                 worker = new Employee(id, name, 1);
-            break;
-            case 2: //经理
-                worker = new Manager(id, name, 2);
-            break;
-            case 3:  //老板
-                worker = new Boss(id, name, 3);
-            break;
-            default:
                 break;
+            // case 2: //经理
+            //     worker = new Manager(id, name, 2);
+            //     break;
+            // case 3: //老板
+            //     worker = new Boss(id, name, 3);
+            //     break;
+            // default:
+            //     break;
         }
         newSpace[this->empNum + i] = worker;
     }

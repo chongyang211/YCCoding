@@ -4,9 +4,9 @@
 
 #include "Employee.h"
 
-Employee::Employee(int id, string name, int dId) {
-    this->id = id;
-    this->name = name;
+Employee::Employee(int mId, string mName, int dId) {
+    this->id = mId;
+    this->name = mName;
     this->deptId = dId;
 }
 
@@ -20,3 +20,8 @@ void Employee::showInfo() {
 string Employee::getDeptName() {
     return string("员工");
 }
+
+Employee::~Employee() {
+    //析构函数释放
+}
+

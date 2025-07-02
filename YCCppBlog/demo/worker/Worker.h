@@ -6,8 +6,6 @@
 #include<string>
 using namespace std;
 
-#ifndef WORKER_H
-#define WORKER_H
 
 //职工抽象基类
 //子类有：普通员工，经理，老板
@@ -22,5 +20,3 @@ public:
     //获取岗位名称
     virtual string getDeptName() = 0;
 };
-
-#endif //WORKER_H

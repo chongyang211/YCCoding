@@ -12,6 +12,7 @@ if (APPLE)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -arch arm64")
 endif()
 
+#如果你的项目使用 CMake，确保源文件被添加到 add_executable 或 add_library 中
 add_executable(YCCppBlog main.cpp
         chapter10/day_10_1.cpp
         chapter10/day_10_1.cpp
