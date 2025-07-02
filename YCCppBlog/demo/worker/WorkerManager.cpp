@@ -158,14 +158,14 @@ void WorkerManager::addEmp() {
             case 1: //普通员工
                 worker = new Employee(id, name, 1);
                 break;
-            // case 2: //经理
-            //     worker = new Manager(id, name, 2);
-            //     break;
-            // case 3: //老板
-            //     worker = new Boss(id, name, 3);
-            //     break;
-            // default:
-            //     break;
+            case 2: //经理
+                worker = new Manager(id, name, 2);
+                break;
+            case 3: //老板
+                worker = new Boss(id, name, 3);
+                break;
+            default:
+                break;
         }
         newSpace[this->empNum + i] = worker;
     }
@@ -183,13 +183,19 @@ void WorkerManager::addEmp() {
     clearScreen();
 }
 
+//文件保存用户数据
 void WorkerManager::save() {
     ofstream ofs;
-    ofs.open(FILENAME,ios::out);
-    for (int i = 0; i < this->empNum; i++){
+    ofs.open(FILENAME, ios::out);
+    //检查文件是否成功打开
+    if (!ofs.is_open()) {
+        std::cerr << "Failed to open file!" << std::endl;
+        return;
+    }
+    for (int i = 0; i < this->empNum; i++) {
         ofs << this->empArray[i]->id << " "
-            << this->empArray[i]->name << " "
-            << this->empArray[i]->deptId << endl;
+                << this->empArray[i]->name << " "
+                << this->empArray[i]->deptId << endl;
     }
     ofs.close();
 }

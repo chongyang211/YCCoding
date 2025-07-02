@@ -13,6 +13,7 @@ using namespace std;
 #ifndef WORKERMANAGER_H
 #define WORKERMANAGER_H
 
+//定义一个文件名称
 #define  FILENAME "empFile.txt"
 
 class WorkerManager {

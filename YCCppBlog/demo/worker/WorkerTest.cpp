@@ -25,6 +25,7 @@ void testWorker() {
 
 
 int main() {
+    testWorker();
     return 0;
 }
 
