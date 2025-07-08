@@ -55,233 +55,251 @@ build CMakeFiles/YCCppBlog.dir/main.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Deb
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_1.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_1.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_1.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_1.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_2.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_2.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_2.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_2_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_2_4.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_2_4.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_2_4.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2_4.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_3_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_3_1.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_3_1.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_3_1.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_1.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_3_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_3_2.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_3_2.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_3_2.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_2.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_3_3.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_3_3.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_3_3.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_3.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_3_3.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_3.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_3_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_3_4.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_3_4.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_3_4.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_4.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter8/day_8_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter8/day_8_2.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter8/day_8_2.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_2.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_2.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter8
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
 
-build CMakeFiles/YCCppBlog.dir/chapter8/day_8_3.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter8/day_8_3.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter8/day_8_3.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_3.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_3.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_3.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter8
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
 
-build CMakeFiles/YCCppBlog.dir/chapter8/day_8_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter8/day_8_4.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter8/day_8_4.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_4.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_4.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter8
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
 
-build CMakeFiles/YCCppBlog.dir/chapter8/day_8_7.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter8/day_8_7.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter8/day_8_7.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_7.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_7.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_7.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter8
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
 
-build CMakeFiles/YCCppBlog.dir/chapter8/day_8_5.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter8/day_8_5.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter8/day_8_5.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_5.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_5.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_5.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter8
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
 
-build CMakeFiles/YCCppBlog.dir/chapter8/day_8_9.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter8/day_8_9.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter8/day_8_9.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_9.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_9.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_9.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter8
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
 
-build CMakeFiles/YCCppBlog.dir/chapter8/day_8_8.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter8/day_8_8.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter8/day_8_8.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_8.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_8.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_8.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter8
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
 
-build CMakeFiles/YCCppBlog.dir/chapter8/day_8_6.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter8/day_8_6.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter8/day_8_6.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_6.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_6.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_6.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter8
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
 
-build CMakeFiles/YCCppBlog.dir/chapter6/day_6_7_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter6/day_6_7_1.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter6/day_6_7_1.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter6/day_6_7_1.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_1.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter6
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6
 
-build CMakeFiles/YCCppBlog.dir/chapter6/day_6_7_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter6/day_6_7_2.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter6/day_6_7_2.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter6/day_6_7_2.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_2.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter6
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_4_1.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_1.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_4_1.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_1.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_5.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_4_5.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_5.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_5.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_4_5.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_5.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_4_4.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_4.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_4_4.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_4.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_3.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_4_3.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_3.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_3.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_4_3.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_3.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_4_2.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_2.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_4_2.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_2.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_8.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter10/day_10_4_8.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_8.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_8.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_4_8.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_8.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter10
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
 
-build CMakeFiles/YCCppBlog.dir/chapter14/day_14_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter14/day_14_1.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter14/day_14_1.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter14/day_14_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter14/day_14_1.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter14/day_14_1.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter14
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter14
 
-build CMakeFiles/YCCppBlog.dir/chapter16/day_16_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter16/day_16_1.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter16/day_16_1.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter16/day_16_1.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter16
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16
 
-build CMakeFiles/YCCppBlog.dir/chapter16/day_16_1_3.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter16/day_16_1_3.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter16/day_16_1_3.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_3.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter16/day_16_1_3.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_3.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter16
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16
 
-build CMakeFiles/YCCppBlog.dir/chapter16/day_16_1_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/chapter16/day_16_1_4.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/chapter16/day_16_1_4.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter16/day_16_1_4.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_4.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/chapter16
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16
 
-build CMakeFiles/YCCppBlog.dir/demo/student/StudentManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/demo/student/StudentManager.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/demo/student/StudentManager.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_demo/student/StudentManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/student/StudentManager.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/student/StudentManager.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/demo/student
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/student
 
-build CMakeFiles/YCCppBlog.dir/demo/worker/WorkerManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/demo/worker/WorkerManager.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/demo/worker/WorkerManager.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/worker/WorkerManager.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerManager.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/demo/worker
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/worker
 
-build CMakeFiles/YCCppBlog.dir/demo/worker/Employee.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/demo/worker/Employee.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/demo/worker/Employee.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Employee.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/worker/Employee.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Employee.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/demo/worker
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/worker
 
-build CMakeFiles/YCCppBlog.dir/demo/worker/Manager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/demo/worker/Manager.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/demo/worker/Manager.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Manager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/worker/Manager.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Manager.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/demo/worker
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/worker
 
-build CMakeFiles/YCCppBlog.dir/demo/worker/Boss.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/demo/worker/Boss.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/demo/worker/Boss.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Boss.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/worker/Boss.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Boss.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/demo/worker
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/worker
 
-build CMakeFiles/YCCppBlog.dir/demo/worker/WorkerTest.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/demo/worker/WorkerTest.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/demo/worker/WorkerTest.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerTest.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/worker/WorkerTest.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerTest.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/demo/worker
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/worker
 
-build CMakeFiles/YCCppBlog.dir/demo/speaker/SpeechManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/demo/speaker/SpeechManager.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/demo/speaker/SpeechManager.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_demo/speaker/SpeechManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/speaker/SpeechManager.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/speaker/SpeechManager.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/demo/speaker
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/speaker
 
-build CMakeFiles/YCCppBlog.dir/demo/school/ComputerManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/demo/school/ComputerManager.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/demo/school/ComputerManager.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_demo/school/ComputerManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/school/ComputerManager.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/school/ComputerManager.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/demo/school
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/school
 
-build CMakeFiles/YCCppBlog.dir/demo/school/Student.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/demo/school/Student.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/demo/school/Student.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_demo/school/Student.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/school/Student.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/school/Student.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/demo/school
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/school
 
-build CMakeFiles/YCCppBlog.dir/demo/school/Teacher.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/demo/school/Teacher.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/demo/school/Teacher.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_demo/school/Teacher.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/school/Teacher.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/school/Teacher.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/demo/school
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/school
 
-build CMakeFiles/YCCppBlog.dir/demo/school/Manager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/demo/school/Manager.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/demo/school/Manager.cpp.o.d
+build CMakeFiles/YCCppBlog.dir/cpp_demo/school/Manager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/school/Manager.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/school/Manager.cpp.o.d
   FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/demo/school
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/school
+
+build CMakeFiles/YCCppBlog.dir/thirdlib/json/json11.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/thirdlib/json/json11.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/thirdlib/json/json11.cpp.o.d
+  FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/YCCppBlog.dir
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/thirdlib/json
+
+build CMakeFiles/YCCppBlog.dir/thirdlib/json/jsonTest.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/thirdlib/json/jsonTest.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/thirdlib/json/jsonTest.cpp.o.d
+  FLAGS = -arch arm64 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/YCCppBlog.dir
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/thirdlib/json
+
+build CMakeFiles/YCCppBlog.dir/c_chapter/chapter7/day7_7_8.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_chapter/chapter7/day7_7_8.c || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/c_chapter/chapter7/day7_7_8.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/YCCppBlog.dir
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_chapter/chapter7
 
 
 # =============================================================================
@@ -291,7 +309,7 @@ build CMakeFiles/YCCppBlog.dir/demo/school/Manager.cpp.o: CXX_COMPILER__YCCppBlo
 #############################################
 # Link the executable YCCppBlog
 
-build YCCppBlog: CXX_EXECUTABLE_LINKER__YCCppBlog_Debug CMakeFiles/YCCppBlog.dir/main.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_1.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_2.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_2_4.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_3_1.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_3_2.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_3_3.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_3_4.cpp.o CMakeFiles/YCCppBlog.dir/chapter8/day_8_2.cpp.o CMakeFiles/YCCppBlog.dir/chapter8/day_8_3.cpp.o CMakeFiles/YCCppBlog.dir/chapter8/day_8_4.cpp.o CMakeFiles/YCCppBlog.dir/chapter8/day_8_7.cpp.o CMakeFiles/YCCppBlog.dir/chapter8/day_8_5.cpp.o CMakeFiles/YCCppBlog.dir/chapter8/day_8_9.cpp.o CMakeFiles/YCCppBlog.dir/chapter8/day_8_8.cpp.o CMakeFiles/YCCppBlog.dir/chapter8/day_8_6.cpp.o CMakeFiles/YCCppBlog.dir/chapter6/day_6_7_1.cpp.o CMakeFiles/YCCppBlog.dir/chapter6/day_6_7_2.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_1.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_5.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_4.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_3.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_2.cpp.o CMakeFiles/YCCppBlog.dir/chapter10/day_10_4_8.cpp.o CMakeFiles/YCCppBlog.dir/chapter14/day_14_1.cpp.o CMakeFiles/YCCppBlog.dir/chapter16/day_16_1.cpp.o CMakeFiles/YCCppBlog.dir/chapter16/day_16_1_3.cpp.o CMakeFiles/YCCppBlog.dir/chapter16/day_16_1_4.cpp.o CMakeFiles/YCCppBlog.dir/demo/student/StudentManager.cpp.o CMakeFiles/YCCppBlog.dir/demo/worker/WorkerManager.cpp.o CMakeFiles/YCCppBlog.dir/demo/worker/Employee.cpp.o CMakeFiles/YCCppBlog.dir/demo/worker/Manager.cpp.o CMakeFiles/YCCppBlog.dir/demo/worker/Boss.cpp.o CMakeFiles/YCCppBlog.dir/demo/worker/WorkerTest.cpp.o CMakeFiles/YCCppBlog.dir/demo/speaker/SpeechManager.cpp.o CMakeFiles/YCCppBlog.dir/demo/school/ComputerManager.cpp.o CMakeFiles/YCCppBlog.dir/demo/school/Student.cpp.o CMakeFiles/YCCppBlog.dir/demo/school/Teacher.cpp.o CMakeFiles/YCCppBlog.dir/demo/school/Manager.cpp.o
+build YCCppBlog: CXX_EXECUTABLE_LINKER__YCCppBlog_Debug CMakeFiles/YCCppBlog.dir/main.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_3.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_3.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_7.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_5.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_9.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_8.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_6.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_5.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_3.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_8.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter14/day_14_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_3.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/student/StudentManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Employee.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Manager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Boss.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerTest.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/speaker/SpeechManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/school/ComputerManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/school/Student.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/school/Teacher.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/school/Manager.cpp.o CMakeFiles/YCCppBlog.dir/thirdlib/json/json11.cpp.o CMakeFiles/YCCppBlog.dir/thirdlib/json/jsonTest.cpp.o CMakeFiles/YCCppBlog.dir/c_chapter/chapter7/day7_7_8.c.o
   FLAGS = -arch arm64 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   POST_BUILD = :
