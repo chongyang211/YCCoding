@@ -1,0 +1,10 @@
+-I
+/Users/yc/newgit/YCCoding/QuickMusicPlayer/build/Qt_6_9_1_macos-Debug
+-I
+/Users/yangchong/Qt/6.9.1/macos/qml
+--resource
+/Users/yc/newgit/YCCoding/QuickMusicPlayer/build/Qt_6_9_1_macos-Debug/.qt/rcc/qmake_QuickMusicPlayer.qrc
+--resource
+/Users/yc/newgit/YCCoding/QuickMusicPlayer/build/Qt_6_9_1_macos-Debug/.qt/rcc/appQuickMusicPlayer_raw_qml_0.qrc
+--module
+QuickMusicPlayer
