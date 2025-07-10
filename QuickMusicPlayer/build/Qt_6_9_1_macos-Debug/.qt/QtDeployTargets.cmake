@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_appQuickMusicPlayer_FILE /Users/yc/newgit/YCCoding/QuickMusicPlayer/build/Qt_6_9_1_macos-Debug/appQuickMusicPlayer.app/Contents/MacOS/appQuickMusicPlayer)
-set(__QT_DEPLOY_TARGET_appQuickMusicPlayer_TYPE EXECUTABLE)

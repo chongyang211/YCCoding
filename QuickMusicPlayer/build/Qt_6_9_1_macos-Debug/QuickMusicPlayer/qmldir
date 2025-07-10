@@ -1,5 +1,0 @@
-module QuickMusicPlayer
-typeinfo appQuickMusicPlayer.qmltypes
-prefer :/qt/qml/QuickMusicPlayer/
-App 1.0 App.qml
-

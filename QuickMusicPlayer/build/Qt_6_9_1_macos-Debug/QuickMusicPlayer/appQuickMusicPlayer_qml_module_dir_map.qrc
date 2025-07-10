@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="/qt/qml/QuickMusicPlayer">/Users/yc/newgit/YCCoding/QuickMusicPlayer/build/Qt_6_9_1_macos-Debug/QuickMusicPlayer</file>
-
-  </qresource>
-</RCC>
