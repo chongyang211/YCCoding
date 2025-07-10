@@ -164,13 +164,36 @@ Window {
                         color: "#ffffff"
                     }
 
+                    //滑块进度条
                     Slider{
                         id:slider
-                        from: 0 // 设置最小值
-                        to: 100 // 设置最大值
                         width: parent.width
                         Layout.fillWidth: true
                         height: 25
+                        background:Rectangle{
+                            x:slider.leftPadding
+                            y:slider.topPadding+(slider.availableHeight-height)/2
+                            width: slider.availableWidth
+                            height: 4
+                            radius: 2
+                            color: "#e9f4ff"
+                            Rectangle{
+                                width: slider.visualPosition*parent.width
+                                height: parent.height
+                                color: "#73a7ab"
+                                radius: 2
+                            }
+                        }
+                        handle:Rectangle{
+                            x:slider.leftPadding+(slider.availableWidth-width)*slider.visualPosition
+                            y:slider.topPadding+(slider.availableHeight-height)/2
+                            width: 15
+                            height: 15
+                            radius: 5
+                            color: "#f0f0f0"
+                            border.color: "#73a7ab"
+                            border.width: 0.5
+                        }
                     }
                 }
 
