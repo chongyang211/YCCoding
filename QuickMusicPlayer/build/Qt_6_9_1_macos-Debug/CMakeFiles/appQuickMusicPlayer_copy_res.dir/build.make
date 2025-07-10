@@ -70,6 +70,7 @@ CMakeFiles/appQuickMusicPlayer_copy_res: .qt/appQuickMusicPlayer_res.txt
 
 .qt/appQuickMusicPlayer_res.txt: /Users/yangchong/Qt/6.9.1/macos/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
 .qt/appQuickMusicPlayer_res.txt: /Users/yc/newgit/YCCoding/QuickMusicPlayer/images.qrc
+.qt/appQuickMusicPlayer_res.txt: /Users/yc/newgit/YCCoding/QuickMusicPlayer/fonts.qrc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/yc/newgit/YCCoding/QuickMusicPlayer/build/Qt_6_9_1_macos-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying appQuickMusicPlayer qml resources into build dir"
 	/Users/yangchong/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DFILES_INFO_PATH=/Users/yc/newgit/YCCoding/QuickMusicPlayer/build/Qt_6_9_1_macos-Debug/.qt/appQuickMusicPlayer_res.cmake -P /Users/yangchong/Qt/6.9.1/macos/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
 

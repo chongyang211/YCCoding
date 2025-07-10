@@ -2,6 +2,7 @@
   <qresource prefix="/qt/qml/QuickMusicPlayer/">
     <file alias="App.qml">/Users/yc/newgit/YCCoding/QuickMusicPlayer/App.qml</file>
     <file alias="images.qrc">/Users/yc/newgit/YCCoding/QuickMusicPlayer/images.qrc</file>
+    <file alias="fonts.qrc">/Users/yc/newgit/YCCoding/QuickMusicPlayer/fonts.qrc</file>
   </qresource>
 </RCC>
 

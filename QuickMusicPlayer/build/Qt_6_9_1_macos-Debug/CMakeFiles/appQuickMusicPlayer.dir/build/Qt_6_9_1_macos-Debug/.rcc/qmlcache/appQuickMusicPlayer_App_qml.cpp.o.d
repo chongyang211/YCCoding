@@ -1112,6 +1112,7 @@ CMakeFiles/appQuickMusicPlayer.dir/build/Qt_6_9_1_macos-Debug/.rcc/qmlcache/appQ
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/cassert \
   /Users/yangchong/Qt/6.9.1/macos/lib/QtCore.framework/Headers/q20iterator.h \
   /Users/yangchong/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtyperevision.h \
+  /Users/yangchong/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qloggingcategory.h \
   /Users/yangchong/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qtimezone.h \
   /Users/yangchong/Qt/6.9.1/macos/lib/QtQml.framework/Headers/qjsengine.h \
   /Users/yangchong/Qt/6.9.1/macos/lib/QtQml.framework/Headers/qjsmanagedvalue.h \

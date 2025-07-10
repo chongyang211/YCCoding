@@ -123,6 +123,7 @@ QuickMusicPlayer/appQuickMusicPlayer.qmltypes: appquickmusicplayer_qmltyperegist
 
 .qt/rcc/qrc_appQuickMusicPlayer_raw_qml_0.cpp: /Users/yc/newgit/YCCoding/QuickMusicPlayer/App.qml
 .qt/rcc/qrc_appQuickMusicPlayer_raw_qml_0.cpp: /Users/yc/newgit/YCCoding/QuickMusicPlayer/images.qrc
+.qt/rcc/qrc_appQuickMusicPlayer_raw_qml_0.cpp: /Users/yc/newgit/YCCoding/QuickMusicPlayer/fonts.qrc
 .qt/rcc/qrc_appQuickMusicPlayer_raw_qml_0.cpp: .qt/rcc/appQuickMusicPlayer_raw_qml_0.qrc
 .qt/rcc/qrc_appQuickMusicPlayer_raw_qml_0.cpp: /Users/yangchong/Qt/6.9.1/macos/libexec/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/yc/newgit/YCCoding/QuickMusicPlayer/build/Qt_6_9_1_macos-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Running rcc for resource appQuickMusicPlayer_raw_qml_0"
