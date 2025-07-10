@@ -11,7 +11,9 @@ Window {
     visible: true
     title: qsTr("Cloud Music Player")
 
+
     ColumnLayout{
+
         anchors.fill: parent
         spacing: 0
 
@@ -111,13 +113,84 @@ Window {
             height: 60
             color: "#00AAAA"
 
-            Row{
+            RowLayout {
+                anchors.fill: parent
 
-                spacing: 10
+                Item{
+                    Layout.preferredWidth: parent.width/10
+                    Layout.fillWidth: true
+                }
+                Button{
+                    icon.source: "qrc:/images/previous.png"
+                    width: 32
+                    height: 32
+                    text: "上一曲"
+                }
 
-                Image {
-                    id: muisc
-                    source: "qrc:/images/power.png"
+                Button{
+                    icon.source: "qrc:/images/stop"
+                    width: 32
+                    height: 32
+                    text: "暂停/播放"
+                }
+                Button{
+                    icon.source: "qrc:/images/next.png"
+                    width: 32
+                    height: 32
+                    text: "下一曲"
+                }
+
+
+                Item{
+                    Layout.preferredWidth: parent.width/2
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    Layout.topMargin: 25
+
+                    Text{
+                        id:nameText
+                        anchors.left:slider.left
+                        anchors.bottom: slider.top
+                        anchors.leftMargin: 5
+                        text:"杨充"
+                        color: "#ffffff"
+                    }
+                    Text{
+                        id:timeText
+                        anchors.right: slider.right
+                        anchors.bottom: slider.top
+                        anchors.rightMargin: 5
+                        text:"00:00/05:30"
+                        color: "#ffffff"
+                    }
+
+                    Slider{
+                        id:slider
+                        from: 0 // 设置最小值
+                        to: 100 // 设置最大值
+                        width: parent.width
+                        Layout.fillWidth: true
+                        height: 25
+                    }
+                }
+
+                Button{
+                    Layout.preferredWidth: 100
+                    icon.source: "qrc:/images/favorite"
+                    width: 32
+                    height: 32
+                    text: "我喜欢"
+                }
+                Button{
+                    Layout.preferredWidth: 100
+                    icon.source: "qrc:/images/repeat"
+                    width: 32
+                    height: 32
+                    text: "重复播放"
+                }
+                Item{
+                    Layout.preferredWidth: parent.width/10
+                    Layout.fillWidth: true
                 }
             }
         }
