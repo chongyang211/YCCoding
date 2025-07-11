@@ -26,11 +26,16 @@ Frame{
         Item{
             Layout.fillWidth: true
             Layout.preferredHeight: 150
-            RoundButton{
+            // RoundButton{
+            //     anchors.centerIn:parent
+            //     height: 100
+            //     width:100
+            // }
+            MusicRoundImage{
                 anchors.centerIn:parent
                 height: 100
                 width:100
-
+                borderRadius: 100
             }
         }
 
