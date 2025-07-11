@@ -11,12 +11,13 @@ Window {
     visible: true
     title: qsTr("Cloud Music Player")
 
+    property int mWINDOW_WIDTH: 1200
+    property int mWINDOW_HEIGHT: 800
 
     ColumnLayout{
 
         anchors.fill: parent
         spacing: 0
-
 
         LayoutHeaderView {
             id:layoutHeaderView

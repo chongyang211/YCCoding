@@ -13,6 +13,7 @@ ToolButton{
     id:self
 
     icon.source:iconSource
+
     ToolTip.visible: hovered
     ToolTip.text: toolTip
 
