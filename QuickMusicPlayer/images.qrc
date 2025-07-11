@@ -1,9 +1,5 @@
-<!DOCTYPE RCC>
-
-<RCC version="1.0">
-    <!--prefix="/"：表示资源文件的根路径是 qrc:/。-->
+<RCC>
     <qresource prefix="/">
-        <!--    <file>images/music.png</file>：表示将 images/music.png 文件添加到资源系统中，路径为 qrc:/images/music.png。 -->
         <file>images/about.png</file>
         <file>images/background.png</file>
         <file>images/clear.png</file>

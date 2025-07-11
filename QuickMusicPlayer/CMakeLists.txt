@@ -34,6 +34,12 @@ qt_add_qml_module(appQuickMusicPlayer
         QML_FILES MusicIconButton.qml
         QML_FILES MusicToolButton.qml
         QML_FILES MusicRoundImage.qml
+        QML_FILES DetailRecommendPageView.qml
+        QML_FILES DetailSearchPageView.qml
+        QML_FILES DetailLocalPageView.qml
+        QML_FILES DetailHistoryPageView.qml
+        QML_FILES DetailFavoritePageView.qml
+        QML_FILES DetailPlayListPageView.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
