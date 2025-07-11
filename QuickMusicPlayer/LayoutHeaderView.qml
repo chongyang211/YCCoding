@@ -22,6 +22,9 @@ ToolBar {
             width: 32
             height: 32
             text: "关于"
+            onClicked: {
+                aboutPop.open()
+            }
         }
         MusicToolButton{
             icon.source: "qrc:/images/about.png"
@@ -120,5 +123,67 @@ ToolBar {
         //这个是坐标
         window.x=(Screen.desktopAvailableWidth-window.width)/2
         window.y=(Screen.desktopAvailableHeight-window.height)/2
+    }
+
+
+    Popup{
+        id:aboutPop
+
+        topInset: 0
+        leftInset: -2
+        rightInset: 0
+        bottomInset: 0
+
+        parent: Overlay.overlay
+        x:(parent.width-width)/2
+        y:(parent.height-height)/2
+
+        width: 250
+        height: 230
+
+        background: Rectangle{
+            color:"#e9f4ff"
+            radius: 5
+            border.color: "#2273a7ab"
+        }
+
+        contentItem: ColumnLayout{
+            width: parent.width
+            height: parent.height
+            Layout.alignment: Qt.AlignHCenter
+
+            Image{
+                Layout.preferredHeight: 60
+                source: "qrc:/images/music"
+                Layout.fillWidth:true
+                fillMode: Image.PreserveAspectFit
+
+            }
+
+            Text {
+                text: "杨充"
+                Layout.fillWidth: true
+                horizontalAlignment: Text.AlignHCenter
+                font.pixelSize: 18
+                color: "#8573a7ab"
+                font.bold: true
+            }
+            Text {
+                text: "这是我的Cloud Music Player"
+                Layout.fillWidth: true
+                horizontalAlignment: Text.AlignHCenter
+                font.pixelSize: 16
+                color: "#8573a7ab"
+                font.bold: true
+            }
+            Text {
+                text: "www.yccoding.com"
+                Layout.fillWidth: true
+                horizontalAlignment: Text.AlignHCenter
+                font.pixelSize: 16
+                color: "#8573a7ab"
+                font.bold: true
+            }
+        }
     }
 }
