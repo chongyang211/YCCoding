@@ -18,7 +18,15 @@ typedef struct tagStudent {
     int  nScore;		//成绩
 } Student;
 
+//链表
+//节点
+typedef struct tagNode {
+    Student stu;			//学生信息
+    struct tagNode* pNext;	//指向下一个节点
+} Node;
 
+//创建头节点
+Node* g_pHead = NULL;		//指向头节点
 
 //菜单展示
 void Menu();
