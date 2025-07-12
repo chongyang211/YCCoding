@@ -25,6 +25,7 @@ int main() {
         switch (ch) {
             case '1': //1.录入学生信息
                 printf("录入学生信息\n");
+                InputStudent();
                 break;
             case '2': //2.打印学生信息
                 printf("打印学生信息\n");
@@ -81,4 +82,49 @@ void Menu() {
 
 
 void InputStudent() {
+    //创建一个人，在堆中分配内存
+    Node* pNewNode = (Node*) malloc(sizeof(Node));
+    //指针下一个指向空
+    pNewNode->pNext = NULL;
+
+    //查找链表的尾结点
+    Node* p = g_pHead;
+    //g_pHead != NULL：确保链表不为空。
+    //p->pNext != NULL：确保当前节点的下一个节点不为空（即当前节点不是最后一个节点）。
+    while (g_pHead != NULL && p->pNext != NULL) {
+        //将指针 p 移动到下一个节点。
+        p = p->pNext;
+    }
+    //把节点插到链表的尾节点
+    if (g_pHead == NULL) {
+        //无数据，则放到头部
+        g_pHead = pNewNode;
+    } else {
+        p->pNext = pNewNode;
+    }
+    //录入学生信息
+    printf("请输入学生姓名：\n");
+    //warning: data argument not used by format string [-Wformat-extra-args]
+    //这个警告是因为 scanf 的格式字符串 "%s" 只需要一个参数（即存储输入的缓冲区）
+    //但你提供了两个参数（pNewNode->stu.szName 和 sizeof(pNewNode->stu.szName)）。scanf 不会使用第二个参数，因此编译器发出了警告。
+    //scanf("%s", pNewNode->stu.szName, sizeof(pNewNode->stu.szName));
+    scanf("%19s", pNewNode->stu.szName); // 假设 szName 的大小为 20
+    // fgets(pNewNode->stu.szName, sizeof(pNewNode->stu.szName), stdin);
+    // // 去掉 fgets 可能读取的换行符
+    // size_t lenName = strlen(pNewNode->stu.szName);
+    // if (lenName > 0 && pNewNode->stu.szName[lenName - 1] == '\n') {
+    //     pNewNode->stu.szName[lenName - 1] = '\0';
+    // }
+    printf("请输入性别：\n");
+    //scanf("%s", pNewNode->stu.szSex, sizeof(pNewNode->stu.szSex));
+    scanf("%3s", pNewNode->stu.szSex);
+    printf("请输入学生年龄：\n");
+    scanf("%d", &pNewNode->stu.nAge);
+    printf("请输入学号：\n");
+    scanf("%d", &pNewNode->stu.nStuNo);
+    printf("请输入成绩：\n");
+    scanf("%d", &pNewNode->stu.nScore);
+    printf("学生信息录入成功。\n\n");
+    pauseProgram();
+    clearScreen();
 }

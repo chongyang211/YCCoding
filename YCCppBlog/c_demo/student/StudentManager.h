@@ -25,7 +25,7 @@ typedef struct tagNode {
     struct tagNode* pNext;	//指向下一个节点
 } Node;
 
-//创建头节点
+//创建头节点。这个是结构体指针
 Node* g_pHead = NULL;		//指向头节点
 
 //菜单展示
