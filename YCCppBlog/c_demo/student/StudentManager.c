@@ -33,6 +33,7 @@ int main() {
                 break;
             case '3': //3.保存学生信息
                 printf("保存学生信息\n");
+                SaveStudent();
                 break;
             case '4': //4.读取学生信息
                 printf("读取学生信息\n");
@@ -127,7 +128,6 @@ void InputStudent() {
     scanf("%d", &pNewNode->stu.nScore);
     printf("学生信息录入成功。\n\n");
     pauseProgram();
-    clearScreen();
 }
 
 //打印学生信息
@@ -156,5 +156,32 @@ void PrintStudent() {
         p = p->pNext;
         printf("*********************************************************************************\n");
     }
+    pauseProgram();
+}
+
+//保存学生信息
+void SaveStudent() {
+    //打开文件
+    FILE *pFile;
+    pFile = fopen("stuinfo.txt", "w");
+    if (pFile == NULL) {
+        printf("打开文件失败。\n");
+        return;
+    }
+    //写入数据
+    Node *p = g_pHead;
+    //判断是否有数据
+    if (p == NULL) {
+        printf("链表中没有数据\n");
+        return;
+    }
+    while (p != NULL) {
+        fwrite(&p->stu, sizeof(Node), 1, pFile);
+        //指向下一个
+        p = p->pNext;
+    }
+    //关闭文件
+    fclose(pFile);
+    printf("数据保存成功。\n");
     pauseProgram();
 }
