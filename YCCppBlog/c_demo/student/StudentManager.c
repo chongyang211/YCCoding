@@ -5,7 +5,11 @@
 #include "StudentManager.h"
 
 int main() {
+    //打印菜单
     Menu();
+    //读取一个字符 整数,字符在内存中映射为ASCII码
+    char ch = getchar();
+    printf("*输入的字符是：%c \n" ,ch);
     return 0;
 }
 

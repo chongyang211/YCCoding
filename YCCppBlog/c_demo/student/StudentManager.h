@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include<string.h>		//strlen()
+
 //菜单展示
 void Menu();
 
