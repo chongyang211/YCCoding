@@ -9,6 +9,17 @@
 #include <stdio.h>
 #include<string.h>		//strlen()
 
+//定义一个学生结构体
+typedef struct tagStudent {
+    char szName[20];	//姓名
+    char szSex[4];		//性别
+    int  nAge;			//年龄
+    int  nStuNo;		//学号
+    int  nScore;		//成绩
+} Student;
+
+
+
 //菜单展示
 void Menu();
 
