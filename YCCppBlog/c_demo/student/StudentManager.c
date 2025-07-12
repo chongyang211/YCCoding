@@ -29,6 +29,7 @@ int main() {
                 break;
             case '2': //2.打印学生信息
                 printf("打印学生信息\n");
+                PrintStudent();
                 break;
             case '3': //3.保存学生信息
                 printf("保存学生信息\n");
@@ -83,12 +84,12 @@ void Menu() {
 
 void InputStudent() {
     //创建一个人，在堆中分配内存
-    Node* pNewNode = (Node*) malloc(sizeof(Node));
+    Node *pNewNode = (Node *) malloc(sizeof(Node));
     //指针下一个指向空
     pNewNode->pNext = NULL;
 
     //查找链表的尾结点
-    Node* p = g_pHead;
+    Node *p = g_pHead;
     //g_pHead != NULL：确保链表不为空。
     //p->pNext != NULL：确保当前节点的下一个节点不为空（即当前节点不是最后一个节点）。
     while (g_pHead != NULL && p->pNext != NULL) {
@@ -127,4 +128,33 @@ void InputStudent() {
     printf("学生信息录入成功。\n\n");
     pauseProgram();
     clearScreen();
+}
+
+//打印学生信息
+void PrintStudent() {
+    clearScreen();
+    //遍历链表
+    Node *p = g_pHead;
+    if (p == NULL) {
+        printf("系统中暂无学生信息，请录入后再来打印查看。\n\n");
+        return;
+    }
+    printf("*********************************************************************************\n");
+    printf("*\t\t\t欢迎使用高校学生成绩管理系统V1.0\t\t\t*\n");
+    printf("*********************************************************************************\n");
+    printf("*\t学号\t*\t姓名\t*\t性别\t*\t年龄\t*\t成绩\t*\n");
+    printf("*********************************************************************************\n");
+    while (p != NULL) {
+        printf("*\t%d\t*\t%s\t*\t%s\t*\t%d\t*\t%d\t*\n",
+               p->stu.nStuNo,
+               p->stu.szName,
+               p->stu.szSex,
+               p->stu.nAge,
+               p->stu.nScore
+        );
+        //指向下一个节点
+        p = p->pNext;
+        printf("*********************************************************************************\n");
+    }
+    pauseProgram();
 }

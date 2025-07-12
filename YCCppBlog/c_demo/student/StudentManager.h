@@ -34,4 +34,7 @@ void Menu();
 //录入信息
 void InputStudent();
 
+//打印学生信息
+void PrintStudent();
+
 #endif //STUDENTCMANAGER_H
