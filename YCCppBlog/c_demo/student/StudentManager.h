@@ -31,4 +31,7 @@ Node* g_pHead = NULL;		//指向头节点
 //菜单展示
 void Menu();
 
+//录入信息
+void InputStudent();
+
 #endif //STUDENTCMANAGER_H
