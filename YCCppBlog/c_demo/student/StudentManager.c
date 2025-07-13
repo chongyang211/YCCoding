@@ -185,3 +185,57 @@ void SaveStudent() {
     printf("数据保存成功。\n");
     pauseProgram();
 }
+
+//读取学生信息
+void ReadStudent() {
+    clearScreen();
+    //打开文件
+    FILE *pFile;
+    pFile = fopen("stuinfo.txt", "r");
+    if (pFile == NULL) {
+        printf("打开文件失败。\n");
+        return;
+    }
+
+    //创建一个人，在堆中分配内存
+    Node *p = (Node *) malloc(sizeof(Node));
+    p->pNext = NULL;
+    g_pHead = p;
+    //逐个单词读入文本内容
+    char str[200];
+    int i = 0;
+    while (fscanf(pFile, "%s", str) != EOF) {
+        //读文件
+        //单词不是*或者空时，进行赋值
+        if (strcmp(str, "*") && str != NULL) {
+            switch (i) {
+                case 0:
+                    p->stu.nStuNo = atoi(str);
+                    break;
+                case 1:
+                    strcpy(p->stu.szName, str);
+                    break;
+                case 2:
+                    strcpy(p->stu.szSex, str);
+                    break;
+                case 3:
+                    p->stu.nAge = atoi(str);
+                    break;
+                case 4:
+                    p->stu.nScore = atoi(str);
+                    break;
+                default:
+                    Node *pNewNode = (Node *) malloc(sizeof(Node));
+                    pNewNode->pNext = NULL;
+                    p->pNext = pNewNode;
+                    p = pNewNode;
+                    p->stu.nStuNo = atoi(str);
+                    i = 0;
+                    break;
+            }
+            i++;
+        }
+    }
+    //打印读取结果
+    PrintStudent();
+}

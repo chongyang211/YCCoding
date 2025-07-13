@@ -40,4 +40,7 @@ void PrintStudent();
 //保存学生信息
 void SaveStudent();
 
+//读取学生信息
+void ReadStudent();
+
 #endif //STUDENTCMANAGER_H
