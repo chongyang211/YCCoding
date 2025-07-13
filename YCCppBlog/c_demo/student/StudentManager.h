@@ -8,6 +8,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include<string.h>		//strlen()
+#include <stdbool.h> // 引入布尔类型支持
+
 
 //定义一个学生结构体
 typedef struct tagStudent {
@@ -45,5 +47,8 @@ void ReadStudent();
 
 //统计所有学生人数
 void CountStudent();
+
+//查找学生信息
+void FindStudent();
 
 #endif //STUDENTCMANAGER_H

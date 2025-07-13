@@ -6,7 +6,7 @@
 
 // 暂停程序
 void pauseProgram() {
-    printf("Press Enter to continue...");
+    printf("Press Enter to continue...\n");
     getchar();
 }
 
@@ -127,9 +127,10 @@ void InputStudent() {
     printf("请输入学号：\n");
     scanf("%d", &pNewNode->stu.nStuNo);
     printf("请输入成绩：\n");
-    scanf("%d", &pNewNode->stu.nScore);
+    scanf("%d\n", &pNewNode->stu.nScore);
     printf("学生信息录入成功。\n\n");
     pauseProgram();
+    clearScreen();
 }
 
 //打印学生信息
@@ -159,6 +160,7 @@ void PrintStudent() {
         printf("*********************************************************************************\n");
     }
     pauseProgram();
+    clearScreen();
 }
 
 //保存学生信息
@@ -209,34 +211,41 @@ void ReadStudent() {
     while (fscanf(pFile, "%s", str) != EOF) {
         //读文件
         //单词不是*或者空时，进行赋值
-        if (strcmp(str, "*") && str != NULL) {
-            switch (i) {
-                case 0:
-                    p->stu.nStuNo = atoi(str);
-                    break;
-                case 1:
-                    strcpy(p->stu.szName, str);
-                    break;
-                case 2:
-                    strcpy(p->stu.szSex, str);
-                    break;
-                case 3:
-                    p->stu.nAge = atoi(str);
-                    break;
-                case 4:
-                    p->stu.nScore = atoi(str);
-                    break;
-                default:
-                    Node *pNewNode = (Node *) malloc(sizeof(Node));
-                    pNewNode->pNext = NULL;
-                    p->pNext = pNewNode;
-                    p = pNewNode;
-                    p->stu.nStuNo = atoi(str);
-                    i = 0;
-                    break;
-            }
-            i++;
+        // 检查输入是否为 "*"
+        if (strcmp(str, "*") == 0) {
+            printf("Input terminated.\n");
+            continue;
         }
+        switch (i) {
+            case 0:
+                p->stu.nStuNo = atoi(str);
+                break;
+            case 1:
+                strcpy(p->stu.szName, str);
+                break;
+            case 2:
+                strcpy(p->stu.szSex, str);
+                break;
+            case 3:
+                p->stu.nAge = atoi(str);
+                break;
+            case 4:
+                p->stu.nScore = atoi(str);
+                break;
+            default:
+                // Node *pNewNode = (Node *) malloc(sizeof(Node));
+                // if (pNewNode == NULL) {
+                //     printf("Memory allocation failed!\n");
+                //     return;
+                // }
+                // pNewNode->pNext = NULL;
+                // p->pNext = pNewNode;
+                // p = pNewNode;
+                // p->stu.nStuNo = atoi(str);
+                // i = 0;
+                break;
+        }
+        i++;
     }
     //打印读取结果
     PrintStudent();
@@ -245,11 +254,52 @@ void ReadStudent() {
 void CountStudent() {
     int countStu = 0;
     //遍历链表
-    Node * p = g_pHead;
+    Node *p = g_pHead;
     while (p != NULL) {
         countStu++;
         p = p->pNext;
     }
     printf("学生总人数：%d\n\n", countStu);
     pauseProgram();
+}
+
+
+//查找学生信息
+void FindStudent() {
+    //通过学号查找学生
+    int stuNum;
+    printf("请输入查找学生学号：");
+    scanf("%d", &stuNum);
+    //遍历链表查找
+    Node* p = g_pHead;
+    //对表头进行展示一次
+    bool isShowHead = false;
+    //记录是否有找到该学号的学生信息
+    bool isFindStu = false;
+    while (p != NULL) {
+        //对比学工号
+        if (stuNum == p->stu.nStuNo) {
+            if (!isShowHead) {
+                printf("*********************************************************************************\n");
+                printf("*\t学号\t*\t姓名\t*\t性别\t*\t年龄\t*\t成绩\t*\n");
+                printf("*********************************************************************************\n");
+                isShowHead = true;
+            }
+            printf("*\t%d\t*\t%s\t*\t%s\t*\t%d\t*\t%d\t*\n",
+                p->stu.nStuNo,
+                p->stu.szName,
+                p->stu.szSex,
+                p->stu.nAge,
+                p->stu.nScore
+            );
+            isFindStu = true;
+            printf("*********************************************************************************\n");
+        }
+        p = p->pNext;
+    }
+    if (!isFindStu) {
+        printf("学号输入有误，系统中暂无该学生信息。\n\n");
+    }
+    pauseProgram();
+    clearScreen();
 }
