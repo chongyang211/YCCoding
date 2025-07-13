@@ -3,6 +3,17 @@
 //
 #include "BankManager.h"
 
+// 暂停程序
+void pauseProgram() {
+    printf("Press Enter to continue...\n");
+    getchar();
+}
+
+// 清屏
+void clearScreen() {
+    system("clear"); // 或使用 printf("\033[H\033[J");
+}
+
 int main() {
     int choice;
     while (1) {
@@ -29,6 +40,7 @@ int main() {
                 break;
             case 7:
                 printf("退出系统，再见！\n");
+                exit(0);
                 break;
             default:
                 printf("无效的选择，请重新输入！\n");
