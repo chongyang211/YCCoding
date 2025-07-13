@@ -14,6 +14,9 @@ void clearScreen() {
     system("clear"); // 或使用 printf("\033[H\033[J");
 }
 
+BankAccount accounts[MAX_ACCOUNTS];
+int account_count = 0;
+
 int main() {
     int choice;
     while (1) {
@@ -22,6 +25,7 @@ int main() {
         switch (choice) {
             case 1:
                 printf("开户\n");
+                openAccount();
                 break;
             case 2:
                 printf("存款\n");
@@ -62,4 +66,23 @@ void showMenu() {
     printf("6. 保存数据到文件\n");
     printf("7. 退出\n");
     printf("请输入您的选择: ");
+}
+
+// 开户
+void openAccount() {
+    if (account_count >= MAX_ACCOUNTS) {
+        printf("账户数量已达到上限，无法继续开户！\n");
+        return;
+    }
+    BankAccount newAccount;
+    newAccount.accountNumber = account_count + 1;
+    printf("请输入账户姓名: ");
+    scanf("%s", newAccount.name);
+    printf("请输入初始余额: ");
+    scanf("%lf", &newAccount.balance);
+    accounts[account_count] = newAccount;
+    account_count++;
+    printf("账户开户成功！账户号: %d\n", newAccount.accountNumber);
+    pauseProgram();
+    clearScreen();
 }

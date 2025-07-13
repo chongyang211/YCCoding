@@ -24,4 +24,7 @@ typedef struct {
 //展示菜单
 void showMenu();
 
+// 开户
+void openAccount();
+
 #endif //BANKMANAGER_H
