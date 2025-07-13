@@ -303,3 +303,18 @@ void FindStudent() {
     pauseProgram();
     clearScreen();
 }
+
+//删除学生信息
+void DelectStudent() {
+    //先找到学生
+    int stuNum;
+    printf("请输入删除学生的学号");
+    scanf("%d",&stuNum);
+    //遍历链表查找，查找到后进行信息显示
+    Node* p = g_pHead;
+
+    //然后删除学生
+    while (p != NULL) {
+        p = p->pNext;
+    }
+}

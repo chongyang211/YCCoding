@@ -51,4 +51,7 @@ void CountStudent();
 //查找学生信息
 void FindStudent();
 
+//删除学生信息
+void DelectStudent();
+
 #endif //STUDENTCMANAGER_H
