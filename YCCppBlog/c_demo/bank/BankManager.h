@@ -7,6 +7,20 @@
 #ifndef BANKMANAGER_H
 #define BANKMANAGER_H
 
+//最多用户不超过100
+#define MAX_ACCOUNTS 100
+//用户名最多是50位
+#define NAME_LENGTH 50
+//用户文件名称
+#define FILENAME "bank_accounts.txt"
+
+//定义用户结构体
+typedef struct {
+    int accountNumber;  //用户卡号
+    char name[NAME_LENGTH]; //用户名
+    double balance; //余额
+} BankAccount;
+
 //展示菜单
 void showMenu();
 
