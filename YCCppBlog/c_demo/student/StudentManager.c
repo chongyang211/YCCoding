@@ -37,9 +37,11 @@ int main() {
                 break;
             case '4': //4.读取学生信息
                 printf("读取学生信息\n");
+                ReadStudent();
                 break;
             case '5': //5.统计所有学生人数
                 printf("统计所有学生人数\n");
+                CountStudent();
                 break;
             case '6': //6.查找学生信息
                 printf("查找学生信息\n");
@@ -238,4 +240,16 @@ void ReadStudent() {
     }
     //打印读取结果
     PrintStudent();
+}
+
+void CountStudent() {
+    int countStu = 0;
+    //遍历链表
+    Node * p = g_pHead;
+    while (p != NULL) {
+        countStu++;
+        p = p->pNext;
+    }
+    printf("学生总人数：%d\n\n", countStu);
+    pauseProgram();
 }

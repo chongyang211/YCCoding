@@ -43,4 +43,7 @@ void SaveStudent();
 //读取学生信息
 void ReadStudent();
 
+//统计所有学生人数
+void CountStudent();
+
 #endif //STUDENTCMANAGER_H
