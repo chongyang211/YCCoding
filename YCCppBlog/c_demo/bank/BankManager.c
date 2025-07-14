@@ -78,11 +78,18 @@ void openAccount() {
     newAccount.accountNumber = account_count + 1;
     printf("请输入账户姓名: ");
     scanf("%s", newAccount.name);
+    pauseProgram();
+    //fgets(newAccount.name, NAME_LENGTH, stdin);
+    newAccount.name[strcspn(newAccount.name, "\n")] = '\0'; // 去掉换行符
     printf("请输入初始余额: ");
-    scanf("%lf", &newAccount.balance);
+    //scanf("%lf", &newAccount.balance);
+    while (scanf("%lf", &newAccount.balance) != 1) {
+        printf("输入无效，请输入一个数字: ");
+        while (getchar() != '\n'); // 清空输入缓冲区
+    }
     accounts[account_count] = newAccount;
     account_count++;
     printf("账户开户成功！账户号: %d\n", newAccount.accountNumber);
     pauseProgram();
-    clearScreen();
+    //clearScreen();
 }
