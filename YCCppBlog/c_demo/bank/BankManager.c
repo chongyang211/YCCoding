@@ -19,6 +19,7 @@ int account_count = 0;
 
 int main() {
     int choice;
+    loadFromFile();
     while (1) {
         showMenu();
         scanf("%d", &choice);
@@ -45,6 +46,7 @@ int main() {
                 break;
             case 6:
                 printf("保存数据到文件\n");
+                saveToFile();
                 break;
             case 7:
                 printf("退出系统，再见！\n");
@@ -208,5 +210,38 @@ void transfer() {
            accounts[fromIndex].balance,
            accounts[toIndex].balance);
 }
+
+// 保存数据到文件
+void saveToFile() {
+    FILE *file = fopen(FILENAME,"w");
+    if (file == NULL) {
+        printf("无法打开文件！\n");
+        return;
+    }
+    for (int i = 0; i < account_count; i++) {
+        fprintf(file, "%d %s %.2lf\n", accounts[i].accountNumber, accounts[i].name, accounts[i].balance);
+    }
+    fclose(file);
+    printf("账户数据已保存到文件！\n");
+}
+
+// 从文件读取数据
+void loadFromFile() {
+    FILE *file = fopen(FILENAME, "r");
+    if (file == NULL) {
+        printf("文件不存在或无法打开！\n");
+        return;
+    }
+    account_count = 0;
+    while (fscanf(file, "%d %s %lf", &accounts[account_count].accountNumber, accounts[account_count].name, &accounts[account_count].balance) != EOF) {
+        account_count++;
+    }
+    fclose(file);
+    printf("账户数据已从文件加载！\n");
+}
+
+
+
+
 
 

@@ -39,4 +39,10 @@ void checkBalance();
 // 转账
 void transfer();
 
+// 保存数据到文件
+void saveToFile();
+
+// 从文件读取数据
+void loadFromFile();
+
 #endif //BANKMANAGER_H
