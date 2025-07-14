@@ -79,4 +79,6 @@ add_executable(YCCppBlog main.cpp
         c_demo/worker/WorkManager.h
         c_demo/worker/WorkManager.c
         c_demo/worker/DemoWorker.c
+        c_demo/worker/Employee.h
+        c_demo/worker/WorkerTools.h
 )

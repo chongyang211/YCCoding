@@ -11,6 +11,10 @@
 #ifndef WORKMANAGER_H
 #define WORKMANAGER_H
 
+void boss_duties();
+void worker_duties();
+void manager_duties();
+
 // 系统主循环
 void system_run();
 // 内部函数声明

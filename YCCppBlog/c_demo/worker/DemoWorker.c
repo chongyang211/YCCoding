@@ -12,16 +12,21 @@
 #include <stdbool.h>
 #include <time.h>
 
-/*-------------------------------------------
- *  宏定义与全局常量
- *------------------------------------------*/
-#define MAX_NAME_LEN 50
-#define MAX_EMPLOYEES 1000
-#define DATA_FILE "employee_data.dat"
-#define BACKUP_FILE "employee_backup.dat"
-#define LOG_FILE "system_log.txt"
-#define MIN_ID 1000
-#define MAX_ID 9999
+#include "Employee.h"
+#include "WorkerTools.h"
+
+
+void worker_duties() {
+    printf("职责：完成经理交给的任务\n");
+}
+
+void manager_duties() {
+    printf("职责：完成老板交给的任务\n");
+}
+
+void boss_duties() {
+    printf("职责：管理公司所有事务\n");
+}
 
 /*-------------------------------------------
  *  日志记录系统（100行）
@@ -74,45 +79,6 @@ void handle_error(ErrorCode code, const char* context) {
     snprintf(log_msg, sizeof(log_msg), "ERROR [%d:%s] - %s",
              code, error_messages[code], context);
     log_event(log_msg);
-}
-
-/*-------------------------------------------
- *  职工类层次结构（200行）
- *------------------------------------------*/
-typedef struct Employee {
-    int id;
-    char name[MAX_NAME_LEN];
-    int dept_id;
-    void (*show_duties)();
-} Employee;
-
-// 普通员工
-typedef struct Worker {
-    Employee base;
-} Worker;
-
-void worker_duties() {
-    printf("职责：完成经理交给的任务\n");
-}
-
-// 经理
-typedef struct Manager {
-    Employee base;
-    int team_size;
-} Manager;
-
-void manager_duties() {
-    printf("职责：完成老板交给的任务\n");
-}
-
-// 老板
-typedef struct Boss {
-    Employee base;
-    float company_shares;
-} Boss;
-
-void boss_duties() {
-    printf("职责：管理公司所有事务\n");
 }
 
 /*-------------------------------------------
