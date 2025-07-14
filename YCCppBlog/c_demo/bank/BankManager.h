@@ -30,4 +30,7 @@ void openAccount();
 // 存款
 void deposit();
 
+// 取款
+void withdraw();
+
 #endif //BANKMANAGER_H
