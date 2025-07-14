@@ -103,7 +103,6 @@ Employee* create_boss(int id, const char* name, int dept_id, float shares) {
     b->base.dept_id = dept_id;
     b->base.show_duties = boss_duties;
     b->company_shares = shares;
-
     return (Employee*)b;
 }
 
