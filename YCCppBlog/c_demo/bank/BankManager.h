@@ -27,4 +27,7 @@ void showMenu();
 // 开户
 void openAccount();
 
+// 存款
+void deposit();
+
 #endif //BANKMANAGER_H

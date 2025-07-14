@@ -29,6 +29,7 @@ int main() {
                 break;
             case 2:
                 printf("存款\n");
+                deposit();
                 break;
             case 3:
                 printf("取款\n");
@@ -92,4 +93,27 @@ void openAccount() {
     printf("账户开户成功！账户号: %d\n", newAccount.accountNumber);
     pauseProgram();
     //clearScreen();
+}
+
+// 存款
+void deposit() {
+    int accountNumber;
+    double amount;
+    printf("请输入账户号：");
+    scanf("%d",&accountNumber);
+    //输入卡号后，开始查找用户
+    for (int i=0 ; i<account_count; i++) {
+        if (accounts[i].accountNumber == accountNumber) {
+            printf("请输入存款金额：");
+            scanf("%lf",&amount);
+            if (amount <= 0) {
+                printf("存款金额必须大于0！\n");
+                return;
+            }
+            accounts[i].balance += amount;
+            printf("存款成功！当前余额: %.2lf\n", accounts[i].balance);
+            return;
+        }
+    }
+    printf("未找到账户号为%d的账户！\n", accountNumber);
 }
