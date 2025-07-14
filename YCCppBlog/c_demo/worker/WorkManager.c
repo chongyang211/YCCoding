@@ -271,6 +271,7 @@ void system_add_employee(Employee* emp) {
         free(emp);
         return;
     }
+    //对数据数量+1
     this_system->employees[this_system->count++] = emp;
     char log_msg[100];
     snprintf(log_msg, sizeof(log_msg), "添加职工: %s (ID: %d)", emp->name, emp->id);
@@ -283,15 +284,40 @@ void system_delete_employee(int id) {
 void system_modify_employee(int id) {
 
 }
-void system_display_all() {
 
+//显示所有职工
+void system_display_all() {
+    if (this_system->count == 0) {
+        printf("没有职工记录\n");
+        return;
+    }
+    printf("\n%-10s %-20s %-15s %-10s\n", "职工ID", "姓名", "部门", "职位");
+    printf("================================================\n");
+    for (int i=0 ; i<this_system->count ; i++) {
+        //遍历数组
+        Employee *employee = this_system->employees[i];
+        char type[20];
+        if (employee->show_duties == worker_duties) {
+            strcpy(type, "普通员工");
+        } else if (employee->show_duties == manager_duties) {
+            strcpy(type, "经理");
+        } else {
+            strcpy(type, "老板");
+        }
+        printf("%-10d %-20s %-15d %-10s\n",
+         employee->id, employee->name, employee->dept_id, type);
+    }
+    log_event("显示所有职工信息");
 }
+
 void system_find_employee() {
 
 }
+
 void system_sort_employees() {
 
 }
+
 void system_clear_data() {
 
 }
