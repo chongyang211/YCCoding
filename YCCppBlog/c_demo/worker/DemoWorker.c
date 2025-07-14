@@ -15,6 +15,7 @@
 #include "WorkerLogger.h"
 #include "WorkManager.h"
 #include "WorkerError.h"
+#include "WorkerValid.h"
 
 void worker_duties() {
     printf("职责：完成经理交给的任务\n");
@@ -277,7 +278,8 @@ int load_from_file(Employee* employees[]) {
 /*-------------------------------------------
  *  用户输入验证系统（200行）
  *------------------------------------------*/
-int get_valid_int(const char* prompt, int min_val, int max_val) {
+
+int get_valid_int(const char *prompt, int min_val, int max_val) {
     int value;
     char input[50];
 
@@ -295,7 +297,7 @@ int get_valid_int(const char* prompt, int min_val, int max_val) {
     }
 }
 
-void get_valid_string(const char* prompt, char* buffer, int max_len) {
+void get_valid_string(const char *prompt, char *buffer, int max_len) {
     while (1) {
         printf("%s: ", prompt);
         fgets(buffer, max_len, stdin);
@@ -330,7 +332,7 @@ void get_valid_string(const char* prompt, char* buffer, int max_len) {
 }
 
 
-int confirm_action(const char* action) {
+int confirm_action(const char *action) {
     char response[10];
     printf("确认%s? (y/n): ", action);
     fgets(response, sizeof(response), stdin);
