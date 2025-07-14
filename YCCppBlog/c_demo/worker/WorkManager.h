@@ -18,6 +18,7 @@ void system_display_menu();
 // 系统主循环
 void system_run();
 void system_add_employee(Employee* emp);
+// 删除某个职工
 void system_delete_employee(int id);
 void system_modify_employee(int id);
 // 显示所有职工

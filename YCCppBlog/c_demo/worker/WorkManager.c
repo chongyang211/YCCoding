@@ -412,27 +412,23 @@ void system_add_employee(Employee* emp) {
 
 // 删除职工
 void system_delete_employee(int id) {
-    for (int i = 0; i < this_system->count; i++) {
+    for (int i=0 ; i<this_system->count ; i++) {
         if (this_system->employees[i]->id == id) {
+            //找到了职工
             char name[MAX_NAME_LEN];
-            strcpy(name, this_system->employees[i]->name);
-
+            strcpy(name,this_system->employees[i]->name);
             free(this_system->employees[i]);
-
-            // 移动数组元素
+            //需要移动数组元素。将i之后的元素统统往前移动一位
             for (int j = i; j < this_system->count - 1; j++) {
                 this_system->employees[j] = this_system->employees[j+1];
             }
-
-            this_system->count--;
-
+            this_system->count --;
             char log_msg[100];
             snprintf(log_msg, sizeof(log_msg), "删除职工: %s (ID: %d)", name, id);
             log_event(log_msg);
             return;
         }
     }
-
     handle_error(ERR_ID_NOT_FOUND, "删除职工");
     printf("错误: 未找到ID为 %d 的职工\n", id);
 }
