@@ -11,6 +11,8 @@
 #ifndef WORKMANAGER_H
 #define WORKMANAGER_H
 
+// 系统主循环
+void system_run();
 // 内部函数声明
 void system_display_menu();
 
