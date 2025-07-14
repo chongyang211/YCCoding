@@ -36,4 +36,7 @@ void withdraw();
 // 查询余额
 void checkBalance();
 
+// 转账
+void transfer();
+
 #endif //BANKMANAGER_H

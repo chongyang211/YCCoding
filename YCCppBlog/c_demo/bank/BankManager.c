@@ -37,6 +37,7 @@ int main() {
                 break;
             case 4:
                 printf("查询余额\n");
+                checkBalance();
                 break;
             case 5:
                 printf("转账\n");
@@ -160,6 +161,11 @@ void checkBalance() {
         }
     }
     printf("未找到账户号为%d的账户！\n", accountNumber);
+}
+
+// 转账
+void transfer() {
+
 }
 
 
