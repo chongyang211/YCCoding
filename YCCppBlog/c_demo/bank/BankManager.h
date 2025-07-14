@@ -33,4 +33,7 @@ void deposit();
 // 取款
 void withdraw();
 
+// 查询余额
+void checkBalance();
+
 #endif //BANKMANAGER_H
