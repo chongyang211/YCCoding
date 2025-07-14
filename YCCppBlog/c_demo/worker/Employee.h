@@ -52,4 +52,8 @@ typedef struct EmployeeSystem {
     void (*clear_data)();
 } EmployeeSystem;
 
+void worker_duties();
+void manager_duties();
+void boss_duties();
+
 

@@ -87,7 +87,6 @@ Employee* create_manager(int id, const char* name, int dept_id, int team_size) {
     m->base.dept_id = dept_id;
     m->base.show_duties = manager_duties;
     m->team_size = team_size;
-
     return (Employee*)m;
 }
 
