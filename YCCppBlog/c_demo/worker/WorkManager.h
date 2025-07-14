@@ -25,3 +25,8 @@ void system_find_employee();
 void system_sort_employees();
 void system_clear_data();
 
+//用户验证系统
+
+
+//添加新职工
+void addNewEmployee();
