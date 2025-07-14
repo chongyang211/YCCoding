@@ -30,6 +30,37 @@ EmployeeSystem* create_employee_system() {
     return sys;
 }
 
+void worker_duties() {
+    printf("职责：完成经理交给的任务\n");
+}
+
+void manager_duties() {
+    printf("职责：完成老板交给的任务\n");
+}
+
+void boss_duties() {
+    printf("职责：管理公司所有事务\n");
+}
+
+void log_event(const char* message) {
+    FILE* log_file = fopen(LOG_FILE, "a");
+    if (!log_file) return;
+
+    time_t now = time(NULL);
+    char* time_str = ctime(&now);
+    time_str[strlen(time_str)-1] = '\0'; // Remove newline
+
+    fprintf(log_file, "[%s] %s\n", time_str, message);
+    fclose(log_file);
+}
+
+void handle_error(ErrorCode code, const char* context) {
+    char log_msg[512];
+    snprintf(log_msg, sizeof(log_msg), "ERROR [%d:%s] - %s",
+             code, error_messages[code], context);
+    log_event(log_msg);
+}
+
 int main() {
     system_run();
     return 0;
@@ -61,7 +92,7 @@ void system_run() {
         switch (choice) {
             case 1:
                 printf("\n添加新职工:\n");
-
+            addNewEmployee();
                 break;
             case 2:
                 printf("\n显示所有职工:\n");
@@ -157,6 +188,19 @@ int confirm_action(const char* action) {
     return (response[0] == 'y' || response[0] == 'Y');
 }
 
+Employee* create_worker(int id, const char* name , int dept_id) {
+    Worker* w = malloc(sizeof(Worker));
+    if (!w) {
+        handle_error(ERR_MEMORY, "创建普通员工失败");
+        return NULL;
+    }
+    w->base.id = id;
+    //w->base.name = name;
+    strncpy(w->base.name, name, MAX_NAME_LEN-1);
+    w->base.dept_id = dept_id;
+    w->base.show_duties = worker_duties;
+    return (Employee*)w;
+}
 
 //添加新职工
 void addNewEmployee() {
@@ -168,4 +212,58 @@ void addNewEmployee() {
     get_valid_string("输入姓名", name, MAX_NAME_LEN);
     int dept = get_valid_int("输入部门ID", 1, 100);
     Employee* new_emp = NULL;
+    if (type == 1) {
+        new_emp = create_worker(id, name, dept);
+    } else if (type == 2) {
+        int team = get_valid_int("输入团队人数", 1, 100);
+        // new_emp = create_manager(id, name, dept, team);
+    } else {
+        int shares = get_valid_int("输入公司股份比例", 1, 100);
+        // new_emp = create_boss(id, name, dept, shares);
+    }
+    if (new_emp) {
+        this_system->add_employee(new_emp);
+    }
+}
+
+void system_add_employee(Employee* emp) {
+    if (!emp) return;
+    // 检查ID是否已存在
+    for (int i = 0; i < this_system->count; i++) {
+        if (this_system->employees[i]->id == emp->id) {
+            handle_error(ERR_ID_EXISTS, "添加职工");
+            printf("错误: ID %d 已存在!\n", emp->id);
+            free(emp);
+            return;
+        }
+    }
+    if (this_system->count >= MAX_EMPLOYEES) {
+        handle_error(ERR_LIST_FULL, "添加职工");
+        printf("错误: 职工列表已满!\n");
+        free(emp);
+        return;
+    }
+    this_system->employees[this_system->count++] = emp;
+    char log_msg[100];
+    snprintf(log_msg, sizeof(log_msg), "添加职工: %s (ID: %d)", emp->name, emp->id);
+    log_event(log_msg);
+}
+
+void system_delete_employee(int id) {
+
+}
+void system_modify_employee(int id) {
+
+}
+void system_display_all() {
+
+}
+void system_find_employee() {
+
+}
+void system_sort_employees() {
+
+}
+void system_clear_data() {
+
 }

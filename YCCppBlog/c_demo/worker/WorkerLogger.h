@@ -16,4 +16,4 @@ typedef struct LogEntry {
     struct LogEntry* next;
 } LogEntry;
 
-void log_event(const char* message);
+//void log_event(const char* message);

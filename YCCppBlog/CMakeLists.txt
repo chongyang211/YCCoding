@@ -86,4 +86,5 @@ add_executable(YCCppBlog main.cpp
         c_demo/worker/WorkerLogger.c
         c_demo/worker/WorkerValid.h
         c_demo/worker/WorkerValid.c
+        c_demo/worker/Employee.c
 )
