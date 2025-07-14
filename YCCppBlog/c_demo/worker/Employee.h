@@ -38,5 +38,18 @@ typedef struct Boss {
     float company_shares;
 } Boss;
 
+typedef struct EmployeeSystem {
+    Employee* employees[MAX_EMPLOYEES];
+    int count;
+    void (*display_menu)();
+    void (*run)();
+    void (*add_employee)(Employee*);
+    void (*delete_employee)(int);
+    void (*modify_employee)(int);
+    void (*display_all)();
+    void (*find_employee)();
+    void (*sort_employees)();
+    void (*clear_data)();
+} EmployeeSystem;
 
 

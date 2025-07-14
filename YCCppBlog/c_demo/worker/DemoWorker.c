@@ -18,7 +18,6 @@
 #include "WorkManager.h"
 #include "WorkerError.h"
 
-
 void worker_duties() {
     printf("职责：完成经理交给的任务\n");
 }
@@ -343,20 +342,6 @@ int confirm_action(const char* action) {
 /*-------------------------------------------
  *  职工管理系统核心（500行）
  *------------------------------------------*/
-typedef struct EmployeeSystem {
-    Employee* employees[MAX_EMPLOYEES];
-    int count;
-
-    void (*display_menu)();
-    void (*run)();
-    void (*add_employee)(Employee*);
-    void (*delete_employee)(int);
-    void (*modify_employee)(int);
-    void (*display_all)();
-    void (*find_employee)();
-    void (*sort_employees)();
-    void (*clear_data)();
-} EmployeeSystem;
 
 // 全局系统实例
 EmployeeSystem* this_system;

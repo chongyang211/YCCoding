@@ -24,4 +24,5 @@ void system_display_menu();
 void log_event(const char* message);
 
 
+
 #endif //WORKMANAGER_H

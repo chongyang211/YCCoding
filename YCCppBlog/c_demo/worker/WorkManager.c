@@ -1,4 +1,11 @@
 #include "WorkManager.h"
+#include "Employee.h"
+#include "WorkerTools.h"
+#include "WorkerLogger.h"
+#include "WorkerError.h"
+
+// 全局系统实例
+EmployeeSystem* this_system;
 
 int main() {
     system_run();
