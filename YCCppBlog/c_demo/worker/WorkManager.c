@@ -435,38 +435,36 @@ void system_delete_employee(int id) {
 
 // 修改职工
 void system_modify_employee(int id) {
-    for (int i = 0; i < this_system->count; i++) {
+    for (int i = 0 ; i < this_system->count ; i++) {
         if (this_system->employees[i]->id == id) {
-            Employee* emp = this_system->employees[i];
-
+            //找到了所属职工
+            Employee *emp = this_system->employees[i];
             printf("\n当前信息:\n");
             printf("姓名: %s\n部门ID: %d\n", emp->name, emp->dept_id);
             emp->show_duties();
-
+            //输入要修改的新信息
             // 获取新信息
             char new_name[MAX_NAME_LEN];
             get_valid_string("输入新姓名", new_name, MAX_NAME_LEN);
             strcpy(emp->name, new_name);
-
-            int new_dept = get_valid_int("输入新部门ID", 1, 100);
+            int new_dept = get_valid_int("输入新部门ID", MIN_ID,MAX_ID);
             emp->dept_id = new_dept;
-
-            // 如果是经理或老板需要特殊处理
+            //如果是老板和经理需要特殊处理一下
             if (emp->show_duties == manager_duties) {
+                // 经理
                 Manager* m = (Manager*)emp;
                 m->team_size = get_valid_int("输入新的团队人数", 1, 100);
             } else if (emp->show_duties == boss_duties) {
+                //老板
                 Boss* b = (Boss*)emp;
                 b->company_shares = get_valid_int("输入新的公司股份", 1, 100);
             }
-
             char log_msg[100];
             snprintf(log_msg, sizeof(log_msg), "修改职工信息: %s (ID: %d)", new_name, id);
             log_event(log_msg);
             return;
         }
     }
-
     handle_error(ERR_ID_NOT_FOUND, "修改职工");
     printf("错误: 未找到ID为 %d 的职工\n", id);
 }
@@ -660,6 +658,7 @@ void system_run() {
                 break;
             }
             case 4: {
+                printf("\n修改某个职工:\n");
                 int id = get_valid_int("输入要修改的职工ID", MIN_ID, MAX_ID);
                 this_system->modify_employee(id);
                 break;

@@ -20,6 +20,7 @@ void system_run();
 void system_add_employee(Employee* emp);
 // 删除某个职工
 void system_delete_employee(int id);
+// 修改职工信息
 void system_modify_employee(int id);
 // 显示所有职工
 void system_display_all();
