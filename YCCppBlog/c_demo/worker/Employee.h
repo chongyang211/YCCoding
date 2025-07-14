@@ -26,8 +26,6 @@ typedef struct Worker {
     Employee base;
 } Worker;
 
-
-
 // 经理
 typedef struct Manager {
     Employee base;

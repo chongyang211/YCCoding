@@ -14,6 +14,9 @@
 
 #include "Employee.h"
 #include "WorkerTools.h"
+#include "WorkerLogger.h"
+#include "WorkManager.h"
+#include "WorkerError.h"
 
 
 void worker_duties() {
@@ -29,13 +32,9 @@ void boss_duties() {
 }
 
 /*-------------------------------------------
- *  日志记录系统（100行）
+ *  日志记录系统
  *------------------------------------------*/
-typedef struct LogEntry {
-    time_t timestamp;
-    char message[256];
-    struct LogEntry* next;
-} LogEntry;
+
 
 void log_event(const char* message) {
     FILE* log_file = fopen(LOG_FILE, "a");
@@ -52,27 +51,6 @@ void log_event(const char* message) {
 /*-------------------------------------------
  *  异常处理系统（150行）
  *------------------------------------------*/
-typedef enum {
-    ERR_NONE = 0,
-    ERR_FILE_OPEN,
-    ERR_MEMORY,
-    ERR_INVALID_INPUT,
-    ERR_ID_EXISTS,
-    ERR_ID_NOT_FOUND,
-    ERR_LIST_FULL,
-    ERR_DATA_CORRUPT
-} ErrorCode;
-
-const char* error_messages[] = {
-    "操作成功",
-    "无法打开文件",
-    "内存分配失败",
-    "无效输入",
-    "职工ID已存在",
-    "未找到该职工",
-    "职工列表已满",
-    "数据文件损坏"
-};
 
 void handle_error(ErrorCode code, const char* context) {
     char log_msg[512];

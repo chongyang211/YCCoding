@@ -20,5 +20,8 @@ void system_run();
 // 内部函数声明
 void system_display_menu();
 
+//记录日志
+void log_event(const char* message);
+
 
 #endif //WORKMANAGER_H
