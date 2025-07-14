@@ -92,7 +92,7 @@ void system_run() {
         switch (choice) {
             case 1:
                 printf("\n添加新职工:\n");
-            addNewEmployee();
+                addNewEmployee();
                 break;
             case 2:
                 printf("\n显示所有职工:\n");
@@ -202,6 +202,21 @@ Employee* create_worker(int id, const char* name , int dept_id) {
     return (Employee*)w;
 }
 
+Employee* create_manager(int id, const char* name, int dept_id, int team_size) {
+    Manager* m = (Manager*)malloc(sizeof(Manager));
+    if (!m) {
+        handle_error(ERR_MEMORY, "创建经理失败");
+        return NULL;
+    }
+    m->base.id = id;
+    strncpy(m->base.name, name, MAX_NAME_LEN-1);
+    m->base.dept_id = dept_id;
+    m->base.show_duties = manager_duties;
+    m->team_size = team_size;
+    return (Employee*)m;
+}
+
+
 //添加新职工
 void addNewEmployee() {
     printf("选择职位类型:\n");
@@ -216,7 +231,7 @@ void addNewEmployee() {
         new_emp = create_worker(id, name, dept);
     } else if (type == 2) {
         int team = get_valid_int("输入团队人数", 1, 100);
-        // new_emp = create_manager(id, name, dept, team);
+        new_emp = create_manager(id, name, dept, team);
     } else {
         int shares = get_valid_int("输入公司股份比例", 1, 100);
         // new_emp = create_boss(id, name, dept, shares);
