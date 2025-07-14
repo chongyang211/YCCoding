@@ -8,8 +8,12 @@
 #include <stdbool.h>
 #include <time.h>
 
+#define LOG_FILE "system_log.txt"
+
 typedef struct LogEntry {
     time_t timestamp;
     char message[256];
     struct LogEntry* next;
 } LogEntry;
+
+void log_event(const char* message);

@@ -8,7 +8,6 @@
 #define MAX_EMPLOYEES 1000
 #define DATA_FILE "employee_data.dat"
 #define BACKUP_FILE "employee_backup.dat"
-#define LOG_FILE "system_log.txt"
 #define MIN_ID 1000
 #define MAX_ID 9999
 

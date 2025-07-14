@@ -12,7 +12,6 @@
 #include <stdbool.h>
 #include <time.h>
 
-#include "WorkerTools.h"
 #include "WorkerLogger.h"
 #include "WorkManager.h"
 #include "WorkerError.h"
@@ -33,7 +32,6 @@ void boss_duties() {
  *  日志记录系统
  *------------------------------------------*/
 
-
 void log_event(const char* message) {
     FILE* log_file = fopen(LOG_FILE, "a");
     if (!log_file) return;
@@ -45,6 +43,7 @@ void log_event(const char* message) {
     fprintf(log_file, "[%s] %s\n", time_str, message);
     fclose(log_file);
 }
+
 
 /*-------------------------------------------
  *  异常处理系统（150行）
@@ -345,17 +344,6 @@ int confirm_action(const char* action) {
 // 全局系统实例
 EmployeeSystem* this_system;
 
-// 内部函数声明
-void system_display_menu();
-void system_run();
-void system_add_employee(Employee* emp);
-void system_delete_employee(int id);
-void system_modify_employee(int id);
-void system_display_all();
-void system_find_employee();
-void system_sort_employees();
-void system_clear_data();
-
 // 创建系统实例
 EmployeeSystem* create_employee_system() {
     EmployeeSystem* sys = malloc(sizeof(EmployeeSystem));
@@ -363,10 +351,8 @@ EmployeeSystem* create_employee_system() {
         handle_error(ERR_MEMORY, "创建系统");
         return NULL;
     }
-
     memset(sys, 0, sizeof(EmployeeSystem));
     sys->count = 0;
-
     // 绑定方法
     sys->display_menu = system_display_menu;
     sys->run = system_run;
@@ -377,7 +363,6 @@ EmployeeSystem* create_employee_system() {
     sys->find_employee = system_find_employee;
     sys->sort_employees = system_sort_employees;
     sys->clear_data = system_clear_data;
-
     return sys;
 }
 
