@@ -1,11 +1,35 @@
 #include "WorkManager.h"
-#include "Employee.h"
 #include "WorkerTools.h"
 #include "WorkerLogger.h"
 #include "WorkerError.h"
 
 // 全局系统实例
 EmployeeSystem* this_system;
+
+// 创建系统实例
+EmployeeSystem* create_employee_system() {
+    EmployeeSystem* sys = malloc(sizeof(EmployeeSystem));
+    if (!sys) {
+        // handle_error(ERR_MEMORY, "创建系统");
+        return NULL;
+    }
+
+    memset(sys, 0, sizeof(EmployeeSystem));
+    sys->count = 0;
+
+    // 绑定方法
+    sys->display_menu = system_display_menu;
+    sys->run = system_run;
+    sys->add_employee = system_add_employee;
+    sys->delete_employee = system_delete_employee;
+    sys->modify_employee = system_modify_employee;
+    sys->display_all = system_display_all;
+    sys->find_employee = system_find_employee;
+    sys->sort_employees = system_sort_employees;
+    sys->clear_data = system_clear_data;
+
+    return sys;
+}
 
 int main() {
     system_run();

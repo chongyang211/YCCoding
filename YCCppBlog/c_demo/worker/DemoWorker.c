@@ -12,7 +12,6 @@
 #include <stdbool.h>
 #include <time.h>
 
-#include "Employee.h"
 #include "WorkerTools.h"
 #include "WorkerLogger.h"
 #include "WorkManager.h"
