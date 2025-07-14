@@ -507,7 +507,6 @@ void system_find_employee() {
 
     if (choice == 1) {
         int id = get_valid_int("输入职工ID", MIN_ID, MAX_ID);
-
         for (int i = 0; i < this_system->count; i++) {
             if (this_system->employees[i]->id == id) {
                 Employee* emp = this_system->employees[i];
@@ -519,12 +518,10 @@ void system_find_employee() {
             }
         }
         printf("未找到该职工\n");
-    }
-    else {
+    } else {
         char name[MAX_NAME_LEN];
         get_valid_string("输入职工姓名", name, MAX_NAME_LEN);
         int found = 0;
-
         for (int i = 0; i < this_system->count; i++) {
             if (strcmp(this_system->employees[i]->name, name) == 0) {
                 if (!found) {
@@ -536,7 +533,6 @@ void system_find_employee() {
                       emp->id, emp->name, emp->dept_id);
             }
         }
-
         if (!found) {
             printf("未找到姓名为 %s 的职工\n", name);
         }
@@ -664,6 +660,7 @@ void system_run() {
                 break;
             }
             case 5:
+                printf("\n查找职工信息:\n");
                 this_system->find_employee();
                 break;
             case 6:

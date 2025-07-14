@@ -24,6 +24,7 @@ void system_delete_employee(int id);
 void system_modify_employee(int id);
 // 显示所有职工
 void system_display_all();
+// 查找职工信息
 void system_find_employee();
 void system_sort_employees();
 void system_clear_data();
