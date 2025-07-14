@@ -76,4 +76,7 @@ add_executable(YCCppBlog main.cpp
         c_demo/student/StudentManager.c
         c_demo/bank/BankManager.h
         c_demo/bank/BankManager.c
+        c_demo/worker/WorkManager.h
+        c_demo/worker/WorkManager.c
+        c_demo/worker/DemoWorker.c
 )
