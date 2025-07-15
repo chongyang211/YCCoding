@@ -1,10 +1,3 @@
-//
-// Created by 杨充 on 2025/7/14.
-//
-//
-// Created by 杨充 on 2025/7/14.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,26 +5,27 @@
 #include <stdbool.h>
 #include <time.h>
 
-#include "WorkerLogger.h"
-#include "WorkManager.h"
-#include "WorkerError.h"
-#include "WorkerValid.h"
-
-void worker_duties() {
-    printf("职责：完成经理交给的任务\n");
-}
-
-void manager_duties() {
-    printf("职责：完成老板交给的任务\n");
-}
-
-void boss_duties() {
-    printf("职责：管理公司所有事务\n");
-}
+/*-------------------------------------------
+ *  宏定义与全局常量
+ *------------------------------------------*/
+#define MAX_NAME_LEN 50
+#define MAX_EMPLOYEES 1000
+#define DATA_FILE "employee_data.dat"
+#define BACKUP_FILE "employee_backup.dat"
+#define LOG_FILE "system_log.txt"
+#define MIN_ID 1000
+#define MAX_ID 9999
 
 /*-------------------------------------------
- *  日志记录系统
+ *  日志记录系统（100行）
  *------------------------------------------*/
+
+
+typedef struct LogEntry {
+    time_t timestamp;
+    char message[256];
+    struct LogEntry* next;
+} LogEntry;
 
 void log_event(const char* message) {
     FILE* log_file = fopen(LOG_FILE, "a");
@@ -45,16 +39,75 @@ void log_event(const char* message) {
     fclose(log_file);
 }
 
-
 /*-------------------------------------------
  *  异常处理系统（150行）
  *------------------------------------------*/
+typedef enum {
+    ERR_NONE = 0,
+    ERR_FILE_OPEN,
+    ERR_MEMORY,
+    ERR_INVALID_INPUT,
+    ERR_ID_EXISTS,
+    ERR_ID_NOT_FOUND,
+    ERR_LIST_FULL,
+    ERR_DATA_CORRUPT
+} ErrorCode;
+
+const char* error_messages[] = {
+    "操作成功",
+    "无法打开文件",
+    "内存分配失败",
+    "无效输入",
+    "职工ID已存在",
+    "未找到该职工",
+    "职工列表已满",
+    "数据文件损坏"
+};
 
 void handle_error(ErrorCode code, const char* context) {
     char log_msg[512];
     snprintf(log_msg, sizeof(log_msg), "ERROR [%d:%s] - %s",
              code, error_messages[code], context);
     log_event(log_msg);
+}
+
+/*-------------------------------------------
+ *  职工类层次结构（200行）
+ *------------------------------------------*/
+typedef struct Employee {
+    int id;
+    char name[MAX_NAME_LEN];
+    int dept_id;
+    void (*show_duties)();
+} Employee;
+
+// 普通员工
+typedef struct Worker {
+    Employee base;
+} Worker;
+
+void worker_duties() {
+    printf("职责：完成经理交给的任务\n");
+}
+
+// 经理
+typedef struct Manager {
+    Employee base;
+    int team_size;
+} Manager;
+
+void manager_duties() {
+    printf("职责：完成老板交给的任务\n");
+}
+
+// 老板
+typedef struct Boss {
+    Employee base;
+    float company_shares;
+} Boss;
+
+void boss_duties() {
+    printf("职责：管理公司所有事务\n");
 }
 
 /*-------------------------------------------
@@ -87,6 +140,7 @@ Employee* create_manager(int id, const char* name, int dept_id, int team_size) {
     m->base.dept_id = dept_id;
     m->base.show_duties = manager_duties;
     m->team_size = team_size;
+
     return (Employee*)m;
 }
 
@@ -102,6 +156,7 @@ Employee* create_boss(int id, const char* name, int dept_id, float shares) {
     b->base.dept_id = dept_id;
     b->base.show_duties = boss_duties;
     b->company_shares = shares;
+
     return (Employee*)b;
 }
 
@@ -276,8 +331,7 @@ int load_from_file(Employee* employees[]) {
 /*-------------------------------------------
  *  用户输入验证系统（200行）
  *------------------------------------------*/
-
-int get_valid_int(const char *prompt, int min_val, int max_val) {
+int get_valid_int(const char* prompt, int min_val, int max_val) {
     int value;
     char input[50];
 
@@ -295,42 +349,32 @@ int get_valid_int(const char *prompt, int min_val, int max_val) {
     }
 }
 
-void get_valid_string(const char *prompt, char *buffer, int max_len) {
+void get_valid_string(const char* prompt, char* buffer, int max_len) {
     while (1) {
         printf("%s: ", prompt);
         fgets(buffer, max_len, stdin);
 
         // 移除换行符
         size_t len = strlen(buffer);
-        if (len > 0 && buffer[len - 1] == '\n') {
-            buffer[len - 1] = '\0';
+        if (len > 0 && buffer[len-1] == '\n') {
+            buffer[len-1] = '\0';
         }
 
         // 检查是否为空
-        if (strlen(buffer) == 0) {
-            printf("输入不能为空！请重新输入。\n");
-            continue;
-        }
-
-        // 验证输入是否包含字母或空格
-        int valid = 0;
-        for (int i = 0; buffer[i]; i++) {
-            if (isalpha(buffer[i]) || isspace(buffer[i])) {
-                valid = 1;
-                break;
+        if (strlen(buffer) > 0) {
+            // 验证输入是否包含字母
+            for (int i = 0; buffer[i]; i++) {
+                if (isalpha(buffer[i] || isspace(buffer[i]))) {
+                    return;
+                }
             }
         }
 
-        if (valid) {
-            return; // 输入有效，退出循环
-        } else {
-            printf("无效输入！请输入至少包含一个字母或空格的字符串。\n");
-        }
+        printf("无效输入! 请输入有效的字符串\n");
     }
 }
 
-
-int confirm_action(const char *action) {
+int confirm_action(const char* action) {
     char response[10];
     printf("确认%s? (y/n): ", action);
     fgets(response, sizeof(response), stdin);
@@ -340,9 +384,34 @@ int confirm_action(const char *action) {
 /*-------------------------------------------
  *  职工管理系统核心（500行）
  *------------------------------------------*/
+typedef struct EmployeeSystem {
+    Employee* employees[MAX_EMPLOYEES];
+    int count;
+
+    void (*display_menu)();
+    void (*run)();
+    void (*add_employee)(Employee*);
+    void (*delete_employee)(int);
+    void (*modify_employee)(int);
+    void (*display_all)();
+    void (*find_employee)();
+    void (*sort_employees)();
+    void (*clear_data)();
+} EmployeeSystem;
 
 // 全局系统实例
 EmployeeSystem* this_system;
+
+// 内部函数声明
+void system_display_menu();
+void system_run();
+void system_add_employee(Employee* emp);
+void system_delete_employee(int id);
+void system_modify_employee(int id);
+void system_display_all();
+void system_find_employee();
+void system_sort_employees();
+void system_clear_data();
 
 // 创建系统实例
 EmployeeSystem* create_employee_system() {
@@ -351,8 +420,10 @@ EmployeeSystem* create_employee_system() {
         handle_error(ERR_MEMORY, "创建系统");
         return NULL;
     }
+
     memset(sys, 0, sizeof(EmployeeSystem));
     sys->count = 0;
+
     // 绑定方法
     sys->display_menu = system_display_menu;
     sys->run = system_run;
@@ -363,6 +434,7 @@ EmployeeSystem* create_employee_system() {
     sys->find_employee = system_find_employee;
     sys->sort_employees = system_sort_employees;
     sys->clear_data = system_clear_data;
+
     return sys;
 }
 
@@ -702,7 +774,6 @@ void system_run() {
 /*-------------------------------------------
  *  主函数及全局数据（100行）
  *------------------------------------------*/
-
 
 int main() {
     printf("=== 企业职工管理系统 ===\n");

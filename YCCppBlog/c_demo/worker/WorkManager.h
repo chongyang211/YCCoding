@@ -29,6 +29,7 @@ void system_display_all();
 void system_find_employee();
 // 职工信息排序
 void system_sort_employees();
+// 职工信息清除
 void system_clear_data();
 
 //用户验证系统

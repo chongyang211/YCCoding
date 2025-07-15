@@ -570,12 +570,10 @@ void system_clear_data() {
         printf("系统中无数据\n");
         return;
     }
-
     if (!confirm_action("清空所有职工数据")) {
         printf("操作已取消\n");
         return;
     }
-
     // 备份到文件
     FILE* backup = fopen(BACKUP_FILE, "wb");
     if (backup) {
@@ -588,17 +586,14 @@ void system_clear_data() {
         fclose(backup);
         log_event("已创建数据备份");
     }
-
     // 释放内存
     for (int i = 0; i < this_system->count; i++) {
         free(this_system->employees[i]);
     }
     this_system->count = 0;
-
     // 清空数据文件
     FILE* data = fopen(DATA_FILE, "w");
     if (data) fclose(data);
-
     log_event("已清空所有职工数据");
     printf("所有职工数据已清除\n");
 }
