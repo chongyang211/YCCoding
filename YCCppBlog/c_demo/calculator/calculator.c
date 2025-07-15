@@ -22,9 +22,6 @@ typedef struct {
 
 static CalculatorState calculator;
 
-// 全局错误处理器
-ErrorHandler global_error_handler;
-
 // 初始化计算器
 void calculator_init(void) {
     calculator.result = 0.0;

@@ -100,4 +100,6 @@ add_executable(YCCppBlog main.cpp
         c_demo/calculator/history.c
         c_demo/calculator/constants.c
         c_demo/calculator/calculator_main.c
+        c_demo/speaker/complex/speech_main.c
+        c_demo/speaker/easy/speech_worker.c
 )

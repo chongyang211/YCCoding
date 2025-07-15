@@ -35,4 +35,7 @@ void calculator_set_angle_unit(bool radians);
 void calculator_show_history(void);
 void calculator_clear_history(void);
 
+// 全局错误处理器
+ErrorHandler global_error_handler;
+
 #endif // CALCULATOR_H
