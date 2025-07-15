@@ -87,4 +87,17 @@ add_executable(YCCppBlog main.cpp
         c_demo/worker/WorkerValid.h
         c_demo/worker/WorkerValid.c
         c_demo/worker/Employee.c
+        c_demo/calculator/calculator.h
+        c_demo/calculator/parser.h
+        c_demo/calculator/stack.h
+        c_demo/calculator/error_handler.h
+        c_demo/calculator/history.h
+        c_demo/calculator/constants.h
+        c_demo/calculator/calculator.c
+        c_demo/calculator/parser.c
+        c_demo/calculator/stack.c
+        c_demo/calculator/error_handler.c
+        c_demo/calculator/history.c
+        c_demo/calculator/constants.c
+        c_demo/calculator/calculator_main.c
 )
