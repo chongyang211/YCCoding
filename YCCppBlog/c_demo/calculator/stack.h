@@ -1,7 +1,7 @@
 //
 // Created by 杨充 on 2025/7/15.
 //
-
+#include <stdbool.h>
 #ifndef STACK_H
 #define STACK_H
 
