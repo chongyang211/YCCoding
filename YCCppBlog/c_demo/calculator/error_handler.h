@@ -2,11 +2,12 @@
 // Created by 杨充 on 2025/7/15.
 //
 
-#ifndef ERROR_HANDLER_H
-#define ERROR_HANDLER_H
-
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
+
+#ifndef ERROR_HANDLER_H
+#define ERROR_HANDLER_H
 
 // 计算器错误类型
 typedef enum {
