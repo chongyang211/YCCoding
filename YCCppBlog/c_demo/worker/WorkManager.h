@@ -17,6 +17,7 @@ void manager_duties();
 void system_display_menu();
 // 系统主循环
 void system_run();
+// 添加职工信息
 void system_add_employee(Employee* emp);
 // 删除某个职工
 void system_delete_employee(int id);
@@ -26,11 +27,12 @@ void system_modify_employee(int id);
 void system_display_all();
 // 查找职工信息
 void system_find_employee();
+// 职工信息排序
 void system_sort_employees();
 void system_clear_data();
 
 //用户验证系统
 
 
-//添加新职工
+//添加新职工。包含普通员工，经理，老板
 void addNewEmployee();

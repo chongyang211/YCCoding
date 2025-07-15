@@ -475,14 +475,11 @@ void system_display_all() {
         printf("没有职工记录\n");
         return;
     }
-
     printf("\n%-10s %-20s %-15s %-10s\n", "职工ID", "姓名", "部门", "职位");
     printf("================================================\n");
-
     for (int i = 0; i < this_system->count; i++) {
         Employee* emp = this_system->employees[i];
         char type[20];
-
         if (emp->show_duties == worker_duties) {
             strcpy(type, "普通员工");
         } else if (emp->show_duties == manager_duties) {
@@ -490,11 +487,9 @@ void system_display_all() {
         } else {
             strcpy(type, "老板");
         }
-
         printf("%-8d %-18s %-12d %-8s\n",
                emp->id, emp->name, emp->dept_id, type);
     }
-
     log_event("显示所有职工信息");
 }
 
@@ -555,12 +550,10 @@ void system_sort_employees() {
         printf("没有可排序的数据\n");
         return;
     }
-
     printf("\n排序选项:\n");
     printf("1. 升序排序\n");
     printf("2. 降序排序\n");
     int choice = get_valid_int("请选择", 1, 2);
-
     if (choice == 1) {
         qsort(this_system->employees, this_system->count, sizeof(Employee*), compare_id_asc);
         printf("已按ID升序排序\n");
@@ -568,7 +561,6 @@ void system_sort_employees() {
         qsort(this_system->employees, this_system->count, sizeof(Employee*), compare_id_desc);
         printf("已按ID降序排序\n");
     }
-
     system_display_all();
 }
 
@@ -664,9 +656,11 @@ void system_run() {
                 this_system->find_employee();
                 break;
             case 6:
+                printf("\n职工信息排序:\n");
                 this_system->sort_employees();
                 break;
             case 7:
+                printf("\n职工信息清除:\n");
                 this_system->clear_data();
                 break;
             case 8:
