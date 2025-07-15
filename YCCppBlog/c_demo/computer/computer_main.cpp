@@ -5,6 +5,10 @@
 #include <ctype.h>
 #include <unistd.h>
 
+#include "identity.h"
+#include "file_operation.h"
+#include "user.h"
+
 // 全局常量
 #define MAX_STUDENTS 1000
 #define MAX_TEACHERS 100
@@ -15,66 +19,6 @@
 #define FILENAME_ADMIN "admin.dat"
 #define FILENAME_ORDERS "orders.dat"
 #define FILENAME_ROOMS "rooms.dat"
-
-// 状态枚举
-typedef enum {
-    PENDING,
-    APPROVED,
-    REJECTED,
-    CANCELLED
-} OrderStatus;
-
-// 时间段枚举
-typedef enum {
-    MORNING,
-    AFTERNOON
-} TimeSlot;
-
-// 用户结构体
-typedef struct {
-    char id[20];
-    char name[50];
-    char password[50];
-} User;
-
-// 学生结构体
-typedef struct {
-    User user;
-    int reservationCount;
-} Student;
-
-// 教师结构体
-typedef struct {
-    User user;
-    int approvalCount;
-} Teacher;
-
-// 管理员结构体
-typedef struct {
-    User user;
-} Admin;
-
-// 机房信息结构体
-typedef struct {
-    int roomId;
-    int capacity;
-    char description[100];
-} ComputerRoom;
-
-// 预约记录结构体
-typedef struct {
-    int orderId;
-    time_t requestTime;
-    time_t reservationDate;
-    int studentId;
-    char studentName[50];
-    int teacherId;
-    char teacherName[50];
-    int roomId;
-    TimeSlot timeSlot;
-    OrderStatus status;
-    time_t processTime;
-} ReservationOrder;
 
 // 全局变量
 ComputerRoom computerRooms[MAX_COMPUTER_ROOMS] = {
@@ -93,15 +37,6 @@ int teacherCount = 0;
 int orderCount = 0;
 int currentUserId = -1;
 char currentUserName[50] = "";
-
-
-// 用户类型枚举
-typedef enum {
-    USER_NONE,
-    STUDENT_USER,
-    TEACHER_USER,
-    ADMIN_USER
-} UserType;
 
 UserType currentUserType = USER_NONE;
 
