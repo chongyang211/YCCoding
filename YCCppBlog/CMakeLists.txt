@@ -102,4 +102,5 @@ add_executable(YCCppBlog main.cpp
         c_demo/calculator/calculator_main.c
         c_demo/speaker/complex/speech_main.c
         c_demo/speaker/easy/speech_worker.c
+        c_demo/computer/computer_main.cpp
 )
