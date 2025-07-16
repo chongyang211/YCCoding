@@ -23,3 +23,14 @@ Account *Bank::findAccount(const std::string &accNumber) {
     return nullptr;
 }
 
+// 存款
+void Bank::deposit(const std::string &accNumber, double amount) {
+    Account* account = findAccount(accNumber);
+    if (account) {
+        account->withdraw(amount);
+    } else {
+        std::cout << "账户不存在！" << std::endl;
+    }
+}
+
+
