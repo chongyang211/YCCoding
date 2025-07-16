@@ -96,7 +96,9 @@ public:
 
     // 根据账户号查找账户
     Account* findAccount(const std::string& accNumber) {
+        //遍历
         for (std::vector<Account>::iterator it = accounts.begin(); it != accounts.end(); ++it) {
+            //根据账号查找
             if (it->getAccountNumber() == accNumber) {
                 return &(*it);
             }
@@ -231,13 +233,7 @@ int main() {
             }
             case 3: {
                 printf("3. 取款\n");
-                std::string accNumber;
-                double amount;
-                std::cout << "请输入账户号: ";
-                std::getline(std::cin, accNumber);
-                std::cout << "请输入取款金额: ";
-                std::cin >> amount;
-                bank.withdraw(accNumber, amount);
+                withdraw();
                 break;
             }
             case 4: {
@@ -327,4 +323,15 @@ void deposit() {
     std::cout << "请输入存款金额:";
     std::cin >> amount;
     bank.deposit(accNumber, amount);
+}
+
+// 取款
+void withdraw() {
+    std::string accNumber;
+    double amount;
+    std::cout << "请输入账户号: ";
+    std::getline(std::cin, accNumber);
+    std::cout << "请输入取款金额: ";
+    std::cin >> amount;
+    bank.withdraw(accNumber, amount);
 }
