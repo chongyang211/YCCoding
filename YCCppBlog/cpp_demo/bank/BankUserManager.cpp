@@ -1,9 +1,15 @@
+#include "BankUserManager.h"
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
 #include <iostream>
 #include <limits>
+
+// #include "Account.h"
+// #include "Bank.h"
+// #include "FileManager.h"
 
 
 class Account {
@@ -201,6 +207,100 @@ public:
 };
 
 
+int main() {
+    Bank bank;
+    std::string filename = "accounts.txt";
+    while (true) {
+        displayMenu();
+        int choice;
+        std::cin >> choice;
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        switch (choice) {
+            case 1: {
+                printf("1. 开户\n");
+                std::string accNumber, name;
+                double initialBalance;
+                std::cout << "请输入账户号: ";
+                std::getline(std::cin, accNumber);
+                std::cout << "请输入姓名: ";
+                std::getline(std::cin, name);
+                std::cout << "请输入初始余额: ";
+                std::cin >> initialBalance;
+                bank.createAccount(accNumber, name, initialBalance);
+                break;
+            }
+            case 2: {
+                printf("2. 存款\n");
+                std::string accNumber;
+                double amount;
+                std::cout << "请输入账户号: ";
+                std::getline(std::cin, accNumber);
+                std::cout << "请输入存款金额: ";
+                std::cin >> amount;
+                bank.deposit(accNumber, amount);
+                break;
+            }
+            case 3: {
+                printf("3. 取款\n");
+                std::string accNumber;
+                double amount;
+                std::cout << "请输入账户号: ";
+                std::getline(std::cin, accNumber);
+                std::cout << "请输入取款金额: ";
+                std::cin >> amount;
+                bank.withdraw(accNumber, amount);
+                break;
+            }
+            case 4: {
+                printf("4. 查询余额\n");
+                std::string accNumber;
+                std::cout << "请输入账户号: ";
+                std::getline(std::cin, accNumber);
+                bank.queryBalance(accNumber);
+                break;
+            }
+            case 5: {
+                printf("5. 转账\n");
+                std::string fromAccNumber, toAccNumber;
+                double amount;
+                std::cout << "请输入转出账户号: ";
+                std::getline(std::cin, fromAccNumber);
+                std::cout << "请输入转入账户号: ";
+                std::getline(std::cin, toAccNumber);
+                std::cout << "请输入转账金额: ";
+                std::cin >> amount;
+                bank.transfer(fromAccNumber, toAccNumber, amount);
+                break;
+            }
+            case 6: {
+                printf("6. 显示所有账户\n");
+                bank.displayAllAccounts();
+                break;
+            }
+            case 7: {
+                printf("7. 保存数据到文件\n");
+                FileManager::saveToFile(bank, filename);
+                break;
+            }
+            case 8: {
+                printf("8. 从文件加载数据\n");
+                FileManager::loadFromFile(bank, filename);
+                break;
+            }
+            case 0: {
+                printf("0. 退出\n");
+                std::cout << "退出系统。\n";
+                return 0;
+            }
+            default: {
+                std::cout << "无效选择，请重试！\n";
+                break;
+            }
+        }
+    }
+    return 0;
+}
+
 void displayMenu() {
     std::cout << "\n银行账户管理系统\n";
     std::cout << "1. 开户\n";
@@ -215,90 +315,4 @@ void displayMenu() {
     std::cout << "请选择操作: ";
 }
 
-int main() {
-    Bank bank;
-    std::string filename = "accounts.txt";
 
-    while (true) {
-        displayMenu();
-        int choice;
-        std::cin >> choice;
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-        switch (choice) {
-            case 1: {
-                std::string accNumber, name;
-                double initialBalance;
-                std::cout << "请输入账户号: ";
-                std::getline(std::cin, accNumber);
-                std::cout << "请输入姓名: ";
-                std::getline(std::cin, name);
-                std::cout << "请输入初始余额: ";
-                std::cin >> initialBalance;
-                bank.createAccount(accNumber, name, initialBalance);
-                break;
-            }
-            case 2: {
-                std::string accNumber;
-                double amount;
-                std::cout << "请输入账户号: ";
-                std::getline(std::cin, accNumber);
-                std::cout << "请输入存款金额: ";
-                std::cin >> amount;
-                bank.deposit(accNumber, amount);
-                break;
-            }
-            case 3: {
-                std::string accNumber;
-                double amount;
-                std::cout << "请输入账户号: ";
-                std::getline(std::cin, accNumber);
-                std::cout << "请输入取款金额: ";
-                std::cin >> amount;
-                bank.withdraw(accNumber, amount);
-                break;
-            }
-            case 4: {
-                std::string accNumber;
-                std::cout << "请输入账户号: ";
-                std::getline(std::cin, accNumber);
-                bank.queryBalance(accNumber);
-                break;
-            }
-            case 5: {
-                std::string fromAccNumber, toAccNumber;
-                double amount;
-                std::cout << "请输入转出账户号: ";
-                std::getline(std::cin, fromAccNumber);
-                std::cout << "请输入转入账户号: ";
-                std::getline(std::cin, toAccNumber);
-                std::cout << "请输入转账金额: ";
-                std::cin >> amount;
-                bank.transfer(fromAccNumber, toAccNumber, amount);
-                break;
-            }
-            case 6: {
-                bank.displayAllAccounts();
-                break;
-            }
-            case 7: {
-                FileManager::saveToFile(bank, filename);
-                break;
-            }
-            case 8: {
-                FileManager::loadFromFile(bank, filename);
-                break;
-            }
-            case 0: {
-                std::cout << "退出系统。\n";
-                return 0;
-            }
-            default: {
-                std::cout << "无效选择，请重试！\n";
-                break;
-            }
-        }
-    }
-
-    return 0;
-}

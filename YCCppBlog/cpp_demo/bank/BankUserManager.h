@@ -1,16 +1,15 @@
 //
 // Created by 杨充 on 2025/7/16.
 //
-
-#ifndef BANKUSERMANAGER_H
-#define BANKUSERMANAGER_H
-
+#include "string"
+#include "iostream"
 
 
-class BankUserManager {
+//展示菜单显示
+void displayMenu();
 
-};
+//菜单选择
+void showMainChoice();
 
 
 
-#endif //BANKUSERMANAGER_H
