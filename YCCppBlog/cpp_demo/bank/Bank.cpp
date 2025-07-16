@@ -43,3 +43,17 @@ void Bank::queryBalance(const std::string &accNumber) {
     }
 }
 
+// 转账
+void Bank::transfer(const std::string &fromAccNumber, const std::string &toAccNumber, double amount) {
+    //先找到转入账户
+    Account* fromAccount = findAccount(fromAccNumber);
+    //然后找到转出账户
+    Account* toAccount = findAccount(toAccNumber);
+    if (fromAccount && toAccount) {
+        //两个账户不为空时，才可以转账
+        fromAccount->transfer(*toAccount, amount);
+    } else {
+        std::cout << "账户不存在！" << std::endl;
+    }
+}
+

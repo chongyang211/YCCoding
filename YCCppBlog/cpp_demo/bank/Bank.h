@@ -22,6 +22,8 @@ public:
     void deposit(const std::string& accNumber, double amount);
     // 查询余额
     void queryBalance(const std::string& accNumber) ;
+    // 转账
+    void transfer(const std::string& fromAccNumber, const std::string& toAccNumber, double amount);
 };
 
 
