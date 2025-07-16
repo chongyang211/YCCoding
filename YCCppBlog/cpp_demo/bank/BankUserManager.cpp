@@ -21,7 +21,8 @@ private:
 public:
     // 构造函数
     Account(const std::string& accNumber, const std::string& accName, double initialBalance)
-        : accountNumber(accNumber), name(accName), balance(initialBalance) {}
+        : accountNumber(accNumber), name(accName), balance(initialBalance) {
+    }
 
     // 获取账户号
     std::string getAccountNumber() const {
@@ -161,6 +162,8 @@ public:
         accounts = accList;
     }
 };
+
+
 #include <fstream>
 #include <sstream>
 
@@ -206,9 +209,9 @@ public:
     }
 };
 
+Bank bank;
 
 int main() {
-    Bank bank;
     std::string filename = "accounts.txt";
     while (true) {
         displayMenu();
@@ -218,15 +221,7 @@ int main() {
         switch (choice) {
             case 1: {
                 printf("1. 开户\n");
-                std::string accNumber, name;
-                double initialBalance;
-                std::cout << "请输入账户号: ";
-                std::getline(std::cin, accNumber);
-                std::cout << "请输入姓名: ";
-                std::getline(std::cin, name);
-                std::cout << "请输入初始余额: ";
-                std::cin >> initialBalance;
-                bank.createAccount(accNumber, name, initialBalance);
+                openAccount();
                 break;
             }
             case 2: {
@@ -315,4 +310,16 @@ void displayMenu() {
     std::cout << "请选择操作: ";
 }
 
+// 开户
+void openAccount() {
+    std::string accNumber, name;
+    double initialBalance;
+    std::cout << "请输入账户号: ";
+    std::getline(std::cin, accNumber);
+    std::cout << "请输入姓名: ";
+    std::getline(std::cin, name);
+    std::cout << "请输入初始余额: ";
+    std::cin >> initialBalance;
+    bank.createAccount(accNumber, name, initialBalance);
+}
 

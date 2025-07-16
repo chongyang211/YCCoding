@@ -5,11 +5,13 @@
 #include "iostream"
 
 
+
 //展示菜单显示
 void displayMenu();
 
 //菜单选择
 void showMainChoice();
 
-
+// 开户
+void openAccount();
 
