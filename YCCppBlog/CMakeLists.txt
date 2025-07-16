@@ -107,4 +107,7 @@ add_executable(YCCppBlog main.cpp
         c_demo/computer/file_operation.h
         c_demo/computer/user.h
         c_demo/sql/sql_manager.c
+        cpp_demo/bank/BankUserManager.cpp
+        cpp_demo/bank/BankUserManager.h
+        cpp_demo/bank/BankUserManager.h
 )

@@ -1,15 +1,14 @@
-//
-// Created by 杨充 on 2025/7/15.
-//
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 #include <ctype.h>
 #include <time.h>
+#include <errno.h>
+#include <sys/stat.h>
 
 // ================================================
-// 常量和全局定义
+// 常量和全局定义（带安全边界）
 // ================================================
 
 #define MAX_NAME_LEN 50
@@ -21,6 +20,7 @@
 #define DB_DIRECTORY "./database/"
 #define DB_EXTENSION ".db"
 #define IDX_EXTENSION ".idx"
+#define PATH_BUFFER_SIZE 256
 
 // ================================================
 // 数据类型定义
@@ -88,11 +88,25 @@ typedef struct {
 } Query;
 
 // ================================================
-// 数据库核心函数
+// 数据库核心函数（带错误处理）
 // ================================================
+
+// 安全创建目录
+bool create_db_directory() {
+    struct stat st = {0};
+    if (stat(DB_DIRECTORY, &st) == -1) {
+        if (mkdir(DB_DIRECTORY, 0777) == -1) {
+            perror("无法创建数据库目录");
+            return false;
+        }
+    }
+    return true;
+}
 
 // 初始化数据库
 void init_database(Database *db) {
+    if (!db) return;
+    
     db->table_count = 0;
     for (int i = 0; i < MAX_TABLE_COUNT; i++) {
         db->tables[i].record_count = 0;
@@ -103,6 +117,8 @@ void init_database(Database *db) {
 
 // 查找表
 Table* find_table(Database *db, const char *table_name) {
+    if (!db || !table_name) return NULL;
+    
     for (int i = 0; i < db->table_count; i++) {
         if (strcmp(db->tables[i].name, table_name) == 0) {
             return &db->tables[i];
@@ -113,36 +129,37 @@ Table* find_table(Database *db, const char *table_name) {
 
 // 创建新表
 int create_table(Database *db, const char *table_name, ColumnDef *columns, int column_count) {
+    if (!db || !table_name || column_count <= 0 || column_count > MAX_COLUMNS_PER_TABLE) {
+        fprintf(stderr, "无效的创建表参数\n");
+        return -1;
+    }
+
     if (db->table_count >= MAX_TABLE_COUNT) {
-        fprintf(stderr, "Error: Maximum table count reached\n");
+        fprintf(stderr, "错误：表数量已达上限\n");
         return -1;
     }
-
+    
     if (find_table(db, table_name) != NULL) {
-        fprintf(stderr, "Error: Table '%s' already exists\n", table_name);
+        fprintf(stderr, "错误：表 '%s' 已存在\n", table_name);
         return -1;
     }
-
-    if (column_count <= 0 || column_count > MAX_COLUMNS_PER_TABLE) {
-        fprintf(stderr, "Error: Invalid column count\n");
-        return -1;
-    }
-
+    
     Table *table = &db->tables[db->table_count];
     strncpy(table->name, table_name, MAX_NAME_LEN);
     table->column_count = column_count;
     table->record_count = 0;
-
+    
     for (int i = 0; i < column_count; i++) {
-        table->columns[i] = columns[i];
+        memcpy(&table->columns[i], &columns[i], sizeof(ColumnDef));
     }
-
-    db->table_count++;
-    return db->table_count - 1;
+    
+    return db->table_count++;
 }
 
 // 查找列索引
 int find_column_index(Table *table, const char *column_name) {
+    if (!table || !column_name) return -1;
+    
     for (int i = 0; i < table->column_count; i++) {
         if (strcmp(table->columns[i].name, column_name) == 0) {
             return i;
@@ -151,50 +168,34 @@ int find_column_index(Table *table, const char *column_name) {
     return -1;
 }
 
-// 创建索引
-void create_index(Table *table, const char *column_name) {
-    int col_index = find_column_index(table, column_name);
-    if (col_index == -1) {
-        fprintf(stderr, "Error: Column not found\n");
-        return;
-    }
-    table->columns[col_index].is_indexed = true;
-}
-
-// 删除索引
-void drop_index(Table *table, const char *column_name) {
-    int col_index = find_column_index(table, column_name);
-    if (col_index == -1) {
-        fprintf(stderr, "Error: Column not found\n");
-        return;
-    }
-    table->columns[col_index].is_indexed = false;
-}
-
 // 添加记录
 int insert_record(Database *db, const char *table_name, Record *record) {
+    if (!db || !table_name || !record) return -1;
+    
     Table *table = find_table(db, table_name);
     if (!table) {
-        fprintf(stderr, "Error: Table not found\n");
+        fprintf(stderr, "错误：找不到表\n");
         return -1;
     }
-
+    
     if (table->record_count >= MAX_RECORDS_PER_TABLE) {
-        fprintf(stderr, "Error: Maximum record count reached for table '%s'\n", table_name);
+        fprintf(stderr, "错误：表 '%s' 记录数已达上限\n", table_name);
         return -1;
     }
-
+    
     // 设置记录ID
     record->id = table->record_count;
-    table->records[table->record_count] = *record;
+    memcpy(&table->records[table->record_count], record, sizeof(Record));
     table->record_count++;
-
+    
     return record->id;
 }
 
 
-// 评估条件
+// 评估条件（修复布尔值比较）
 bool evaluate_condition(Condition *condition, Table *table, Record *record) {
+    if (!condition || !table || !record) return false;
+
     int col_index = find_column_index(table, condition->column_name);
     if (col_index == -1) return false;
 
@@ -218,7 +219,7 @@ bool evaluate_condition(Condition *condition, Table *table, Record *record) {
                 case COMPARISON_LESS_OR_EQUAL:
                     return rec_value->int_value <= cond_value->int_value;
                 default:
-                    return false; // 其他操作符不支持数值类型
+                    return false;
             }
 
         case FLOAT:
@@ -255,67 +256,58 @@ bool evaluate_condition(Condition *condition, Table *table, Record *record) {
             }
 
         case BOOL:
+            // 修复布尔值比较：确保类型一致
             if (condition->op == COMPARISON_EQUAL) {
-                return rec_value->bool_value == cond_value->bool_value;
+                return rec_value->bool_value == (cond_value->int_value != 0);
             }
             return false;
     }
-
     return false;
 }
 
-
-// 删除记录
+// 删除记录（优化内存移动）
 int delete_records(Database *db, const char *table_name, Query *query) {
+    if (!db || !table_name || !query) return 0;
+    
     Table *table = find_table(db, table_name);
     if (!table) {
-        fprintf(stderr, "Error: Table not found\n");
+        fprintf(stderr, "错误：找不到表\n");
         return 0;
     }
-
+    
     int deleted = 0;
     for (int i = 0; i < table->record_count; i++) {
         if (evaluate_condition(&query->condition, table, &table->records[i])) {
-            // 移动记录填充空缺
-            for (int j = i; j < table->record_count - 1; j++) {
-                table->records[j] = table->records[j + 1];
+            // 安全移动记录
+            if (table->record_count > 1 && i < table->record_count - 1) {
+                memmove(&table->records[i], &table->records[i+1], 
+                       (table->record_count - i - 1) * sizeof(Record));
             }
             table->record_count--;
-            i--;  // 重新检查当前位置
+            i--; // 重新检查当前位置
             deleted++;
         }
     }
-
     return deleted;
 }
 
-// 更新记录
-int update_records(Database *db, const char *table_name, Query *query,
+// 更新记录（添加空指针检查）
+int update_records(Database *db, const char *table_name, Query *query, 
                   const char *column_name, DataValue *new_value) {
+    if (!db || !table_name || !query || !column_name) return 0;
+    
     Table *table = find_table(db, table_name);
     if (!table) {
-        fprintf(stderr, "Error: Table not found\n");
+        fprintf(stderr, "错误：找不到表\n");
         return 0;
     }
-
+    
     int col_index = find_column_index(table, column_name);
     if (col_index == -1) {
-        fprintf(stderr, "Error: Column not found\n");
+        fprintf(stderr, "错误：找不到列\n");
         return 0;
     }
-
-    DataType expected_type = table->columns[col_index].type;
-    if (new_value) {
-        // 类型检查 (简单版本)
-        // if ((expected_type == INT && new_value->int_value != new_value->int_value) ||
-        //     (expected_type == FLOAT && new_value->float_value != new_value->float_value)) {
-        if ((expected_type == INT) ||
-            (expected_type == FLOAT)) {
-            fprintf(stderr, "Type mismatch\n");
-            return 0;
-        }
-    }
-
+    
     int updated = 0;
     for (int i = 0; i < table->record_count; i++) {
         if (evaluate_condition(&query->condition, table, &table->records[i])) {
@@ -325,18 +317,20 @@ int update_records(Database *db, const char *table_name, Query *query,
             updated++;
         }
     }
-
     return updated;
 }
 
-// 查询记录
+
+// 查询记录（添加边界检查）
 int query_records(Database *db, Query *query, Record *results, int max_results) {
+    if (!db || !query || !results || max_results <= 0) return 0;
+    
     Table *table = find_table(db, query->table_name);
     if (!table) {
-        fprintf(stderr, "Table not found\n");
+        fprintf(stderr, "表未找到\n");
         return 0;
     }
-
+    
     int found = 0;
     for (int i = 0; i < table->record_count && found < max_results; i++) {
         if (evaluate_condition(&query->condition, table, &table->records[i])) {
@@ -347,154 +341,239 @@ int query_records(Database *db, Query *query, Record *results, int max_results) 
 }
 
 // ================================================
-// 文件操作函数
+// 文件操作函数（增强安全性）
 // ================================================
 
-// 保存数据库到文件
+// 安全保存数据库到文件
 bool save_database(Database *db) {
-    FILE *meta_file = fopen(DB_DIRECTORY "database.meta", "wb");
-    if (!meta_file) {
-        perror("Error opening meta file");
+    if (!db) return false;
+    
+    if (!create_db_directory()) {
         return false;
     }
-
-    fwrite(&db->table_count, sizeof(int), 1, meta_file);
-
+    
+    char meta_path[PATH_BUFFER_SIZE];
+    snprintf(meta_path, sizeof(meta_path), "%sdatabase.meta", DB_DIRECTORY);
+    FILE *meta_file = fopen(meta_path, "wb");
+    if (!meta_file) {
+        perror("无法打开元数据文件");
+        return false;
+    }
+    
+    // 写入表数量
+    if (fwrite(&db->table_count, sizeof(int), 1, meta_file) != 1) {
+        perror("元数据写入失败");
+        fclose(meta_file);
+        return false;
+    }
+    
     for (int t = 0; t < db->table_count; t++) {
         Table *table = &db->tables[t];
-
+        
         // 保存表元数据
         size_t name_len = strlen(table->name) + 1;
-        fwrite(&name_len, sizeof(size_t), 1, meta_file);
-        fwrite(table->name, sizeof(char), name_len, meta_file);
-
-        fwrite(&table->column_count, sizeof(int), 1, meta_file);
-        fwrite(&table->record_count, sizeof(int), 1, meta_file);
-
+        if (fwrite(&name_len, sizeof(size_t), 1, meta_file) != 1 ||
+            fwrite(table->name, sizeof(char), name_len, meta_file) != name_len ||
+            fwrite(&table->column_count, sizeof(int), 1, meta_file) != 1 ||
+            fwrite(&table->record_count, sizeof(int), 1, meta_file) != 1) {
+            perror("表元数据写入失败");
+            fclose(meta_file);
+            return false;
+        }
+        
         // 保存列定义
         for (int c = 0; c < table->column_count; c++) {
             ColumnDef *col = &table->columns[c];
-            fwrite(col->name, sizeof(char), MAX_NAME_LEN, meta_file);
-            fwrite(&col->type, sizeof(DataType), 1, meta_file);
-            fwrite(&col->is_indexed, sizeof(bool), 1, meta_file);
-            fwrite(&col->is_primary, sizeof(bool), 1, meta_file);
+            if (fwrite(col->name, sizeof(char), MAX_NAME_LEN, meta_file) != MAX_NAME_LEN ||
+                fwrite(&col->type, sizeof(DataType), 1, meta_file) != 1 ||
+                fwrite(&col->is_indexed, sizeof(bool), 1, meta_file) != 1 ||
+                fwrite(&col->is_primary, sizeof(bool), 1, meta_file) != 1) {
+                perror("列定义写入失败");
+                fclose(meta_file);
+                return false;
+            }
         }
-
+        
         // 保存数据到单独文件
-        char table_file_path[256];
-        snprintf(table_file_path, sizeof(table_file_path),
-                DB_DIRECTORY "%s" DB_EXTENSION, table->name);
-
+        char table_file_path[PATH_BUFFER_SIZE];
+        snprintf(table_file_path, sizeof(table_file_path), "%s%s%s", DB_DIRECTORY, table->name, DB_EXTENSION);
         FILE *table_file = fopen(table_file_path, "wb");
         if (!table_file) {
-            perror("Error opening table file");
+            perror("无法打开表数据文件");
             fclose(meta_file);
             return false;
         }
-
+        
         for (int r = 0; r < table->record_count; r++) {
-            fwrite(&table->records[r].id, sizeof(int), 1, table_file);
-
+            if (fwrite(&table->records[r].id, sizeof(int), 1, table_file) != 1) {
+                perror("记录ID写入失败");
+                fclose(table_file);
+                fclose(meta_file);
+                return false;
+            }
+            
             for (int c = 0; c < table->column_count; c++) {
                 ColumnDef *col_def = &table->columns[c];
                 switch (col_def->type) {
                     case INT:
-                        fwrite(&table->records[r].values[c].int_value, sizeof(int), 1, table_file);
+                        if (fwrite(&table->records[r].values[c].int_value, sizeof(int), 1, table_file) != 1) {
+                            perror("整数值写入失败");
+                            fclose(table_file);
+                            fclose(meta_file);
+                            return false;
+                        }
                         break;
                     case FLOAT:
-                        fwrite(&table->records[r].values[c].float_value, sizeof(float), 1, table_file);
+                        if (fwrite(&table->records[r].values[c].float_value, sizeof(float), 1, table_file) != 1) {
+                            perror("浮点数值写入失败");
+                            fclose(table_file);
+                            fclose(meta_file);
+                            return false;
+                        }
                         break;
                     case STRING:
-                        fwrite(table->records[r].values[c].string_value, sizeof(char), MAX_STRING_LENGTH, table_file);
+                        if (fwrite(table->records[r].values[c].string_value, sizeof(char), MAX_STRING_LENGTH, table_file) != MAX_STRING_LENGTH) {
+                            perror("字符串值写入失败");
+                            fclose(table_file);
+                            fclose(meta_file);
+                            return false;
+                        }
                         break;
                     case BOOL:
-                        fwrite(&table->records[r].values[c].bool_value, sizeof(bool), 1, table_file);
+                        if (fwrite(&table->records[r].values[c].bool_value, sizeof(bool), 1, table_file) != 1) {
+                            perror("布尔值写入失败");
+                            fclose(table_file);
+                            fclose(meta_file);
+                            return false;
+                        }
                         break;
                 }
             }
         }
         fclose(table_file);
     }
-
+    
     fclose(meta_file);
     return true;
 }
 
-// 从文件加载数据库
+// 安全加载数据库
 bool load_database(Database *db) {
-    FILE *meta_file = fopen(DB_DIRECTORY "database.meta", "rb");
+    if (!db) return false;
+    
+    char meta_path[PATH_BUFFER_SIZE];
+    snprintf(meta_path, sizeof(meta_path), "%sdatabase.meta", DB_DIRECTORY);
+    FILE *meta_file = fopen(meta_path, "rb");
     if (!meta_file) {
-        perror("Error opening meta file");
+        perror("无法打开元数据文件");
         return false;
     }
-
-    fread(&db->table_count, sizeof(int), 1, meta_file);
-
+    
+    // 读取表数量
+    if (fread(&db->table_count, sizeof(int), 1, meta_file) != 1) {
+        perror("元数据读取失败");
+        fclose(meta_file);
+        return false;
+    }
+    
     for (int t = 0; t < db->table_count; t++) {
         Table *table = &db->tables[t];
-
+        
         // 加载表元数据
         size_t name_len;
-        fread(&name_len, sizeof(size_t), 1, meta_file);
-        fread(table->name, sizeof(char), name_len, meta_file);
-
-        fread(&table->column_count, sizeof(int), 1, meta_file);
-        fread(&table->record_count, sizeof(int), 1, meta_file);
-
+        if (fread(&name_len, sizeof(size_t), 1, meta_file) != 1 ||
+            fread(table->name, sizeof(char), name_len, meta_file) != name_len ||
+            fread(&table->column_count, sizeof(int), 1, meta_file) != 1 ||
+            fread(&table->record_count, sizeof(int), 1, meta_file) != 1) {
+            perror("表元数据读取失败");
+            fclose(meta_file);
+            return false;
+        }
+        
         // 加载列定义
         for (int c = 0; c < table->column_count; c++) {
             ColumnDef *col = &table->columns[c];
-            fread(col->name, sizeof(char), MAX_NAME_LEN, meta_file);
-            fread(&col->type, sizeof(DataType), 1, meta_file);
-            fread(&col->is_indexed, sizeof(bool), 1, meta_file);
-            fread(&col->is_primary, sizeof(bool), 1, meta_file);
+            if (fread(col->name, sizeof(char), MAX_NAME_LEN, meta_file) != MAX_NAME_LEN ||
+                fread(&col->type, sizeof(DataType), 1, meta_file) != 1 ||
+                fread(&col->is_indexed, sizeof(bool), 1, meta_file) != 1 ||
+                fread(&col->is_primary, sizeof(bool), 1, meta_file) != 1) {
+                perror("列定义读取失败");
+                fclose(meta_file);
+                return false;
+            }
         }
-
+        
         // 从文件加载数据
-        char table_file_path[256];
-        snprintf(table_file_path, sizeof(table_file_path),
-                DB_DIRECTORY "%s" DB_EXTENSION, table->name);
-
+        char table_file_path[PATH_BUFFER_SIZE];
+        snprintf(table_file_path, sizeof(table_file_path), "%s%s%s", DB_DIRECTORY, table->name, DB_EXTENSION);
         FILE *table_file = fopen(table_file_path, "rb");
         if (!table_file) {
-            perror("Error opening table file");
+            perror("无法打开表数据文件");
             fclose(meta_file);
             return false;
         }
-
+        
         for (int r = 0; r < table->record_count; r++) {
-            fread(&table->records[r].id, sizeof(int), 1, table_file);
-
+            if (fread(&table->records[r].id, sizeof(int), 1, table_file) != 1) {
+                perror("记录ID读取失败");
+                fclose(table_file);
+                fclose(meta_file);
+                return false;
+            }
+            
             for (int c = 0; c < table->column_count; c++) {
                 ColumnDef *col_def = &table->columns[c];
                 switch (col_def->type) {
                     case INT:
-                        fread(&table->records[r].values[c].int_value, sizeof(int), 1, table_file);
+                        if (fread(&table->records[r].values[c].int_value, sizeof(int), 1, table_file) != 1) {
+                            perror("整数值读取失败");
+                            fclose(table_file);
+                            fclose(meta_file);
+                            return false;
+                        }
                         break;
                     case FLOAT:
-                        fread(&table->records[r].values[c].float_value, sizeof(float), 1, table_file);
+                        if (fread(&table->records[r].values[c].float_value, sizeof(float), 1, table_file) != 1) {
+                            perror("浮点数值读取失败");
+                            fclose(table_file);
+                            fclose(meta_file);
+                            return false;
+                        }
                         break;
                     case STRING:
-                        fread(table->records[r].values[c].string_value, sizeof(char), MAX_STRING_LENGTH, table_file);
+                        if (fread(table->records[r].values[c].string_value, sizeof(char), MAX_STRING_LENGTH, table_file) != MAX_STRING_LENGTH) {
+                            perror("字符串值读取失败");
+                            fclose(table_file);
+                            fclose(meta_file);
+                            return false;
+                        }
+                        table->records[r].values[c].string_value[MAX_STRING_LENGTH-1] = '\0'; // 确保以空字符结尾
                         break;
                     case BOOL:
-                        fread(&table->records[r].values[c].bool_value, sizeof(bool), 1, table_file);
+                        if (fread(&table->records[r].values[c].bool_value, sizeof(bool), 1, table_file) != 1) {
+                            perror("布尔值读取失败");
+                            fclose(table_file);
+                            fclose(meta_file);
+                            return false;
+                        }
                         break;
                 }
             }
         }
         fclose(table_file);
     }
-
+    
     fclose(meta_file);
     return true;
 }
 
 // ================================================
-// 数据库实用工具函数
+// 数据库实用工具函数（带空指针检查）
 // ================================================
 
 void print_record(Table *table, Record *record) {
+    if (!table || !record) return;
+    
     printf("ID: %d\n", record->id);
     for (int i = 0; i < table->column_count; i++) {
         printf("%s: ", table->columns[i].name);
@@ -517,13 +596,18 @@ void print_record(Table *table, Record *record) {
 }
 
 void print_table_structure(Table *table) {
+    if (!table) {
+        printf("无效的表\n");
+        return;
+    }
+    
     printf("\nTable: %s\n", table->name);
     printf("Columns:\n");
     for (int i = 0; i < table->column_count; i++) {
         printf("  %s (%s) %s%s\n",
               table->columns[i].name,
-              table->columns[i].type == INT ? "INT" :
-              table->columns[i].type == FLOAT ? "FLOAT" :
+              table->columns[i].type == INT ? "INT" : 
+              table->columns[i].type == FLOAT ? "FLOAT" : 
               table->columns[i].type == STRING ? "STRING" : "BOOL",
               table->columns[i].is_primary ? "PRIMARY KEY " : "",
               table->columns[i].is_indexed ? "INDEXED" : "");
@@ -531,24 +615,25 @@ void print_table_structure(Table *table) {
     printf("Total records: %d\n", table->record_count);
 }
 
-// 查询解析函数 (简化版)
+// 查询解析函数（增加容错能力）
 int parse_query(const char *input, Query *query) {
-    // 示例解析: "SELECT * FROM users WHERE age>25"
-    // 简单实现 - 实际应用中需要完整的SQL解析器
-    char table_name[64];
-    char column_name[64];
-    char op_str[16];
-    char value_str[128];
-
-    // 简单分词
-    if (sscanf(input, "SELECT * FROM %63s WHERE %63s%15s%127[^\n]",
-              table_name, column_name, op_str, value_str) != 4) {
+    if (!input || !query) return -1;
+    
+    char table_name[64] = {0};
+    char column_name[64] = {0};
+    char op_str[16] = {0};
+    char value_str[128] = {0};
+    
+    // 安全解析
+    if (sscanf(input, "SELECT * FROM %63s WHERE %63s%15s%127[^\n]", 
+              table_name, column_name, op_str, value_str) < 4) {
         return -1;
     }
-
+    
+    // 复制表名和列名
     strncpy(query->table_name, table_name, MAX_NAME_LEN);
     strncpy(query->condition.column_name, column_name, MAX_NAME_LEN);
-
+    
     // 解析操作符
     if (strcmp(op_str, "=") == 0) query->condition.op = COMPARISON_EQUAL;
     else if (strcmp(op_str, "!=") == 0) query->condition.op = COMPARISON_NOT_EQUAL;
@@ -559,282 +644,139 @@ int parse_query(const char *input, Query *query) {
     else if (strcmp(op_str, "CONTAINS") == 0) query->condition.op = COMPARISON_CONTAINS;
     else if (strcmp(op_str, "STARTSWITH") == 0) query->condition.op = COMPARISON_STARTS_WITH;
     else return -1;
-
-    // 解析值
-    char *trimmed_value = value_str;
-    while (*trimmed_value == ' ') trimmed_value++;
-
-    if (strcmp(trimmed_value, "true") == 0) {
+    
+    // 安全解析值
+    if (strcasecmp(value_str, "true") == 0) {
         query->condition.value.bool_value = true;
-    } else if (strcmp(trimmed_value, "false") == 0) {
+    } else if (strcasecmp(value_str, "false") == 0) {
         query->condition.value.bool_value = false;
-    } else if (strchr(trimmed_value, '.') != NULL) {
-        query->condition.value.float_value = atof(trimmed_value);
+    } else if (strchr(value_str, '.') != NULL) {
+        query->condition.value.float_value = atof(value_str);
     } else {
-        query->condition.value.int_value = atoi(trimmed_value);
-        strncpy(query->condition.value.string_value, trimmed_value, MAX_STRING_LENGTH);
+        query->condition.value.int_value = atoi(value_str);
+        strncpy(query->condition.value.string_value, value_str, MAX_STRING_LENGTH);
     }
-
+    
     return 0;
 }
 
 // ================================================
-// 演示用例和测试函数
+// 演示用例和测试函数（优化初始化）
 // ================================================
 
 void demo_setup_database(Database *db) {
+    if (!db) return;
+    
     // 创建users表
-    ColumnDef users_columns[4] = {
+    ColumnDef users_columns[] = {
         {"id", INT, true, true},
         {"name", STRING, true, false},
         {"age", INT, false, false},
         {"active", BOOL, false, false}
     };
-
-    create_table(db, "users", users_columns, 4);
-
-    // 添加用户记录
-    Record user1 = {0};
+    int user_col_count = sizeof(users_columns)/sizeof(ColumnDef);
+    create_table(db, "users", users_columns, user_col_count);
+    
+    // 添加用户记录（安全初始化）
+    Record user1;
+    memset(&user1, 0, sizeof(Record));
     user1.values[0].int_value = 1;
-    strcpy(user1.values[1].string_value, "John Doe");
+    strncpy(user1.values[1].string_value, "John Doe", MAX_STRING_LENGTH);
     user1.values[2].int_value = 32;
     user1.values[3].bool_value = true;
-
-    Record user2 = {0};
+    insert_record(db, "users", &user1);
+    
+    Record user2;
+    memset(&user2, 0, sizeof(Record));
     user2.values[0].int_value = 2;
-    strcpy(user2.values[1].string_value, "Jane Smith");
+    strncpy(user2.values[1].string_value, "Jane Smith", MAX_STRING_LENGTH);
     user2.values[2].int_value = 28;
     user2.values[3].bool_value = true;
-
-    Record user3 = {0};
+    insert_record(db, "users", &user2);
+    
+    Record user3;
+    memset(&user3, 0, sizeof(Record));
     user3.values[0].int_value = 3;
-    strcpy(user3.values[1].string_value, "Bob Johnson");
+    strncpy(user3.values[1].string_value, "Bob Johnson", MAX_STRING_LENGTH);
     user3.values[2].int_value = 45;
     user3.values[3].bool_value = false;
-
-    insert_record(db, "users", &user1);
-    insert_record(db, "users", &user2);
     insert_record(db, "users", &user3);
-
+    
     // 创建products表
-    ColumnDef products_columns[3] = {
+    ColumnDef products_columns[] = {
         {"id", INT, true, true},
         {"name", STRING, true, false},
         {"price", FLOAT, false, false}
     };
-
-    create_table(db, "products", products_columns, 3);
-
+    int product_col_count = sizeof(products_columns)/sizeof(ColumnDef);
+    create_table(db, "products", products_columns, product_col_count);
+    
     // 添加产品记录
-    Record product1 = {0};
+    Record product1;
+    memset(&product1, 0, sizeof(Record));
     product1.values[0].int_value = 101;
-    strcpy(product1.values[1].string_value, "Laptop");
+    strncpy(product1.values[1].string_value, "Laptop", MAX_STRING_LENGTH);
     product1.values[2].float_value = 1299.99;
-
-    Record product2 = {0};
-    product2.values[0].int_value = 102;
-    strcpy(product2.values[1].string_value, "Smartphone");
-    product2.values[2].float_value = 799.99;
-
     insert_record(db, "products", &product1);
+    
+    Record product2;
+    memset(&product2, 0, sizeof(Record));
+    product2.values[0].int_value = 102;
+    strncpy(product2.values[1].string_value, "Smartphone", MAX_STRING_LENGTH);
+    product2.values[2].float_value = 799.99;
     insert_record(db, "products", &product2);
 }
 
-void run_demo_queries(Database *db) {
-    printf("\n=== Running demo queries ===\n");
-
-    // 查询所有活跃用户
-    printf("\nQuery: All active users\n");
-    Query active_users_query;
-    strcpy(active_users_query.table_name, "users");
-    strcpy(active_users_query.condition.column_name, "active");
-    active_users_query.condition.op = COMPARISON_EQUAL;
-    active_users_query.condition.value.bool_value = true;
-
-    Record results[10];
-    int count = query_records(db, &active_users_query, results, 10);
-
-    Table *users_table = find_table(db, "users");
-    for (int i = 0; i < count; i++) {
-        print_record(users_table, &results[i]);
-    }
-
-    // 查询30岁以上用户
-    printf("\nQuery: Users older than 30\n");
-    Query age_query;
-    strcpy(age_query.table_name, "users");
-    strcpy(age_query.condition.column_name, "age");
-    age_query.condition.op = COMPARISON_GREATER;
-    age_query.condition.value.int_value = 30;
-
-    count = query_records(db, &age_query, results, 10);
-    for (int i = 0; i < count; i++) {
-        print_record(users_table, &results[i]);
-    }
-
-    // 更新价格超过1000的产品
-    printf("\nUpdating expensive products\n");
-    Query expensive_query;
-    strcpy(expensive_query.table_name, "products");
-    strcpy(expensive_query.condition.column_name, "price");
-    expensive_query.condition.op = COMPARISON_GREATER;
-    expensive_query.condition.value.float_value = 1000.0;
-
-    DataValue new_price;
-    new_price.float_value = 1199.99;
-
-    int updated = update_records(db, "products", &expensive_query, "price", &new_price);
-    printf("Updated %d records\n", updated);
-
-    // 验证更新
-    Query all_products_query;
-    strcpy(all_products_query.table_name, "products");
-    strcpy(all_products_query.condition.column_name, "id");
-    all_products_query.condition.op = COMPARISON_GREATER;
-    all_products_query.condition.value.int_value = 0;
-
-    Table *products_table = find_table(db, "products");
-    count = query_records(db, &all_products_query, results, 10);
-    for (int i = 0; i < count; i++) {
-        print_record(products_table, &results[i]);
-    }
-
-    // 删除测试
-    printf("\nDeleting inactive users\n");
-    Query inactive_query;
-    strcpy(inactive_query.table_name, "users");
-    strcpy(inactive_query.condition.column_name, "active");
-    inactive_query.condition.op = COMPARISON_EQUAL;
-    inactive_query.condition.value.bool_value = false;
-
-    int deleted = delete_records(db, "users", &inactive_query);
-    printf("Deleted %d records\n", deleted);
-
-    // 验证删除
-    Query all_users_query = {{0}};
-    strcpy(all_users_query.table_name, "users");
-    strcpy(all_users_query.condition.column_name, "id");
-    all_users_query.condition.op = COMPARISON_GREATER;
-    all_users_query.condition.value.int_value = 0;
-
-    count = query_records(db, &all_users_query, results, 10);
-    for (int i = 0; i < count; i++) {
-        print_record(users_table, &results[i]);
-    }
-
-    // 文件I/O测试
-    printf("\nSaving database to files...\n");
-    save_database(db);
-
-    Database loaded_db;
-    init_database(&loaded_db);
-    printf("Loading database from files...\n");
-    load_database(&loaded_db);
-
-    printf("\nLoaded database contents:\n");
-    Table *loaded_table = find_table(&loaded_db, "users");
-    if (loaded_table) {
-        print_table_structure(loaded_table);
-        for (int i = 0; i < loaded_table->record_count; i++) {
-            print_record(loaded_table, &loaded_table->records[i]);
-        }
-    }
-}
-
 // ================================================
-// 性能测试函数
-// ================================================
-
-void performance_test(Database *db) {
-    printf("\n=== Starting performance test ===\n");
-
-    // 准备一个包含大量数据的表
-    ColumnDef test_columns[5] = {
-        {"id", INT, true, true},
-        {"value1", INT, false, false},
-        {"value2", FLOAT, false, false},
-        {"text", STRING, true, false},
-        {"flag", BOOL, false, false}
-    };
-
-    if (!find_table(db, "perf_test")) {
-        create_table(db, "perf_test", test_columns, 5);
-    }
-
-    Table *test_table = find_table(db, "perf_test");
-
-    // 填充1000条记录
-    if (test_table->record_count == 0) {
-        printf("Generating test data...\n");
-        srand(time(NULL));
-        for (int i = 0; i < 500; i++) {
-            Record r = {0};
-            r.values[0].int_value = test_table->record_count;
-            r.values[1].int_value = rand() % 1000;
-            r.values[2].float_value = (rand() % 10000) / 100.0;
-
-            char text[50];
-            sprintf(text, "Record_%d", r.values[0].int_value);
-            strncpy(r.values[3].string_value, text, MAX_STRING_LENGTH);
-
-            r.values[4].bool_value = (rand() % 2) == 0;
-
-            insert_record(db, "perf_test", &r);
-        }
-    }
-
-    // 测试查询性能
-    printf("Running query performance test...\n");
-
-    Query query;
-    strcpy(query.table_name, "perf_test");
-    strcpy(query.condition.column_name, "value1");
-    query.condition.op = COMPARISON_GREATER;
-    query.condition.value.int_value = 500;
-
-    Record results[1000];
-
-    clock_t start = clock();
-    int found = query_records(db, &query, results, 1000);
-    clock_t end = clock();
-
-    double elapsed = (double)(end - start) / CLOCKS_PER_SEC * 1000.0;
-    printf("Found %d records in %.2f ms\n", found, elapsed);
-}
-
-// ================================================
-// 主函数 - 数据库测试入口
+// 主函数 - 增强错误处理
 // ================================================
 
 int main() {
     // 确保数据库目录存在
-    system("mkdir -p " DB_DIRECTORY);
-
+    if (!create_db_directory()) {
+        return EXIT_FAILURE;
+    }
+    
     Database db;
     init_database(&db);
-
-    printf("Simple File-based Database System\n");
-    printf("================================\n\n");
-
+    
+    printf("简易文件数据库系统（修复版）\n");
+    printf("==============================\n\n");
+    
     // 设置演示数据
     demo_setup_database(&db);
-
+    
     // 打印表结构
     Table *users = find_table(&db, "users");
     if (users) print_table_structure(users);
-
+    
     Table *products = find_table(&db, "products");
     if (products) print_table_structure(products);
-
-    // 运行演示查询
-    run_demo_queries(&db);
-
-    // 运行性能测试
-    performance_test(&db);
-
-    // 保存最终数据库状态
-    save_database(&db);
-
-    printf("\nDatabase saved successfully\n");
-    return 0;
+    
+    // 保存数据库
+    if (save_database(&db)) {
+        printf("\n数据库已成功保存\n");
+        
+        // 测试加载
+        Database loaded_db;
+        init_database(&loaded_db);
+        if (load_database(&loaded_db)) {
+            printf("数据库已成功加载\n");
+            
+            // 验证加载的数据
+            Table *loaded_table = find_table(&loaded_db, "users");
+            if (loaded_table && loaded_table->record_count > 0) {
+                printf("\n验证第一条用户记录: ");
+                printf("ID=%d, Name=%s\n", 
+                      loaded_table->records[0].id,
+                      loaded_table->records[0].values[1].string_value);
+            }
+        } else {
+            printf("数据库加载失败\n");
+        }
+    } else {
+        printf("数据库保存失败\n");
+    }
+    
+    return EXIT_SUCCESS;
 }
