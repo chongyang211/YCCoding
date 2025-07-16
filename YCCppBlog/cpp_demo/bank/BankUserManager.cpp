@@ -238,10 +238,7 @@ int main() {
             }
             case 4: {
                 printf("4. 查询余额\n");
-                std::string accNumber;
-                std::cout << "请输入账户号: ";
-                std::getline(std::cin, accNumber);
-                bank.queryBalance(accNumber);
+                checkBalance();
                 break;
             }
             case 5: {
@@ -334,4 +331,12 @@ void withdraw() {
     std::cout << "请输入取款金额: ";
     std::cin >> amount;
     bank.withdraw(accNumber, amount);
+}
+
+// 查询余额
+void checkBalance() {
+    std::string accNumber;
+    std::cout << "请输入账户号: ";
+    std::getline(std::cin, accNumber);
+    bank.queryBalance(accNumber);
 }
