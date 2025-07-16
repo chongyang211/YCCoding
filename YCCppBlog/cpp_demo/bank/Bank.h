@@ -20,6 +20,8 @@ public:
     Account* findAccount(const std::string& accNumber);
     // 存款
     void deposit(const std::string& accNumber, double amount);
+    // 查询余额
+    void queryBalance(const std::string& accNumber) ;
 };
 
 

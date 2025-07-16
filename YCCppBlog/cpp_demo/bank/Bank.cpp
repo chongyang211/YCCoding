@@ -33,4 +33,13 @@ void Bank::deposit(const std::string &accNumber, double amount) {
     }
 }
 
+// 查询余额
+void Bank::queryBalance(const std::string &accNumber) {
+    Account* account = findAccount(accNumber);
+    if (account) {
+        std::cout << "账户余额: " << account->getBalance() << std::endl;
+    } else {
+        std::cout << "账户不存在！" << std::endl;
+    }
+}
 
