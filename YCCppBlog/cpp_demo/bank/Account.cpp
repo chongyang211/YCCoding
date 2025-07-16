@@ -4,6 +4,27 @@
 
 #include "Account.h"
 
+// 构造函数
+Account::Account(const std::string &accNumber, const std::string &accName, double initialBalance) {
+    this->accountNumber = accNumber;
+    this->name = accName;
+    this->balance = initialBalance;
+}
+
+// 获取账户号
+std::string Account::getAccountNumber() const {
+    return accountNumber;
+}
+
+// 获取姓名
+std::string Account::getName() const {
+    return name;
+}
+
+// 获取余额
+double Account::getBalance() const {
+    return balance;
+}
 
 // 存款
 void Account::deposit(double amount) {
