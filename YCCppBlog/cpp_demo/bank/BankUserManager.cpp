@@ -138,9 +138,12 @@ public:
 
     // 转账
     void transfer(const std::string& fromAccNumber, const std::string& toAccNumber, double amount) {
+        //先找到转入账户
         Account* fromAccount = findAccount(fromAccNumber);
+        //然后找到转出账户
         Account* toAccount = findAccount(toAccNumber);
         if (fromAccount && toAccount) {
+            //两个账户不为空时，才可以转账
             fromAccount->transfer(*toAccount, amount);
         } else {
             std::cout << "账户不存在！" << std::endl;
@@ -243,15 +246,7 @@ int main() {
             }
             case 5: {
                 printf("5. 转账\n");
-                std::string fromAccNumber, toAccNumber;
-                double amount;
-                std::cout << "请输入转出账户号: ";
-                std::getline(std::cin, fromAccNumber);
-                std::cout << "请输入转入账户号: ";
-                std::getline(std::cin, toAccNumber);
-                std::cout << "请输入转账金额: ";
-                std::cin >> amount;
-                bank.transfer(fromAccNumber, toAccNumber, amount);
+                transfer();
                 break;
             }
             case 6: {
@@ -339,4 +334,19 @@ void checkBalance() {
     std::cout << "请输入账户号: ";
     std::getline(std::cin, accNumber);
     bank.queryBalance(accNumber);
+}
+
+// 用户转账
+void transfer() {
+    // 定义转入和转出账号
+    std::string fromAccNumber, toAccNumber;
+    //转出金额
+    double amount;
+    std::cout << "请输入转出账户号: ";
+    std::getline(std::cin, fromAccNumber);
+    std::cout << "请输入转入账户号: ";
+    std::getline(std::cin, toAccNumber);
+    std::cout << "请输入转账金额: ";
+    std::cin >> amount;
+    bank.transfer(fromAccNumber, toAccNumber, amount);
 }

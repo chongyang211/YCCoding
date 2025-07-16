@@ -23,3 +23,6 @@ void withdraw();
 
 // 查询余额
 void checkBalance();
+
+// 用户转账
+void transfer();
