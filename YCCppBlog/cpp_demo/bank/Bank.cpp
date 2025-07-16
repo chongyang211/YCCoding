@@ -10,3 +10,16 @@ void Bank::createAccount(const std::string &accNumber, const std::string &accNam
     accounts.push_back(newAccount);
     std::cout << "开户成功！" << std::endl;
 }
+
+// 根据账户号查找账户
+Account *Bank::findAccount(const std::string &accNumber) {
+    //遍历
+    for (std::vector<Account>::iterator it = accounts.begin(); it != accounts.end(); ++it) {
+        //根据账号查找
+        if (it->getAccountNumber() == accNumber) {
+            return &(*it);
+        }
+    }
+    return nullptr;
+}
+

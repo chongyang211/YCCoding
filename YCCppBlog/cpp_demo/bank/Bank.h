@@ -16,6 +16,8 @@ private:
 public:
     // 开户
     void createAccount(const std::string& accNumber, const std::string& accName, double initialBalance);
+    // 根据账户号查找账户
+    Account* findAccount(const std::string& accNumber);
 };
 
 
