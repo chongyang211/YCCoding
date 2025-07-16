@@ -226,13 +226,7 @@ int main() {
             }
             case 2: {
                 printf("2. 存款\n");
-                std::string accNumber;
-                double amount;
-                std::cout << "请输入账户号: ";
-                std::getline(std::cin, accNumber);
-                std::cout << "请输入存款金额: ";
-                std::cin >> amount;
-                bank.deposit(accNumber, amount);
+                deposit();
                 break;
             }
             case 3: {
@@ -323,3 +317,14 @@ void openAccount() {
     bank.createAccount(accNumber, name, initialBalance);
 }
 
+// 存款
+void deposit() {
+    std::string accNumber;
+    double amount;
+    std::cout << "请输入账户号:";
+    //获取输入的字符串
+    std::getline(std::cin , accNumber);
+    std::cout << "请输入存款金额:";
+    std::cin >> amount;
+    bank.deposit(accNumber, amount);
+}

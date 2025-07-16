@@ -15,3 +15,6 @@ void showMainChoice();
 // 开户
 void openAccount();
 
+// 存款
+void deposit();
+
