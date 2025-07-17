@@ -115,4 +115,5 @@ add_executable(YCCppBlog main.cpp
         cpp_demo/bank/Bank.h
         cpp_demo/bank/FileManager.cpp
         cpp_demo/bank/FileManager.h
+        c_demo/sql/sql_manager.h
 )
