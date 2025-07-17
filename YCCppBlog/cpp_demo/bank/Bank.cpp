@@ -64,4 +64,10 @@ void Bank::displayAllAccounts() const {
     }
 }
 
+// 获取所有账户
+const std::vector<Account> &Bank::getAccounts() const {
+    return accounts;
+}
+
+
 
