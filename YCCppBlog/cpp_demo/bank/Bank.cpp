@@ -57,3 +57,11 @@ void Bank::transfer(const std::string &fromAccNumber, const std::string &toAccNu
     }
 }
 
+// 显示所有账户
+void Bank::displayAllAccounts() const {
+    for (std::vector<Account>::const_iterator it = accounts.begin(); it != accounts.end(); ++it) {
+        it->display();
+    }
+}
+
+

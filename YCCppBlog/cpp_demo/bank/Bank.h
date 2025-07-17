@@ -24,6 +24,8 @@ public:
     void queryBalance(const std::string& accNumber) ;
     // 转账
     void transfer(const std::string& fromAccNumber, const std::string& toAccNumber, double amount);
+    // 显示所有账户
+    void displayAllAccounts() const ;
 };
 
 
