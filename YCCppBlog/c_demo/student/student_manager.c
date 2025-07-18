@@ -2,7 +2,7 @@
 // Created by 杨充 on 2025/7/12.
 //
 
-#include "StudentManager.h"
+#include "student_manager.h"
 
 // 暂停程序
 void pauseProgram() {

@@ -72,8 +72,8 @@ add_executable(YCCppBlog main.cpp
         thirdlib/json/json11.cpp
         thirdlib/json/jsonTest.cpp
         c_chapter/chapter7/day7_7_8.c
-        c_demo/student/StudentManager.h
-        c_demo/student/StudentManager.c
+        c_demo/student/student_manager.h
+        c_demo/student/student_manager.c
         c_demo/bank/BankManager.h
         c_demo/bank/BankManager.c
         c_demo/worker/WorkManager.h
