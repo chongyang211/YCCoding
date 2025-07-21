@@ -60,6 +60,7 @@ void Menu();
 void createTable(Database *db, const char *tableName, Column *columns, int columnCount);
 //插入行数据
 void insertRow(Database *db, const char *tableName, void **data);
+//删除行数据
 void deleteRow(Database *db, const char *tableName, int rowIndex);
 void updateRow(Database *db, const char *tableName, int rowIndex, void **data);
 void queryTable(Database *db, const char *tableName);
