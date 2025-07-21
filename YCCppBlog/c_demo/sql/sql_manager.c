@@ -8,8 +8,10 @@ void createTable(Database *db, const char *tableName, Column *columns, int colum
         printf("无法创建表：数据库表数量已达上限！\n");
         return;
     }
-
-    Table *table = &db->tables[db->tableCount];
+    //获取索引
+    int tableCount = db->tableCount;
+    //获取目标表指针
+    Table *table = &db->tables[tableCount];
     strncpy(table->name, tableName, MAX_NAME_LENGTH);
     table->columnCount = columnCount;
     for (int i = 0; i < columnCount; i++) {
@@ -18,13 +20,13 @@ void createTable(Database *db, const char *tableName, Column *columns, int colum
     }
     table->rowCount = 0;
     db->tableCount++;
-
     printf("表 '%s' 创建成功！\n", tableName);
 }
 
 // 插入行
 void insertRow(Database *db, const char *tableName, void **data) {
     Table *table = NULL;
+    //遍历查找目标表
     for (int i = 0; i < db->tableCount; i++) {
         if (strcmp(db->tables[i].name, tableName) == 0) {
             table = &db->tables[i];
@@ -36,7 +38,6 @@ void insertRow(Database *db, const char *tableName, void **data) {
         printf("表 '%s' 不存在！\n", tableName);
         return;
     }
-
     if (table->rowCount >= MAX_ROWS) {
         printf("无法插入行：表 '%s' 行数已达上限！\n", tableName);
         return;
@@ -60,7 +61,6 @@ void insertRow(Database *db, const char *tableName, void **data) {
         }
     }
     table->rowCount++;
-
     printf("行插入成功！\n");
 }
 
@@ -259,6 +259,63 @@ void clearScreen() {
     system("clear"); // 或使用 printf("\033[H\033[J");
 }
 
+Database db = {0};
+const char *filename = "database.txt";
+
+void userCreateTable() {
+    // 示例：创建表
+    Column columns[] = {
+        {"ID", TYPE_INT},
+        {"Name", TYPE_STRING},
+        {"Age", TYPE_INT}
+    };
+    createTable(&db, "Users", columns, 3);
+}
+
+void userInsertRow() {
+    // 示例：插入行
+    void *row1[] = {&(int){1}, "Alice", &(int){25}};
+    void *row2[] = {&(int){2}, "Bob", &(int){30}};
+    insertRow(&db, "Users", row1);
+    insertRow(&db, "Users", row2);
+}
+
+void userSaveFile() {
+    // 示例：保存数据库
+    saveDatabase(&db, filename);
+}
+
+void test() {
+    Database db = {0};
+    const char *filename = "database.dat";
+
+    // 示例：创建表
+    Column columns[] = {
+        {"ID", TYPE_INT},
+        {"Name", TYPE_STRING},
+        {"Age", TYPE_INT}
+    };
+    createTable(&db, "Users", columns, 3);
+
+    // 示例：插入行
+    void *row1[] = {&(int){1}, "Alice", &(int){25}};
+    void *row2[] = {&(int){2}, "Bob", &(int){30}};
+    insertRow(&db, "Users", row1);
+    insertRow(&db, "Users", row2);
+
+    // 示例：查询表
+    queryTable(&db, "Users");
+
+    // 示例：保存数据库
+    saveDatabase(&db, filename);
+
+    // 示例：加载数据库
+    Database newDb = {0};
+    loadDatabase(&newDb, filename);
+    queryTable(&newDb, "Users");
+}
+
+
 int main() {
     int choice;
     while (1) {
@@ -270,9 +327,11 @@ int main() {
         switch (choice) {
             case 1: //1.创建表
                 printf("创建表\n");
+                userCreateTable();
                 break;
             case 2: //2.插入行
                 printf("插入行\n");
+                userInsertRow();
                 break;
             case 3: //3.删除行
                 printf("删除行\n");
@@ -285,6 +344,7 @@ int main() {
                 break;
             case 6: //6.保存数据到文件
                 printf("保存数据到文件\n");
+                userSaveFile();
                 break;
             case 7: //7.从文件读取数据
                 printf("从文件读取数据\n");
@@ -297,28 +357,11 @@ int main() {
                 break;
         }
     }
-    // Database db = {0};
-    // const char *filename = "database.dat";
-    //
-    // // 示例：创建表
-    // Column columns[] = {
-    //     {"ID", TYPE_INT},
-    //     {"Name", TYPE_STRING},
-    //     {"Age", TYPE_INT}
-    // };
-    // createTable(&db, "Users", columns, 3);
-    //
-    // // 示例：插入行
-    // void *row1[] = {&(int){1}, "Alice", &(int){25}};
-    // void *row2[] = {&(int){2}, "Bob", &(int){30}};
-    // insertRow(&db, "Users", row1);
-    // insertRow(&db, "Users", row2);
+
     //
     // // 示例：查询表
     // queryTable(&db, "Users");
     //
-    // // 示例：保存数据库
-    // saveDatabase(&db, filename);
     //
     // // 示例：加载数据库
     // Database newDb = {0};

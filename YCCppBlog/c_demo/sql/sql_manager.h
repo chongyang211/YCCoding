@@ -39,10 +39,8 @@ typedef struct {
 // 表结构体
 typedef struct {
     char name[MAX_NAME_LENGTH];
-    //列数据
-    Column column[MAX_COLUMNS];
+    Column columns[MAX_COLUMNS];
     int columnCount;
-    //行数据
     Row rows[MAX_ROWS];
     int rowCount;
 } Table;
@@ -58,7 +56,9 @@ typedef struct {
 void Menu();
 
 // 函数声明
+//创建表
 void createTable(Database *db, const char *tableName, Column *columns, int columnCount);
+//插入行数据
 void insertRow(Database *db, const char *tableName, void **data);
 void deleteRow(Database *db, const char *tableName, int rowIndex);
 void updateRow(Database *db, const char *tableName, int rowIndex, void **data);
