@@ -18,7 +18,9 @@
 typedef enum {
     //int类型数据
     TYPE_INT,
+    //float类型数据
     TYPE_FLOAT,
+    //字符串类型数据
     TYPE_STRING
 } DataType;
 
