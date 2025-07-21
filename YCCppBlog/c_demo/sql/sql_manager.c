@@ -1,5 +1,7 @@
 #include "sql_manager.h"
 
+#include "../bank/BankManager.h"
+
 // 创建表
 void createTable(Database *db, const char *tableName, Column *columns, int columnCount) {
     if (db->tableCount >= MAX_COLUMNS) {
@@ -246,36 +248,100 @@ void loadDatabase(Database *db, const char *filename) {
     printf("数据库加载成功！\n");
 }
 
+// 暂停程序
+void pauseProgram() {
+    printf("Press Enter to continue...\n");
+    getchar();
+}
+
+// 清屏
+void clearScreen() {
+    system("clear"); // 或使用 printf("\033[H\033[J");
+}
 
 int main() {
-    Database db = {0};
-    const char *filename = "database.dat";
-
-    // 示例：创建表
-    Column columns[] = {
-        {"ID", TYPE_INT},
-        {"Name", TYPE_STRING},
-        {"Age", TYPE_INT}
-    };
-    createTable(&db, "Users", columns, 3);
-
-    // 示例：插入行
-    void *row1[] = {&(int){1}, "Alice", &(int){25}};
-    void *row2[] = {&(int){2}, "Bob", &(int){30}};
-    insertRow(&db, "Users", row1);
-    insertRow(&db, "Users", row2);
-
-    // 示例：查询表
-    queryTable(&db, "Users");
-
-    // 示例：保存数据库
-    saveDatabase(&db, filename);
-
-    // 示例：加载数据库
-    Database newDb = {0};
-    loadDatabase(&newDb, filename);
-    queryTable(&newDb, "Users");
+    int choice;
+    while (1) {
+        //打印菜单
+        Menu();
+        //读取控制台字符
+        scanf("%d", &choice);
+        printf("输入的字符是：%c \n", choice);
+        switch (choice) {
+            case 1: //1.创建表
+                printf("创建表\n");
+                break;
+            case 2: //2.插入行
+                printf("插入行\n");
+                break;
+            case 3: //3.删除行
+                printf("删除行\n");
+                break;
+            case 4: //4.更新行
+                printf("更新行\n");
+                break;
+            case 5: //5.查询表
+                printf("查询表\n");
+                break;
+            case 6: //6.保存数据到文件
+                printf("保存数据到文件\n");
+                break;
+            case 7: //7.从文件读取数据
+                printf("从文件读取数据\n");
+                break;
+            case 0: //0.退出系统
+                printf("退出系统\n");
+                return 0;
+            default:
+                printf("输入有误，没有该功能\n\n");
+                break;
+        }
+    }
+    // Database db = {0};
+    // const char *filename = "database.dat";
+    //
+    // // 示例：创建表
+    // Column columns[] = {
+    //     {"ID", TYPE_INT},
+    //     {"Name", TYPE_STRING},
+    //     {"Age", TYPE_INT}
+    // };
+    // createTable(&db, "Users", columns, 3);
+    //
+    // // 示例：插入行
+    // void *row1[] = {&(int){1}, "Alice", &(int){25}};
+    // void *row2[] = {&(int){2}, "Bob", &(int){30}};
+    // insertRow(&db, "Users", row1);
+    // insertRow(&db, "Users", row2);
+    //
+    // // 示例：查询表
+    // queryTable(&db, "Users");
+    //
+    // // 示例：保存数据库
+    // saveDatabase(&db, filename);
+    //
+    // // 示例：加载数据库
+    // Database newDb = {0};
+    // loadDatabase(&newDb, filename);
+    // queryTable(&newDb, "Users");
 
     return 0;
+}
+
+//菜单
+void Menu() {
+    printf("*************************************************\n");
+    printf("*\t欢迎简易数据库系统1.0\t*\n");
+    printf("*\t\t请选择功能\t\t\t*\n");
+    printf("*************************************************\n");
+    printf("*\t\t1.创建表\t\t\t*\n");
+    printf("*\t\t2.插入行\t\t\t*\n");
+    printf("*\t\t3.删除行\t\t\t*\n");
+    printf("*\t\t4.更新行\t\t\t*\n");
+    printf("*\t\t5.查询表\t\t\t*\n");
+    printf("*\t\t6.保存数据到文件\t\t*\n");
+    printf("*\t\t7.从文件读取数据\t\t*\n");
+    printf("*\t\t0.退出系统\t\t\t*\n");
+    printf("*************************************************\n");
 }
 

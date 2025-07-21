@@ -47,6 +47,9 @@ typedef struct {
     int tableCount;
 } Database;
 
+//菜单展示
+void Menu();
+
 // 函数声明
 void createTable(Database *db, const char *tableName, Column *columns, int columnCount);
 void insertRow(Database *db, const char *tableName, void **data);
