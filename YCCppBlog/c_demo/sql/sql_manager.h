@@ -16,10 +16,12 @@
 
 // 数据类型枚举
 typedef enum {
+    //int类型数据
     TYPE_INT,
     TYPE_FLOAT,
     TYPE_STRING
 } DataType;
+
 
 // 列结构体
 typedef struct {
