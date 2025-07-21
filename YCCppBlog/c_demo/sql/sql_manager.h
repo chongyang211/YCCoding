@@ -39,11 +39,14 @@ typedef struct {
 // 表结构体
 typedef struct {
     char name[MAX_NAME_LENGTH];
-    Column columns[MAX_COLUMNS];
+    //列数据
+    Column column[MAX_COLUMNS];
     int columnCount;
+    //行数据
     Row rows[MAX_ROWS];
     int rowCount;
 } Table;
+
 
 // 数据库结构体
 typedef struct {
