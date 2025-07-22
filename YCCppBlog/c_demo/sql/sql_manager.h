@@ -27,8 +27,8 @@ typedef enum {
 
 // 列结构体
 typedef struct {
-    char name[MAX_NAME_LENGTH];
-    DataType type;
+    char name[MAX_NAME_LENGTH]; // 列名
+    DataType type;              // 数据类型
 } Column;
 
 // 行结构体
@@ -38,18 +38,18 @@ typedef struct {
 
 // 表结构体
 typedef struct {
-    char name[MAX_NAME_LENGTH];
-    Column columns[MAX_COLUMNS];
-    int columnCount;
-    Row rows[MAX_ROWS];
-    int rowCount;
+    char name[MAX_NAME_LENGTH]; // 表名
+    Column columns[MAX_COLUMNS]; // 列信息
+    int columnCount;            // 列数
+    Row rows[MAX_ROWS];         // 行数据
+    int rowCount;               // 行数
 } Table;
 
 
 // 数据库结构体
 typedef struct {
-    Table tables[MAX_COLUMNS];
-    int tableCount;
+    Table tables[MAX_COLUMNS]; // 所有表
+    int tableCount;            // 表数
 } Database;
 
 //菜单展示
@@ -62,9 +62,13 @@ void createTable(Database *db, const char *tableName, Column *columns, int colum
 void insertRow(Database *db, const char *tableName, void **data);
 //删除行数据
 void deleteRow(Database *db, const char *tableName, int rowIndex);
+//更新行数据
 void updateRow(Database *db, const char *tableName, int rowIndex, void **data);
+//查询表操作
 void queryTable(Database *db, const char *tableName);
+// 保存文件数据
 void saveDatabase(Database *db, const char *filename);
+// 读取文件数据
 void loadDatabase(Database *db, const char *filename);
 
 

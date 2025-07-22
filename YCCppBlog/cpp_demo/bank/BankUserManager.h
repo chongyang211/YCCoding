@@ -4,6 +4,12 @@
 #include "string"
 #include "iostream"
 
+//最多用户不超过100
+#define MAX_ACCOUNTS = 100;
+//用户名最多是50位
+#define MAX_LENGTH_NAME = 50;
+//用户文件名称
+#define FILE_NAME = "accounts.txt";
 
 
 //展示菜单显示

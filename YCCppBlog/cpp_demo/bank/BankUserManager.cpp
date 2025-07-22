@@ -11,7 +11,7 @@
 // #include "Bank.h"
 // #include "FileManager.h"
 
-
+//用户
 class Account {
 private:
     std::string accountNumber; // 账户号
@@ -20,9 +20,17 @@ private:
 
 public:
     // 构造函数
-    Account(const std::string& accNumber, const std::string& accName, double initialBalance)
-        : accountNumber(accNumber), name(accName), balance(initialBalance) {
+    // Account(const std::string& accNumber, const std::string& accName, double initialBalance)
+    //     : accountNumber(accNumber), name(accName), balance(initialBalance) {
+    // }
+
+    // 构造函数
+    Account(const std::string& accNumber, const std::string& accName, double initialBalance) {
+        this->accountNumber = accNumber;
+        this->name = accName;
+        this->balance = initialBalance;
     }
+
 
     // 获取账户号
     std::string getAccountNumber() const {
@@ -82,6 +90,7 @@ public:
 #include <vector>
 #include <algorithm>
 
+//账户
 class Bank {
 private:
     std::vector<Account> accounts; // 所有账户
@@ -89,9 +98,13 @@ private:
 public:
     // 开户
     void createAccount(const std::string& accNumber, const std::string& accName, double initialBalance) {
+        //创建用户对象
         Account newAccount(accNumber, accName, initialBalance);
+        //将用户对象存储到集合中
         accounts.push_back(newAccount);
-        std::cout << "开户成功！" << std::endl;
+        std::cout << "开户成功！耶耶耶" << std::endl;
+        //todo 打印开户成功后，数量
+        //int count = accounts.size;
     }
 
     // 根据账户号查找账户
@@ -108,8 +121,17 @@ public:
 
     // 存款
     void deposit(const std::string& accNumber, double amount) {
-        Account* account = findAccount(accNumber);
-        if (account) {
+        //定义一个指针用户
+        Account* account = nullptr;
+        //遍历查找
+        for (std::vector<Account>::iterator it = accounts.begin(); it != accounts.end(); ++it) {
+            if (it->getAccountNumber() == accNumber) {
+                account = &(*it);
+                break;
+            }
+        }
+        if (account != nullptr) {
+            //用户存在
             account->deposit(amount);
         } else {
             std::cout << "账户不存在！" << std::endl;
@@ -256,6 +278,7 @@ int main() {
             }
             case 7: {
                 printf("7. 保存数据到文件\n");
+                // FileManager::saveToFile(bank, FILE_NAME);
                 FileManager::saveToFile(bank, filename);
                 break;
             }
@@ -314,6 +337,7 @@ void deposit() {
     std::getline(std::cin , accNumber);
     std::cout << "请输入存款金额:";
     std::cin >> amount;
+    //然后根据账户号找到对应的账户，判断存款金额大于0后即存款
     bank.deposit(accNumber, amount);
 }
 

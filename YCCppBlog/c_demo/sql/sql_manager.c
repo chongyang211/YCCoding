@@ -73,22 +73,18 @@ void deleteRow(Database *db, const char *tableName, int rowIndex) {
             break;
         }
     }
-
     if (!table) {
         printf("表 '%s' 不存在！\n", tableName);
         return;
     }
-
     if (rowIndex < 0 || rowIndex >= table->rowCount) {
         printf("行索引无效！\n");
         return;
     }
-
     for (int i = rowIndex; i < table->rowCount - 1; i++) {
         table->rows[i] = table->rows[i + 1];
     }
     table->rowCount--;
-
     printf("行删除成功！\n");
 }
 
@@ -101,17 +97,14 @@ void updateRow(Database *db, const char *tableName, int rowIndex, void **data) {
             break;
         }
     }
-
     if (!table) {
         printf("表 '%s' 不存在！\n", tableName);
         return;
     }
-
     if (rowIndex < 0 || rowIndex >= table->rowCount) {
         printf("行索引无效！\n");
         return;
     }
-
     Row *row = &table->rows[rowIndex];
     for (int i = 0; i < table->columnCount; i++) {
         switch (table->columns[i].type) {
@@ -126,7 +119,6 @@ void updateRow(Database *db, const char *tableName, int rowIndex, void **data) {
                 break;
         }
     }
-
     printf("行更新成功！\n");
 }
 
@@ -139,12 +131,10 @@ void queryTable(Database *db, const char *tableName) {
             break;
         }
     }
-
     if (!table) {
         printf("表 '%s' 不存在！\n", tableName);
         return;
     }
-
     printf("表 '%s' 数据：\n", tableName);
     for (int i = 0; i < table->columnCount; i++) {
         printf("%-20s", table->columns[i].name);
@@ -173,12 +163,12 @@ void queryTable(Database *db, const char *tableName) {
 
 // 保存数据库到文件
 void saveDatabase(Database *db, const char *filename) {
+    //打开文件
     FILE *file = fopen(filename, "wb");
     if (!file) {
         printf("无法打开文件 '%s'！\n", filename);
         return;
     }
-
     fwrite(&db->tableCount, sizeof(int), 1, file);
     for (int i = 0; i < db->tableCount; i++) {
         Table *table = &db->tables[i];
@@ -186,6 +176,7 @@ void saveDatabase(Database *db, const char *filename) {
         fwrite(&table->columnCount, sizeof(int), 1, file);
         fwrite(table->columns, sizeof(Column), MAX_COLUMNS, file);
         fwrite(&table->rowCount, sizeof(int), 1, file);
+        //写行数据
         for (int j = 0; j < table->rowCount; j++) {
             Row *row = &table->rows[j];
             for (int k = 0; k < table->columnCount; k++) {
@@ -203,7 +194,6 @@ void saveDatabase(Database *db, const char *filename) {
             }
         }
     }
-
     fclose(file);
     printf("数据库保存成功！\n");
 }
@@ -215,7 +205,6 @@ void loadDatabase(Database *db, const char *filename) {
         printf("无法打开文件 '%s'！\n", filename);
         return;
     }
-
     fread(&db->tableCount, sizeof(int), 1, file);
     for (int i = 0; i < db->tableCount; i++) {
         Table *table = &db->tables[i];
@@ -243,7 +232,6 @@ void loadDatabase(Database *db, const char *filename) {
             }
         }
     }
-
     fclose(file);
     printf("数据库加载成功！\n");
 }
