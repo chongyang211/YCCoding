@@ -140,8 +140,15 @@ public:
 
     // 取款
     void withdraw(const std::string& accNumber, double amount) {
-        Account* account = findAccount(accNumber);
-        if (account) {
+        Account* account = nullptr;
+        //使用传统的 for 循环。通过索引访问 std::vector 的元素：
+        for(size_t i = 0; i < accounts.size(); ++i) {
+            if (accounts[i].getAccountNumber() == accNumber) {
+                account = &accounts[i];
+                break;
+            }
+        }
+        if (account != nullptr) {
             account->withdraw(amount);
         } else {
             std::cout << "账户不存在！" << std::endl;
