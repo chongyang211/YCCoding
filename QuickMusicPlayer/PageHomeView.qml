@@ -13,7 +13,8 @@ RowLayout{
         {icon:"local-white",value:"本地音乐",qml:"DetailLocalPageView"},
         {icon:"history-white",value:"播放历史",qml:"DetailHistoryPageView"},
         {icon:"favorite-big-white",value:"我喜欢的",qml:"DetailFavoritePageView"},
-        {icon:"favorite-big-white",value:"专辑歌单",qml:"DetailPlayListPageView"}
+        {icon:"favorite-big-white",value:"专辑歌单",qml:"DetailPlayListPageView"},
+        {icon:"favorite-big-white",value:"C++和QML交互",qml:"CppQmlPageView"}
     ]
 
 

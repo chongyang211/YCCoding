@@ -1,6 +1,10 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
 #include <QIcon>
+#include "AuthManager.h"
+#include "DataModel.h"
+   #include "SensorData.h"
 
 int main(int argc, char *argv[]){
 
@@ -11,7 +15,17 @@ int main(int argc, char *argv[]){
     //设置ICON
     app.setWindowIcon(QIcon(":/images/music.png"));
 
+    // 必须在加载QML前注册！
     QQmlApplicationEngine engine;
+    // 创建对象
+    AuthManager authManager;
+    // 设置上下文属性
+    engine.rootContext()->setContextProperty("authManager", &authManager);
+    DataModel dataModel;
+    engine.rootContext()->setContextProperty("dataModel", &dataModel);
+    SensorData sensorData;
+    engine.rootContext()->setContextProperty("sensorData", &sensorData);
+
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,

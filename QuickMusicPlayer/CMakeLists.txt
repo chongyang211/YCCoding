@@ -41,6 +41,17 @@ qt_add_qml_module(appQuickMusicPlayer
         QML_FILES DetailFavoritePageView.qml
         QML_FILES DetailPlayListPageView.qml
         QML_FILES MusicBannerView.qml
+        QML_FILES CppQmlPageView.qml
+        QML_FILES HomePage.qml
+        SOURCES
+        SOURCES
+        SOURCES AuthManager.h
+        SOURCES AuthManager.cpp
+        QML_FILES CppQmlLogginPage.qml
+        SOURCES DataModel.h DataModel.cpp
+        QML_FILES CppQmlListPage.qml
+        SOURCES SensorData.h SensorData.cpp
+        QML_FILES CppQmlDataChangePage.qml
 
 )
 
