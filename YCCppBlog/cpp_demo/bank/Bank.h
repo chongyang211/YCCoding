@@ -20,6 +20,8 @@ public:
     Account* findAccount(const std::string& accNumber);
     // 存款
     void deposit(const std::string& accNumber, double amount);
+    // 取款
+    void withdraw(const std::string& accNumber, double amount);
     // 查询余额
     void queryBalance(const std::string& accNumber) ;
     // 转账
@@ -28,6 +30,8 @@ public:
     void displayAllAccounts() const ;
     // 获取所有账户
     const std::vector<Account>& getAccounts() const ;
+    // 设置所有账户
+    void setAccounts(const std::vector<Account>& accList) ;
 };
 
 

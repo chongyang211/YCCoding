@@ -9,6 +9,8 @@ void Bank::createAccount(const std::string &accNumber, const std::string &accNam
     Account newAccount(accNumber, accName, initialBalance);
     accounts.push_back(newAccount);
     std::cout << "开户成功！" << std::endl;
+    //todo 打印开户成功后，数量
+    //int count = accounts.size;
 }
 
 // 根据账户号查找账户
@@ -25,13 +27,40 @@ Account *Bank::findAccount(const std::string &accNumber) {
 
 // 存款
 void Bank::deposit(const std::string &accNumber, double amount) {
-    Account* account = findAccount(accNumber);
-    if (account) {
+    //定义一个指针用户
+    Account* account = nullptr;
+    //遍历查找
+    for (std::vector<Account>::iterator it = accounts.begin(); it != accounts.end(); ++it) {
+        if (it->getAccountNumber() == accNumber) {
+            account = &(*it);
+            break;
+        }
+    }
+    if (account != nullptr) {
+        //用户存在
+        account->deposit(amount);
+    } else {
+        std::cout << "账户不存在！" << std::endl;
+    }
+}
+
+// 取款
+void Bank::withdraw(const std::string &accNumber, double amount) {
+    Account* account = nullptr;
+    //使用传统的 for 循环。通过索引访问 std::vector 的元素：
+    for(size_t i = 0; i < accounts.size(); ++i) {
+        if (accounts[i].getAccountNumber() == accNumber) {
+            account = &accounts[i];
+            break;
+        }
+    }
+    if (account != nullptr) {
         account->withdraw(amount);
     } else {
         std::cout << "账户不存在！" << std::endl;
     }
 }
+
 
 // 查询余额
 void Bank::queryBalance(const std::string &accNumber) {
@@ -68,6 +97,11 @@ void Bank::displayAllAccounts() const {
 const std::vector<Account> &Bank::getAccounts() const {
     return accounts;
 }
+
+void Bank::setAccounts(const std::vector<Account> &accList) {
+    this->accounts = accList;
+}
+
 
 
 
