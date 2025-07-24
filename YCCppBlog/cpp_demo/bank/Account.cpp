@@ -48,6 +48,7 @@ void Account::withdraw(double amount) {
 
 // 转账
 bool Account::transfer(Account &targetAccount, double amount) {
+    //首先要确保转出的金额大于0，并且是小于用户余额
     if (amount > 0 && amount <= balance) {
         balance -= amount;
         targetAccount.deposit(amount);
