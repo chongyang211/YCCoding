@@ -27,6 +27,53 @@ Item {
             anchors.topMargin: 30
 
             Text {
+                text: "信号槽1-> C++到QML通信"
+                font.pixelSize: 20
+                color: "black"
+                font.bold: true
+                horizontalAlignment: Text.AlignHCenter
+
+                //创建一个鼠标悬停效果，当鼠标悬停在文本上时，改变文本的颜色。
+                MouseArea {
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    onEntered: {
+                        parent.color = "red"
+                    }
+                    onExited: {
+                        parent.color = "black"
+                    }
+                    onClicked: {
+                        stackView.push("CppQmlSignls1Page.qml")
+                    }
+                }
+            }
+
+            Text {
+                text: "信号槽2-> QML到C++通信"
+                font.pixelSize: 20
+                color: "black"
+                font.bold: true
+                horizontalAlignment: Text.AlignHCenter
+
+                //创建一个鼠标悬停效果，当鼠标悬停在文本上时，改变文本的颜色。
+                MouseArea {
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    onEntered: {
+                        parent.color = "red"
+                    }
+                    onExited: {
+                        parent.color = "black"
+                    }
+                    onClicked: {
+                        stackView.push("CppQmlSignls2Page.qml")
+                    }
+                }
+            }
+
+
+            Text {
                 text: "用户登录功能"
                 font.pixelSize: 20
                 color: "black"

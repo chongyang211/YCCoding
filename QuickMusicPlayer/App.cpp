@@ -4,7 +4,10 @@
 #include <QIcon>
 #include "AuthManager.h"
 #include "DataModel.h"
-   #include "SensorData.h"
+#include "SensorData.h"
+#include "SensorMonitor.h"
+#include "Controller.h"
+
 
 int main(int argc, char *argv[]){
 
@@ -25,6 +28,10 @@ int main(int argc, char *argv[]){
     engine.rootContext()->setContextProperty("dataModel", &dataModel);
     SensorData sensorData;
     engine.rootContext()->setContextProperty("sensorData", &sensorData);
+    SensorMonitor sensorMonitor;
+    engine.rootContext()->setContextProperty("sensorMonitor", &sensorMonitor);
+    Controller controller;
+     engine.rootContext()->setContextProperty("controller", &controller);
 
     QObject::connect(
         &engine,

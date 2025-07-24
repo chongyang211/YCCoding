@@ -52,6 +52,10 @@ qt_add_qml_module(appQuickMusicPlayer
         QML_FILES CppQmlListPage.qml
         SOURCES SensorData.h SensorData.cpp
         QML_FILES CppQmlDataChangePage.qml
+        SOURCES SensorMonitor.h SensorMonitor.cpp
+        QML_FILES CppQmlSignls1Page.qml
+        SOURCES Controller.h Controller.cpp
+        QML_FILES CppQmlSignls2Page.qml
 
 )
 

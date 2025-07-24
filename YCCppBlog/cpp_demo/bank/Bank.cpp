@@ -64,8 +64,16 @@ void Bank::withdraw(const std::string &accNumber, double amount) {
 
 // 查询余额
 void Bank::queryBalance(const std::string &accNumber) {
-    Account* account = findAccount(accNumber);
-    if (account) {
+    Account* account = nullptr;
+    //遍历
+    for (std::vector<Account>::iterator it = accounts.begin(); it != accounts.end(); ++it) {
+        //根据账号查找
+        if (it->getAccountNumber() == accNumber) {
+            account = &(*it);
+            break;
+        }
+    }
+    if (account != nullptr) {
         std::cout << "账户余额: " << account->getBalance() << std::endl;
     } else {
         std::cout << "账户不存在！" << std::endl;
