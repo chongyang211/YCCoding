@@ -61,6 +61,7 @@ int main() {
             case 8: {
                 printf("8. 从文件加载数据\n");
                 FileManager::loadFromFile(bank, filename);
+                bank.displayAllAccounts();
                 break;
             }
             case 0: {

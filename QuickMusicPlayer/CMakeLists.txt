@@ -28,9 +28,9 @@ qt_add_qml_module(appQuickMusicPlayer
         icons.qrc
     RESOURCES
         fonts.qrc
-        QML_FILES LayoutBottomView.qml
-        QML_FILES LayoutHeaderView.qml
-        QML_FILES PageHomeView.qml
+        QML_FILES HomeBottomView.qml
+        QML_FILES HomeHeaderView.qml
+        QML_FILES HomeContrainView.qml
         QML_FILES MusicIconButton.qml
         QML_FILES MusicToolButton.qml
         QML_FILES MusicRoundImage.qml
@@ -56,6 +56,11 @@ qt_add_qml_module(appQuickMusicPlayer
         QML_FILES CppQmlSignls1Page.qml
         SOURCES Controller.h Controller.cpp
         QML_FILES CppQmlSignls2Page.qml
+        SOURCES ContactModel.h ContactModel.cpp
+        QML_FILES CppQmlStudentPage.qml
+        QML_FILES DetailField.qml
+        QML_FILES ContactDetailView.qml
+        QML_FILES ContactEditor.qml
 
 )
 

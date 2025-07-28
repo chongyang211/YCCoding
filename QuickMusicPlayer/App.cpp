@@ -7,6 +7,7 @@
 #include "SensorData.h"
 #include "SensorMonitor.h"
 #include "Controller.h"
+#include "ContactModel.h"
 
 
 int main(int argc, char *argv[]){
@@ -31,7 +32,9 @@ int main(int argc, char *argv[]){
     SensorMonitor sensorMonitor;
     engine.rootContext()->setContextProperty("sensorMonitor", &sensorMonitor);
     Controller controller;
-     engine.rootContext()->setContextProperty("controller", &controller);
+    engine.rootContext()->setContextProperty("controller", &controller);
+    ContactModel contactModel;
+    engine.rootContext()->setContextProperty("contactModel", &contactModel);
 
     QObject::connect(
         &engine,
