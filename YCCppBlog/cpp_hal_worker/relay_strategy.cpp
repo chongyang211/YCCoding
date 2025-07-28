@@ -17,7 +17,7 @@ RelayStrategy::RelayStrategy() {
     m_isOpen = false;
 }
 
-int RelayStrategy::openDoor() {
+int RelayStrategy::openDoor(uint64_t data) {
     if (!m_isReady) {
         return ERROR_NOT_INIT;
     }
@@ -30,11 +30,7 @@ int RelayStrategy::openDoor() {
     }
 }
 
-int RelayStrategy::openDoor(uint64_t data) {
-    return openDoor();
-}
-
-int RelayStrategy::closeDoor() {
+int RelayStrategy::closeDoor(uint64_t data) {
     if (!m_isReady) {
         return ERROR_NOT_INIT;
     }
@@ -44,10 +40,6 @@ int RelayStrategy::closeDoor() {
         return SUCCEED;
     }
     return ERROR_RELAY_FILE_WRITE_ERROR;
-}
-
-int RelayStrategy::closeDoor(uint64_t data) {
-    return closeDoor();
 }
 
 AccessDevicesStatus RelayStrategy::getStatus() {

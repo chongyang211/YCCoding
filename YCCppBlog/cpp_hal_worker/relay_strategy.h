@@ -15,9 +15,7 @@ private:
 public:
     RelayStrategy();
     ~RelayStrategy() override;
-    int openDoor() override;
     int openDoor(uint64_t data) override;
-    int closeDoor() override;
     int closeDoor(uint64_t data) override;
     AccessDevicesStatus getStatus() override;
     bool initialize() override;

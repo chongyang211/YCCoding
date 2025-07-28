@@ -34,23 +34,12 @@ enum ErrorCode {
 class AccessStratgy {
 public:
     //virtual ~AccessStratgy();
-    virtual ~AccessStratgy() {
-    }
-
-    virtual int openDoor() = 0;
-
+    virtual ~AccessStratgy() {}
     virtual int openDoor(uint64_t data) = 0;
-
-    virtual int closeDoor() = 0;
-
     virtual int closeDoor(uint64_t data) = 0;
-
     virtual AccessDevicesStatus getStatus() = 0;
-
     virtual bool initialize() = 0;
-
-    virtual void release() {
-    }
+    virtual void release() {}
 };
 
 #endif //ACCESSSTRATEGY_H
