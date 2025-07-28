@@ -118,4 +118,9 @@ add_executable(YCCppBlog main.cpp
         c_demo/sql/sql_manager.h
         cpp_demo/sql/SqlManager.cpp
         cpp_demo/sql/SqlManager.h
+        cpp_worker/relay_strategy.cpp
+        cpp_worker/relay_strategy.h
+        cpp_worker/access_strategy.h
+        cpp_worker/strategy_utils.cpp
+        cpp_worker/strategy_utils.h
 )
