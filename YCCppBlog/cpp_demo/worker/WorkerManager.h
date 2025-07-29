@@ -35,14 +35,19 @@ public:
     void exitSystem();
     //增加职工
     void addEmp();
+    //显示职工
+    void showEmp();
+    //删除职工
+    void deleteEmp();
+    //判断员工是否存在
+    int isExist(int id);
     //保存文件
     void save();
     //读取文件
     void read();
     //统计人数
     int getEmpNum();
-    //显示职工
-    void showEmp();
+
 };
 
 //声明，菜单输入选项

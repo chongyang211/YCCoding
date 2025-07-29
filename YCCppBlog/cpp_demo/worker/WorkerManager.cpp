@@ -237,6 +237,22 @@ void WorkerManager::showEmp() {
     pause();
 }
 
+void WorkerManager::deleteEmp() {
+
+}
+
+//判断员工是否存在
+int WorkerManager::isExist(int id) {
+    int index = -1;
+    for (int i=0 ; i< this->empNum ; i++) {
+        Worker *worker = this->empArray[i];
+        if (worker->id == id) {
+            index = i;
+            break;
+        }
+    }
+    return index;
+}
 
 
 
