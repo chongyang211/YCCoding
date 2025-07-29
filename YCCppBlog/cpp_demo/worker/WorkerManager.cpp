@@ -55,6 +55,7 @@ int main() {
                 wm.showEmp();
                 break;
             case 3: //删除职工
+                wm.deleteEmp();
                 break;
             case 4: //修改职工
                 break;
@@ -238,7 +239,27 @@ void WorkerManager::showEmp() {
 }
 
 void WorkerManager::deleteEmp() {
-
+    if (this->fileIsEmpty) {
+        cout << "文件不存在或记录为空！" << endl;
+    } else {
+        //按职工编号删除
+        cout << "请输入想要删除的职工号：" << endl;
+        int id = 0;
+        cin >> id;
+        int index = isExist(id);
+        if (index == -1) {
+            cout << "删除失败，未找到该职工" << endl;
+            return;
+        }
+        //删除数据中某个数组，那就是index后数据都往前挪动一位
+        for (int i=index ; i<this->empNum ; i++) {
+            this->empArray[i] = this->empArray[i+1];
+        }
+        this->empNum--;
+        this->save();   //保存文件
+        cout << "删除成功！" << endl;
+    }
+    pause();
 }
 
 //判断员工是否存在
