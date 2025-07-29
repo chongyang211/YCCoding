@@ -61,6 +61,7 @@ int main() {
                 wm.modEmp();
                 break;
             case 5: //查找职工
+                wm.findEmp();
                 break;
             case 6: //排序职工
                 break;
@@ -358,7 +359,6 @@ void WorkerManager::findEmp() {
                     cout << "查找成功,职工编号为：" << empArray[i]->id << " 号的信息如下：" << endl;
                     flag = true;
                     this->empArray[i]->showInfo();
-                    break;
                 }
             }
             if (flag == false) {
