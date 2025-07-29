@@ -52,6 +52,7 @@ int main() {
                 wm.addEmp();
             break;
             case 2: //显示职工
+                wm.showEmp();
                 break;
             case 3: //删除职工
                 break;
@@ -223,10 +224,17 @@ int WorkerManager::getEmpNum() {
     return num;
 }
 
-
-
+//显示职工
 void WorkerManager::showEmp() {
-    clearScreen();
+    if (this->fileIsEmpty) {
+        cout << "文件不存在或记录为空！" << endl;
+    } else {
+        for (int i=0 ; i<this->empNum ; i++) {
+            Worker * worker = this->empArray[i];
+            worker->showInfo();
+        }
+    }
+    pause();
 }
 
 
