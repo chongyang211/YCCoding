@@ -326,6 +326,11 @@ void WorkerManager::modEmp() {
     pause();
 }
 
+void WorkerManager::findEmp() {
+
+}
+
+
 
 
 

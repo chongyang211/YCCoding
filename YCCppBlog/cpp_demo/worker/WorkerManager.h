@@ -43,6 +43,8 @@ public:
     int isExist(int id);
     //修改职工
     void modEmp();
+    //查找职工
+    void findEmp();
     //保存文件
     void save();
     //读取文件
