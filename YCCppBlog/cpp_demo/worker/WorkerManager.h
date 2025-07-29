@@ -45,6 +45,8 @@ public:
     void modEmp();
     //查找职工
     void findEmp();
+    //排序职工
+    void sortEmp();
     //保存文件
     void save();
     //读取文件
