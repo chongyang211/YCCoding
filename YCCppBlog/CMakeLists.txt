@@ -54,7 +54,6 @@ add_executable(YCCppBlog main.cpp
         cpp_demo/worker/Manager.h
         cpp_demo/worker/Boss.cpp
         cpp_demo/worker/Boss.h
-        cpp_demo/worker/WorkerTest.cpp
         cpp_demo/speaker/SpeechManager.cpp
         cpp_demo/speaker/SpeechManager.h
         cpp_demo/speaker/Speaker.h

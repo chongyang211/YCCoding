@@ -4,6 +4,8 @@
 
 #include "WorkerManager.h"
 
+//编译指令：g++ Boss.cpp Manager.cpp Employee.cpp WorkerManager.cpp
+
 WorkerManager::WorkerManager() {
     //构造函数实现
     read();
@@ -35,13 +37,6 @@ void pauseAndCls() {
 }
 
 int main() {
-    showMainSelect();
-    pause();
-    return 0;
-}
-
-//声明，菜单输入选项
-void showMainSelect() {
     WorkerManager wm;
     int choice = 0;
     while (true) {
@@ -52,10 +47,10 @@ void showMainSelect() {
         switch (choice) {
             case 0: //退出系统
                 wm.exitSystem();
-                break;
+                return 0;
             case 1: //添加职工
                 wm.addEmp();
-                break;
+            break;
             case 2: //显示职工
                 break;
             case 3: //删除职工
@@ -69,10 +64,16 @@ void showMainSelect() {
             case 7: //清空文件
                 break;
             default:
-                system("cls");
+                pause();
             break;
         }
     }
+    return 0;
+}
+
+//声明，菜单输入选项
+void showMainSelect() {
+
 }
 
 void WorkerManager::showMenu() {
@@ -92,8 +93,7 @@ void WorkerManager::showMenu() {
 
 void WorkerManager::exitSystem() {
     cout << "欢迎下次使用" << endl;
-    pause();
-    exit(0);
+    pauseAndCls();
 }
 
 void WorkerManager::addEmp() {
