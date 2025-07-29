@@ -21,3 +21,7 @@ string Manager::getDeptName() {
     return string("经理");
 }
 
+Manager::~Manager() {
+
+}
+

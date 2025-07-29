@@ -124,4 +124,5 @@ add_executable(YCCppBlog main.cpp
         cpp_hal_worker/strategy_utils.h
         cpp_hal_worker/wiegand_strategy.cpp
         cpp_hal_worker/wiegand_strategy.h
+        cpp_demo/worker/Worker.cpp
 )

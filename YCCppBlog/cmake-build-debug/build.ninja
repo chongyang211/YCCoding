@@ -51,547 +51,411 @@ build cmake_object_order_depends_target_YCCppBlog: phony || CMakeFiles/YCCppBlog
 
 build CMakeFiles/YCCppBlog.dir/main.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/main.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/main.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_1.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_1.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_2.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_2_4.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2_4.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_3_1.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_1.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_3_2.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_2.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_3.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_3_3.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_3.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_3_4.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_4.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_2.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_2.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_3.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_3.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_3.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_4.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_4.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_7.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_7.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_7.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_5.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_5.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_5.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_9.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_9.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_9.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_8.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_8.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_8.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_6.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter8/day_8_6.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_6.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter6/day_6_7_1.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_1.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter6/day_6_7_2.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_2.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_4_1.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_1.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_5.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_4_5.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_5.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_4_4.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_4.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_3.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_4_3.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_3.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_2.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_4_2.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_2.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_8.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter10/day_10_4_8.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_8.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter14/day_14_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter14/day_14_1.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter14/day_14_1.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter14
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter16/day_16_1.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_3.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter16/day_16_1_3.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_3.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_4.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_chapter/chapter16/day_16_1_4.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_4.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/student/StudentManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/student/StudentManager.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/student/StudentManager.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/student
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/worker/WorkerManager.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerManager.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Employee.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/worker/Employee.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Employee.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Manager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/worker/Manager.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Manager.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Boss.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/worker/Boss.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Boss.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
-
-build CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerTest.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/worker/WorkerTest.cpp || cmake_object_order_depends_target_YCCppBlog
-  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerTest.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/YCCppBlog.dir
-  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/speaker/SpeechManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/speaker/SpeechManager.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/speaker/SpeechManager.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/speaker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/school/ComputerManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/school/ComputerManager.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/school/ComputerManager.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/school
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/school/Student.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/school/Student.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/school/Student.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/school
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/school/Teacher.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/school/Teacher.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/school/Teacher.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/school
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/school/Manager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/school/Manager.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/school/Manager.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/school
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/thirdlib/json/json11.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/thirdlib/json/json11.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/thirdlib/json/json11.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/thirdlib/json
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/thirdlib/json/jsonTest.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/thirdlib/json/jsonTest.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/thirdlib/json/jsonTest.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/thirdlib/json
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_chapter/chapter7/day7_7_8.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_chapter/chapter7/day7_7_8.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_chapter/chapter7/day7_7_8.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_chapter/chapter7
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/student/student_manager.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/student/student_manager.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/student/student_manager.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/student
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/bank/BankManager.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/bank/BankManager.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/bank/BankManager.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/bank
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/worker/WorkManager.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/worker/WorkManager.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/worker/WorkManager.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/worker/DemoWorker.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/worker/DemoWorker.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/worker/DemoWorker.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/worker/WorkerLogger.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/worker/WorkerLogger.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/worker/WorkerLogger.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/worker/WorkerValid.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/worker/WorkerValid.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/worker/WorkerValid.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/worker/Employee.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/worker/Employee.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/worker/Employee.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/calculator/calculator.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/calculator/calculator.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/calculator/calculator.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/calculator
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/calculator/parser.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/calculator/parser.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/calculator/parser.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/calculator
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/calculator/stack.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/calculator/stack.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/calculator/stack.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/calculator
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/calculator/error_handler.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/calculator/error_handler.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/calculator/error_handler.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/calculator
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/calculator/history.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/calculator/history.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/calculator/history.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/calculator
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/calculator/constants.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/calculator/constants.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/calculator/constants.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/calculator
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/calculator/calculator_main.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/calculator/calculator_main.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/calculator/calculator_main.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/calculator
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/speaker/complex/speech_main.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/speaker/complex/speech_main.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/speaker/complex/speech_main.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/speaker/complex
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/speaker/easy/speech_worker.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/speaker/easy/speech_worker.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/speaker/easy/speech_worker.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/speaker/easy
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/computer/computer_main.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/computer/computer_main.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/computer/computer_main.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/computer
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/c_demo/sql/sql_manager.c.o: C_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/c_demo/sql/sql_manager.c || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/c_demo/sql/sql_manager.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/c_demo/sql
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/bank/BankUserManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/bank/BankUserManager.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/bank/BankUserManager.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/bank
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/bank/Account.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/bank/Account.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/bank/Account.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/bank
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/bank/Bank.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/bank/Bank.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/bank/Bank.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/bank
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/bank/FileManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/bank/FileManager.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/bank/FileManager.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/bank
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_demo/sql/SqlManager.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/sql/SqlManager.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/sql/SqlManager.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/sql
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_hal_worker/relay_strategy.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_hal_worker/relay_strategy.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_hal_worker/relay_strategy.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_hal_worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_hal_worker/strategy_utils.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_hal_worker/strategy_utils.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_hal_worker/strategy_utils.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_hal_worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
 
 build CMakeFiles/YCCppBlog.dir/cpp_hal_worker/wiegand_strategy.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_hal_worker/wiegand_strategy.cpp || cmake_object_order_depends_target_YCCppBlog
   DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_hal_worker/wiegand_strategy.cpp.o.d
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_hal_worker
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
-  TARGET_PDB = YCCppBlog.pdb
+
+build CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Worker.cpp.o: CXX_COMPILER__YCCppBlog_unscanned_Debug /Users/yc/newgit/YCCoding/YCCppBlog/cpp_demo/worker/Worker.cpp || cmake_object_order_depends_target_YCCppBlog
+  DEP_FILE = CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Worker.cpp.o.d
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/YCCppBlog.dir
+  OBJECT_FILE_DIR = CMakeFiles/YCCppBlog.dir/cpp_demo/worker
 
 
 # =============================================================================
@@ -601,14 +465,13 @@ build CMakeFiles/YCCppBlog.dir/cpp_hal_worker/wiegand_strategy.cpp.o: CXX_COMPIL
 #############################################
 # Link the executable YCCppBlog
 
-build YCCppBlog: CXX_EXECUTABLE_LINKER__YCCppBlog_Debug CMakeFiles/YCCppBlog.dir/main.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_3.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_3.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_7.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_5.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_9.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_8.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_6.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_5.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_3.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_8.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter14/day_14_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_3.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/student/StudentManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Employee.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Manager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Boss.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerTest.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/speaker/SpeechManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/school/ComputerManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/school/Student.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/school/Teacher.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/school/Manager.cpp.o CMakeFiles/YCCppBlog.dir/thirdlib/json/json11.cpp.o CMakeFiles/YCCppBlog.dir/thirdlib/json/jsonTest.cpp.o CMakeFiles/YCCppBlog.dir/c_chapter/chapter7/day7_7_8.c.o CMakeFiles/YCCppBlog.dir/c_demo/student/student_manager.c.o CMakeFiles/YCCppBlog.dir/c_demo/bank/BankManager.c.o CMakeFiles/YCCppBlog.dir/c_demo/worker/WorkManager.c.o CMakeFiles/YCCppBlog.dir/c_demo/worker/DemoWorker.c.o CMakeFiles/YCCppBlog.dir/c_demo/worker/WorkerLogger.c.o CMakeFiles/YCCppBlog.dir/c_demo/worker/WorkerValid.c.o CMakeFiles/YCCppBlog.dir/c_demo/worker/Employee.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/calculator.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/parser.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/stack.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/error_handler.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/history.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/constants.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/calculator_main.c.o CMakeFiles/YCCppBlog.dir/c_demo/speaker/complex/speech_main.c.o CMakeFiles/YCCppBlog.dir/c_demo/speaker/easy/speech_worker.c.o CMakeFiles/YCCppBlog.dir/c_demo/computer/computer_main.cpp.o CMakeFiles/YCCppBlog.dir/c_demo/sql/sql_manager.c.o CMakeFiles/YCCppBlog.dir/cpp_demo/bank/BankUserManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/bank/Account.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/bank/Bank.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/bank/FileManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/sql/SqlManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_hal_worker/relay_strategy.cpp.o CMakeFiles/YCCppBlog.dir/cpp_hal_worker/strategy_utils.cpp.o CMakeFiles/YCCppBlog.dir/cpp_hal_worker/wiegand_strategy.cpp.o
-  FLAGS = -arch arm64 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk -mmacosx-version-min=15.4
+build YCCppBlog: CXX_EXECUTABLE_LINKER__YCCppBlog_Debug CMakeFiles/YCCppBlog.dir/main.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_2_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_3.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_3.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_7.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_5.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_9.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_8.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_6.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_5.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_3.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_2.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_8.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter14/day_14_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_3.cpp.o CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter16/day_16_1_4.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/student/StudentManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Employee.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Manager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Boss.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/speaker/SpeechManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/school/ComputerManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/school/Student.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/school/Teacher.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/school/Manager.cpp.o CMakeFiles/YCCppBlog.dir/thirdlib/json/json11.cpp.o CMakeFiles/YCCppBlog.dir/thirdlib/json/jsonTest.cpp.o CMakeFiles/YCCppBlog.dir/c_chapter/chapter7/day7_7_8.c.o CMakeFiles/YCCppBlog.dir/c_demo/student/student_manager.c.o CMakeFiles/YCCppBlog.dir/c_demo/bank/BankManager.c.o CMakeFiles/YCCppBlog.dir/c_demo/worker/WorkManager.c.o CMakeFiles/YCCppBlog.dir/c_demo/worker/DemoWorker.c.o CMakeFiles/YCCppBlog.dir/c_demo/worker/WorkerLogger.c.o CMakeFiles/YCCppBlog.dir/c_demo/worker/WorkerValid.c.o CMakeFiles/YCCppBlog.dir/c_demo/worker/Employee.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/calculator.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/parser.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/stack.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/error_handler.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/history.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/constants.c.o CMakeFiles/YCCppBlog.dir/c_demo/calculator/calculator_main.c.o CMakeFiles/YCCppBlog.dir/c_demo/speaker/complex/speech_main.c.o CMakeFiles/YCCppBlog.dir/c_demo/speaker/easy/speech_worker.c.o CMakeFiles/YCCppBlog.dir/c_demo/computer/computer_main.cpp.o CMakeFiles/YCCppBlog.dir/c_demo/sql/sql_manager.c.o CMakeFiles/YCCppBlog.dir/cpp_demo/bank/BankUserManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/bank/Account.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/bank/Bank.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/bank/FileManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/sql/SqlManager.cpp.o CMakeFiles/YCCppBlog.dir/cpp_hal_worker/relay_strategy.cpp.o CMakeFiles/YCCppBlog.dir/cpp_hal_worker/strategy_utils.cpp.o CMakeFiles/YCCppBlog.dir/cpp_hal_worker/wiegand_strategy.cpp.o CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Worker.cpp.o
+  FLAGS = -arch arm64 -g -arch arm64 -mmacosx-version-min=15.4
   OBJECT_DIR = CMakeFiles/YCCppBlog.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/YCCppBlog.dir/
   TARGET_FILE = YCCppBlog
-  TARGET_PDB = YCCppBlog.pdb
+  TARGET_PDB = YCCppBlog.dbg
 
 
 #############################################
@@ -653,14 +516,14 @@ build all: phony YCCppBlog
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Users/yc/newgit/YCCoding/YCCppBlog/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Users/yc/newgit/YCCoding/YCCppBlog/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Users/yc/newgit/YCCoding/YCCppBlog/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Apple-GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /Users/yc/newgit/YCCoding/YCCppBlog/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################

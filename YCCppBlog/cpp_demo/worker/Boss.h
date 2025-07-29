@@ -17,6 +17,8 @@ public:
     virtual void showInfo();
     //获取职工岗位名称
     virtual string getDeptName();
+    //定义析构函数用于释放
+    ~Boss();
 };
 
 

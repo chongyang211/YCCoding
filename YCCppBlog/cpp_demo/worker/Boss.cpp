@@ -22,6 +22,10 @@ string Boss::getDeptName() {
     return string("总裁");
 }
 
+Boss::~Boss() {
+
+}
+
 
 
 

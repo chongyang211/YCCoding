@@ -4,7 +4,7 @@
 
 #include "WorkerManager.h"
 
-//编译指令：g++ Boss.cpp Manager.cpp Employee.cpp WorkerManager.cpp
+//编译指令：g++ Worker.cpp Boss.cpp Manager.cpp Employee.cpp WorkerManager.cpp
 
 WorkerManager::WorkerManager() {
     //构造函数实现
@@ -58,6 +58,7 @@ int main() {
                 wm.deleteEmp();
                 break;
             case 4: //修改职工
+                wm.modEmp();
                 break;
             case 5: //查找职工
                 break;
@@ -273,6 +274,56 @@ int WorkerManager::isExist(int id) {
         }
     }
     return index;
+}
+
+//修改职工
+void WorkerManager::modEmp() {
+    if (this->fileIsEmpty) {
+        cout << "文件不存在或记录为空！" << endl;
+    } else {
+        //按职工编号进行修改
+        cout << "请输入想要修改的职工号：" << endl;
+        int id;
+        cin >> id;
+        int index = isExist(id);
+        if (index == -1) {
+            cout << "修改失败，未找到该职工" << endl;
+            return;
+        }
+        int newId = 0;
+        string newName = "";
+        int newSelect = 0;
+        cout << "查到： " << id << "号职工，请输入新职工号： " << endl;
+        cin >> newId;
+        cout << "请输入新姓名： " << endl;
+        cin >> newName;
+        cout << "请输入新的岗位： " << endl;
+        cout << "1、普通职工" << endl;
+        cout << "2、经理" << endl;
+        cout << "3、老板" << endl;
+        cin >> newSelect;
+        //先删除
+        delete this->empArray[index];
+        Worker* worker = NULL;
+        switch (newSelect) {
+            case1:
+                worker = new Employee(newId, newName, newSelect);
+                break;
+            case2:
+                worker = new Manager(newId, newName, newSelect);
+                break;
+            case 3:
+                worker = new Boss(newId, newName, newSelect);
+                break;
+            default:
+                break;
+        }
+        //更改数据 到数组中
+        this->empArray[index] = worker;
+        cout << "修改成功！" << endl;
+        save();
+    }
+    pause();
 }
 
 

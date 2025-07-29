@@ -19,4 +19,8 @@ public:
     virtual void showInfo() = 0;
     //获取岗位名称
     virtual string getDeptName() = 0;
+    // 添加虚析构函数
+    // 将析构函数声明为虚函数，确保通过基类指针删除派生类对象时，能够正确调用派生类的析构函数。
+    // `= default` 表示使用编译器生成的默认实现。
+    virtual ~Worker();
 };

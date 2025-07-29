@@ -41,6 +41,8 @@ public:
     void deleteEmp();
     //判断员工是否存在
     int isExist(int id);
+    //修改职工
+    void modEmp();
     //保存文件
     void save();
     //读取文件
