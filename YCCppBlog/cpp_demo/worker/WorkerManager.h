@@ -47,6 +47,8 @@ public:
     void findEmp();
     //排序职工
     void sortEmp();
+    //清理文件
+    void cleanFile();
     //保存文件
     void save();
     //读取文件

@@ -64,9 +64,10 @@ int main() {
                 wm.findEmp();
                 break;
             case 6: //排序职工
-
+                wm.sortEmp();
                 break;
             case 7: //清空文件
+                wm.cleanFile();
                 break;
             default:
                 pause();
@@ -408,6 +409,32 @@ void WorkerManager::sortEmp() {
         this->showEmp();
     }
     pause();
+}
+
+void WorkerManager::cleanFile() {
+    cout << "确认清空？" << endl;
+    cout << "1、确认" << endl;
+    cout << "2、返回" << endl;
+    int select = 0;
+    cin >> select;
+    if (select == 1) {
+        //打开模式 ios::trunc 如果存在删除文件并重新创建
+        ofstream ofs(FILENAME, ios::trunc);
+        ofs.close();
+        if (this->empArray != NULL) {
+            for (int i = 0; i < this->empNum; i++) {
+                if (this->empArray[i] != NULL) {
+                    delete this->empArray[i];
+                }
+            }
+            this->empNum = 0;
+            delete[] this->empArray;
+            this->empArray = NULL;
+            this->fileIsEmpty = true;
+        }
+        cout << "清空成功！" << endl;
+    }
+    pauseAndCls();
 }
 
 
