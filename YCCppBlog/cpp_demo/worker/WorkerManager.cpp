@@ -77,11 +77,6 @@ int main() {
     return 0;
 }
 
-//声明，菜单输入选项
-void showMainSelect() {
-
-}
-
 void WorkerManager::showMenu() {
     cout << "********************************************" << endl;
     cout << "*********  欢迎使用职工管理系统！ **********" << endl;
@@ -158,6 +153,8 @@ void WorkerManager::addEmp() {
     this->empNum = newSize;
     //更新职工不为空标志
     this->fileIsEmpty = false;
+    //保存数据
+    this->save();   //保存文件
     //提示信息
     cout << "成功添加" << addNum << "名新职工！" << endl;
     //输入新数据
@@ -174,8 +171,8 @@ void WorkerManager::save() {
         return;
     }
     for (int i = 0; i < this->empNum; i++) {
-        ofs << this->empArray[i]->id << " "
-                << this->empArray[i]->name << " "
+        ofs << this->empArray[i]->id << ","
+                << this->empArray[i]->name << ","
                 << this->empArray[i]->deptId << endl;
     }
     ofs.close();
@@ -205,7 +202,7 @@ void WorkerManager::read() {
         ifs.close();
         return;
     }
-    int num =  this->getEmpNum();
+    int num = this->getEmpNum();
     cout << "职工个数为：" << num << endl;  //测试代码
     this->empNum = num;  //更新成员属性
 }
@@ -214,15 +211,41 @@ void WorkerManager::read() {
 int WorkerManager::getEmpNum() {
     ifstream ifs;
     ifs.open(FILENAME , ios::in);
+    if (!ifs.is_open()) {
+        std::cerr << "无法打开文件！" << std::endl;
+        return 0;
+    }
     int id;
     string name;
     int dId;
     int num = 0;
-    //下面这个写法是什么意思
-    //这段代码的作用是从文件流 ifs 中依次读取 id、name 和 dId 三个数据
-    //ifs >> id，从文件流 ifs 中读取一个值，并将其存储到变量 id 中。如果读取成功，表达式返回 true；否则返回 false。
-    while (ifs>>id && ifs>>name && ifs>>dId) {
+    std::string line;
+    // 逐行读取文件
+    while (std::getline(ifs, line)) {
+        std::stringstream ss(line);
+        char comma; // 用于读取逗号
+        // 解析每一行的数据
+        ss >> id >> comma >> name >> comma >> dId;
+        std::cout << "ID: " << id
+                 << ", Name: " << name
+                 << ", Did: " << dId << std::endl;
         //记录人数
+        Worker* worker = NULL;
+        switch (id) {
+            case 1:
+                worker = new Employee(id, name, dId);
+                break;
+            case 2:
+                worker = new Manager(id, name, dId);
+                break;
+            case 3:
+                worker = new Boss(id, name, dId);
+                break;
+            default:
+                break;
+        }
+        //更改数据 到数组中
+        this->empArray[num] = worker;
         num++;
     }
     ifs.close();
@@ -309,10 +332,10 @@ void WorkerManager::modEmp() {
         delete this->empArray[index];
         Worker* worker = NULL;
         switch (newSelect) {
-            case1:
+            case 1:
                 worker = new Employee(newId, newName, newSelect);
                 break;
-            case2:
+            case 2:
                 worker = new Manager(newId, newName, newSelect);
                 break;
             case 3:

@@ -7,7 +7,9 @@
 #include "Boss.h"
 #include "Manager.h"
 #include "Employee.h"
+#include <sstream>
 #include <fstream>
+
 using namespace std;
 
 #ifndef WORKERMANAGER_H
@@ -15,6 +17,12 @@ using namespace std;
 
 //定义一个文件名称
 #define  FILENAME "empFile.txt"
+
+struct Data {
+    int id; //职工编号
+    string name;  //职工姓名
+    int deptId; //职工所在部门名称编号
+};
 
 class WorkerManager {
 public:
