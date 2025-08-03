@@ -38,7 +38,7 @@ void pauseAndCls() {
 }
 
 int main() {
-    SpeechManager sm;
+    SpeechManager sm;   //创建对象之后，首先对调用构造方法
     for (map<int, Speaker>::iterator it = sm.speaker.begin(); it != sm.speaker.end(); it++) {
         cout << "选手编号：" << it->first
                 << " 姓名： " << it->second.name
