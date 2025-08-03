@@ -97,6 +97,8 @@ void SpeechManager::initSpeech() {
     this->speaker.clear();
     //初始化比赛轮次
     this->index = 1;
+    //初始化记录容器
+    this->record.clear();
 }
 
 void SpeechManager::createSpeaker() {
@@ -124,19 +126,19 @@ void SpeechManager::startSpeech() {
     //1、抽签
     this->speechDraw();
     //2、比赛
-    // this->speechContest();
-    // //3、显示晋级结果
-    // this->showScore();
-    // //第二轮比赛
-    // this->index++;
-    // //1、抽签
-    // this->speechDraw();
-    // //2、比赛
-    // this->speechContest();
-    // //3、显示最终结果
-    // this->showScore();
-    // //4、保存分数
-    // this->saveRecord();
+    this->speechContest();
+    //3、显示晋级结果
+    this->showScore();
+    //第二轮比赛
+    this->index++;
+    //1、抽签
+    this->speechDraw();
+    //2、比赛
+    this->speechContest();
+    //3、显示最终结果
+    this->showScore();
+    //4、保存分数
+    this->saveRecord();
 }
 
 void SpeechManager::speechDraw() {
@@ -258,7 +260,7 @@ void SpeechManager::saveRecord() {
     //将每个人数据写入到文件中
     for (vector<int>::iterator it = victory.begin(); it != victory.end(); it++) {
         //遍历数据然后写到流中
-        ofs << *it << "号选手，分数是：" << speaker[*it].score[1] << endl;
+        ofs << *it << "," << speaker[*it].score[1] << endl;
     }
     ofs << endl;
     //关闭文件
@@ -268,6 +270,7 @@ void SpeechManager::saveRecord() {
 
 
 void SpeechManager::loadRecord() {
+    cout << "开始获取往届记录！" << endl;
     //输入流对象 读取文件
     ifstream ifs("speech.txt", ios::in);
     if (!ifs.is_open()) {
@@ -287,16 +290,18 @@ void SpeechManager::loadRecord() {
     //文件不为空
     this->fileIsEmpty = false;
     ifs.putback(ch); //读取的单个字符放回去
+    cout << "文件不为空！读取的单个字符放回去" << ch << endl;
     string data;
     int index = 0;
     while (ifs >> data) {
-        //cout << data << endl;
+        cout << "文件读取的数据：" << data << endl;
         vector<string> v;
         int pos = -1;
         int start = 0;
         while (true) {
             pos = data.find(",", start); //从0开始查找 ','
             if (pos == -1) {
+                cout << "找不到break返回" << ch << endl;
                 break; //找不到break返回
             }
             string tmp = data.substr(start, pos - start); //找到了,进行分割 参数1 起始位置，参数2 截取长度
@@ -310,6 +315,7 @@ void SpeechManager::loadRecord() {
 }
 
 void SpeechManager::showRecord() {
+
     for (int i = 0; i < this->record.size(); i++) {
         cout << "第" << i + 1 << "届 " <<
                 "冠军编号：" << this->record[i][0] << " 得分：" << this->record[i][1] << " "

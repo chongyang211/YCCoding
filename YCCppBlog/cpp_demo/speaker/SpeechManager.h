@@ -10,6 +10,9 @@
 #include <ostream>
 #include <fstream>
 #include "Speaker.h"
+#include <deque>
+#include <cstdlib> // for rand() and srand()
+#include <ctime>   // for time()
 
 using namespace std;
 
