@@ -30,6 +30,11 @@ public:
     map<int, Speaker> speaker;
     //比赛轮次
     int index;
+    //文件为空的标志
+    bool fileIsEmpty;
+    //往届记录
+    map<int, vector<string> > record;
+public:
     //构造函数
     SpeechManager();
     //析构函数
@@ -52,13 +57,8 @@ public:
     void showScore();
     //保存记录
     void saveRecord();
-
     //读取记录
     void loadRecord();
-    //文件为空的标志
-    bool fileIsEmpty;
-    //往届记录
-    map<int, vector<string> > record;
     //显示往届得分
     void showRecord();
     //清空记录

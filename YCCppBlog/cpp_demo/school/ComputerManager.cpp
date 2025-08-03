@@ -55,8 +55,7 @@ int main() {
             case 0: //退出系统
                 cout << "欢迎下一次使用" << endl;
                 pause();
-                exit(0);
-                break;
+                return 0;
             default:
                 cout << "输入有误，请重新选择！" << endl;
                 clearScreen();
@@ -108,17 +107,17 @@ void loginIn(string fileName, int type) {
         // }
     } else if (type == 2) {
         //教师登录验证
-        // int fId;
-        // string fName;
-        // string fPwd;
-        // while (ifs >> fId && ifs >> fName && ifs >> fPwd) {
-        //     if (id == fId && name == fName && pwd == fPwd) {
-        //         cout << "教师验证登录成功!" << endl;
-        //         pauseAndCls();
-        //         person = new Teacher(id, name, pwd);
-        //         return;
-        //     }
-        // }
+        int fId;
+        string fName;
+        string fPwd;
+        while (ifs >> fId && ifs >> fName && ifs >> fPwd) {
+            if (id == fId && name == fName && pwd == fPwd) {
+                cout << "教师验证登录成功!" << endl;
+                pauseAndCls();
+                person = new Teacher(id, name, pwd);
+                return;
+            }
+        }
     } else if (type == 3) {
         //管理员登录验证
         string fName;

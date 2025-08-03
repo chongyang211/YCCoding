@@ -4,6 +4,8 @@
 
 #include "SpeechManager.h"
 
+//执行指令：g++ SpeechManager.cpp
+
 SpeechManager::SpeechManager(){
     //初始化属性
     this->initSpeech();
