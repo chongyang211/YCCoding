@@ -93,6 +93,7 @@ void SpeechManager::initSpeech() {
     this->v1.clear();
     this->v2.clear();
     this->victory.clear();
+    //保证选手容器也为空
     this->speaker.clear();
     //初始化比赛轮次
     this->index = 1;
