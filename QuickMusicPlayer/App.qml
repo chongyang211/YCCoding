@@ -13,6 +13,11 @@ Window {
     // 设置 Fusion 样式
     title: qsTr("Cloud Music Player")
 
+
+    // 将LogService注册为全局属性
+    property var logService: LogService
+    // property var logService: LogService {} // 注册单例
+
     property int mWINDOW_WIDTH: 1200
     property int mWINDOW_HEIGHT: 800
 
@@ -38,14 +43,14 @@ Window {
 
         // 监听当前页面变化，更新状态栏颜色
         onCurrentItemChanged: {
-            console.log("main StackView page changed: " + (currentItem ? currentItem.objectName || "Unknown" : "null"));
-            console.log("main Page type: " + (currentItem ? (currentItem.constructor ? currentItem.constructor.name : "Unknown") : "null"));
-            console.log("main Status bar color updated to: " + currentItem.statusBarColor);
-            console.log("main Status bar color reset to default:#FFFFFF");
+            logService.info("main StackView page changed: " + (currentItem ? currentItem.objectName || "Unknown" : "null"));
+            logService.info("main Page type: " + (currentItem ? (currentItem.constructor ? currentItem.constructor.name : "Unknown") : "null"));
+            logService.info("main Status bar color updated to: " + currentItem.statusBarColor);
+            logService.info("main Status bar color reset to default:#FFFFFF");
         }
 
         Component.onCompleted: {
-            console.log("main StackView onCompleted")
+            logService.info("main StackView onCompleted")
             // 在 StackView 初始化完成后，立即跳转到 HomePage
             stackView.push("HomePage.qml")
         }
@@ -53,6 +58,7 @@ Window {
 
     // 页面监听
     Component.onCompleted: {
+        logService.info("main onCompleted")
         console.log("main onCompleted")
         //stackView.push("HomePage.qml");
     }

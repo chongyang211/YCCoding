@@ -61,6 +61,7 @@ qt_add_qml_module(appQuickMusicPlayer
         QML_FILES DetailField.qml
         QML_FILES ContactDetailView.qml
         QML_FILES ContactEditor.qml
+        QML_FILES LogService.qml
 
 )
 

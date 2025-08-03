@@ -157,6 +157,17 @@ void WorkerManager::addEmp() {
     this->save();   //保存文件
     //提示信息
     cout << "成功添加" << addNum << "名新职工！" << endl;
+
+
+    // cout << "int类型：sizeof(newSize): " << sizeof(newSize) << " bytes" << endl;
+    // cout << "数组：sizeof(数组): " << sizeof(this->empArray) << " bytes" << endl;
+    // cout << "对象：sizeof(对象): " << sizeof(newSpace) << " bytes" << endl;
+    // int* ptr = nullptr;
+    // cout << "指针：sizeof(指针): " << sizeof(ptr) << " bytes" << endl;
+    // char str[] = "Hello";
+    // cout << "字符串：sizeof(字符串): " << sizeof(str) << " bytes" << endl;
+    // std::string str2 = "Hello";
+    // cout << "字符串：sizeof(字符串): " << sizeof(str2) << " bytes" << endl;
     //输入新数据
     clearScreen();
 }

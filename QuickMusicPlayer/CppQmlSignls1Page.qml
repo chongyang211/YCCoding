@@ -27,12 +27,12 @@ Item {
 
         Component.onCompleted: {
             // 检查对象是否存在
-            console.log("sensorMonitor 对象存在:", sensorMonitor !== undefined)
-            console.log("对象类型:", typeof sensorMonitor)
+            logService.info("sensorMonitor 对象存在:", sensorMonitor !== undefined)
+            logService.info("对象类型:", typeof sensorMonitor)
             // 检查 update 属性类型
-            console.log("update 类型:", typeof sensorMonitor.update)
+            logService.info("update 类型:", typeof sensorMonitor.update)
             // 检查对象原型
-            console.log("对象属性:", Object.keys(sensorMonitor))
+            logService.info("对象属性:", Object.keys(sensorMonitor))
         }
     }
 }
