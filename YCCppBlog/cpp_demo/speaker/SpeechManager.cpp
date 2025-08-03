@@ -63,7 +63,7 @@ int main() {
                 sm.exitSystem();
                 break;
             default:
-                system("cls"); //清屏
+                clearScreen();
             break;
         }
     }
