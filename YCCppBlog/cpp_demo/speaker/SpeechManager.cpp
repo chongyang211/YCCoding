@@ -124,31 +124,34 @@ void SpeechManager::startSpeech() {
     //1、抽签
     this->speechDraw();
     //2、比赛
-    this->speechContest();
-    //3、显示晋级结果
-    this->showScore();
-    //第二轮比赛
-    this->index++;
-    //1、抽签
-    this->speechDraw();
-    //2、比赛
-    this->speechContest();
-    //3、显示最终结果
-    this->showScore();
-    //4、保存分数
-    this->saveRecord();
+    // this->speechContest();
+    // //3、显示晋级结果
+    // this->showScore();
+    // //第二轮比赛
+    // this->index++;
+    // //1、抽签
+    // this->speechDraw();
+    // //2、比赛
+    // this->speechContest();
+    // //3、显示最终结果
+    // this->showScore();
+    // //4、保存分数
+    // this->saveRecord();
 }
 
 void SpeechManager::speechDraw() {
     cout << "第 << " << this->index << " >> 轮比赛选手正在抽签，打乱用户顺序"<<endl;
     cout << "---------------------" << endl;
     cout << "抽签后演讲顺序如下：" << endl;
-    //random_shuffle这个已经不用了
-    // 创建随机数引擎
-    random_device rd;
-    mt19937 g(rd());
+    //<algorithm>：提供 std::shuffle。<random>：提供随机数生成器。
+    //使用 std::shuffle 打乱 std::vector 的顺序。
+    // 创建随机数生成器
+    std::random_device rd;  // 随机种子
+    std::mt19937 g(rd());   // 使用 Mersenne Twister 算法
     if (this->index == 1) {
+        //第一轮
         shuffle(v1.begin(), v1.end(),g);
+        //然后打印一下打乱后的次序
         for (vector<int>::iterator it = v1.begin(); it != v1.end(); it++){
             cout << *it << " ";
         }
