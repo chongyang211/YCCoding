@@ -7,9 +7,6 @@
 #include<string>
 using namespace std;
 
-#ifndef IDENTITY_H
-#define IDENTITY_H
-
 
 //身份抽象类
 class Identity {
@@ -23,5 +20,3 @@ public:
     virtual void openMenu() = 0;
     // virtual void openMenu() {}
 };
-
-#endif //IDENTITY_H
