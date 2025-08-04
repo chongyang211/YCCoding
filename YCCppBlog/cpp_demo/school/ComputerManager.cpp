@@ -45,13 +45,13 @@ int main() {
         cin >> select; //接受用户选择
         switch (select) {
             case 1: //学生身份
-
+                loginIn(STUDENT_FILE,1);
                 break;
             case 2: //老师身份
-
+                loginIn(TEACHER_FILE,2);
                 break;
             case 3: //管理员身份
-
+                loginIn(ADMIN_FILE,3);
                 break;
             case 0: //退出系统
                 cout << "欢迎下一次使用" << endl;
@@ -65,6 +65,57 @@ int main() {
     }
     pause();
     return 0;
+}
+
+void loginIn(string fileName, int type) {
+    // Identity identity;   //注意：Identity是抽象类
+    Identity *identity = NULL;
+    //打开文本文件
+    ifstream ifs;
+    ifs.open(fileName,ios::in);
+    //文件不存在
+    if (!ifs.is_open()) {
+        cout << "文件不存在" <<endl;
+        ifs.close();
+        return;
+    }
+    int id = 0;
+    string name;
+    string pwd;
+    if (type == 1) {    //学生登陆
+        cout << "请输入你的学号" << endl;
+        cin >> id;
+    } else if (type ==2) {  //教师登录
+        cout << "请输入你的职工号" << endl;
+        cin >> id;
+    }
+    cout << "请输入用户名：" << endl;
+    cin >> name;
+    cout << "请输入密码： " << endl;
+    cin >> pwd;
+    if (type == 1) {
+        //学生登录验证
+        cout << "学生登录验证" << endl;
+        int fId;
+        string fName;
+        string fPwd;
+        while (ifs>>fId && ifs>>fName && ifs>>fPwd) {
+            //用户输入的id，姓名和密钥，跟文件做对比
+            if (id == fId && name == fName && pwd == fPwd) {
+                cout << "学生验证登录成功!" << endl;
+                pauseAndCls();
+                identity = new Student(id, name, pwd);
+            }
+        }
+    } else if (type == 2) {
+        //教师登录验证
+        cout << "教师登录验证" << endl;
+    } else if (type == 3) {
+        //管理员登录验证
+        cout << "管理员登录验证" << endl;
+    }
+    cout << "验证登录失败!" << endl;
+    pauseAndCls();
 }
 
 
