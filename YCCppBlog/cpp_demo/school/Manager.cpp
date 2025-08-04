@@ -8,13 +8,16 @@
 
 //默认构造
 Manager::Manager() {
-
+    //初始化容器
+    this->initVector();
 }
 
 //有参构造
 Manager::Manager(string name , string pwd) {
     this->name = name;
     this->pwd = pwd;
+    //初始化容器
+    this->initVector();
 }
 
 //选择菜单
