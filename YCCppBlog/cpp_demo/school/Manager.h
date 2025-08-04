@@ -4,11 +4,22 @@
 #pragma once
 #include <iostream>
 #include <fstream>
+#include <vector>
+
+#include "Student.h"
+#include "Teacher.h"
 using namespace std;
 #include "Identity.h"
 
 
 class Manager : public Identity {
+public:
+    //初始化容器
+    void initVector();
+    //学生容器
+    vector<Student> vStu;
+    //教师容器
+    vector<Teacher> vTea;
 public:
     //默认构造
     Manager();
