@@ -46,6 +46,7 @@ void Manager::addPerson() {
     cout << "2、添加老师" << endl;
     string fileName;
     string tip;
+    string errorTip;
     ofstream ofs;
     int select = 0;
     cin >> select;
@@ -53,9 +54,11 @@ void Manager::addPerson() {
     if (select == 1){
         fileName = STUDENT_FILE;    //学生
         tip = "请输入学号： ";
+        errorTip = "学号重复，请重新输入";
     } else {
         fileName = TEACHER_FILE;    //老师
         tip = "请输入职工编号：";
+        errorTip = "职工编号重复，请重新输入";
     }
     //打开文件
     ofs.open(fileName, ios::out | ios::app);
@@ -67,6 +70,17 @@ void Manager::addPerson() {
     string name;
     string pwd;
     cout <<tip << endl;
+    //去重复操作
+    while (true) {
+        cin >> id;
+        bool ret = this->checkRepeat(id, 1);
+        //有重复
+        if (ret) {
+            cout << errorTip << endl;
+        } else {
+            break;
+        }
+    }
     cin >> id;
     cout << "请输入姓名： " << endl;
     cin >> name;
