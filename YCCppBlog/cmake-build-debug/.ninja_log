@@ -1,9 +1,9 @@
 # ninja log v6
-817	1463	1752710335356461619	CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_1.cpp.o	3db1f2b722968818
+23	817	1752710334562006428	CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_2.cpp.o	66e35a6f457966a5
 1987	2481	1752710336526663909	CMakeFiles/YCCppBlog.dir/cpp_demo/student/StudentManager.cpp.o	a1923f96f4db8104
 1405	1987	1752710335943896710	CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_1.cpp.o	e879eedb04bb31e0
 1442	1975	1752710335981126681	CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_8.cpp.o	cc03dc96f103dd54
-23	817	1752710334562006428	CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_2.cpp.o	66e35a6f457966a5
+817	1463	1752710335356461619	CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter6/day_6_7_1.cpp.o	3db1f2b722968818
 21	794	1752710334560676839	CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_1.cpp.o	6577c2609fda07cb
 2503	3168	1752710337042730361	CMakeFiles/YCCppBlog.dir/thirdlib/json/json11.cpp.o	dbdc888a663732ad
 22	775	1752710334561288383	CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_3_3.cpp.o	6b36b11da00f2654
@@ -38,8 +38,8 @@
 775	1442	1752710335315000591	CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter8/day_8_4.cpp.o	d51a194c40978f6a
 2971	3028	1752710337510036632	CMakeFiles/YCCppBlog.dir/c_demo/worker/DemoWorker.c.o	7e63ce4b97be0ebf
 1990	2570	1752710336529400752	CMakeFiles/YCCppBlog.dir/cpp_demo/worker/WorkerManager.cpp.o	a771134614b707c1
+6	69	1754313704383932877	build.ninja	d35e76ab3e242d38
 1435	1983	1752710335974587616	CMakeFiles/YCCppBlog.dir/cpp_chapter/chapter10/day_10_4_2.cpp.o	20397d2e3491adec
-6	69	1754207640603907923	build.ninja	d35e76ab3e242d38
-2461	2922	1752710336999933328	CMakeFiles/YCCppBlog.dir/cpp_demo/school/Student.cpp.o	3f19fb84e8cb9be6
-2450	3320	1752710336989417997	CMakeFiles/YCCppBlog.dir/cpp_demo/speaker/SpeechManager.cpp.o	6e6c70a05700605b
 1992	2452	1752710336531391010	CMakeFiles/YCCppBlog.dir/cpp_demo/worker/Employee.cpp.o	8933b3207b4ee993
+2450	3320	1752710336989417997	CMakeFiles/YCCppBlog.dir/cpp_demo/speaker/SpeechManager.cpp.o	6e6c70a05700605b
+2461	2922	1752710336999933328	CMakeFiles/YCCppBlog.dir/cpp_demo/school/Student.cpp.o	3f19fb84e8cb9be6
