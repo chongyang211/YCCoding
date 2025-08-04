@@ -121,3 +121,21 @@ void Manager::initVector() {
     ifs.close();
 }
 
+bool Manager::checkRepeat(int id, int type) {
+    if (type == 1) {
+        for (vector<Student>::iterator it = vStu.begin(); it != vStu.end(); it++) {
+            if (id == it->id){
+                return true;
+            }
+        }
+    } else {
+        for (vector<Teacher>::iterator it = vTea.begin(); it != vTea.end(); it++) {
+            if (id == it->empId) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+
