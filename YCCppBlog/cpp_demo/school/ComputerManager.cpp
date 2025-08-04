@@ -105,11 +105,24 @@ void loginIn(string fileName, int type) {
                 cout << "学生验证登录成功!" << endl;
                 pauseAndCls();
                 identity = new Student(id, name, pwd);
+                return;
             }
         }
     } else if (type == 2) {
         //教师登录验证
         cout << "教师登录验证" << endl;
+        //教师登录验证
+        int fId;
+        string fName;
+        string fPwd;
+        while (ifs >> fId && ifs >> fName && ifs >> fPwd) {
+            if (id == fId && name == fName && pwd == fPwd) {
+                cout << "教师验证登录成功!" << endl;
+                pauseAndCls();
+                identity = new Teacher(id, name, pwd);
+                return;
+            }
+        }
     } else if (type == 3) {
         //管理员登录验证
         cout << "管理员登录验证" << endl;
