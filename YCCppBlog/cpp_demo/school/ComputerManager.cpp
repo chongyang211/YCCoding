@@ -136,6 +136,7 @@ void loginIn(string fileName, int type) {
                 clearScreen();
                 //创建管理员对象
                 identity = new Manager(name, pwd);
+                managerMenu(identity);
                 return;
             }
         }
