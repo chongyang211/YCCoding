@@ -133,6 +133,8 @@ void Manager::initVector() {
     }
     cout << "当前教师数量为： " << vTea.size() << endl;
     ifs.close();
+    //初始化容器
+    initVector();
 }
 
 bool Manager::checkRepeat(int id, int type) {
