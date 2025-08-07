@@ -53,7 +53,8 @@ int main() {
 
 void loginIn(string fileName, int type) {
     // Identity identity;   //注意：Identity是抽象类
-    Identity *identity = NULL;
+    // Identity *identity = NULL;   //
+    Identity *identity = nullptr;
     //打开文本文件
     ifstream ifs;
     ifs.open(fileName,ios::in);

@@ -39,7 +39,7 @@ qt_add_qml_module(appQuickMusicPlayer
         QML_FILES DetailLocalPageView.qml
         QML_FILES DetailHistoryPageView.qml
         QML_FILES DetailFavoritePageView.qml
-        QML_FILES DetailPlayListPageView.qml
+        QML_FILES DialogListPageView.qml
         QML_FILES MusicBannerView.qml
         QML_FILES CppQmlPageView.qml
         QML_FILES HomePage.qml
@@ -62,6 +62,7 @@ qt_add_qml_module(appQuickMusicPlayer
         QML_FILES ContactDetailView.qml
         QML_FILES ContactEditor.qml
         QML_FILES LogService.qml
+        QML_FILES DialogCustomDialog.qml
 
 )
 

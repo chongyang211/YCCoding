@@ -129,4 +129,6 @@ add_executable(YCCppBlog main.cpp
         cpp_demo/speaker/FileSpeechUtils.h
         cpp_demo/school/ToolUtils.cpp
         cpp_demo/school/ToolUtils.h
+        cpp_chapter/chapter13/day_13_1.cpp
+        cpp_chapter/chapter13/day_13_3.cpp
 )
