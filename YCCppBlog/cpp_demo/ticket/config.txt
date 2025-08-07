@@ -1,0 +1,4 @@
+total_tickets 100
+num_windows 3
+num_customers 10
+max_tickets_per_customer 5

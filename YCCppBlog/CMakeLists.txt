@@ -131,4 +131,11 @@ add_executable(YCCppBlog main.cpp
         cpp_demo/school/ToolUtils.h
         cpp_chapter/chapter13/day_13_1.cpp
         cpp_chapter/chapter13/day_13_3.cpp
+        cpp_chapter/chapter13/day_13.h
+        cpp_chapter/DemoTest.cpp
+        cpp_chapter/DemoTest.h
+        cpp_chapter/Demo.cpp
+        cpp_chapter/yt_process_killer.cpp
+        cpp_chapter/yt_process_killer.h
+        cpp_demo/ticket/TicketEasyManager.cpp
 )

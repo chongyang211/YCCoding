@@ -46,8 +46,13 @@ void Account::withdraw(double amount) {
     }
 }
 
+void test() {
+    std::cout << "转账金额无效或余额不足！" << std::endl;
+}
+
 // 转账
 bool Account::transfer(Account &targetAccount, double amount) {
+    test();
     //首先要确保转出的金额大于0，并且是小于用户余额
     if (amount > 0 && amount <= balance) {
         balance -= amount;

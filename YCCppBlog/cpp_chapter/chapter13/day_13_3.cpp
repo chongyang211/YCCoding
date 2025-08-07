@@ -5,6 +5,8 @@
 #include <thread>
 #include <mutex>
 #include <condition_variable>
+
+#include "day_13.h"
 using namespace std;
 
 
@@ -23,27 +25,47 @@ void delayed_task() {
     halCv.notify_one();  // 通知等待中的线程
 }
 
-//在 C++ 中使用 std::condition_variable实现延迟执行任务的功能，可以通过以下方式实现：开启任务后让线程等待 2 秒再唤醒执行，同时主线程可以继续其他操作。
-//g++ -std=c++11 day_13_3.cpp
-int main() {
+void test1() {
     // 启动延迟任务的线程
     std::thread worker(delayed_task); {
         std::unique_lock<std::mutex> lock(mtx);
         // 主线程继续执行其他工作
         std::cout << "主线程执行其他任务..." << std::endl;
         // 等待 2 秒或被提前唤醒
-        // cv.wait_for(lock, std::chrono::seconds(2), []{ return ready; });
-        // bool isFinish = cv.wait_for(lock, std::chrono::seconds(2), [](){ return ready; });
-        bool isFinish = halCv.wait_for(lock, std::chrono::seconds(2), []() -> bool { return isHalReady; });
-        if (isFinish) {
+        if (halCv.wait_for(lock, std::chrono::seconds(2), []() -> bool { return isHalReady; })) {
             std::cout << "★ 条件达成 - 提前执行任务" << std::endl;
         } else {
             std::cout << "⏰ 等待超时 - 强制唤醒执行" << std::endl;
         }
-        std::cout << "=== 继续任务 ===" << std::endl;
     }
     worker.join();  // 确保任务线程结束
     // 任务执行
     std::cout << "=== 执行核心任务 ===" << std::endl;
+}
+
+
+//使用 `std::mutex` 保护共享资源
+int sharedData = 0;
+void increment() {
+    for (int i = 0; i < 1000; ++i) {
+        std::lock_guard<std::mutex> lock(mtx); // 自动加锁和解锁
+        // 或手动管理: mtx.lock(); ... mtx.unlock();
+        ++sharedData;
+    }
+}
+
+void test2() {
+    std::thread t1(increment);
+    std::thread t2(increment);
+    t1.join();
+    t2.join();
+    std::cout << "Shared Data: " << sharedData << std::endl; // 输出: Shared Data: 2000
+}
+
+
+//在 C++ 中使用 std::condition_variable实现延迟执行任务的功能，可以通过以下方式实现：开启任务后让线程等待 2 秒再唤醒执行，同时主线程可以继续其他操作。
+//g++ -std=c++11 day_13_3.cpp
+int main() {
+    test2();
     return 0;
 }
