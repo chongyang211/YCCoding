@@ -1,6 +1,7 @@
 //
 // Created by 杨充 on 2025/8/7.
 //
+#include <future>
 #include <iostream>
 #include <thread>
 using namespace std;
@@ -42,7 +43,8 @@ void detachThread1() {
 int main() {
     // startThread1();
     // startThread2();
-    detachThread1();
+    //detachThread1();
+
     return 0;
 }
 

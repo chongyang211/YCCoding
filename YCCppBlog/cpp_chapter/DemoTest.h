@@ -14,6 +14,8 @@ class DemoTest {
 public:
     void _DelayedTask();  // 延迟任务函数
     int _InitAndApp();           // 初始化并执行任务的函数
+    void _DelayedTask2();  // 延迟任务函数
+    int _InitAndApp2();           // 初始化并执行任务的函数
 private:
     std::mutex mtx;              // 互斥锁
     std::condition_variable halCv; // 条件变量
