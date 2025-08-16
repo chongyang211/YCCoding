@@ -159,6 +159,60 @@ public:
         logger.log(ss.str());
         cv.notify_all();
     }
+
+    int getRemainingTickets() const {
+        return remainingTickets;
+    }
+
+    int getTotalTickets() const {
+        return totalTicket;
+    }
+};
+
+//售票窗口类
+class TicketWindow {
+private:
+    std::string name;   //窗口名称
+    TicketSystem& ticketSystem;     //票务系统
+    Logger& logger;     //日志系统
+    std::atomic<bool> running;      //是否正在运行中
+    std::atomic<int> ticketsSold;   //
+    std::thread workerThread;       //工作线程
+public:
+    TicketWindow(const std::string& windowName, TicketSystem& system, Logger& log)
+        : name(windowName), ticketSystem(system), logger(log), running(true), ticketsSold(0) {
+        logger.log("Ticket window " + name + " created");
+    }
+
+    // 禁用拷贝构造函数和拷贝赋值运算符
+    TicketWindow(const TicketWindow&) = delete;
+    TicketWindow& operator=(const TicketWindow&) = delete;
+
+    //启动售票线程
+    void start() {
+        workerThread = std::thread([this] {
+            logger.log(name + " started selling tickets");
+            //使用随机数生成器生成随机数。
+            std::random_device rd;
+            std::mt19937 gen(rd());
+            //生成 1 到 5 之间的随机数，模拟每次售票的数量。
+            std::uniform_int_distribution<> dis(1, 5);
+            while (running) {
+                int numTickets = dis(gen);
+                //尝试售票。
+                if (ticketSystem.sellTicket(numTickets, name)) {
+                    //如果售票成功，增加 ticketsSold 并模拟出票时间。
+                    ticketsSold += numTickets;
+                    std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 模拟出票时间
+                } else {
+                    //如果售票失败，记录警告日志并退出循环。
+                    logger.log(name + " failed to sell tickets. Not enough tickets available.", LogLevel::WARNING);
+                    break;
+                }
+            }
+            logger.log(name + " stopped selling tickets");
+        });
+    }
 };
 
 void test(Logger& logger) {
@@ -189,7 +243,18 @@ int main() {
 
     // 初始化配置管理器
     ConfigManager config("config.txt");
-    test(logger);
+
+    // 创建票务系统
+    TicketSystem ticketSystem(config.get("total_tickets"), logger);
+
+    {
+        TicketWindow window1("Window 1", ticketSystem, logger);
+        TicketWindow window2("Window 2", ticketSystem, logger);
+        std::this_thread::sleep_for(std::chrono::seconds(3)); // 模拟运行时间
+        window1.start();
+        window2.start();
+    } // 窗口对象离开作用域，析构函数被调用
+
     return 0;
 }
 
