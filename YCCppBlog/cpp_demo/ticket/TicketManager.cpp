@@ -142,7 +142,34 @@ public:
             return false;
         }
     }
+
+    //加票方法
+    void addTickets(int num) {
+        std::lock_guard<std::mutex> lock(ticketMutex);
+        remainingTickets+=num;
+        std::stringstream ss;
+        ss << "Added " << num << " tickets. Remaining tickets: " << remainingTickets;
+        logger.log(ss.str());
+        cv.notify_all();
+    }
 };
+
+void test(Logger& logger) {
+    TicketSystem ticketSystem(10 , logger);
+
+    std::thread t1([&ticketSystem] {
+        ticketSystem.sellTicket(3, "Window 1");
+    });
+    std::thread t2([&ticketSystem] {
+        ticketSystem.sellTicket(5, "Window 2");
+    });
+    std::thread t3([&ticketSystem] {
+        ticketSystem.sellTicket(4, "Window 3");
+    });
+    t1.join();
+    t2.join();
+    t3.join();
+}
 
 int main() {
     // 初始化日志系统
@@ -154,7 +181,7 @@ int main() {
 
     // 初始化配置管理器
     ConfigManager config("config.txt");
-
+    test(logger);
     return 0;
 }
 
