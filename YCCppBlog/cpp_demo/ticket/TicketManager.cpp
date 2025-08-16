@@ -102,6 +102,21 @@ public:
     }
 };
 
+//设计票务系统类
+class TicketSystem {
+private:
+    int totalTicket;    //总票数
+    std::atomic<int> remainingTickets;      //正在出的票
+    std::mutex ticketMutex;     //票务锁，保证线程安全
+    std::condition_variable cv;     //条件变量，用于线程通信，可以和锁结合使用
+    Logger & logger;
+public:
+    TicketSystem(int total , Logger & log) :
+        totalTicket(total) , remainingTickets(total) , logger(log) {
+        logger.log("Ticket system created with " + std::to_string(total) + " tickets");
+    }
+};
+
 int main() {
     // 初始化日志系统
     Logger logger("ticket_system_log.txt");
