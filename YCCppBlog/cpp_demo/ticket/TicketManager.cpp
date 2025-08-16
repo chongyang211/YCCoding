@@ -145,6 +145,13 @@ public:
 
     //加票方法
     void addTickets(int num) {
+        // 检查参数
+        if (num <= 0) {
+            std::stringstream ss;
+            ss << "Failed to add tickets. Invalid number of tickets: " << num;
+            logger.log(ss.str(), LogLevel::WARNING);
+            return;
+        }
         std::lock_guard<std::mutex> lock(ticketMutex);
         remainingTickets+=num;
         std::stringstream ss;
@@ -156,7 +163,6 @@ public:
 
 void test(Logger& logger) {
     TicketSystem ticketSystem(10 , logger);
-
     std::thread t1([&ticketSystem] {
         ticketSystem.sellTicket(3, "Window 1");
     });
@@ -164,8 +170,10 @@ void test(Logger& logger) {
         ticketSystem.sellTicket(5, "Window 2");
     });
     std::thread t3([&ticketSystem] {
-        ticketSystem.sellTicket(4, "Window 3");
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        ticketSystem.addTickets(10);
     });
+
     t1.join();
     t2.join();
     t3.join();
