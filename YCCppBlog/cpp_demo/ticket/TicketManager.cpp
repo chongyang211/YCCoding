@@ -258,13 +258,20 @@ int main() {
     // 创建票务系统
     TicketSystem ticketSystem(config.get("total_tickets"), logger);
 
-    {
-        TicketWindow window1("Window 1", ticketSystem, logger);
-        TicketWindow window2("Window 2", ticketSystem, logger);
-        std::this_thread::sleep_for(std::chrono::seconds(3)); // 模拟运行时间
-        window1.start();
-        window2.start();
-    } // 窗口对象离开作用域，析构函数被调用
+    // 创建售票窗口
+    std::vector<std::unique_ptr<TicketWindow>> windows;
+    int numWindows = config.get("num_windows");
+    for (int i = 1; i <= numWindows; ++i) {
+        // windows.push_back(std::make_unique<TicketWindow>(
+        //     "Window " + std::to_string(i), ticketSystem, logger));
+        windows.push_back(std::unique_ptr<TicketWindow>(
+            new TicketWindow("Window " + std::to_string(i), ticketSystem, logger)));
+    }
+
+    // 启动售票窗口
+    for (auto& window : windows) {
+        window->start();
+    }
 
     return 0;
 }
