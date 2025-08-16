@@ -17,6 +17,7 @@
 #include <memory>
 #include <atomic>
 
+//  g++ -std=c++11
 using namespace std;
 
 //日志级别枚举
@@ -54,6 +55,7 @@ public:
         std::string levelStr;
         switch (level) {
             case LogLevel::INFO: levelStr = "INFO"; break;
+            case LogLevel::DEBUG: levelStr = "DEBUG"; break;
             case LogLevel::WARNING: levelStr = "WARNING"; break;
             case LogLevel::ERROR: levelStr = "ERROR"; break;
         }
@@ -62,6 +64,16 @@ public:
         std::cout << logMessage << std::endl;
     }
 };
+
+int main() {
+    // 初始化日志系统
+    Logger logger("ticket_system_log.txt");
+    logger.log("System initialized", LogLevel::INFO);
+    logger.log("System initialized debug", LogLevel::DEBUG);
+    logger.log("System initialized warning", LogLevel::WARNING);
+    logger.log("System initialized error", LogLevel::ERROR);
+    return 0;
+}
 
 
 
