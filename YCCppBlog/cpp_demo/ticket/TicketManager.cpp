@@ -16,6 +16,7 @@
 #include <algorithm>
 #include <memory>
 #include <atomic>
+#include <unordered_map>
 
 //  g++ -std=c++11
 using namespace std;
@@ -65,6 +66,42 @@ public:
     }
 };
 
+class ConfigManager {
+private:
+    //用map集合存储配置数据
+    std::unordered_map<std::string,int> config;
+public:
+    //从本地文件读取配置数据，然后存储到map集合
+    ConfigManager(const std::string & fileName) {
+        std::ifstream file(fileName);
+        if (file.is_open()) {
+            std::string key;
+            int value;
+            while (file >> key >> value) {
+                config[key] = value;
+                std::cout << "config key : " << key << " , value : " << value << endl;
+            }
+        } else {
+            //如果没有本地文件，则默认配置
+            config["total_tickets"] = 100;
+            config["num_windows"] = 3;
+            config["num_customers"] = 10;
+            config["max_tickets_per_customer"] = 5;
+            config["simulation_duration"] = 10; // 秒
+        }
+    }
+
+    //获取某项属性
+    int get(const std::string & key) const {
+        //auto 自动变量，编译器自动推导类型
+        auto it = config.find(key);
+        if (it != config.end()) {
+            return it->second;
+        }
+        throw std::runtime_error("Config key not found: " + key);
+    }
+};
+
 int main() {
     // 初始化日志系统
     Logger logger("ticket_system_log.txt");
@@ -72,8 +109,15 @@ int main() {
     logger.log("System initialized debug", LogLevel::DEBUG);
     logger.log("System initialized warning", LogLevel::WARNING);
     logger.log("System initialized error", LogLevel::ERROR);
+
+    // 初始化配置管理器
+    ConfigManager config("config.txt");
+
     return 0;
 }
+
+
+
 
 
 
