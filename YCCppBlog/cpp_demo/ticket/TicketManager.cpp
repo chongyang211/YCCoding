@@ -213,6 +213,17 @@ public:
             logger.log(name + " stopped selling tickets");
         });
     }
+
+    void stop() {
+        running = false;
+        if (workerThread.joinable()) {
+            workerThread.join();
+        }
+    }
+
+    int getTicketsSold() const {
+        return ticketsSold;
+    }
 };
 
 void test(Logger& logger) {
