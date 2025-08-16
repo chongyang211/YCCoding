@@ -139,4 +139,5 @@ add_executable(YCCppBlog main.cpp
         cpp_chapter/yt_process_killer.h
         cpp_demo/ticket/TicketEasyManager.cpp
         cpp_chapter/chapter13/day13_6.cpp
+        cpp_demo/ticket/TicketManager.cpp
 )
