@@ -276,6 +276,11 @@ public:
             purchaseThread.join();
         }
     }
+
+    // ==== VIP购票方法 ====
+    void buyVIP(int num, TicketWindow& vipWindow) {
+        vipWindow.sellVIP(num, name);
+    }
 };
 
 void test(Logger& logger) {
