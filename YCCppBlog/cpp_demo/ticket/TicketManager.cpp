@@ -283,28 +283,25 @@ void test(Logger& logger) {
     t3.join();
 }
 
+// 主程序
 int main() {
-    // 初始化日志系统
-    Logger logger("ticket_system_log.txt");
-    logger.log("System initialized", LogLevel::INFO);
-    logger.log("System initialized debug", LogLevel::DEBUG);
-    logger.log("System initialized warning", LogLevel::WARNING);
-    logger.log("System initialized error", LogLevel::ERROR);
-
-    // 初始化配置管理器
+    // 读取配置文件
     ConfigManager config("config.txt");
+    int totalTickets = config.get("total_tickets");
+    int numWindows = config.get("num_windows");
+    int numCustomers = config.get("num_customers");
+    int maxTicketsPerCustomer = config.get("max_tickets_per_customer");
 
-    // 创建票务系统
-    TicketSystem ticketSystem(config.get("total_tickets"), logger);
+    // 初始化日志系统
+    Logger logger("ticket_system.log");
+
+    // 初始化票务系统
+    TicketSystem ticketSystem(totalTickets, logger);
 
     // 创建售票窗口
     std::vector<std::unique_ptr<TicketWindow>> windows;
-    int numWindows = config.get("num_windows");
     for (int i = 1; i <= numWindows; ++i) {
-        // windows.push_back(std::make_unique<TicketWindow>(
-        //     "Window " + std::to_string(i), ticketSystem, logger));
-        windows.push_back(std::unique_ptr<TicketWindow>(
-            new TicketWindow("Window " + std::to_string(i), ticketSystem, logger)));
+        windows.push_back(std::unique_ptr<TicketWindow>(new TicketWindow("Window " + std::to_string(i), ticketSystem, logger)));
     }
 
     // 启动售票窗口
@@ -314,9 +311,40 @@ int main() {
 
     // 创建顾客
     std::vector<Customer> customers;
-    int numCustomers = config.get("num_customers");
     for (int i = 1; i <= numCustomers; ++i) {
         customers.emplace_back("Customer " + std::to_string(i), ticketSystem, logger);
+    }
+
+    // 顾客购票
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, maxTicketsPerCustomer);
+
+    for (auto& customer : customers) {
+        int numTickets = dis(gen);
+        customer.buyTickets(numTickets);
+        std::this_thread::sleep_for(std::chrono::milliseconds(200)); // 模拟顾客购票间隔
+    }
+
+    // 动态增加票数
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+    ticketSystem.addTickets(50);
+
+    // 等待所有售票窗口停止
+    std::this_thread::sleep_for(std::chrono::seconds(5));
+    for (auto& window : windows) {
+        window->stop();
+    }
+
+    // 输出统计信息
+    std::stringstream ss;
+    ss << "All tickets sold. Remaining tickets: " << ticketSystem.getRemainingTickets();
+    logger.log(ss.str());
+
+    for (const auto& window : windows) {
+        ss.str("");
+        ss << window->getTicketsSold() << " tickets sold by " << window->getTicketsSold();
+        logger.log(ss.str());
     }
 
     return 0;
