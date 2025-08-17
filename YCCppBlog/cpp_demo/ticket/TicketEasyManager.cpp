@@ -145,16 +145,28 @@ public:
             }
         }).detach();
     }
+
+    // ==== 恢复售票 ====
+    void recoverTickets(int num) {
+        std::lock_guard<std::mutex> lock(ticketMutex);
+        remainingTickets += num;
+        std::stringstream ss;
+        ss << "Recovered " << num << " tickets. Total now: " << remainingTickets;
+        logger.log(ss.str(), LogLevel::WARNING);
+        cv.notify_all();
+    }
 };
 
 // 售票窗口
 class TicketWindow {
 private:
-    std::string name;
-    TicketSystem& ticketSystem;
-    Logger& logger;
-    std::atomic<bool> running;
-    std::atomic<int> ticketsSold;
+    std::string name;   //窗口名称
+    TicketSystem& ticketSystem;     //票务系统
+    Logger& logger;     //日志系统
+    std::atomic<bool> running;      //是否正在运行中
+    std::atomic<int> ticketsSold;   //
+    std::thread workerThread;       //工作线程
+    std::mutex vipMutex;     //票务锁，保证线程安全
 
 public:
     TicketWindow(const std::string& windowName, TicketSystem& system, Logger& log)
@@ -172,13 +184,20 @@ public:
 
             while (running) {
                 int numTickets = dis(gen);
-                if (ticketSystem.sellTicket(numTickets, name)) {
-                    ticketsSold += numTickets;
-                    std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 模拟出票时间
-                } else {
-                    logger.log(name + " failed to sell tickets. Not enough tickets available.", LogLevel::WARNING);
-                    break;
+                try {
+                      if (ticketSystem.sellTicket(numTickets, name)) {
+                          ticketsSold += numTickets;
+                          std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 模拟出票时间
+                      } else {
+                          logger.log(name + " failed to sell tickets. Not enough tickets available.", LogLevel::WARNING);
+                          break;
+                      }
+                } catch (const std::exception & e) {
+                    logger.log(name + " encountered error: " + std::string(e.what()), LogLevel::ERROR);
+                    // 恢复部分票数
+                    ticketSystem.recoverTickets(numTickets);
                 }
+
             }
         }).detach();
     }
@@ -189,6 +208,18 @@ public:
 
     int getTicketsSold() const {
         return ticketsSold;
+    }
+
+    // ==== VIP售票方法 ====
+    void sellVIP(int num, const std::string& customerName) {
+        std::lock_guard<std::mutex> lock(vipMutex);
+        if (ticketSystem.sellTicket(num, name + " (VIP)")) {
+            ticketsSold += num;
+            std::stringstream ss;
+            ss << "VIP customer " << customerName << " bought " << num
+               << " tickets from " << name;
+            logger.log(ss.str());
+        }
     }
 };
 
@@ -220,6 +251,11 @@ public:
             }
         }).detach();
     }
+
+    // ==== VIP购票方法 ====
+    void buyVIP(int num, TicketWindow& vipWindow) {
+        vipWindow.sellVIP(num, name);
+    }
 };
 
 // 主程序
@@ -242,6 +278,7 @@ int main() {
     for (int i = 1; i <= numWindows; ++i) {
         windows.push_back(std::unique_ptr<TicketWindow>(new TicketWindow("Window " + std::to_string(i), ticketSystem, logger)));
     }
+    windows.push_back(std::unique_ptr<TicketWindow>(new TicketWindow("VIP Window ", ticketSystem, logger)));
 
     // 启动售票窗口
     for (auto& window : windows) {
@@ -253,6 +290,16 @@ int main() {
     for (int i = 1; i <= numCustomers; ++i) {
         customers.emplace_back("Customer " + std::to_string(i), ticketSystem, logger);
     }
+
+    // 创建VIP窗口
+    // auto vipWindow = std::make_unique<TicketWindow>("VIP Window", ticketSystem, logger);
+    // vipWindow->start();
+    //
+    // // VIP顾客购票
+    // for (int i = 0; i < 3; i++) {
+    //     customers[i].buyVIP(3, *vipWindow);
+    //     std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    // }
 
     // 顾客购票
     std::random_device rd;
