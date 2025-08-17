@@ -101,18 +101,29 @@ public:
     }
 
     bool sellTicket(int num, const std::string& windowName) {
+        //使用 std::unique_lock 锁定互斥锁，确保对共享资源 remainingTickets 的访问是线程安全的。
         std::unique_lock<std::mutex> lock(ticketMutex);
-        cv.wait(lock, [this, num] { return remainingTickets >= num; });
-
+        //使用条件变量 cv 等待，直到满足条件 remainingTickets >= num 或 remainingTickets == 0。
+        //这样可以避免忙等待，提高效率。
+        cv.wait(lock, [this, num] {
+            return remainingTickets >= num || remainingTickets == 0;
+        });
         if (remainingTickets >= num) {
+            //如果 remainingTickets >= num，则减少剩余票数，记录日志，并通过 cv.notify_all() 通知其他等待的线程。
             remainingTickets -= num;
             std::stringstream ss;
             ss << windowName << " sold " << num << " tickets. Remaining tickets: " << remainingTickets;
             logger.log(ss.str());
-            cv.notify_all();
+            cv.notify_all();    //刷新
             return true;
+        } else {
+            //如果 remainingTickets < num，则返回 false，表示售票失败。
+            //记录警告日志
+            std::stringstream ss;
+            ss << windowName << " failed to sell " << num << " tickets. Not enough tickets available.";
+            logger.log(ss.str(), LogLevel::WARNING);
+            return false;
         }
-        return false;
     }
 
     void addTickets(int num) {
@@ -258,6 +269,45 @@ public:
     }
 };
 
+// ==== 性能监控类 ====
+class PerformanceMonitor {
+private:
+    std::atomic<int> totalSales;
+    std::atomic<int> successfulSales;
+    std::atomic<int> failedSales;
+    std::chrono::steady_clock::time_point startTime;
+    Logger& logger;
+
+public:
+    PerformanceMonitor(Logger& log) :
+        totalSales(0), successfulSales(0), failedSales(0), logger(log) {
+        startTime = std::chrono::steady_clock::now();
+    }
+
+    void recordSale(bool success) {
+        totalSales++;
+        if (success) successfulSales++;
+        else failedSales++;
+    }
+
+    void report() {
+        auto endTime = std::chrono::steady_clock::now();
+        auto duration = std::chrono::duration_cast<std::chrono::seconds>(endTime - startTime);
+        std::stringstream ss;
+        ss << "\n==== PERFORMANCE REPORT ====\n";
+        ss << "Total sales attempts: " << totalSales << "\n";
+        ss << "Successful sales: " << successfulSales << "\n";
+        ss << "Failed sales: " << failedSales << "\n";
+        ss << "Success rate: "
+           << (totalSales > 0 ? 100.0 * successfulSales / totalSales : 0) << "%\n";
+        ss << "Simulation duration: " << duration.count() << " seconds\n";
+        ss << "Transactions per second: "
+           << (duration.count() > 0 ? totalSales / duration.count() : 0) << "\n";
+        logger.log(ss.str());
+    }
+};
+
+
 // 主程序
 int main() {
     // 读取配置文件
@@ -269,7 +319,7 @@ int main() {
 
     // 初始化日志系统
     Logger logger("ticket_system.log");
-
+    PerformanceMonitor monitor(logger);
     // 初始化票务系统
     TicketSystem ticketSystem(totalTickets, logger);
 
@@ -335,6 +385,9 @@ int main() {
         ss << window->getTicketsSold() << " tickets sold by " << window->getTicketsSold();
         logger.log(ss.str());
     }
+
+    // 结束时报告
+    monitor.report();
 
     return 0;
 }
