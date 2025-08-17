@@ -257,7 +257,12 @@ public:
         });
     }
 
-
+    //等待购票完成
+    void waitForPurchase() {
+        if (purchaseThread.joinable()) {
+            purchaseThread.join();
+        }
+    }
 };
 
 void test(Logger& logger) {
