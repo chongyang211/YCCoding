@@ -312,6 +312,13 @@ int main() {
         window->start();
     }
 
+    // 创建顾客
+    std::vector<Customer> customers;
+    int numCustomers = config.get("num_customers");
+    for (int i = 1; i <= numCustomers; ++i) {
+        customers.emplace_back("Customer " + std::to_string(i), ticketSystem, logger);
+    }
+
     return 0;
 }
 
