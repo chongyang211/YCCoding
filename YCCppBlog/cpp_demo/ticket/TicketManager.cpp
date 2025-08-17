@@ -226,6 +226,40 @@ public:
     }
 };
 
+//定义顾客类
+class Customer {
+private:
+    std::string name;
+    TicketSystem &ticketSystem;
+    Logger &logger;
+    std::thread purchaseThread;
+public:
+    Customer(const std::string &customerName , TicketSystem &system , Logger &log):
+        name(customerName),ticketSystem(system),logger(log) {
+        logger.log("Customer " + name + " created");
+    }
+
+    //顾客购票方法
+    void buyTickets(int num) {
+        purchaseThread = std::thread([this,num]() {
+            std::stringstream ss;
+            ss << name << " is trying to buy " << num << " tickets.";
+            logger.log(ss.str());
+            if (ticketSystem.sellTicket(num,name)) {
+                ss.str("");
+                ss << name << " successfully bought " << num << " tickets.";
+                logger.log(ss.str());
+            } else {
+                ss.str("");
+                ss << name << " failed to buy " << num << " tickets. Not enough tickets available.";
+                logger.log(ss.str(), LogLevel::WARNING);
+            }
+        });
+    }
+
+
+};
+
 void test(Logger& logger) {
     TicketSystem ticketSystem(10 , logger);
     std::thread t1([&ticketSystem] {
