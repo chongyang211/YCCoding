@@ -96,7 +96,9 @@ private:
     Logger& logger;
 
 public:
-    TicketSystem(int total, Logger& log) : totalTickets(total), remainingTickets(total), logger(log) {}
+    TicketSystem(int total, Logger& log) : totalTickets(total), remainingTickets(total), logger(log) {
+
+    }
 
     bool sellTicket(int num, const std::string& windowName) {
         std::unique_lock<std::mutex> lock(ticketMutex);
@@ -128,6 +130,20 @@ public:
 
     int getTotalTickets() const {
         return totalTickets;
+    }
+
+    //动态票务监控
+    void monitorTickets() {
+        std::thread([this]() {
+            while (true) {
+                std::this_thread::sleep_for(std::chrono::seconds(1));
+                int remaining = getRemainingTickets();
+                if (remaining < totalTickets / 4) {
+                    logger.log("Warning: Only " + std::to_string(remaining) +
+                               " tickets remaining!", LogLevel::WARNING);
+                }
+            }
+        }).detach();
     }
 };
 
