@@ -265,6 +265,9 @@ int main() {
         std::this_thread::sleep_for(std::chrono::milliseconds(200)); // 模拟顾客购票间隔
     }
 
+    // 启动票务监控
+    ticketSystem.monitorTickets();
+
     // 动态增加票数
     std::this_thread::sleep_for(std::chrono::seconds(2));
     ticketSystem.addTickets(50);
