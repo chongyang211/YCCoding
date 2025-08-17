@@ -178,6 +178,7 @@ private:
     std::atomic<bool> running;      //是否正在运行中
     std::atomic<int> ticketsSold;   //
     std::thread workerThread;       //工作线程
+    std::mutex vipMutex;     //票务锁，保证线程安全
 public:
     TicketWindow(const std::string& windowName, TicketSystem& system, Logger& log)
         : name(windowName), ticketSystem(system), logger(log), running(true), ticketsSold(0) {
@@ -223,6 +224,18 @@ public:
 
     int getTicketsSold() const {
         return ticketsSold;
+    }
+
+    // ==== VIP售票方法 ====
+    void sellVIP(int num, const std::string& customerName) {
+        std::lock_guard<std::mutex> lock(vipMutex);
+        if (ticketSystem.sellTicket(num, name + " (VIP)")) {
+            ticketsSold += num;
+            std::stringstream ss;
+            ss << "VIP customer " << customerName << " bought " << num
+               << " tickets from " << name;
+            logger.log(ss.str());
+        }
     }
 };
 
