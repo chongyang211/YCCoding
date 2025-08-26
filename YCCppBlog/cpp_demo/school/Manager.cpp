@@ -3,6 +3,9 @@
 //
 
 #include "Manager.h"
+
+#include <algorithm>
+
 #include "GlobalFile.h"
 #include "ToolUtils.h"
 
@@ -93,8 +96,29 @@ void Manager::addPerson() {
     ofs.close();
 }
 
+void printStudent(Student & s) {
+    cout << "学号： " << s.id << " 姓名： " << s.name << " 密码：" << s.pwd << endl;
+}
+
+void printTeacher(Teacher & t) {
+    cout << "职工号： " << t.empId << " 姓名： " << t.name << " 密码：" << t.pwd << endl;
+}
+
 //查看账号
 void Manager::showPerson() {
+    cout << "请选择查看内容：" << endl;
+    cout << "1、查看所有学生" << endl;
+    cout << "2、查看所有老师" << endl;
+    int select = 0;
+    cin >> select;
+    if (select == 1){
+        cout << "所有学生信息如下： " << endl;
+        for_each(vStu.begin(), vStu.end(), printStudent);
+    }else{
+        cout << "所有老师信息如下： " << endl;
+        for_each(vTea.begin(), vTea.end(), printTeacher);
+    }
+    pauseAndCls();
 }
 
 //查看机房信息

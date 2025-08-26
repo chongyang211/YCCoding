@@ -139,4 +139,7 @@ add_executable(YCCppBlog main.cpp
         cpp_chapter/yt_process_killer.h
         cpp_demo/ticket/TicketEasyManager.cpp
         cpp_chapter/chapter13/day13_6.cpp
+        thirdlib/thread/ThreadPool.cpp
+        thirdlib/thread/ThreadPool.h
+        thirdlib/thread/ThreadPoolTest.cpp
 )
