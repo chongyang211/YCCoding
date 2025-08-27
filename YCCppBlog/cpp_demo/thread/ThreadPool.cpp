@@ -97,15 +97,15 @@ void ThreadPool::taskLoop(const std::string &name) {
         }
 
         if (preTask) {
-            std::cout << "preTask begin" << std::endl;
+            //std::cout << "preTask begin" << std::endl;
             (*preTask)();
-            std::cout << "preTask end" << std::endl;
+            //std::cout << "preTask end" << std::endl;
         }
 
         if (task) {
-            std::cout << "task begin" << std::endl;
+            //std::cout << "task begin" << std::endl;
             (*task)();
-            std::cout << "task end" << std::endl;
+            //std::cout << "task end" << std::endl;
         }
     }
 }
