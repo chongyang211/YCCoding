@@ -52,6 +52,15 @@ namespace PollingSystem {
         virtual std::string getConfigInfo() const = 0;
     };
 
+    struct TaskResult {
+        bool success;
+        std::string message;
+        std::chrono::steady_clock::time_point timestamp;
+        TaskResult(bool s, const std::string& m,
+           std::chrono::steady_clock::time_point t)
+            : success(s), message(m), timestamp(t) {}
+    };
+
 }
 
 #endif //LOOPPOLLING_H
