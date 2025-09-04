@@ -61,6 +61,37 @@ namespace PollingSystem {
             : success(s), message(m), timestamp(t) {}
     };
 
+    class Poller {
+    public:
+        // 任务函数类型定义
+        typedef std::function<TaskResult()> ActionFunc;
+    private:
+        // 轮询线程主循环
+        void run();
+        // 执行任务
+        void executeAction();
+        std::unique_ptr<IPollingStrategy> strategy_;
+        ActionFunc action_;
+        std::atomic<bool> running_;
+        bool paused_;
+        std::thread worker_thread_;
+        mutable std::mutex mutex_;
+        std::condition_variable cond_;
+        long task_timeout_ns_;
+    public:
+        /**
+        * @brief 构造函数
+        * @param strategy 轮询策略
+        * @param action 要执行的任务函数
+        */
+        Poller(std::unique_ptr<IPollingStrategy> strategy, ActionFunc action)
+            : strategy_(std::move(strategy)),
+              action_(action),
+              running_(false),
+              paused_(false),
+              task_timeout_ns_(0) {}
+    };
+
 }
 
 #endif //LOOPPOLLING_H
