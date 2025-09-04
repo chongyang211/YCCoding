@@ -198,6 +198,38 @@ namespace PollingSystem {
              << strategy_->getConfigInfo() << std::endl;
     }
 
+    void Poller::stop() {
+        if (!running_) {
+            return;
+        }
+        {
+            std::lock_guard<std::mutex> lock(mutex_);
+            running_ = false;
+            paused_ = false;
+        }
+        cond_.notify_all();
+        if (worker_thread_.joinable()) {
+            worker_thread_.join();
+        }
+        std::cout << "Poller stopped." << std::endl;
+    }
+
+    // 暂停轮询
+    void Poller::pause() {
+        std::lock_guard<std::mutex> lock(mutex_);
+        paused_ = true;
+        cond_.notify_all();
+        std::cout << "Poller paused." << std::endl;
+    }
+
+    void Poller::resume() {
+        {
+            std::lock_guard<std::mutex> lock(mutex_);
+            paused_ = false;
+        }
+        cond_.notify_all();
+        std::cout << "Poller resumed." << std::endl;
+    }
 
 }
 
