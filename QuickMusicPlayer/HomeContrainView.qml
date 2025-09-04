@@ -8,13 +8,13 @@ RowLayout{
 
 
     property var qmlList: [
-        {icon:"local-white",value:"本地音乐",qml:"DetailLocalPageView"},
-        {icon:"recommend-white",value:"推荐内容",qml:"DetailRecommendPageView"},
-        {icon:"cloud-white",value:"搜索音乐",qml:"DetailSearchPageView"},
-        {icon:"history-white",value:"播放历史",qml:"DetailHistoryPageView"},
-        {icon:"favorite-big-white",value:"我喜欢的",qml:"DetailFavoritePageView"},
-        {icon:"favorite-big-white",value:"弹窗系列按钮",qml:"DialogListPageView"},
-        {icon:"favorite-big-white",value:"C++和QML交互",qml:"CppQmlPageView"}
+        {icon:"local-white.png",value:"本地音乐",qml:"DetailLocalPageView"},
+        {icon:"recommend-white.png",value:"推荐内容",qml:"DetailRecommendPageView"},
+        {icon:"cloud-white.png",value:"搜索音乐",qml:"DetailSearchPageView"},
+        {icon:"history-white.png",value:"播放历史",qml:"DetailHistoryPageView"},
+        {icon:"favorite-big-white.png",value:"图形和动画案例",qml:"AnimationPageView"},
+        {icon:"favorite-big-white.png",value:"弹窗系列按钮",qml:"DialogListPageView"},
+        {icon:"favorite-big-white.png",value:"C++和QML交互",qml:"CppQmlPageView"}
     ]
 
 

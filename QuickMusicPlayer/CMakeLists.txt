@@ -27,7 +27,7 @@ qt_add_qml_module(appQuickMusicPlayer
     RESOURCES
         icons.qrc
     RESOURCES
-        fonts.qrc
+
         QML_FILES HomeBottomView.qml
         QML_FILES HomeHeaderView.qml
         QML_FILES HomeContrainView.qml
@@ -38,7 +38,7 @@ qt_add_qml_module(appQuickMusicPlayer
         QML_FILES DetailSearchPageView.qml
         QML_FILES DetailLocalPageView.qml
         QML_FILES DetailHistoryPageView.qml
-        QML_FILES DetailFavoritePageView.qml
+        QML_FILES AnimationPageView.qml
         QML_FILES DialogListPageView.qml
         QML_FILES MusicBannerView.qml
         QML_FILES CppQmlPageView.qml
@@ -63,6 +63,13 @@ qt_add_qml_module(appQuickMusicPlayer
         QML_FILES ContactEditor.qml
         QML_FILES LogService.qml
         QML_FILES DialogCustomDialog.qml
+        QML_FILES AinmationStackPage.qml
+        QML_FILES AnimationStatesPage.qml
+        QML_FILES AnimationPropertyPage1.qml
+        QML_FILES AnimationPropertyPage2.qml
+        QML_FILES AnimationGifPage.qml
+        RESOURCES
+        QML_FILES Woker.qml
 
 )
 

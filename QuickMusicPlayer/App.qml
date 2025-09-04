@@ -34,8 +34,22 @@ Window {
             id: home
         }
         // 禁用所有动画
-        pushEnter: null
-        pushExit: null
+        pushEnter: Transition {
+            PropertyAnimation {
+                property: "opacity"
+                from: 0
+                to: 1
+                duration: 500
+            }
+        }
+        pushExit: Transition {
+            PropertyAnimation {
+                property: "opacity"
+                from: 1
+                to: 0
+                duration: 500
+            }
+        }
         popEnter: null
         popExit: null
         replaceEnter: null
@@ -60,6 +74,7 @@ Window {
     Component.onCompleted: {
         logService.info("main onCompleted")
         console.log("main onCompleted")
+        console.log("Exists:", Qt.resourceUrl("qrc:/images/local-white.png"))
         //stackView.push("HomePage.qml");
     }
 

@@ -18,7 +18,7 @@ ToolBar {
         //ToolButton
         ToolButton{
             // icon: "qrc:/images/music.png"
-            icon.source: "qrc:/images/music.png"
+            icon.source: "qrc:/images/local-white.png"
             width: 32
             height: 32
             text: "关于"
@@ -154,7 +154,7 @@ ToolBar {
 
             Image{
                 Layout.preferredHeight: 60
-                source: "qrc:/images/music"
+                source: "qrc:/images/music.png"
                 Layout.fillWidth:true
                 fillMode: Image.PreserveAspectFit
 
