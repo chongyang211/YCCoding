@@ -60,9 +60,77 @@ namespace PollingSystem {
         }
     };
 
+    //指数退避策略
+    class ExponentialBackoffStrategy : public IPollingStrategy {
+    private:
+        const long initial_ns;  //初始等待时间，由构造函数传入。
+        const long max_ns;  //最大等待时间，由构造函数传入。
+        long current_ns;
+    public:
+        ExponentialBackoffStrategy(long initial, long max, TimeUnit unit)
+            : initial_ns(TimeConverter::toNanoseconds(initial, unit)),
+              max_ns(TimeConverter::toNanoseconds(max, unit)),
+              current_ns(initial_ns) {}
+
+        virtual long getNextInterval() override {
+            long result = current_ns;
+            current_ns = std::min(current_ns * 2, max_ns);
+            return result;
+        }
+
+        virtual void reset() override { current_ns = initial_ns; }
+        virtual void recordSuccess() override { reset(); }
+        virtual void recordFailure() override {}
+
+        virtual std::string getConfigInfo() const override {
+            std::ostringstream oss;
+            oss << "ExponentialBackoff: Initial=" << initial_ns
+                << "ns, Max=" << max_ns << "ns";
+            return oss.str();
+        }
+    };
+
+    //随机间隔策略
+    class RandomIntervalStrategy : public IPollingStrategy {
+    private:
+        const long min_ns;
+        const long max_ns;
+        std::default_random_engine engine;
+    public:
+        RandomIntervalStrategy(long min, long max, TimeUnit unit) :
+        min_ns(TimeConverter::toNanoseconds(min,unit)),
+        max_ns(TimeConverter::toNanoseconds(max,unit)),
+        engine(std::random_device()) {
+        }
+
+        virtual long getNextInterval() override {
+            std::uniform_int_distribution<long> dist(min_ns,max_ns);
+            return dist(engine);
+        }
+        virtual void reset() override {}
+        virtual void recordSuccess() override {}
+        virtual void recordFailure() override {}
+
+        virtual std::string getConfigInfo() const override {
+            std::ostringstream oss;
+            oss << "RandomInterval: Min=" << min_ns
+                << "ns, Max=" << max_ns << "ns";
+            return oss.str();
+        }
+    };
+
 }
 
+void test1() {
+    PollingSystem::FixedIntervalStrategy strategy(1000, PollingSystem::TimeUnit::MILLISECONDS); // 固定间隔 1000ms
+    std::cout << "Config: " << strategy.getConfigInfo() << std::endl;
+    // 获取下一次轮询间隔
+    std::cout << "Next interval: " << strategy.getNextInterval() << " ns" << std::endl;
+}
+
+//g++ -std=c++11 LoopPolling.cpp
 int main() {
+    test1();
     // 示例使用场景
     return 0;
 }
