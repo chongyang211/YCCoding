@@ -36,7 +36,21 @@ namespace PollingSystem {
         MINUTES
     };
 
-
+    class IPollingStrategy {
+    public:
+        //析构函数
+        virtual ~IPollingStrategy(){}
+        //获取下一次轮训
+        virtual long getNextInterval() = 0;
+        //重置策略状态
+        virtual void reset() = 0;
+        //记录任务成功
+        virtual void recordSuccess() = 0;
+        //记录任务失败
+        virtual void recordFailure() = 0;
+        //获取策略配置信息
+        virtual std::string getConfigInfo() const = 0;
+    };
 
 }
 
