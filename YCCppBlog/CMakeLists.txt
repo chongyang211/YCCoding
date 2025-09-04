@@ -144,4 +144,6 @@ add_executable(YCCppBlog main.cpp
         cpp_demo/thread/ThreadPoolTest.cpp
         cpp_demo/looper/Looper.cpp
         cpp_demo/looper/Looper.h
+        cpp_demo/looper/LoopPolling.cpp
+        cpp_demo/looper/LoopPolling.h
 )
