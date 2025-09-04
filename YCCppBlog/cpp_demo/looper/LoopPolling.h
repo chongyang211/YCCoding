@@ -28,6 +28,16 @@
 
 namespace PollingSystem {
     // 所有实现将放在这个命名空间内
+    enum class TimeUnit {
+        NANOSECONDS,
+        MICROSECONDS,
+        MILLISECONDS,
+        SECONDS,
+        MINUTES
+    };
+
+
+
 }
 
 #endif //LOOPPOLLING_H
