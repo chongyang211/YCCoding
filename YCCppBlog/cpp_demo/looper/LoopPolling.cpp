@@ -231,6 +231,14 @@ namespace PollingSystem {
         std::cout << "Poller resumed." << std::endl;
     }
 
+    // 更新轮询策略
+    void Poller::updateStrategy(std::unique_ptr<IPollingStrategy> new_strategy) {
+        std::lock_guard<std::mutex> lock(mutex_);
+        strategy_ = std::move(new_strategy);
+        strategy_->reset();
+        std::cout << "Strategy updated: " << strategy_->getConfigInfo() << std::endl;
+    }
+
 }
 
 
