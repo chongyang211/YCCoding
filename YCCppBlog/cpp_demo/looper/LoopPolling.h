@@ -90,8 +90,27 @@ namespace PollingSystem {
               running_(false),
               paused_(false),
               task_timeout_ns_(0) {}
-    };
+        ~Poller() {
+            stop();
+        }
+        // 启动轮询器
+        void start();
+        // 停止轮询器
+        void stop();
+        // 暂停轮询
+        void pause();
+        // 继续轮询
+        void resume();
+        // 更新轮询策略
+        void updateStrategy(std::unique_ptr<IPollingStrategy> new_strategy);
+        // 打印统计信息
+        void printStatistics() const;
+        // 手动触发任务
+        void triggerNow();
+        // 设置任务超时时间
+        void setTaskTimeout(long timeout, TimeUnit unit);
 
+    };
 }
 
 #endif //LOOPPOLLING_H

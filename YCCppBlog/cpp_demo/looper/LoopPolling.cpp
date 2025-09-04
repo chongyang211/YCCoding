@@ -188,9 +188,20 @@ namespace PollingSystem {
         std::deque<TaskResult> recentResults;
     };
 
+    void Poller::start() {
+        if (running_) {
+            return;
+        }
+        running_ = true;
+        worker_thread_ = std::thread(&Poller::run,this);
+        std::cout << "Poller started with strategy: "
+             << strategy_->getConfigInfo() << std::endl;
+    }
 
 
 }
+
+
 
 void test1() {
     PollingSystem::FixedIntervalStrategy strategy(1000, PollingSystem::TimeUnit::MILLISECONDS); // 固定间隔 1000ms
