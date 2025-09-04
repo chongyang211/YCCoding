@@ -40,6 +40,25 @@ namespace PollingSystem {
         }
     };
 
+    //固定间隔策略
+    class FixedIntervalStrategy : public IPollingStrategy {
+    private:
+        const long interval_ns;固定间隔策略
+    public:
+        FixedIntervalStrategy(long interval, TimeUnit unit)
+        : interval_ns(TimeConverter::toNanoseconds(interval, unit)) {}
+
+        virtual long getNextInterval() override { return interval_ns; }
+        virtual void reset() override {}
+        virtual void recordSuccess() override {}
+        virtual void recordFailure() override {}
+
+        virtual std::string getConfigInfo() const override {
+            std::ostringstream oss;
+            oss << "FixedInterval: " << interval_ns << " ns";
+            return oss.str();
+        }
+    };
 
 }
 
