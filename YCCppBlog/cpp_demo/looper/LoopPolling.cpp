@@ -43,7 +43,7 @@ namespace PollingSystem {
     //固定间隔策略
     class FixedIntervalStrategy : public IPollingStrategy {
     private:
-        const long interval_ns;固定间隔策略
+        const long interval_ns;
     public:
         FixedIntervalStrategy(long interval, TimeUnit unit)
         : interval_ns(TimeConverter::toNanoseconds(interval, unit)) {}
