@@ -5,16 +5,6 @@
 #ifndef IPOLLINGSTRATEGY_H
 #define IPOLLINGSTRATEGY_H
 
-// ===========================================
-// 时间单位定义和转换工具
-// ===========================================
-enum class TimeUnit {
-    NANOSECONDS,
-    MICROSECONDS,
-    MILLISECONDS,
-    SECONDS,
-    MINUTES
-};
 
 // ===========================================
 // 轮询策略接口和实现
