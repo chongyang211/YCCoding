@@ -147,4 +147,6 @@ add_executable(YCCppBlog main.cpp
         cpp_demo/looper/LoopPolling.cpp
         cpp_demo/looper/LoopPolling.h
         cpp_demo/looper/IPollingStrategy.h
+        cpp_demo/looper/TaskStatistics.cpp
+        cpp_demo/looper/TaskStatistics.h
 )
