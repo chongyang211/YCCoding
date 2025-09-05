@@ -26,6 +26,9 @@
 #include <future>
 #include <ctime>
 
+#include "IPollingStrategy.h"
+#include "Looper.h"
+
 namespace PollingSystem {
 
 // ===========================================
@@ -65,19 +68,6 @@ public:
             default: return "unknown";
         }
     }
-};
-
-// ===========================================
-// 轮询策略接口和实现
-// ===========================================
-class IPollingStrategy {
-public:
-    virtual ~IPollingStrategy() {}
-    virtual long getNextInterval() = 0;
-    virtual void reset() = 0;
-    virtual void recordSuccess() = 0;
-    virtual void recordFailure() = 0;
-    virtual std::string getConfigInfo() const = 0;
 };
 
 /**
