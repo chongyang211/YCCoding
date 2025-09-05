@@ -30,7 +30,7 @@
 #include "TimeConverter.h"
 #include "TimeUnit.h"
 
-namespace PollingSystem {
+// namespace PollingSystem {
 
 
 /**
@@ -124,14 +124,9 @@ private:
 };
 
 
-} // namespace PollingSystem
+// } // namespace PollingSystem
 
-// ===========================================
-// 示例使用场景
-// ===========================================
-//g++ -std=c++11 TaskStatistics.cpp Poller.cpp TaskStatistics.cpp Looper.cpp
 int main() {
-    using namespace PollingSystem;
 
     // 示例任务函数
     auto sampleAction = []() -> TaskResult {
