@@ -31,17 +31,6 @@
 
 namespace PollingSystem {
 
-// ===========================================
-// 时间单位定义和转换工具
-// ===========================================
-enum class TimeUnit {
-    NANOSECONDS,
-    MICROSECONDS,
-    MILLISECONDS,
-    SECONDS,
-    MINUTES
-};
-
 /**
  * @brief 时间转换工具类
  */
