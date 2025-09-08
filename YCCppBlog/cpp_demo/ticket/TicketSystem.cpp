@@ -4,6 +4,7 @@
 
 #include "TicketSystem.h"
 #include <sstream>
+#include <thread>
 
 
 TicketSystem::TicketSystem(int total, Logger &log) : totalTicket(total), remainingTickets(total), logger(log) {
@@ -94,14 +95,14 @@ int TicketSystem::getTotalTickets() const {
 // 通过后台线程实时监控剩余票数，及时发出预警，提高系统的健壮性。
 void TicketSystem::monitorTickets() {
     //创建一个线程
-    std::thread([this] {
+    std::thread([this]() {
         //这个代码后期可以拆分出来，开始监控，也可以设置停止监控
         while (true) {
             //睡眠1秒钟
             std::this_thread::sleep_for(std::chrono::seconds(1));
             //获取票的数量
             int remaining = getRemainingTickets();
-            //
+            //当剩下票小于1/4时，告警提示
             if (remaining < getTotalTickets() / 4) {
               logger.log("Warning: Only " + std::to_string(remaining) +
                          " tickets remaining!", LogLevel::WARNING);
@@ -109,6 +110,21 @@ void TicketSystem::monitorTickets() {
         }
         //线程detach是创建一个分发线程，相当于是并行的线程
     }).detach();
+}
+
+// 恢复票功能 (recoverTickets)
+// 线程安全：使用 std::lock_guard 确保对 remainingTickets 的修改是线程安全的。
+// 日志记录：记录恢复票数的日志，并通知等待的售票线程。
+void TicketSystem::recoverTickets(int num) {
+    //使用场景是新增票后，需要恢复票的售卖功能
+    std::lock_guard<std::mutex> lock(ticketMutex);
+    //自动锁，作用域结束后将自动释放
+    remainingTickets += num;
+    std::stringstream ss;
+    //记录日志，恢复票功能
+    ss << "Recovered " << num << " tickets. Total now: " << remainingTickets;
+    logger.log(ss.str(), LogLevel::WARNING);
+    cv.notify_all();
 }
 
 

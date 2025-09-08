@@ -14,88 +14,8 @@
 #include <map>
 #include "Logger.h"
 #include "ConfigManager.h"
+#include "TicketSystem.h"
 
-// 票务系统
-class TicketSystem {
-private:
-    int totalTickets;
-    std::atomic<int> remainingTickets;
-    std::mutex ticketMutex;
-    std::condition_variable cv;
-    Logger& logger;
-
-public:
-    TicketSystem(int total, Logger& log) : totalTickets(total), remainingTickets(total), logger(log) {
-
-    }
-
-    bool sellTicket(int num, const std::string& windowName) {
-        //使用 std::unique_lock 锁定互斥锁，确保对共享资源 remainingTickets 的访问是线程安全的。
-        std::unique_lock<std::mutex> lock(ticketMutex);
-        //使用条件变量 cv 等待，直到满足条件 remainingTickets >= num 或 remainingTickets == 0。
-        //这样可以避免忙等待，提高效率。
-        cv.wait(lock, [this, num] {
-            return remainingTickets >= num || remainingTickets == 0;
-        });
-        if (remainingTickets >= num) {
-            //如果 remainingTickets >= num，则减少剩余票数，记录日志，并通过 cv.notify_all() 通知其他等待的线程。
-            remainingTickets -= num;
-            std::stringstream ss;
-            ss << windowName << " sold " << num << " tickets. Remaining tickets: " << remainingTickets;
-            logger.log(ss.str());
-            cv.notify_all();    //刷新
-            return true;
-        } else {
-            //如果 remainingTickets < num，则返回 false，表示售票失败。
-            //记录警告日志
-            std::stringstream ss;
-            ss << windowName << " failed to sell " << num << " tickets. Not enough tickets available.";
-            logger.log(ss.str(), LogLevel::WARNING);
-            return false;
-        }
-    }
-
-    void addTickets(int num) {
-        std::lock_guard<std::mutex> lock(ticketMutex);
-        remainingTickets += num;
-        std::stringstream ss;
-        ss << "Added " << num << " tickets. Remaining tickets: " << remainingTickets;
-        logger.log(ss.str());
-        cv.notify_all();
-    }
-
-    int getRemainingTickets() const {
-        return remainingTickets;
-    }
-
-    int getTotalTickets() const {
-        return totalTickets;
-    }
-
-    //动态票务监控
-    void monitorTickets() {
-        std::thread([this]() {
-            while (true) {
-                std::this_thread::sleep_for(std::chrono::seconds(1));
-                int remaining = getRemainingTickets();
-                if (remaining < totalTickets / 4) {
-                    logger.log("Warning: Only " + std::to_string(remaining) +
-                               " tickets remaining!", LogLevel::WARNING);
-                }
-            }
-        }).detach();
-    }
-
-    // ==== 恢复售票 ====
-    void recoverTickets(int num) {
-        std::lock_guard<std::mutex> lock(ticketMutex);
-        remainingTickets += num;
-        std::stringstream ss;
-        ss << "Recovered " << num << " tickets. Total now: " << remainingTickets;
-        logger.log(ss.str(), LogLevel::WARNING);
-        cv.notify_all();
-    }
-};
 
 // 售票窗口
 class TicketWindow {
@@ -236,7 +156,7 @@ public:
     }
 };
 
-//g++ -std=c++11 Logger.cpp ConfigManager.cpp TicketManager.cpp
+//g++ -std=c++11 Logger.cpp ConfigManager.cpp TicketSystem.cpp TicketManager.cpp
 // 主程序
 int main() {
     // 读取配置文件
