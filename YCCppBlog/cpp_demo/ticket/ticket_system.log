@@ -324,3 +324,86 @@ Success rate: 0%
 Simulation duration: 9 seconds
 Transactions per second: 0
 
+[INFO]Window 1 sold 3 tickets. Remaining tickets: 97
+[INFO]Customer 1 is trying to buy 3 tickets.
+[INFO]Window 2 sold 4 tickets. Remaining tickets: 93
+[INFO]Window 3 sold 5 tickets. Remaining tickets: 88
+[INFO]VIP Window  sold 1 tickets. Remaining tickets: 87
+[INFO]Customer 1 sold 3 tickets. Remaining tickets: 84
+[INFO]Customer 1 successfully bought 3 tickets.
+[INFO]Window 3 sold 4 tickets. Remaining tickets: 80
+[INFO]Window 1 sold 4 tickets. Remaining tickets: 76
+[INFO]Window 2 sold 5 tickets. Remaining tickets: 71
+[INFO]VIP Window  sold 3 tickets. Remaining tickets: 68
+[INFO]Customer 2 is trying to buy 4 tickets.
+[INFO]Customer 2 sold 4 tickets. Remaining tickets: 64
+[INFO]Customer 2 successfully bought 4 tickets.
+[INFO]Window 2 sold 4 tickets. Remaining tickets: 60
+[INFO]Window 3 sold 1 tickets. Remaining tickets: 59
+[INFO]Window 1 sold 1 tickets. Remaining tickets: 58
+[INFO]VIP Window  sold 1 tickets. Remaining tickets: 57
+[INFO]Window 1 sold 1 tickets. Remaining tickets: 56
+[INFO]Window 2 sold 4 tickets. Remaining tickets: 52
+[INFO]Window 3 sold 1 tickets. Remaining tickets: 51
+[INFO]VIP Window  sold 5 tickets. Remaining tickets: 46
+[INFO]Customer 3 is trying to buy 4 tickets.
+[INFO]Customer 3 sold 4 tickets. Remaining tickets: 42
+[INFO]Customer 3 successfully bought 4 tickets.
+[INFO]Window 1 sold 3 tickets. Remaining tickets: 39
+[INFO]Window 2 sold 2 tickets. Remaining tickets: 37
+[INFO]Window 3 sold 3 tickets. Remaining tickets: 34
+[INFO]VIP Window  sold 3 tickets. Remaining tickets: 31
+[INFO]Window 1 sold 1 tickets. Remaining tickets: 30
+[INFO]Window 2 sold 3 tickets. Remaining tickets: 27
+[INFO]Window 3 sold 5 tickets. Remaining tickets: 22
+[INFO]VIP Window  sold 1 tickets. Remaining tickets: 21
+[INFO]Customer 4 is trying to buy 4 tickets.
+[INFO]Customer 4 sold 4 tickets. Remaining tickets: 17
+[INFO]Customer 4 successfully bought 4 tickets.
+[INFO]Window 1 sold 5 tickets. Remaining tickets: 12
+[INFO]Window 3 sold 1 tickets. Remaining tickets: 11
+[INFO]Window 2 sold 3 tickets. Remaining tickets: 8
+[INFO]VIP Window  sold 5 tickets. Remaining tickets: 3
+[INFO]Window 2 sold 2 tickets. Remaining tickets: 1
+[INFO]Customer 5 is trying to buy 2 tickets.
+[INFO]Customer 6 is trying to buy 1 tickets.
+[INFO]Customer 6 sold 1 tickets. Remaining tickets: 0
+[INFO]Customer 6 successfully bought 1 tickets.
+[WARNING]Window 1 failed to sell 5 tickets. Not enough tickets available.
+[WARNING]Window 1 failed to sell tickets. Not enough tickets available.
+[WARNING]Window 3 failed to sell 4 tickets. Not enough tickets available.
+[WARNING]Window 3 failed to sell tickets. Not enough tickets available.
+[WARNING]VIP Window  failed to sell 2 tickets. Not enough tickets available.
+[WARNING]VIP Window  failed to sell tickets. Not enough tickets available.
+[WARNING]Customer 5 failed to sell 2 tickets. Not enough tickets available.
+[WARNING]Customer 5 failed to buy 2 tickets. Not enough tickets available.
+[WARNING]Window 2 failed to sell 5 tickets. Not enough tickets available.
+[WARNING]Window 2 failed to sell tickets. Not enough tickets available.
+[INFO]Customer 7 is trying to buy 5 tickets.
+[WARNING]Customer 7 failed to sell 5 tickets. Not enough tickets available.
+[WARNING]Customer 7 failed to buy 5 tickets. Not enough tickets available.
+[INFO]Customer 8 is trying to buy 3 tickets.
+[WARNING]Customer 8 failed to sell 3 tickets. Not enough tickets available.
+[WARNING]Customer 8 failed to buy 3 tickets. Not enough tickets available.
+[INFO]Customer 9 is trying to buy 2 tickets.
+[WARNING]Customer 9 failed to sell 2 tickets. Not enough tickets available.
+[WARNING]Customer 9 failed to buy 2 tickets. Not enough tickets available.
+[INFO]Customer 10 is trying to buy 5 tickets.
+[WARNING]Customer 10 failed to sell 5 tickets. Not enough tickets available.
+[WARNING]Customer 10 failed to buy 5 tickets. Not enough tickets available.
+[WARNING]Warning: Only 0 tickets remaining!
+[INFO]Added 50 tickets. Remaining tickets: 50
+[INFO]All tickets sold. Remaining tickets: 50
+[INFO]18 tickets sold by 18
+[INFO]27 tickets sold by 27
+[INFO]20 tickets sold by 20
+[INFO]19 tickets sold by 19
+[INFO]
+==== PERFORMANCE REPORT ====
+Total sales attempts: 0
+Successful sales: 0
+Failed sales: 0
+Success rate: 0%
+Simulation duration: 9 seconds
+Transactions per second: 0
+

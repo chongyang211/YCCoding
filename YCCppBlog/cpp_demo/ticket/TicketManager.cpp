@@ -12,47 +12,8 @@
 #include <memory>
 #include <queue>
 #include <map>
+#include "Logger.h"
 
-// 日志级别
-enum class LogLevel {
-    INFO,
-    WARNING,
-    ERROR
-};
-
-// 日志系统
-class Logger {
-private:
-    std::ofstream logFile;
-    std::mutex logMutex;
-
-public:
-    Logger(const std::string& filename) {
-        logFile.open(filename, std::ios::out | std::ios::app);
-        if (!logFile.is_open()) {
-            throw std::runtime_error("Failed to open log file.");
-        }
-    }
-
-    ~Logger() {
-        if (logFile.is_open()) {
-            logFile.close();
-        }
-    }
-
-    void log(const std::string& message, LogLevel level = LogLevel::INFO) {
-        std::lock_guard<std::mutex> lock(logMutex);
-        std::string levelStr;
-        switch (level) {
-            case LogLevel::INFO: levelStr = "INFO"; break;
-            case LogLevel::WARNING: levelStr = "WARNING"; break;
-            case LogLevel::ERROR: levelStr = "ERROR"; break;
-        }
-        std::string logMessage = "[" + levelStr + "] " + message;
-        logFile << logMessage << std::endl;
-        std::cout << logMessage << std::endl;
-    }
-};
 
 // 系统配置管理
 class ConfigManager {
@@ -307,7 +268,7 @@ public:
     }
 };
 
-//g++ -std=c++11 TicketManager.cpp
+//g++ -std=c++11 Logger.cpp TicketManager.cpp
 // 主程序
 int main() {
     // 读取配置文件
