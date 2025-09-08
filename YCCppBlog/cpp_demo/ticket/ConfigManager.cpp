@@ -29,7 +29,13 @@ ConfigManager::ConfigManager(const std::string &fileName) {
     }
 }
 
+//获取某项属性
 int ConfigManager::get(const std::string &key) const {
-
+    // auto 自动变量，编译器会自动推导类型
+    auto it = config.find(key);
+    if (it != config.end()) {
+        return it->second;
+    }
+    throw std::runtime_error("Config key not found: " + key);
 }
 
