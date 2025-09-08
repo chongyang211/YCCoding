@@ -66,3 +66,52 @@ void TicketSystem::addTickets(int num) {
     //然后通过cv条件变量通知刷新
     cv.notify_all();
 }
+
+// 获取票数
+int TicketSystem::getRemainingTickets() const {
+    return remainingTickets;
+}
+
+int TicketSystem::getTotalTickets() const {
+    return totalTicket;
+}
+
+// 监控线程的主逻辑
+// void monitorThreadFunc() {
+//     while (true) {
+//         std::this_thread::sleep_for(std::chrono::seconds(1));
+//         int remaining = getRemainingTickets();
+//         if (remaining < totalTickets / 4) {
+//             logger.log("Warning: Only " + std::to_string(remaining) +
+//                        " tickets remaining!", LogLevel::WARNING);
+//         }
+//     }
+// }
+
+// 动态票务监控 (monitorTickets)
+// 后台线程：启动一个独立的线程，每隔 1 秒检查剩余票数。
+// 预警机制：当剩余票数少于总票数的 1/4 时，记录警告日志。
+// 通过后台线程实时监控剩余票数，及时发出预警，提高系统的健壮性。
+void TicketSystem::monitorTickets() {
+    //创建一个线程
+    std::thread([this] {
+        //这个代码后期可以拆分出来，开始监控，也可以设置停止监控
+        while (true) {
+            //睡眠1秒钟
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            //获取票的数量
+            int remaining = getRemainingTickets();
+            //
+            if (remaining < getTotalTickets() / 4) {
+              logger.log("Warning: Only " + std::to_string(remaining) +
+                         " tickets remaining!", LogLevel::WARNING);
+          }
+        }
+        //线程detach是创建一个分发线程，相当于是并行的线程
+    }).detach();
+}
+
+
+
+
+
