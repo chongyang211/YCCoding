@@ -153,4 +153,7 @@ add_executable(YCCppBlog main.cpp
         cpp_demo/looper/TimeConverter.h
         cpp_demo/looper/TimeUnit.h
         cpp_demo/looper/LooperTest.cpp
+        cpp_demo/ticket/TicketManager.cpp
+        cpp_demo/ticket/Logger.cpp
+        cpp_demo/ticket/Logger.h
 )

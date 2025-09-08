@@ -1,0 +1,48 @@
+[INFO] System initialized
+[DEBUG] System initialized debug
+[WARNING] System initialized warning
+[ERROR] System initialized error
+[INFO] System initialized
+[DEBUG] System initialized debug
+[WARNING] System initialized warning
+[ERROR] System initialized error
+[INFO] System initialized
+[DEBUG] System initialized debug
+[WARNING] System initialized warning
+[ERROR] System initialized error
+[INFO] Ticket system created with 10 tickets
+[INFO] Window 1 sold 3 tickets. Remaining tickets: 7
+[INFO] Window 3 sold 4 tickets. Remaining tickets: 3
+[INFO] System initialized
+[DEBUG] System initialized debug
+[WARNING] System initialized warning
+[ERROR] System initialized error
+[INFO] Ticket system created with 10 tickets
+[INFO] Window 1 sold 3 tickets. Remaining tickets: 7
+[INFO] Window 2 sold 5 tickets. Remaining tickets: 2
+[INFO] Added 10 tickets. Remaining tickets: 12
+[INFO] System initialized
+[DEBUG] System initialized debug
+[WARNING] System initialized warning
+[ERROR] System initialized error
+[INFO] Ticket system created with 100 tickets
+[INFO] Ticket window Window 1 created
+[INFO] Ticket window Window 2 created
+[INFO] System initialized
+[DEBUG] System initialized debug
+[WARNING] System initialized warning
+[ERROR] System initialized error
+[INFO] Ticket system created with 100 tickets
+[INFO] Ticket window Window 1 created
+[INFO] Ticket window Window 2 created
+[INFO] System initialized
+[DEBUG] System initialized debug
+[WARNING] System initialized warning
+[ERROR] System initialized error
+[INFO] Ticket system created with 100 tickets
+[INFO] Ticket window Window 1 created
+[INFO] Ticket window Window 2 created
+[INFO] Ticket window Window 3 created
+[INFO] Window 1 started selling tickets
+[INFO] Window 1 sold 2 tickets. Remaining tickets: 98
+[INFO] Window 2 started selling tickets

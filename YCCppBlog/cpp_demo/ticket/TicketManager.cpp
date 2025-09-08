@@ -307,7 +307,7 @@ public:
     }
 };
 
-//g++ -std=c++11 TicketEasyManager.cpp
+//g++ -std=c++11 TicketManager.cpp
 // 主程序
 int main() {
     // 读取配置文件
