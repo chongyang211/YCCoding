@@ -19,14 +19,19 @@ private:
     std::atomic<int> ticketsSold;   //记录售票数量
     std::thread workerThread;   //工作线程
 public:
-    TicketWindow(const std::string& windowName, TicketSystem& system, Logger& log);
-    TicketWindow(const TicketWindow&);
-    TicketWindow& operator=(const TicketWindow&);
+    TicketWindow(const std::string& windowName, TicketSystem & system, Logger& log);
+    // TicketWindow(const TicketWindow&);
+    // TicketWindow& operator=(const TicketWindow&);
+    TicketWindow(const TicketWindow&) = delete;
+    TicketWindow& operator=(const TicketWindow&) = delete;
     //开始窗口售票
     void start();
+    //停止窗口售票
     void stop();
     //获取售票数量
     int getTicketsSold() const;
+    //vip售票
+    void sellVIP(int num, const std::string& customerName);
 };
 
 #endif //TICKETWINDOW_H

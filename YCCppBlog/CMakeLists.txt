@@ -162,4 +162,6 @@ add_executable(YCCppBlog main.cpp
         cpp_demo/ticket/TicketSystem.h
         cpp_demo/ticket/TicketWindow.cpp
         cpp_demo/ticket/TicketWindow.h
+        cpp_demo/ticket/Customer.cpp
+        cpp_demo/ticket/Customer.h
 )

@@ -29,7 +29,6 @@ public:
     void monitorTickets();
     //恢复票功能 (recoverTickets)
     void recoverTickets(int num);
-
 };
 
 
