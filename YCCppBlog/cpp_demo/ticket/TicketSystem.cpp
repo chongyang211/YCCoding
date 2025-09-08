@@ -44,3 +44,25 @@ bool TicketSystem::sellTicket(int num, const std::string &windowName) {
         return false;
     }
 }
+
+// 添加票功能 (addTickets)
+// 线程安全：使用 std::lock_guard 确保对 remainingTickets 的修改是线程安全的。
+// 通知机制：通过 cv.notify_all() 唤醒等待的售票线程。
+void TicketSystem::addTickets(int num) {
+    // 检查参数
+    if (num <= 0) {
+        std::stringstream ss;
+        ss << "Failed to add tickets. Invalid number of tickets: " << num;
+        logger.log(ss.str(), LogLevel::WARNING);
+        return;
+    }
+    std::lock_guard<std::mutex> lock(ticketMutex);
+    //使用自动锁保证变量安全
+    remainingTickets += num;
+    //记录日志
+    std::stringstream ss;
+    ss << "Added " << num << " tickets. Remaining tickets: " << remainingTickets;
+    logger.log(ss.str());
+    //然后通过cv条件变量通知刷新
+    cv.notify_all();
+}
