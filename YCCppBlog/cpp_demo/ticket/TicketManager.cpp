@@ -13,39 +13,7 @@
 #include <queue>
 #include <map>
 #include "Logger.h"
-
-
-// 系统配置管理
-class ConfigManager {
-private:
-    std::unordered_map<std::string, int> config;
-
-public:
-    ConfigManager(const std::string& filename) {
-        std::ifstream file(filename);
-        if (file.is_open()) {
-            std::string key;
-            int value;
-            while (file >> key >> value) {
-                config[key] = value;
-            }
-        } else {
-            // 默认配置
-            config["total_tickets"] = 100;
-            config["num_windows"] = 3;
-            config["num_customers"] = 10;
-            config["max_tickets_per_customer"] = 5;
-        }
-    }
-
-    int get(const std::string& key) const {
-        auto it = config.find(key);
-        if (it != config.end()) {
-            return it->second;
-        }
-        throw std::runtime_error("Config key not found: " + key);
-    }
-};
+#include "ConfigManager.h"
 
 // 票务系统
 class TicketSystem {
@@ -268,7 +236,7 @@ public:
     }
 };
 
-//g++ -std=c++11 Logger.cpp TicketManager.cpp
+//g++ -std=c++11 Logger.cpp ConfigManager.cpp TicketManager.cpp
 // 主程序
 int main() {
     // 读取配置文件
