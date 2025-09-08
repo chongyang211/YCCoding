@@ -18,8 +18,9 @@ private:
     std::atomic<bool> running;  //是否在工作中
     std::atomic<int> ticketsSold;   //记录售票数量
     std::thread workerThread;   //工作线程
+    std::mutex vipMutex;
 public:
-    TicketWindow(const std::string& windowName, TicketSystem & system, Logger& log);
+    TicketWindow(const std::string& windowName, TicketSystem& system, Logger& log);
     // TicketWindow(const TicketWindow&);
     // TicketWindow& operator=(const TicketWindow&);
     TicketWindow(const TicketWindow&) = delete;

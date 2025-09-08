@@ -19,6 +19,8 @@ private:
     Logger &logger;     //日志类
 public:
     TicketSystem(int total, Logger& log);
+    TicketSystem(const TicketSystem&) = delete;            // 禁用拷贝构造函数
+    TicketSystem& operator=(const TicketSystem&) = delete; // 禁用拷贝赋值运算符
     //售票功能 (sellTicket)
     bool sellTicket(int num, const std::string& windowName);
     //添加票功能 (addTickets)
