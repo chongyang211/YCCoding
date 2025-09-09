@@ -8,8 +8,7 @@
 #include <thread>
 #include "Logger.h"
 #include "TicketSystem.h"
-#include "TicketWindow.h"
-
+// #include "TicketWindow.h"
 
 class Customer {
 private:
@@ -20,7 +19,7 @@ private:
 public:
     Customer(const std::string& customerName, TicketSystem& system, Logger& log);
     void buyTickets(int num);
-    void buyVIP(int num, TicketWindow& vipWindow);
+    // void buyVIP(int num, TicketWindow& vipWindow);
 };
 
 

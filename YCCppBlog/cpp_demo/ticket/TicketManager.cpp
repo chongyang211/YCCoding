@@ -14,6 +14,7 @@
 #include <map>
 #include "Logger.h"
 #include "ConfigManager.h"
+#include "Customer.h"
 #include "TicketSystem.h"
 // #include "TicketWindow.h"
 
@@ -85,41 +86,6 @@ public:
     }
 };
 
-// 顾客
-class Customer {
-private:
-    std::string name;
-    TicketSystem& ticketSystem;
-    Logger& logger;
-
-public:
-    Customer(const std::string& customerName, TicketSystem& system, Logger& log)
-        : name(customerName), ticketSystem(system), logger(log) {}
-
-    void buyTickets(int num) {
-        std::thread([this, num]() {
-            std::stringstream ss;
-            ss << name << " is trying to buy " << num << " tickets.";
-            logger.log(ss.str());
-
-            if (ticketSystem.sellTicket(num, name)) {
-                ss.str("");
-                ss << name << " successfully bought " << num << " tickets.";
-                logger.log(ss.str());
-            } else {
-                ss.str("");
-                ss << name << " failed to buy " << num << " tickets. Not enough tickets available.";
-                logger.log(ss.str(), LogLevel::WARNING);
-            }
-        }).detach();
-    }
-
-    // ==== VIP购票方法 ====
-    void buyVIP(int num, TicketWindow& vipWindow) {
-        vipWindow.sellVIP(num, name);
-    }
-};
-
 // ==== 性能监控类 ====
 class PerformanceMonitor {
 private:
@@ -158,7 +124,7 @@ public:
     }
 };
 
-//g++ -std=c++11 Logger.cpp ConfigManager.cpp TicketSystem.cpp TicketManager.cpp
+//g++ -std=c++11 Logger.cpp ConfigManager.cpp TicketSystem.cpp Customer.cpp TicketManager.cpp
 // 主程序
 int main() {
     // 读取配置文件
