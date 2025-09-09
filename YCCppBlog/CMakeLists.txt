@@ -164,4 +164,6 @@ add_executable(YCCppBlog main.cpp
         cpp_demo/ticket/TicketWindow.h
         cpp_demo/ticket/Customer.cpp
         cpp_demo/ticket/Customer.h
+        cpp_demo/ticket/PerformanceMonitor.cpp
+        cpp_demo/ticket/PerformanceMonitor.h
 )

@@ -15,6 +15,7 @@
 #include "Logger.h"
 #include "ConfigManager.h"
 #include "Customer.h"
+#include "PerformanceMonitor.h"
 #include "TicketSystem.h"
 // #include "TicketWindow.h"
 
@@ -86,45 +87,7 @@ public:
     }
 };
 
-// ==== 性能监控类 ====
-class PerformanceMonitor {
-private:
-    std::atomic<int> totalSales;
-    std::atomic<int> successfulSales;
-    std::atomic<int> failedSales;
-    std::chrono::steady_clock::time_point startTime;
-    Logger& logger;
-
-public:
-    PerformanceMonitor(Logger& log) :
-        totalSales(0), successfulSales(0), failedSales(0), logger(log) {
-        startTime = std::chrono::steady_clock::now();
-    }
-
-    void recordSale(bool success) {
-        totalSales++;
-        if (success) successfulSales++;
-        else failedSales++;
-    }
-
-    void report() {
-        auto endTime = std::chrono::steady_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::seconds>(endTime - startTime);
-        std::stringstream ss;
-        ss << "\n==== PERFORMANCE REPORT ====\n";
-        ss << "Total sales attempts: " << totalSales << "\n";
-        ss << "Successful sales: " << successfulSales << "\n";
-        ss << "Failed sales: " << failedSales << "\n";
-        ss << "Success rate: "
-           << (totalSales > 0 ? 100.0 * successfulSales / totalSales : 0) << "%\n";
-        ss << "Simulation duration: " << duration.count() << " seconds\n";
-        ss << "Transactions per second: "
-           << (duration.count() > 0 ? totalSales / duration.count() : 0) << "\n";
-        logger.log(ss.str());
-    }
-};
-
-//g++ -std=c++11 Logger.cpp ConfigManager.cpp TicketSystem.cpp Customer.cpp TicketManager.cpp
+//g++ -std=c++11 Logger.cpp ConfigManager.cpp TicketSystem.cpp Customer.cpp PerformanceMonitor.cpp TicketManager.cpp
 // 主程序
 int main() {
     // 读取配置文件
