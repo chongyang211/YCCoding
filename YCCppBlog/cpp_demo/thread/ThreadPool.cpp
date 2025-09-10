@@ -137,3 +137,19 @@ void ThreadPool::postPackagedTask(const std::shared_ptr<std::packaged_task<int()
     // 使用 mCv.notify_one() 唤醒一个等待的线程。
     mCv.notify_one();
 }
+
+std::size_t ThreadPool::taskSize() {
+    std::unique_lock<std::mutex> lock(mQueueMutex);
+    return mTasks.size();
+}
+
+std::size_t ThreadPool::preTaskSize() {
+    std::unique_lock<std::mutex> lock(mQueueMutex);
+    return mPrepTasks.size();
+}
+
+std::size_t ThreadPool::allTaskSize() {
+    return taskSize() + preTaskSize();
+}
+
+

@@ -39,13 +39,12 @@ public:
     void clearAllTasks();
     // 清空优先任务队列。
     void clearPreTasks();
-
     // 返回普通任务队列的大小。
-    std::size_t taskSize() { return mTasks.size(); }
+    std::size_t taskSize();
     // 返回优先任务队列的大小。
-    std::size_t preTaskSize() { return mPrepTasks.size(); }
+    std::size_t preTaskSize();
     // 返回所有任务队列的大小。
-    std::size_t allTaskSize() { return taskSize() + preTaskSize(); }
+    std::size_t allTaskSize();
 protected:
     // 线程启动时的回调（空实现）。
     virtual void onThreadAttached() {};
@@ -80,19 +79,21 @@ private:
 // 使用模板和可变参数模板，支持任意类型的任务。返回一个 std::future，用于获取任务的执行结果。
 template<class F, class... Args>
 auto ThreadPool::postTask(F &&f, Args &&... args) -> std::future<typename std::result_of<F(Args...)>::type> {
-    using return_type = typename std::result_of<F(Args...)>::type;
 
+    using return_type = typename std::result_of<F(Args...)>::type;
+    // 封装任务为 packaged_task
     auto task = std::shared_ptr<std::packaged_task<return_type()> >(
         new std::packaged_task<return_type()>(std::bind(std::forward<F>(f), std::forward<Args>(args)...)));
     std::future<return_type> res = task->get_future(); {
         std::unique_lock<std::mutex> lock(mQueueMutex);
         // don't allow enqueueing after stopping the pool
-        if (mStop) throw std::runtime_error("enqueue on stopped ThreadPool");
-
+        if (mStop) {
+            throw std::runtime_error("enqueue on stopped ThreadPool");
+        }
+        // push 一个 task任务
         mTasks.push(task);
     }
     mCv.notify_one();
-
     return res;
 }
 
@@ -115,7 +116,6 @@ auto ThreadPool::postPreTask(F &&f, Args &&... args) -> std::future<typename std
         mPrepTasks.push(task);
     }
     mCv.notify_one();
-
     return res;
 }
 
