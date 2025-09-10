@@ -22,14 +22,16 @@ public:
     ThreadPool(size_t maxNumberOfThreads = (std::thread::hardware_concurrency() + 1));
     // 带名称的构造函数。
     ThreadPool(const std::string &name, size_t maxNumberOfThreads = (std::thread::hardware_concurrency() + 1));
+    // 析构函数
+    virtual ~ThreadPool();
+
+    // 任务管理接口
     // 提交普通任务。
     template<class F, class... Args>
     auto postTask(F &&f, Args &&... args) -> std::future<typename std::result_of<F(Args...)>::type>;
     // 提交优先任务。
     template<class F, class... Args>
     auto postPreTask(F &&f, Args &&... args) -> std::future<typename std::result_of<F(Args...)>::type>;
-    // 析构函数
-    virtual ~ThreadPool();
     void postPackagedTask(const std::shared_ptr<std::packaged_task<int()> > &task);
     // 清空普通任务队列。
     void clearTasks();
@@ -37,6 +39,7 @@ public:
     void clearAllTasks();
     // 清空优先任务队列。
     void clearPreTasks();
+
     // 返回普通任务队列的大小。
     std::size_t taskSize() { return mTasks.size(); }
     // 返回优先任务队列的大小。
@@ -50,15 +53,10 @@ protected:
     virtual void onThreadDetached() {}
 private:
     void taskLoop(const std::string &name);
-
     ThreadPool(const ThreadPool &) = delete;
-
     ThreadPool(ThreadPool &&) = delete;
-
     ThreadPool &operator=(const ThreadPool &) = delete;
-
     ThreadPool &operator=(ThreadPool &&) = delete;
-
 private:
     // need to keep track of threads so we can join them
     // 存储线程池中的线程。
@@ -67,7 +65,6 @@ private:
     std::queue<std::shared_ptr<std::packaged_task<int()> > > mTasks;
     // 优先处理的队列
     std::queue<std::shared_ptr<std::packaged_task<int()> > > mPrepTasks;
-
     // 保护任务队列的互斥锁。
     std::mutex mQueueMutex;
     // 条件变量，用于线程间的同步。
