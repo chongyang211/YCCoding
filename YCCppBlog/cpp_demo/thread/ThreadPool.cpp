@@ -9,6 +9,7 @@
 // the constructor just launches some amount of workers
 // 作用：初始化线程池，并指定线程池的名称和最大线程数。
 // 原理：emplace_back 直接构造线程对象，避免了额外的拷贝操作。taskLoop 是线程的主循环函数，负责从任务队列中取出任务并执行。
+
 ThreadPool::ThreadPool(const std::string &name, size_t maxNumberOfThreads) : mStop(false) {
     // 初始化 mStop 为 false，表示线程池处于运行状态。
     for (size_t i = 0; i < maxNumberOfThreads; ++i) {
@@ -37,7 +38,13 @@ ThreadPool::~ThreadPool() {
     // 使用 mCv.notify_all() 唤醒所有等待的线程。
     mCv.notify_all();
     // 使用 std::for_each 和 std::thread::join 等待所有线程执行完毕。
-    std::for_each(mThreads.begin(), mThreads.end(), std::bind(&std::thread::join, std::placeholders::_1));
+    // std::for_each(mThreads.begin(), mThreads.end(), std::bind(&std::thread::join, std::placeholders::_1));
+    // 等待所有线程结束
+    for (auto &thread : mThreads) {
+        if (thread.joinable()) {
+            thread.join();
+        }
+    }
 }
 
 // 清理普通任务
@@ -72,12 +79,17 @@ void ThreadPool::clearAllTasks() {
 void ThreadPool::taskLoop(const std::string &name) {
     // 调用 onThreadAttached()，通知线程已启动。
     onThreadAttached();
-    for (;;) {
+    while (true) {
         std::shared_ptr<std::packaged_task<int()> > preTask;
-        std::shared_ptr<std::packaged_task<int()> > task; {
+        std::shared_ptr<std::packaged_task<int()> > task;
+        {
+            // 等待条件变量：停止信号或任务可用
             std::unique_lock<std::mutex> lock(this->mQueueMutex);
             //使用 mCv.wait 等待任务队列非空或线程池停止。
-            this->mCv.wait(lock, [this] { return this->mStop || !this->mTasks.empty() || !this->mPrepTasks.empty(); });
+            mCv.wait(lock,[this] {
+                return this->mStop || !this->mTasks.empty() || !this->mPrepTasks.empty();
+            });
+            // 检查停止信号
             if (this->mStop) {
                 // 如果 mStop 为 true，调用 onThreadDetached() 并退出循环。
                 onThreadDetached();
@@ -88,20 +100,18 @@ void ThreadPool::taskLoop(const std::string &name) {
                 preTask = this->mPrepTasks.front();
                 this->mPrepTasks.pop();
             }
-
             //执行普通任务队列 mTasks 中的任务。
             if (!this->mTasks.empty()) {
                 task = this->mTasks.front();
                 this->mTasks.pop();
             }
         }
-
+        // 执行任务（在锁外执行，避免阻塞其他线程）
         if (preTask) {
             //std::cout << "preTask begin" << std::endl;
             (*preTask)();
             //std::cout << "preTask end" << std::endl;
         }
-
         if (task) {
             //std::cout << "task begin" << std::endl;
             (*task)();
